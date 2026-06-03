@@ -1,11 +1,49 @@
 import bcrypt from "bcryptjs";
 import { User } from "../models/user.model";
+import jwt from "jsonwebtoken";
+import { env } from "../config/env";
 
 interface RegisterInput {
   username: string;
   email: string;
   password: string;
 }
+
+export const loginUser = async (
+  email: string,
+  password: string
+) => {
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new Error("Invalid credentials");
+  }
+
+  const isPasswordValid = await bcrypt.compare(
+    password,
+    user.passwordHash
+  );
+
+  if (!isPasswordValid) {
+    throw new Error("Invalid credentials");
+  }
+
+  const token = jwt.sign(
+    {
+      userId: user._id,
+      email: user.email,
+    },
+    env.jwtSecret,
+    {
+      expiresIn: "1d",
+    }
+  );
+
+  return {
+    user,
+    token,
+  };
+};
 
 export const registerUser = async ({
   username,

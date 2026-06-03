@@ -52,3 +52,20 @@ export const deleteDocumentRecord = async (
     userId,
   });
 };
+
+export const updateDocumentStatus =
+  async (
+    documentId: string,
+    status:
+      | "processing"
+      | "processed"
+      | "failed"
+  ) => {
+
+    return await
+      DocumentModel.findByIdAndUpdate(
+        documentId,
+        { status },
+        { new: true }
+      );
+  };

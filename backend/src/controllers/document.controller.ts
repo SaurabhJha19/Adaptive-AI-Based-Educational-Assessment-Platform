@@ -8,6 +8,12 @@ import {
   getDocumentById,
   deleteDocumentRecord,
 } from "../services/document.service";
+import {
+  getDocumentChunks
+} from "../services/document-chunk.service";
+import {
+  processDocument
+} from "../services/document-processing.service";
 
 export const uploadDocument = asyncHandler(
   async (
@@ -36,6 +42,12 @@ export const uploadDocument = asyncHandler(
         mimeType:
           req.file.mimetype,
       });
+
+    processDocument(
+        document._id.toString(),
+        req.user!.userId,
+        document.filePath
+      ).catch(console.error);
 
     res.status(201).json({
       success: true,
@@ -108,6 +120,31 @@ export const deleteDocument =
         success: true,
         message:
           "Document deleted successfully",
+      });
+    }
+  );
+
+export const getChunks =
+  asyncHandler(
+    async (
+      req: AuthRequest,
+      res: Response
+    ) => {
+
+      const { id } =
+        req.params;
+
+      const chunks =
+        await getDocumentChunks(
+          id,
+          req.user!.userId
+        );
+
+      res.status(200).json({
+        success: true,
+        count:
+          chunks.length,
+        chunks,
       });
     }
   );

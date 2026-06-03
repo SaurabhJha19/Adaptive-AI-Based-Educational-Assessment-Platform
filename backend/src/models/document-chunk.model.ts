@@ -9,6 +9,9 @@ export interface IDocumentChunk
   documentId:
     mongoose.Types.ObjectId;
 
+  userId:
+    mongoose.Types.ObjectId;
+
   chunkIndex: number;
 
   content: string;
@@ -27,6 +30,12 @@ const documentChunkSchema =
         type: Number,
         required: true,
       },
+
+        userId: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+        },
 
       content: {
         type: String,

@@ -7,6 +7,8 @@ export interface AuthRequest extends Request {
     userId: string;
     email: string;
   };
+
+  file?: Express.Multer.File;
 }
 
 export const authenticate = (

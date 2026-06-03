@@ -24,3 +24,31 @@ export const createDocument = async (
 
   return document;
 };
+
+export const getUserDocuments = async (
+  userId: string
+) => {
+  return await DocumentModel
+    .find({ userId })
+    .sort({ createdAt: -1 });
+};
+
+export const getDocumentById = async (
+  documentId: string,
+  userId: string
+) => {
+  return await DocumentModel.findOne({
+    _id: documentId,
+    userId,
+  });
+};
+
+export const deleteDocumentRecord = async (
+  documentId: string,
+  userId: string
+) => {
+  return await DocumentModel.findOneAndDelete({
+    _id: documentId,
+    userId,
+  });
+};

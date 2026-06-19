@@ -30,7 +30,7 @@ export const authenticate = (
 
     const decoded = jwt.verify(
       token,
-      env.jwtSecret
+      env.JWT_SECRET
     ) as {
       userId: string;
       email: string;

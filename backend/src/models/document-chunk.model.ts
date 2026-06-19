@@ -15,6 +15,14 @@ export interface IDocumentChunk
   chunkIndex: number;
 
   content: string;
+
+  embedding: number[];
+
+  metadata?: {
+    page?: number;
+    source?: string;
+    documentName?: string;
+  };
 }
 
 const documentChunkSchema =
@@ -24,6 +32,14 @@ const documentChunkSchema =
         type: Schema.Types.ObjectId,
         ref: "Document",
         required: true,
+        index: true,
+      },
+
+      userId: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+        index: true,
       },
 
       chunkIndex: {
@@ -31,15 +47,28 @@ const documentChunkSchema =
         required: true,
       },
 
-        userId: {
-        type: Schema.Types.ObjectId,
-        ref: "User",
-        required: true,
-        },
-
       content: {
         type: String,
         required: true,
+      },
+
+      embedding: {
+        type: [Number],
+        default: [],
+      },
+
+      metadata: {
+        page: {
+          type: Number,
+        },
+
+        source: {
+          type: String,
+        },
+
+        documentName:{ 
+          type: String,
+        },
       },
     },
     {

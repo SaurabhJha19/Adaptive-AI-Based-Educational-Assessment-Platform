@@ -33,7 +33,7 @@ export const loginUser = async (
       userId: user._id,
       email: user.email,
     },
-    env.jwtSecret,
+    env.JWT_SECRET,
     {
       expiresIn: "1d",
     }

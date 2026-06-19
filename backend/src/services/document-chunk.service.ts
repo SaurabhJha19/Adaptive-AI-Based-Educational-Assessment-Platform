@@ -1,6 +1,10 @@
 import { DocumentChunkModel }
 from "../models/document-chunk.model";
 
+import {
+  generateEmbedding
+} from "./embedding.service";
+
 interface ChunkInput {
   documentId: string;
   userId: string;
@@ -15,16 +19,29 @@ export const saveChunks =
   }: ChunkInput) => {
 
     const chunkDocs =
-      chunks.map(
-        (
-          content,
-          index
-        ) => ({
-          documentId,
-          userId,
-          chunkIndex: index,
-          content,
-        })
+      await Promise.all(
+
+        chunks.map(
+          async (
+            content,
+            index
+          ) => {
+
+            const embedding =
+              await generateEmbedding(
+                content
+              );
+
+            return {
+              documentId,
+              userId,
+              chunkIndex:
+                index,
+              content,
+              embedding,
+            };
+          }
+        )
       );
 
     return await

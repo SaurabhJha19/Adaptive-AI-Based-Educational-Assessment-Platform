@@ -4,6 +4,7 @@ import authRoutes from "./routes/auth.routes";
 import { errorHandler } from "./middleware/error.middleware";
 import documentRoutes from "./routes/document.routes";
 import questionRoutes from "./routes/question.routes";
+import examRoutes from "./routes/exam.routes";
 
 const app = express();
 
@@ -17,6 +18,11 @@ app.use(
 );
 
 app.use("/api/documents", documentRoutes);
+
+app.use(
+  "/api/exams",
+  examRoutes
+);
 
 app.get("/health", (_, res) => {
   res.status(200).json({

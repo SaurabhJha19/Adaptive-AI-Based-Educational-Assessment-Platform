@@ -1,0 +1,93 @@
+import { Response }
+from "express";
+
+import {
+  AuthRequest
+}
+from "../middleware/auth.middleware";
+
+import {
+  asyncHandler
+}
+from "../utils/async-handler";
+
+import {
+  createExam
+}
+from "../services/exam.service";
+
+import {
+  ExamModel
+}
+from "../models/exam.model";
+
+export const createExamController =
+  asyncHandler(
+    async (
+      req: AuthRequest,
+      res: Response
+    ) => {
+
+      const {
+        documentId,
+        title,
+      } = req.body;
+
+      const exam =
+        await createExam(
+          req.user!.userId,
+          documentId,
+          title
+        );
+
+      res.status(201).json({
+        success: true,
+        exam,
+      });
+    }
+  );
+
+export const getExamById =
+  asyncHandler(
+    async (
+      req: AuthRequest,
+      res: Response
+    ) => {
+
+      const exam =
+        await ExamModel
+          .findById(
+            req.params.id
+          )
+          .populate(
+            "questions"
+          );
+
+      res.status(200).json({
+        success: true,
+        exam,
+      });
+    }
+  );
+
+export const getUserExams =
+  asyncHandler(
+    async (
+      req: AuthRequest,
+      res: Response
+    ) => {
+
+      const exams =
+        await ExamModel.find({
+          userId:
+            req.user!.userId,
+        });
+
+      res.status(200).json({
+        success: true,
+        count:
+          exams.length,
+        exams,
+      });
+    }
+  );

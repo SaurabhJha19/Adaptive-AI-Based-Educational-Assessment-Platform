@@ -18,6 +18,8 @@ export interface IQuestion
 
   explanation: string;
 
+  topic: string;
+
   difficulty:
     | "easy"
     | "medium"
@@ -72,6 +74,11 @@ const questionSchema =
           "hard",
         ],
         default: "medium",
+      },
+
+      topic: {
+        type: String,
+        required: true,
       },
 
       type: {

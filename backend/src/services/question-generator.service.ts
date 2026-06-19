@@ -46,6 +46,8 @@ export const generateQuestions =
           difficulty:
             "medium",
 
+          topic: "General",
+
           type:
             "mcq",
         });

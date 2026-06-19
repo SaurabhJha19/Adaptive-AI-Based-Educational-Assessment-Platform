@@ -5,6 +5,7 @@ import { uploadDocument } from "../controllers/document.controller";
 import { getDocuments } from "../controllers/document.controller";
 import {deleteDocument} from "../controllers/document.controller";
 import {getChunks} from "../controllers/document.controller";
+import { searchDocuments } from "../controllers/document.controller";
 
 
 const router = Router();
@@ -20,6 +21,12 @@ router.get(
   "/",
   authenticate,
   getDocuments
+);
+
+router.post(
+  "/search",
+  authenticate,
+  searchDocuments
 );
 
 router.get(

@@ -14,6 +14,15 @@ import {
 import {
   processDocument
 } from "../services/document-processing.service";
+import {
+  retrieveRelevantChunks
+}
+from "../services/retrieval.service";
+
+import {
+  searchSchema
+}
+from "../validators/search.validator";
 
 export const uploadDocument = asyncHandler(
   async (
@@ -145,6 +154,30 @@ export const getChunks =
         count:
           chunks.length,
         chunks,
+      });
+    }
+  );
+
+export const searchDocuments =
+  asyncHandler(
+    async (req, res) => {
+
+      const data =
+        searchSchema.parse(
+          req.body
+        );
+
+      const results =
+        await retrieveRelevantChunks(
+          req.user!.userId,
+          data.query
+        );
+
+      res.status(200).json({
+        success: true,
+        count:
+          results.length,
+        results,
       });
     }
   );

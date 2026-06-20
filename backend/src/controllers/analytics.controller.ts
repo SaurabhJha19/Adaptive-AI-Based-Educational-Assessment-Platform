@@ -2,36 +2,27 @@ import { Response }
 from "express";
 
 import {
-  AuthRequest
-}
-from "../middleware/auth.middleware";
+  UserAnalyticsModel,
+} from "../models/user-analytics.model";
 
 import {
-  asyncHandler
-}
-from "../utils/async-handler";
-
-import {
-  UserAnalyticsModel
-}
-from "../models/user-analytics.model";
+  AuthRequest,
+} from "../middleware/auth.middleware";
 
 export const getAnalytics =
-  asyncHandler(
-    async (
-      req: AuthRequest,
-      res: Response
-    ) => {
+  async (
+    req: AuthRequest,
+    res: Response
+  ) => {
 
-      const analytics =
-        await UserAnalyticsModel.findOne({
-          userId:
-            req.user!.userId,
-        });
-
-      res.status(200).json({
-        success: true,
-        analytics,
+    const analytics =
+      await UserAnalyticsModel.findOne({
+        userId:
+          req.user!.userId,
       });
-    }
-  );
+
+    res.status(200).json({
+      success: true,
+      analytics,
+    });
+  };

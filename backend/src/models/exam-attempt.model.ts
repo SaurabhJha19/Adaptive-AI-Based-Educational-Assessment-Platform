@@ -6,7 +6,7 @@ import mongoose, {
 export interface IAnswer {
   questionId: mongoose.Types.ObjectId;
   selectedAnswer: string;
-  correct: boolean;
+  isCorrect: boolean;
 }
 
 export interface IExamAttempt
@@ -20,13 +20,11 @@ export interface IExamAttempt
 
   score: number;
 
-  totalQuestions: number;
-
   percentage: number;
 
-  status:
-    | "completed"
-    | "in_progress";
+  startedAt: Date;
+
+  submittedAt: Date;
 }
 
 const answerSchema =
@@ -43,7 +41,7 @@ const answerSchema =
         required: true,
       },
 
-      correct: {
+      isCorrect: {
         type: Boolean,
         required: true,
       },
@@ -77,24 +75,19 @@ const examAttemptSchema =
         required: true,
       },
 
-      totalQuestions: {
-        type: Number,
-        required: true,
-      },
-
       percentage: {
         type: Number,
         required: true,
       },
 
-      status: {
-        type: String,
-        enum: [
-          "completed",
-          "in_progress",
-        ],
-        default:
-          "completed",
+      startedAt: {
+        type: Date,
+        default: Date.now,
+      },
+
+      submittedAt: {
+        type: Date,
+        default: Date.now,
       },
     },
     {

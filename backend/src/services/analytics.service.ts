@@ -1,14 +1,14 @@
 import {
-  ExamAttemptModel
+  UserAnalyticsModel,
+} from "../models/user-analytics.model";
+
+import {
+  ExamAttemptModel,
 } from "../models/exam-attempt.model";
 
 import {
-  QuestionModel
+  QuestionModel,
 } from "../models/question.model";
-
-import {
-  UserAnalyticsModel
-} from "../models/user-analytics.model";
 
 export const updateUserAnalytics =
   async (
@@ -23,20 +23,18 @@ export const updateUserAnalytics =
     if (
       attempts.length === 0
     ) {
-      return null;
+      return;
     }
 
-    const totalScore =
-      attempts.reduce(
-        (sum, attempt) =>
-          sum +
-          attempt.percentage,
-        0
-      );
+    const totalExams =
+      attempts.length;
 
     const averageScore =
-      totalScore /
-      attempts.length;
+      attempts.reduce(
+        (sum, attempt) =>
+          sum + attempt.percentage,
+        0
+      ) / totalExams;
 
     const topicStats:
       Record<
@@ -48,13 +46,11 @@ export const updateUserAnalytics =
       > = {};
 
     for (
-      const attempt
-      of attempts
+      const attempt of attempts
     ) {
 
       for (
-        const answer
-        of attempt.answers
+        const answer of attempt.answers
       ) {
 
         const question =
@@ -62,19 +58,18 @@ export const updateUserAnalytics =
             answer.questionId
           );
 
-        if (!question)
+        if (!question) {
           continue;
+        }
 
         const topic =
-          question.topic;
+          question.topic ||
+          "General";
 
         if (
           !topicStats[topic]
         ) {
-
-          topicStats[
-            topic
-          ] = {
+          topicStats[topic] = {
             correct: 0,
             total: 0,
           };
@@ -85,9 +80,8 @@ export const updateUserAnalytics =
         ].total++;
 
         if (
-          answer.correct
+          answer.isCorrect
         ) {
-
           topicStats[
             topic
           ].correct++;
@@ -106,25 +100,18 @@ export const updateUserAnalytics =
     ).forEach(
       ([topic, stats]) => {
 
-        const accuracy =
-          (
-            stats.correct /
-            stats.total
-          ) *
+        const score =
+          (stats.correct /
+            stats.total) *
           100;
 
-        if (
-          accuracy >= 75
-        ) {
-
+        if (score >= 80) {
           strongTopics.push(
             topic
           );
+        }
 
-        } else if (
-          accuracy < 50
-        ) {
-
+        if (score <= 50) {
           weakTopics.push(
             topic
           );
@@ -133,52 +120,43 @@ export const updateUserAnalytics =
     );
 
     let recommendedDifficulty:
-      "easy"
+      | "easy"
       | "medium"
-      | "hard";
+      | "hard" =
+      "medium";
 
     if (
-      averageScore >= 80
+      averageScore < 50
     ) {
-
-      recommendedDifficulty =
-        "hard";
-
-    } else if (
-      averageScore >= 60
-    ) {
-
-      recommendedDifficulty =
-        "medium";
-
-    } else {
-
       recommendedDifficulty =
         "easy";
+    } else if (
+      averageScore > 80
+    ) {
+      recommendedDifficulty =
+        "hard";
     }
 
-    return await
-      UserAnalyticsModel.findOneAndUpdate(
-        { userId },
+    await UserAnalyticsModel.findOneAndUpdate(
+      {
+        userId,
+      },
+      {
+        userId,
 
-        {
-          userId,
-          totalExams:
-            attempts.length,
+        totalExams,
 
-          averageScore,
+        averageScore,
 
-          strongTopics,
+        strongTopics,
 
-          weakTopics,
+        weakTopics,
 
-          recommendedDifficulty,
-        },
-
-        {
-          upsert: true,
-          returnDocument:
-            "after",
-        }
-      );
+        recommendedDifficulty,
+      },
+      {
+        upsert: true,
+        new: true,
+      }
+    );
   };

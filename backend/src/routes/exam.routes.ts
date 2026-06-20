@@ -14,9 +14,8 @@ import {
 from "../controllers/exam.controller";
 
 import {
-  submitExamController,
-  getAttempts,
-  getAttemptById,
+  submitExam,
+  getExamResult,
 }
 from "../controllers/exam-attempt.controller";
 
@@ -40,22 +39,18 @@ router.get(
   getExamById
 );
 
+
+
 router.post(
   "/submit",
   authenticate,
-  submitExamController
+  submitExam  
 );
 
 router.get(
   "/attempts",
   authenticate,
-  getAttempts
-);
-
-router.get(
-  "/attempt/:id",
-  authenticate,
-  getAttemptById
+  getExamResult
 );
 
 export default router;

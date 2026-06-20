@@ -1,90 +1,77 @@
 import { Response }
 from "express";
 
-import {
-  AuthRequest
-}
+import { AuthRequest }
 from "../middleware/auth.middleware";
 
 import {
-  asyncHandler
-}
-from "../utils/async-handler";
+  evaluateExam,
+} from "../services/evaluation.service";
 
 import {
-  submitExam
-}
-from "../services/exam-attempt.service";
+  ExamAttemptModel,
+} from "../models/exam-attempt.model";
 
-import {
-  ExamAttemptModel
-}
-from "../models/exam-attempt.model";
+export const submitExam =
+  async (
+    req: AuthRequest,
+    res: Response
+  ) => {
 
-export const submitExamController =
-  asyncHandler(
-    async (
-      req: AuthRequest,
-      res: Response
-    ) => {
+    const examId =
+      req.params.examId as string;
 
-      const attempt =
-        await submitExam({
+    const {
+      answers,
+    } = req.body;
+
+    const result =
+      await evaluateExam({
+        userId:
+          req.user!.userId,
+
+        examId,
+        answers,
+      });
+
+    res.status(200).json({
+      success: true,
+      ...result,
+    });
+  };
+
+export const getExamResult =
+  async (
+    req: AuthRequest,
+    res: Response
+  ) => {
+
+    const examId =
+      req.params.examId as string;
+
+    const result =
+      await ExamAttemptModel
+        .findOne({
+          examId,
           userId:
             req.user!.userId,
-
-          examId:
-            req.body.examId,
-
-          answers:
-            req.body.answers,
+        })
+        .sort({
+          createdAt: -1,
         });
 
-      res.status(201).json({
-        success: true,
-        attempt,
-      });
-    }
-  );
-
-export const getAttempts =
-  asyncHandler(
-    async (
-      req: AuthRequest,
-      res: Response
-    ) => {
-
-      const attempts =
-        await ExamAttemptModel.find({
-          userId:
-            req.user!.userId,
+    if (!result) {
+      return res
+        .status(404)
+        .json({
+          success: false,
+          message:
+            "Result not found",
         });
-
-      res.status(200).json({
-        success: true,
-        count:
-          attempts.length,
-        attempts,
-      });
     }
-  );
 
-export const getAttemptById =
-  asyncHandler(
-    async (
-      req: AuthRequest,
-      res: Response
-    ) => {
-
-      const attempt =
-        await ExamAttemptModel
-          .findById(
-            req.params.id
-          );
-
-      res.status(200).json({
-        success: true,
-        attempt,
-      });
-    }
-  );
+    res.status(200).json({
+      success: true,
+      result,
+    });
+  };

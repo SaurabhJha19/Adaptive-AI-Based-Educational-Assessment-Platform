@@ -20,6 +20,10 @@ export interface IQuestion
 
   topic: string;
 
+  averageRating?: number;
+
+  feedbackCount?: number;
+
   difficulty:
     | "easy"
     | "medium"
@@ -79,6 +83,16 @@ const questionSchema =
       topic: {
         type: String,
         required: true,
+      },
+
+      averageRating: {
+        type: Number,
+        default: 0,
+      },
+
+      feedbackCount: {
+        type: Number,
+        default: 0,
       },
 
       type: {

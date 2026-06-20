@@ -6,16 +6,23 @@ import {
 } from "../middleware/auth.middleware";
 
 import {
-  getAnalytics,
-} from "../controllers/analytics.controller";
+  submitExam,
+  getExamResult,
+} from "../controllers/exam-attempt.controller";
 
 const router =
   Router();
 
-router.get(
-  "/",
+router.post(
+  "/:examId/submit",
   authenticate,
-  getAnalytics
+  submitExam
+);
+
+router.get(
+  "/:examId/result",
+  authenticate,
+  getExamResult
 );
 
 export default router;

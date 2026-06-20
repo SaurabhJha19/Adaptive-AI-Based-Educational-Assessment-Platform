@@ -5,6 +5,7 @@ import { errorHandler } from "./middleware/error.middleware";
 import documentRoutes from "./routes/document.routes";
 import questionRoutes from "./routes/question.routes";
 import examRoutes from "./routes/exam.routes";
+import analyticsRoutes from "./routes/analytics.routes";
 
 const app = express();
 
@@ -22,6 +23,11 @@ app.use("/api/documents", documentRoutes);
 app.use(
   "/api/exams",
   examRoutes
+);
+
+app.use(
+  "/api/analytics",
+  analyticsRoutes
 );
 
 app.get("/health", (_, res) => {

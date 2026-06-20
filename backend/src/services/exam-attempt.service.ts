@@ -7,6 +7,11 @@ from "../models/question.model";
 import { ExamAttemptModel }
 from "../models/exam-attempt.model";
 
+import {
+  updateUserAnalytics
+}
+from "./analytics.service";
+
 export const submitExam =
   async ({
     userId,
@@ -87,6 +92,10 @@ export const submitExam =
         status:
           "completed",
       });
+
+      await updateUserAnalytics(
+        userId
+      );
 
     return attempt;
   };

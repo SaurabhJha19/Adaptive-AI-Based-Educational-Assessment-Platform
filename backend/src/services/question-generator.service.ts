@@ -1,61 +1,108 @@
-import { QuestionModel }
-from "../models/question.model";
+import {
+  QuestionModel,
+} from "../models/question.model";
+
+import {
+  retrieveRelevantChunks,
+} from "./retrieval.service";
+
+import {
+  buildContext,
+} from "./context-builder.service";
+
+import {
+  getQuestionProvider,
+} from "./question-provider-factory.service";
+
+import {
+  getExamSettings,
+} from "./adaptive-exam.service";
 
 export const generateQuestions =
   async ({
     userId,
     documentId,
-    chunks,
+    count = 5,
   }: {
     userId: string;
     documentId: string;
-    chunks: string[];
+    count?: number;
   }) => {
 
-    const questions = [];
+    const settings =
+      await getExamSettings(
+        userId
+      );
 
-    for (
-      let i = 0;
-      i < Math.min(chunks.length, 5);
-      i++
+    const adaptiveQuery =
+      settings.topics.join(
+        " "
+      );
+
+    const chunks =
+      await retrieveRelevantChunks(
+        userId,
+        adaptiveQuery,
+        count
+      );
+
+    if (
+      chunks.length === 0
     ) {
 
-      const question =
-        await QuestionModel.create({
-          userId,
-          documentId,
-
-          question:
-            `What is discussed in section ${
-              i + 1
-            }?`,
-
-          options: [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D",
-          ],
-
-          answer:
-            "Option A",
-
-          explanation:
-            "Mock question generated before OpenAI integration.",
-
-          difficulty:
-            "medium",
-
-          topic: "General",
-
-          type:
-            "mcq",
-        });
-
-      questions.push(
-        question
+      throw new Error(
+        "No chunks found"
       );
     }
+
+    const context =
+      buildContext(chunks);
+
+    const provider =
+      getQuestionProvider();
+
+    const generatedQuestions =
+      await provider.generateQuestions(
+        context,
+        settings.difficulty,
+        count
+      );
+
+    const questions =
+      await Promise.all(
+        generatedQuestions.map(
+          async (
+            generatedQuestion
+          ) => {
+
+            return QuestionModel.create({
+              userId,
+              documentId,
+
+              question:
+                generatedQuestion.question,
+
+              options:
+                generatedQuestion.options,
+
+              answer:
+                generatedQuestion.answer,
+
+              explanation:
+                "Generated via provider",
+
+              difficulty:
+                generatedQuestion.difficulty,
+
+              topic:
+                generatedQuestion.topic,
+
+              type:
+                "mcq",
+            });
+          }
+        )
+      );
 
     return questions;
   };

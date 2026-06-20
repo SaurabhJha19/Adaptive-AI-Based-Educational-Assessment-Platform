@@ -19,4 +19,8 @@ export const env = {
   EMBEDDING_MODEL:
     process.env.EMBEDDING_MODEL ||
     "text-embedding-3-small",
+
+  QUESTION_MODEL:
+    process.env.QUESTION_MODEL ||
+    "GPT_PENDING_KEY",
 };

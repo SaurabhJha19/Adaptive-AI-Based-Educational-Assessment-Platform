@@ -12,13 +12,37 @@ export const retrieveRelevantChunks =
   async (
     userId: string,
     query: string,
-    limit = 5
+    limit = 5,
+    documentIds?: string[]
   ) => {
 
     const queryEmbedding =
       await generateEmbedding(
         query
       );
+
+    const filter: any = {
+      userId:
+        new mongoose.Types.ObjectId(
+          userId
+        ),
+    };
+
+    if (
+      documentIds &&
+      documentIds.length > 0
+    ) {
+
+      filter.documentId = {
+        $in:
+          documentIds.map(
+            (id) =>
+              new mongoose.Types.ObjectId(
+                id
+              )
+          ),
+      };
+    }
 
     const results =
       await DocumentChunkModel.aggregate([
@@ -38,11 +62,7 @@ export const retrieveRelevantChunks =
 
             limit,
 
-            filter: {
-              userId: new mongoose.Types.ObjectId(
-                userId
-              ),
-            },
+            filter,
           },
         },
       ]);

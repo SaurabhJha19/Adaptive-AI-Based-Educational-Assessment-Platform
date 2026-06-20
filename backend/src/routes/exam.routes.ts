@@ -19,6 +19,10 @@ import {
 }
 from "../controllers/exam-attempt.controller";
 
+import {
+  generateKnowledgeBaseExamController,
+} from "../controllers/exam.controller";
+
 const router = Router();
 
 router.post(
@@ -51,6 +55,12 @@ router.get(
   "/attempts",
   authenticate,
   getExamResult
+);
+
+router.post(
+  "/knowledge-base",
+  authenticate,
+  generateKnowledgeBaseExamController
 );
 
 export default router;

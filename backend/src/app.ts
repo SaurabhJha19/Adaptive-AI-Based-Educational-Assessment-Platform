@@ -8,14 +8,14 @@ import examRoutes from "./routes/exam.routes";
 import analyticsRoutes from "./routes/analytics.routes";
 import feedbackRoutes from "./routes/feedback.routes";
 import examAttemptRoutes from "./routes/exam-attempt.routes";
-
+import recommendationRoutes from "./routes/recommendation.routes";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
-
+app.use("/api/recommendations", recommendationRoutes);
 app.use(
   "/api/questions",
   questionRoutes

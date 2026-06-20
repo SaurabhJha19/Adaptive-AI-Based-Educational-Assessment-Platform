@@ -10,6 +10,10 @@ import {
   QuestionModel,
 } from "../models/question.model";
 
+import {
+  generateRecommendations,
+} from "./recommendation.service";
+
 export const updateUserAnalytics =
   async (
     userId: string
@@ -158,5 +162,10 @@ export const updateUserAnalytics =
         upsert: true,
         new: true,
       }
+          );
+
+    await generateRecommendations(
+      userId
     );
+
   };

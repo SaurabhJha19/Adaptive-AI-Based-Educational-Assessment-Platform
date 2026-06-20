@@ -21,6 +21,10 @@ import {
 }
 from "../models/exam.model";
 
+import {
+  generateKnowledgeBaseExam,
+} from "../services/knowledge-base-exam.service";
+
 export const createExamController =
   asyncHandler(
     async (
@@ -88,6 +92,37 @@ export const getUserExams =
         count:
           exams.length,
         exams,
+      });
+    }
+  );
+
+export const generateKnowledgeBaseExamController =
+  asyncHandler(
+    async (
+      req: AuthRequest,
+      res: Response
+    ) => {
+
+      const {
+        documentIds,
+        count = 10,
+      } = req.body;
+
+      const questions =
+        await generateKnowledgeBaseExam({
+          userId:
+            req.user!.userId,
+
+          documentIds,
+
+          count,
+        });
+
+      res.status(200).json({
+        success: true,
+        count:
+          questions.length,
+        questions,
       });
     }
   );

@@ -22,5 +22,9 @@ export const env = {
 
   QUESTION_MODEL:
     process.env.QUESTION_MODEL ||
-    "GPT_PENDING_KEY",
+    "gpt-4.1-mini",
+
+  EXPLAINER_MODEL:
+    process.env.EXPLAINER_MODEL ||
+    "gpt-4.1-mini",
 };

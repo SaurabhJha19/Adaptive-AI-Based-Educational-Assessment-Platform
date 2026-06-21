@@ -15,8 +15,9 @@ export const getQuestionProvider =
   () => {
 
     if (
-      env.QUESTION_MODEL ===
-      "GPT_PENDING_KEY"
+      !env.OPENAI_API_KEY ||
+      env.OPENAI_API_KEY ===
+        "API_PENDING_KEY"
     ) {
 
       return new MockQuestionProvider();

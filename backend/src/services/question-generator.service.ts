@@ -18,6 +18,10 @@ import {
   getExamSettings,
 } from "./adaptive-exam.service";
 
+import {
+  selectDiverseChunks,
+} from "./chunk-selection.service";
+
 export const generateQuestions =
   async ({
     userId,
@@ -35,15 +39,15 @@ export const generateQuestions =
       );
 
     const adaptiveQuery =
-      settings.topics.join(
-        " "
-      );
+      settings.topics.length > 0
+        ? settings.topics.join(" ")
+        : documentId;
 
     const chunks =
       await retrieveRelevantChunks(
         userId,
         adaptiveQuery,
-        count
+        20
       );
 
     if (
@@ -55,8 +59,16 @@ export const generateQuestions =
       );
     }
 
+    const selectedChunks =
+      selectDiverseChunks(
+        chunks,
+        8
+      );
+
     const context =
-      buildContext(chunks);
+      buildContext(
+        selectedChunks
+      );
 
     const provider =
       getQuestionProvider();

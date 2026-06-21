@@ -12,7 +12,7 @@ export const retrieveRelevantChunks =
   async (
     userId: string,
     query: string,
-    limit = 5,
+    limit = 20,
     documentIds?: string[]
   ) => {
 

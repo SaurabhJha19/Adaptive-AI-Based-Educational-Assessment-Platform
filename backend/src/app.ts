@@ -9,6 +9,8 @@ import analyticsRoutes from "./routes/analytics.routes";
 import feedbackRoutes from "./routes/feedback.routes";
 import examAttemptRoutes from "./routes/exam-attempt.routes";
 import recommendationRoutes from "./routes/recommendation.routes";
+import explainerRoutes from "./routes/explainer.routes";
+import topicPerformanceRoutes from "./routes/topic-performance.routes";
 
 const app = express();
 
@@ -16,40 +18,20 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/recommendations", recommendationRoutes);
-app.use(
-  "/api/questions",
-  questionRoutes
-);
-
+app.use("/api/questions", questionRoutes);
+app.use("/api/explainer", explainerRoutes);
 app.use("/api/documents", documentRoutes);
-
-app.use(
-  "/api/exams",
-  examRoutes
-);
-
-app.use(
-  "/api/exams",
-  examAttemptRoutes
-);
-
-app.use(
-  "/api/feedback",
-  feedbackRoutes
-);
-
-app.use(
-  "/api/analytics",
-  analyticsRoutes
-);
-
+app.use("/api/exams", examRoutes);
+app.use("/api/exams", examAttemptRoutes);
+app.use("/api/feedback", feedbackRoutes);
+app.use("/api/analytics", analyticsRoutes);
+app.use("/api/topic-performance", topicPerformanceRoutes);
 app.get("/health", (_, res) => {
   res.status(200).json({
     success: true,
     message: "Server Running",
   });
 });
-
 app.use(errorHandler);
 
 export default app;

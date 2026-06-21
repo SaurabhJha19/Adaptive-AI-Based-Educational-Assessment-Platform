@@ -6,6 +6,10 @@ import {
   QuestionModel,
 } from "../models/question.model";
 
+import {
+  updateTopicPerformance,
+} from "./global-learning.service";
+
 export const submitFeedback =
   async ({
     userId,
@@ -30,6 +34,11 @@ export const submitFeedback =
       await FeedbackModel.find({
         questionId,
       });
+
+    await updateTopicPerformance(
+      questionId,
+      rating
+    );
 
     const average =
       feedbacks.reduce(

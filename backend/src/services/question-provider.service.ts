@@ -1,6 +1,9 @@
 export interface GeneratedQuestion {
+
   question: string;
+
   options: string[];
+
   answer: string;
 
   difficulty:

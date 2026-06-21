@@ -16,7 +16,9 @@ export interface IQuestion
 
   answer: string;
 
-  explanation: string;
+  explanation?: string;
+
+  sourceChunkIds?: string[];
 
   topic: string;
 
@@ -68,6 +70,12 @@ const questionSchema =
 
       explanation: {
         type: String,
+        default: "",
+      },
+
+      sourceChunkIds: {
+        type: [String],
+        default: [],
       },
 
       difficulty: {

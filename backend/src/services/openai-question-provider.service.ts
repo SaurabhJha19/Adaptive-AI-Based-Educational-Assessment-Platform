@@ -9,6 +9,10 @@ import {
 }
 from "./question-provider.service";
 
+import {
+  withRetry,
+} from "../utils/openai-retry.util";
+
 const openai =
   new OpenAI({
     apiKey:
@@ -69,7 +73,9 @@ JSON Format:
     ],
     "answer": "...",
     "difficulty": "${difficulty}",
-    "topic": "..."
+    "topic": "...",
+    "explanation": "...",
+    "sourceChunkIds": ["...", "..."]
   }
 ]
 
@@ -78,29 +84,32 @@ Context:
 ${context}
 
 Generate questions that cover as many different topics from the context as possible.
-
+For every question provide a short explanation describing why the answer is correct.
 Do not create multiple questions testing the same idea.
 `;
 
     const response =
-      await openai.chat.completions.create({
-        model:
-          env.QUESTION_MODEL,
+      await withRetry(
+        () =>
+          openai.chat.completions.create({
+            model:
+              env.QUESTION_MODEL,
 
-        temperature: 0.7,
+            temperature: 0.7,
 
-        messages: [
-          {
-            role: "system",
-            content:
-              "You generate educational MCQ questions in JSON only.",
-          },
-          {
-            role: "user",
-            content: prompt,
-          },
-        ],
-      });
+            messages: [
+              {
+                role: "system",
+                content:
+                  "You generate educational MCQ questions in JSON only.",
+              },
+              {
+                role: "user",
+                content: prompt,
+              },
+            ],
+          })
+      )
 
     const content =
       response.choices[0]

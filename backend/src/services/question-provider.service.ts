@@ -12,6 +12,10 @@ export interface GeneratedQuestion {
     | "hard";
 
   topic: string;
+
+  explanation: string;
+
+  sourceChunkIds: string[];
 }
 
 export interface QuestionProvider {

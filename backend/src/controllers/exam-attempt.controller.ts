@@ -1,77 +1,120 @@
-import { Response }
-from "express";
+import { Response } from "express";
 
-import { AuthRequest }
-from "../middleware/auth.middleware";
+import { AuthRequest } from "../middleware/auth.middleware";
 
-import {
-  evaluateExam,
-} from "../services/evaluation.service";
+import { evaluateExam } from "../services/evaluation.service";
 
-import {
-  ExamAttemptModel,
-} from "../models/exam-attempt.model";
+import { ExamAttemptModel } from "../models/exam-attempt.model";
 
-export const submitExam =
-  async (
-    req: AuthRequest,
-    res: Response
-  ) => {
+import { QuestionModel } from "../models/question.model";
 
-    const examId =
-      req.params.examId as string;
+export const submitExam = async (
+  req: AuthRequest,
+  res: Response
+) => {
 
-    const {
+  const examId = req.params.examId as string;
+
+  const { answers } = req.body;
+
+  const result =
+    await evaluateExam({
+      userId: req.user!.userId,
+      examId,
       answers,
-    } = req.body;
+    });
 
-    const result =
-      await evaluateExam({
-        userId:
-          req.user!.userId,
+  res.status(200).json({
+    success: true,
+    ...result,
+  });
+};
 
+export const getExamResult = async (
+  req: AuthRequest,
+  res: Response
+) => {
+
+  const { examId } = req.params;
+
+  const attempt =
+    await ExamAttemptModel
+      .findOne({
         examId,
-        answers,
+        userId: req.user!.userId,
+      })
+      .sort({
+        createdAt: -1,
       });
 
-    res.status(200).json({
-      success: true,
-      ...result,
+  if (!attempt) {
+    return res.status(404).json({
+      success: false,
+      message: "Result not found",
     });
-  };
+  }
 
-export const getExamResult =
-  async (
-    req: AuthRequest,
-    res: Response
-  ) => {
+  const answers =
+    await Promise.all(
 
-    const examId =
-      req.params.examId as string;
+      attempt.answers.map(
+        async (answer) => {
 
-    const result =
-      await ExamAttemptModel
-        .findOne({
-          examId,
-          userId:
-            req.user!.userId,
-        })
-        .sort({
-          createdAt: -1,
-        });
+          const question =
+            await QuestionModel.findById(
+              answer.questionId
+            );
 
-    if (!result) {
-      return res
-        .status(404)
-        .json({
-          success: false,
-          message:
-            "Result not found",
-        });
-    }
+          return {
 
-    res.status(200).json({
-      success: true,
-      result,
-    });
-  };
+            question: {
+
+              _id: question?._id,
+
+              question:
+                question?.question,
+
+              options:
+                question?.options,
+
+              correctAnswer:
+                question?.answer,
+
+              explanation:
+                question?.explanation,
+
+            },
+
+            selectedAnswer:
+              answer.selectedAnswer,
+
+            isCorrect:
+              answer.isCorrect,
+
+          };
+        }
+      )
+    );
+
+  res.status(200).json({
+
+    success: true,
+
+    result: {
+
+      _id: attempt._id,
+
+      score: attempt.score,
+
+      percentage:
+        attempt.percentage,
+
+      submittedAt:
+        attempt.submittedAt,
+
+      answers,
+
+    },
+
+  });
+};

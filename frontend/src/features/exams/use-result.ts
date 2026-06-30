@@ -14,6 +14,7 @@ export const useResult =
   ) => {
 
     return useQuery({
+
       queryKey: [
         "result",
         examId,
@@ -26,5 +27,6 @@ export const useResult =
 
       enabled:
         !!examId,
+
     });
   };

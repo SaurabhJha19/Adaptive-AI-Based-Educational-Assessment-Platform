@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import {
   useParams,
-  useRouter,
 } from "next/navigation";
 
 import {
@@ -19,9 +18,6 @@ export default function ExamDetailPage() {
 
   const params =
     useParams();
-
-  const router =
-    useRouter();
 
   const examId =
     params.id as string;
@@ -68,8 +64,13 @@ export default function ExamDetailPage() {
               formattedAnswers,
           });
 
-        router.push(
-          `/results/${examId}`
+        alert(
+          `Score: ${result.score}/${result.totalQuestions}
+Percentage: ${result.percentage}%`
+        );
+
+        console.log(
+          result
         );
 
       } catch (
@@ -89,7 +90,7 @@ export default function ExamDetailPage() {
   if (isLoading) {
 
     return (
-      <div className="p-6">
+      <div>
         Loading Exam...
       </div>
     );
@@ -101,14 +102,14 @@ export default function ExamDetailPage() {
   if (!exam) {
 
     return (
-      <div className="p-6">
+      <div>
         Exam not found
       </div>
     );
   }
 
   return (
-    <div className="max-w-4xl">
+    <div>
 
       <h1
         className="
@@ -120,96 +121,87 @@ export default function ExamDetailPage() {
         {exam.title}
       </h1>
 
-      <div className="space-y-6">
+      {exam.questions?.map(
+        (
+          question: any,
+          index: number
+        ) => (
 
-        {exam.questions?.map(
-          (
-            question: any,
-            index: number
-          ) => (
+          <div
+            key={
+              question._id
+            }
+            className="
+            border
+            rounded-lg
+            p-4
+            mb-4
+            "
+          >
 
-            <div
-              key={
-                question._id
-              }
+            <h2
               className="
-              border
-              rounded-lg
-              p-5
+              font-semibold
+              mb-3
               "
             >
+              Q{index + 1}.{" "}
+              {question.question}
+            </h2>
 
-              <h2
-                className="
-                font-semibold
-                text-lg
-                mb-4
-                "
-              >
-                Q{index + 1}.{" "}
-                {question.question}
-              </h2>
+            {question.options?.map(
+              (
+                option: string
+              ) => (
 
-              <div className="space-y-2">
+                <label
+                  key={
+                    option
+                  }
+                  className="
+                  flex
+                  items-center
+                  gap-2
+                  py-1
+                  cursor-pointer
+                  "
+                >
 
-                {question.options?.map(
-                  (
-                    option: string
-                  ) => (
+                  <input
+                    type="radio"
+                    name={
+                      question._id
+                    }
+                    value={
+                      option
+                    }
+                    checked={
+                      answers[
+                        question._id
+                      ] === option
+                    }
+                    onChange={() =>
+                      setAnswers(
+                        (
+                          prev
+                        ) => ({
+                          ...prev,
+                          [question._id]:
+                            option,
+                        })
+                      )
+                    }
+                  />
 
-                    <label
-                      key={
-                        option
-                      }
-                      className="
-                      flex
-                      items-center
-                      gap-3
-                      cursor-pointer
-                      "
-                    >
+                  {option}
 
-                      <input
-                        type="radio"
-                        name={
-                          question._id
-                        }
-                        value={
-                          option
-                        }
-                        checked={
-                          answers[
-                            question._id
-                          ] === option
-                        }
-                        onChange={() =>
-                          setAnswers(
-                            (
-                              prev
-                            ) => ({
-                              ...prev,
-                              [question._id]:
-                                option,
-                            })
-                          )
-                        }
-                      />
+                </label>
+              )
+            )}
 
-                      <span>
-                        {option}
-                      </span>
-
-                    </label>
-                  )
-                )}
-
-              </div>
-
-            </div>
-          )
-        )}
-
-      </div>
+          </div>
+        )
+      )}
 
       <button
         onClick={
@@ -219,12 +211,11 @@ export default function ExamDetailPage() {
           submitMutation.isPending
         }
         className="
-        mt-8
         border
-        rounded-lg
-        px-6
-        py-3
-        font-medium
+        px-4
+        py-2
+        rounded
+        mt-6
         "
       >
         {

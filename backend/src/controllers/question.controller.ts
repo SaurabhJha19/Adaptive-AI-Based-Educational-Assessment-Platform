@@ -10,11 +10,6 @@ import { asyncHandler }
 from "../utils/async-handler";
 
 import {
-  DocumentChunkModel
-}
-from "../models/document-chunk.model";
-
-import {
   generateQuestions
 }
 from "../services/question-generator.service";
@@ -29,12 +24,6 @@ export const createQuestions =
         documentId
       } = req.body;
 
-      const chunks =
-        await DocumentChunkModel.find({
-          documentId,
-          userId:
-            req.user?.userId,
-        });
 
       const questions =
         await generateQuestions({
@@ -43,10 +32,7 @@ export const createQuestions =
 
           documentId,
 
-          chunks:
-            chunks.map(
-              c => c.content
-            ),
+ 
         });
 
       res.status(201).json({

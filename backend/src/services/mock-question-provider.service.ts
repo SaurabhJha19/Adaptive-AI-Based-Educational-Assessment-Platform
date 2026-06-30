@@ -53,24 +53,18 @@ export class MockQuestionProvider
     return Array.from(
       { length: count },
       (_, index) => ({
-        question:
-          `Mock Question ${
-            index + 1
-          }`,
-
-        options: [
-          "Option A",
-          "Option B",
-          "Option C",
-          "Option D",
-        ],
-
-        answer:
-          "Option A",
-
-        difficulty,
-
-        topic,
+            question: `Mock Question ${index + 1}`,
+            options: [
+              "Option A",
+              "Option B",
+              "Option C",
+              "Option D",
+            ],
+            answer: "Option A",
+            difficulty,
+            topic,
+            explanation: "Mock explanation",
+            sourceChunkIds: [],
       })
     );
   }

@@ -20,9 +20,13 @@ export interface IExamAttempt
 
   score: number;
 
+  totalQuestions: number;
+
   percentage: number;
 
   startedAt: Date;
+
+  status : string;
 
   submittedAt: Date;
 }
@@ -71,6 +75,11 @@ const examAttemptSchema =
       ],
 
       score: {
+        type: Number,
+        required: true,
+      },
+
+      totalQuestions: {
         type: Number,
         required: true,
       },

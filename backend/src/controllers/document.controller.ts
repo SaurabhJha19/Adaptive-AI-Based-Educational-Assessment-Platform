@@ -94,7 +94,7 @@ export const deleteDocument =
       res: Response
     ) => {
 
-      const { id } = req.params;
+      const id = String(req.params.id);
 
       const document =
         await getDocumentById(
@@ -140,8 +140,9 @@ export const getChunks =
       res: Response
     ) => {
 
-      const { id } =
-        req.params;
+      const id = Array.isArray(req.params.id)
+        ? req.params.id[0]
+        : req.params.id;
 
       const chunks =
         await getDocumentChunks(
@@ -160,7 +161,10 @@ export const getChunks =
 
 export const searchDocuments =
   asyncHandler(
-    async (req, res) => {
+    async (
+      req: AuthRequest,
+      res: Response
+    ) => {
 
       const data =
         searchSchema.parse(

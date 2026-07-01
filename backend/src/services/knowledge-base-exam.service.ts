@@ -13,13 +13,20 @@ export const generateKnowledgeBaseExam =
     count?: number;
   }) => {
 
-    return generateQuestions({
-      userId,
+return generateQuestions({
 
-      documentId:
-        documentIds?.[0] ||
-        "knowledge-base",
+  userId,
 
-      count,
-    });
+  documentId:
+    documentIds?.[0] ??
+    "knowledge-base",
+
+  examId: "knowledge-base",
+
+  count,
+
+  difficultyOverride: undefined,
+
+});
+
   };

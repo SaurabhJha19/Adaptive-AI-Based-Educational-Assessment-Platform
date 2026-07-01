@@ -18,7 +18,7 @@ export const processDocument =
   async (
     documentId: string,
     userId: string,
-    filePath: string
+    s3Key: string
   ) => {
 
     try {
@@ -30,7 +30,7 @@ export const processDocument =
 
       const text =
         await extractTextFromPdf(
-          filePath
+          s3Key
         );
 
       const chunks =

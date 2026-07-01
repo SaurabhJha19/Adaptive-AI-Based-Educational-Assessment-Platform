@@ -1,45 +1,54 @@
-import { Response }
-from "express";
+import { Response } from "express";
 
 import {
   AuthRequest,
-}
-from "../middleware/auth.middleware";
+} from "../middleware/auth.middleware";
 
-import { asyncHandler }
-from "../utils/async-handler";
+import { asyncHandler } from "../utils/async-handler";
 
 import {
-  generateQuestions
-}
-from "../services/question-generator.service";
+  generateQuestions,
+} from "../services/question-generator.service";
 
 export const createQuestions =
   asyncHandler(
     async (
-        req: AuthRequest,  res: Response
+      req: AuthRequest,
+      res: Response
     ) => {
 
-      const {
-        documentId
-      } = req.body;
+const {
+  documentId,
+  examId,
+  count = 10,
+  difficulty,
+} = req.body;
 
+const questions =
+  await generateQuestions({
 
-      const questions =
-        await generateQuestions({
-          userId:
-            req.user!.userId,
+    userId: req.user!.userId,
 
-          documentId,
+    documentId,
 
- 
-        });
+    examId,
+
+    count,
+
+    difficultyOverride: difficulty,
+
+  });
 
       res.status(201).json({
+
         success: true,
+
         count:
           questions.length,
+
         questions,
+
       });
+
     }
   );

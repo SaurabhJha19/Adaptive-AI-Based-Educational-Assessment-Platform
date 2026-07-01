@@ -26,8 +26,6 @@ export const createDocument =
       fileName:
         data.fileName,
 
-      filePath: "",
-
       fileSize:
         data.fileSize,
 

@@ -13,9 +13,10 @@ export const submitExam = async (
   res: Response
 ) => {
 
-  const examId = req.params.examId as string;
-
-  const { answers } = req.body;
+  const {
+    examId,
+    answers,
+  } = req.body;
 
   const result =
     await evaluateExam({
@@ -28,6 +29,7 @@ export const submitExam = async (
     success: true,
     ...result,
   });
+
 };
 
 export const getExamResult = async (

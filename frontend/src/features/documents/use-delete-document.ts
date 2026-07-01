@@ -6,10 +6,10 @@ import {
 } from "@tanstack/react-query";
 
 import {
-  uploadDocument,
+  deleteDocument,
 } from "./document.service";
 
-export const useUploadDocument =
+export const useDeleteDocument =
   () => {
 
     const queryClient =
@@ -18,20 +18,7 @@ export const useUploadDocument =
     return useMutation({
 
       mutationFn:
-        ({
-          file,
-          onUploadProgress,
-        }: {
-          file: File;
-
-          onUploadProgress?: (
-            progress: number
-          ) => void;
-        }) =>
-          uploadDocument(
-            file,
-            onUploadProgress
-          ),
+        deleteDocument,
 
       onSuccess: () => {
 

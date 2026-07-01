@@ -1,9 +1,23 @@
 import { api }
 from "@/services/api";
 
+export const getDocuments =
+  async () => {
+
+    const response =
+      await api.get(
+        "/documents"
+      );
+
+    return response.data;
+  };
+
 export const uploadDocument =
   async (
-    file: File
+    file: File,
+    onUploadProgress?: (
+      progress: number
+    ) => void
   ) => {
 
     const formData =
@@ -23,18 +37,64 @@ export const uploadDocument =
             "Content-Type":
               "multipart/form-data",
           },
+
+          onUploadProgress:
+            (event) => {
+
+              if (
+                event.total &&
+                onUploadProgress
+              ) {
+
+                onUploadProgress(
+                  Math.round(
+                    event.loaded *
+                      100 /
+                      event.total
+                  )
+                );
+              }
+            },
         }
       );
 
     return response.data;
   };
 
-export const getDocuments =
-  async () => {
+export const deleteDocument =
+  async (
+    id: string
+  ) => {
+
+    const response =
+      await api.delete(
+        `/documents/${id}`
+      );
+
+    return response.data;
+  };
+
+export const getDocument =
+  async (
+    id: string
+  ) => {
 
     const response =
       await api.get(
-        "/documents"
+        `/documents/${id}`
+      );
+
+    return response.data;
+  };
+
+export const getChunks =
+  async (
+    id: string
+  ) => {
+
+    const response =
+      await api.get(
+        `/documents/${id}/chunks`
       );
 
     return response.data;

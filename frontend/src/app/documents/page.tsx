@@ -1,207 +1,108 @@
 "use client";
 
-import {
-  Document,
-} from "@/types/document";
+import { useState } from "react";
 
-import {
-  useDocuments,
-} from "@/features/documents/use-documents";
+import UploadButton from "@/features/documents/components/upload-button";
+import DocumentGrid from "@/features/documents/components/document-grid";
 
-import {
-  useUploadDocument,
-} from "@/features/documents/use-upload-document";
-
-import {
-  useGenerateExam,
-} from "@/features/exams/use-generate-exam";
+import { useDocuments } from "@/features/documents/use-documents";
+import { useUploadDocument } from "@/features/documents/use-upload-document";
+import { useDeleteDocument } from "@/features/documents/use-delete-document";
 
 export default function DocumentsPage() {
 
   const {
     data,
     isLoading,
-    refetch,
   } = useDocuments();
 
-  const uploadMutation =
+  const upload =
     useUploadDocument();
 
-  const generateExam =
-    useGenerateExam();
+  const remove =
+    useDeleteDocument();
 
-  const handleUpload =
-    async (
-      event:
-        React.ChangeEvent<HTMLInputElement>
-    ) => {
+  const [
+    progress,
+    setProgress,
+  ] = useState(0);
 
-      const file =
-        event.target.files?.[0];
+  if (isLoading) {
 
-      if (!file) {
-        return;
-      }
-
-      try {
-
-        await uploadMutation.mutateAsync(
-          file
-        );
-
-        await refetch();
-
-      } catch (
-        error
-      ) {
-
-        console.error(
-          error
-        );
-      }
-    };
-
-  const handleGenerateExam =
-    async (
-      documentId: string
-    ) => {
-
-      try {
-
-        await generateExam.mutateAsync(
-          documentId
-        );
-
-        alert(
-          "Exam generated successfully!"
-        );
-
-      } catch (
-        error
-      ) {
-
-        console.error(
-          error
-        );
-
-        alert(
-          "Failed to generate exam."
-        );
-      }
-    };
+    return (
+      <div>
+        Loading documents...
+      </div>
+    );
+  }
 
   return (
-    <div>
 
-      <h1
-        className="
-        text-3xl
-        font-bold
-        mb-6
-        "
-      >
-        Documents
-      </h1>
+    <div className="space-y-6">
 
-      <input
-        type="file"
-        accept=".pdf"
-        onChange={
-          handleUpload
-        }
-      />
+      <div className="flex items-center justify-between">
 
-      {uploadMutation.isPending && (
-        <p className="mt-4">
-          Uploading...
-        </p>
-      )}
+        <div>
 
-      <div className="mt-6">
+          <h1 className="text-3xl font-bold">
+            Documents
+          </h1>
 
-        {isLoading && (
-          <p>
-            Loading documents...
+          <p className="text-muted-foreground">
+            Manage your uploaded study material.
           </p>
-        )}
 
-        {!isLoading &&
-          data?.documents?.length === 0 && (
-            <p>
-              No documents uploaded yet.
-            </p>
-          )}
+        </div>
 
-        {data?.documents?.map(
-          (
-            document: Document
-          ) => (
-
-            <div
-              key={
-                document._id
-              }
-              className="
-              border
-              rounded-lg
-              p-4
-              mb-4
-              "
-            >
-
-              <h2
-                className="
-                font-semibold
-                "
-              >
-                {
-                  document.originalName
-                }
-              </h2>
-
-              <p
-                className="
-                text-sm
-                text-gray-500
-                "
-              >
-                Status:
-                {" "}
-                {
-                  document.status
-                }
-              </p>
-
-              <button
-                onClick={() =>
-                  handleGenerateExam(
-                    document._id
-                  )
-                }
-                disabled={
-                  generateExam.isPending
-                }
-                className="
-                mt-3
-                border
-                rounded
-                px-3
-                py-1
-                "
-              >
-                {
-                  generateExam.isPending
-                    ? "Generating..."
-                    : "Generate Exam"
-                }
-              </button>
-
-            </div>
-          )
-        )}
+        <UploadButton
+          onSelect={(file) =>
+            upload.mutate({
+              file,
+              onUploadProgress:
+                setProgress,
+            })
+          }
+        />
 
       </div>
 
+      {upload.isPending && (
+
+        <div className="rounded-lg border p-4">
+
+          <p>
+            Uploading...
+          </p>
+
+          <div className="mt-2 h-2 rounded bg-muted">
+
+            <div
+              className="h-2 rounded bg-primary transition-all"
+              style={{
+                width: `${progress}%`,
+              }}
+            />
+
+          </div>
+
+          <p className="mt-2 text-sm">
+            {progress}%
+          </p>
+
+        </div>
+
+      )}
+
+      <DocumentGrid
+        documents={
+          data?.documents ?? []
+        }
+        onDelete={(id) =>
+          remove.mutate(id)
+        }
+      />
+
     </div>
+
   );
 }

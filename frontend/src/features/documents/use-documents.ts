@@ -11,11 +11,24 @@ import {
 export const useDocuments =
   () => {
 
-    return useQuery({
-      queryKey:
-        ["documents"],
+        return useQuery({
+        queryKey: ["documents"],
+        queryFn: getDocuments,
 
-      queryFn:
-        getDocuments,
-    });
+        refetchInterval: (query) => {
+            const docs =
+            query.state.data?.documents;
+
+            const processing =
+            docs?.some(
+                (doc: any) =>
+                doc.status ===
+                "processing"
+            );
+
+            return processing
+            ? 3000
+            : false;
+        },
+        });
   };

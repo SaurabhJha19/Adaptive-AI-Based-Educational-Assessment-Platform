@@ -4,6 +4,10 @@ export interface Document {
 
   originalName: string;
 
+  fileSize: number;
+
+  mimeType: string;
+
   status:
     | "uploaded"
     | "processing"

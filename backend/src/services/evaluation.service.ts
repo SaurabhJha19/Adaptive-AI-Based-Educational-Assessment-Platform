@@ -141,6 +141,7 @@ export const evaluateExam =
         percentage,
         submittedAt:
           new Date(),
+        totalQuestions: exam.questions.length,
       });
 
   await updateUserAnalytics(

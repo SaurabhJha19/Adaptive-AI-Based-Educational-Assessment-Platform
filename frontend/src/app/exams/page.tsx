@@ -3,8 +3,8 @@
 import Link from "next/link";
 
 import {
-  useExams,
-} from "@/features/exams/use-exams";
+  useExam,
+} from "@/features/exams/use-exam";
 
 import {
   Exam,
@@ -15,7 +15,7 @@ export default function ExamsPage() {
   const {
     data,
     isLoading,
-  } = useExams();
+  } = useExam(params.id as string);
 
   return (
     <div>

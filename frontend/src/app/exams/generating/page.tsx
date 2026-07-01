@@ -1,87 +1,25 @@
-"use client";
+import { Suspense } from "react";
 
-import { useEffect, useRef } from "react";
-import {
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import GeneratingContent from "./generating-content";
 
-import ExamLoading from "@/features/exams/components/exam-loading";
-import { useGenerateExam } from "@/features/exams/use-generate-exam";
-import { ExamDifficulty } from "@/features/exams/types";
+export default function GeneratingPage() {
 
-export default function GeneratingExamPage() {
+  return (
 
-  const router = useRouter();
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center">
 
-  const params = useSearchParams();
+          Loading...
 
-  const mutation = useGenerateExam();
-
-  // Prevent duplicate generation in React Strict Mode
-  const started = useRef(false);
-
-  useEffect(() => {
-
-    if (started.current) {
-      return;
-    }
-
-    started.current = true;
-
-    const documentId = params.get("documentId");
-    const title = params.get("title");
-
-    const questionCount =
-      Number(params.get("questionCount")) || 10;
-
-    const difficulty =
-      (params.get("difficulty") ??
-        "adaptive") as ExamDifficulty;
-
-    if (!documentId || !title) {
-
-      router.replace("/documents");
-
-      return;
-
-    }
-
-    const generate = async () => {
-
-      try {
-
-        const exam =
-          await mutation.mutateAsync({
-
-            documentId,
-
-            title,
-
-            questionCount,
-
-            difficulty,
-
-          });
-
-        router.replace(
-          `/exams/${exam._id}`
-        );
-
-      } catch (error) {
-
-        console.error(error);
-
-        router.replace("/documents");
-
+        </div>
       }
+    >
 
-    };
+      <GeneratingContent />
 
-    generate();
+    </Suspense>
 
-  }, [mutation, params, router]);
-
-  return <ExamLoading />;
+  );
 
 }

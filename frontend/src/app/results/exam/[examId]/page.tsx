@@ -1,249 +1,140 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
-import {
-  useResult,
-} from "@/features/exams/use-result";
+import { Button } from "@/components/ui/button";
 
-export default function ResultsPage() {
+import ResultsSummary from "@/features/exams/components/results-summary";
+import QuestionReviewCard from "@/features/exams/components/question-review-card";
+
+import { useExamResult } from "@/features/exams/use-exam-result";
+import { useExamResultQuery } from "@/features/exams/use-exam-result-query";
+
+export default function ExamResultsPage() {
 
   const params =
     useParams();
 
+  const router =
+    useRouter();
+
   const examId =
     params.examId as string;
+
+  const cached =
+    useExamResult(examId);
 
   const {
     data,
     isLoading,
-    isError,
-  } = useResult(
-    examId
-  );
-
-  if (isLoading) {
-
-    return (
-      <div className="max-w-4xl p-6">
-        <h1 className="text-3xl font-bold">
-          Loading Results...
-        </h1>
-      </div>
-    );
-  }
-
-  if (isError) {
-
-    return (
-      <div className="max-w-4xl p-6">
-
-        <h1
-          className="
-          text-3xl
-          font-bold
-          mb-4
-          "
-        >
-          Exam Results
-        </h1>
-
-        <div
-          className="
-          border
-          rounded-lg
-          p-6
-          "
-        >
-          Failed to load exam results.
-        </div>
-
-      </div>
-    );
-  }
+  } =
+    useExamResultQuery(examId);
 
   const result =
-    data?.result;
+    cached ?? data;
+
+  if (isLoading && !result) {
+
+    return (
+
+      <div className="flex min-h-screen items-center justify-center">
+
+        Loading Results...
+
+      </div>
+
+    );
+
+  }
 
   if (!result) {
 
     return (
-      <div className="max-w-4xl p-6">
 
-        <h1
-          className="
-          text-3xl
-          font-bold
-          mb-4
-          "
-        >
-          Exam Results
-        </h1>
+      <div className="flex min-h-screen items-center justify-center">
 
-        <div
-          className="
-          border
-          rounded-lg
-          p-6
-          "
-        >
-          No result found.
+        <div className="space-y-6 text-center">
+
+          <h1 className="text-3xl font-bold">
+
+            Result Not Found
+
+          </h1>
+
+          <Button
+            onClick={() =>
+              router.push("/dashboard")
+            }
+          >
+
+            Back to Dashboard
+
+          </Button>
+
         </div>
 
       </div>
+
     );
+
   }
 
   return (
 
-    <div className="max-w-5xl">
+    <div className="mx-auto max-w-6xl space-y-8 p-8">
 
-      <h1
-        className="
-        text-3xl
-        font-bold
-        mb-8
-        "
-      >
-        Exam Results
-      </h1>
+      <ResultsSummary
+        result={result}
+      />
 
-      <div
-        className="
-        border
-        rounded-lg
-        p-6
-        mb-8
-        "
-      >
+      <div>
 
-        <div className="mb-4">
-          <strong>
-            Score:
-          </strong>
-          {" "}
-          {result.score}
-          {" / "}
-          {result.answers.length}
-        </div>
+        <h2 className="mb-6 text-3xl font-bold">
 
-        <div className="mb-4">
-          <strong>
-            Percentage:
-          </strong>
-          {" "}
-          {result.percentage}%
-        </div>
+          Question Review
 
-        <div className="mb-4">
-          <strong>
-            Submitted:
-          </strong>
-          {" "}
-          {
-            new Date(
-              result.submittedAt
-            ).toLocaleString()
-          }
+        </h2>
+
+        <div className="space-y-6">
+
+          {result.review.map(
+            review => (
+
+              <QuestionReviewCard
+                key={review.questionId}
+                review={review}
+              />
+
+            )
+          )}
+
         </div>
 
       </div>
 
-      <h2
-        className="
-        text-2xl
-        font-semibold
-        mb-4
-        "
-      >
-        Answer Review
-      </h2>
+      <div className="flex justify-center gap-4">
 
-      <div className="space-y-4">
+        <Button
+          variant="outline"
+          onClick={() =>
+            router.push("/dashboard")
+          }
+        >
+          Dashboard
+        </Button>
 
-        {result.answers.map(
-          (
-            answer: any,
-            index: number
-          ) => (
-
-            <div
-              key={index}
-              className="
-              border
-              rounded-lg
-              p-5
-              "
-            >
-
-              <div
-                className="
-                flex
-                justify-between
-                mb-3
-                "
-              >
-
-                <h3
-                  className="
-                  font-semibold
-                  "
-                >
-                  Question {index + 1}
-                </h3>
-
-                <span
-                  className={
-                    answer.isCorrect
-                      ? "text-green-600 font-semibold"
-                      : "text-red-600 font-semibold"
-                  }
-                >
-                  {
-                    answer.isCorrect
-                      ? "Correct"
-                      : "Incorrect"
-                  }
-                </span>
-
-              </div>
-
-              <div className="mb-2">
-
-                <strong>
-                  Your Answer:
-                </strong>
-
-                {" "}
-
-                {
-                  answer.selectedAnswer
-                }
-
-              </div>
-
-              <div>
-
-                <strong>
-                  Result:
-                </strong>
-
-                {" "}
-
-                {
-                  answer.isCorrect
-                    ? "Correct"
-                    : "Incorrect"
-                }
-
-              </div>
-
-            </div>
-          )
-        )}
+        <Button
+          onClick={() =>
+            router.push("/documents")
+          }
+        >
+          Take Another Exam
+        </Button>
 
       </div>
 
     </div>
+
   );
+
 }

@@ -11,6 +11,38 @@ import {
   updateUserAnalytics,
 } from "./analytics.service";
 
+
+export const getExamResult =
+async (
+    examId: string,
+    userId: string,
+) => {
+
+    const attempt =
+    await ExamAttemptModel
+        .findOne({
+
+            examId,
+
+            userId,
+
+        })
+        .sort({
+            createdAt: -1,
+        });
+
+    if (!attempt) {
+
+        throw new Error(
+            "Result not found"
+        );
+
+    }
+
+    return attempt;
+
+};
+
 export const evaluateExam =
   async ({
     userId,
@@ -64,13 +96,30 @@ export const evaluateExam =
       }
 
       evaluatedAnswers.push({
+
         questionId:
           question._id,
+
+        question:
+          question.question,
+
+        options:
+          question.options,
 
         selectedAnswer:
           answer.selectedAnswer,
 
+        correctAnswer:
+          question.answer,
+
+        explanation:
+          question.explanation,
+
+        difficulty:
+          question.difficulty,
+
         isCorrect,
+
       });
     }
 
@@ -98,13 +147,25 @@ export const evaluateExam =
       userId,
     );
 
-    return {
-      attempt,
-      score,
-      percentage,
-      totalQuestions:
-        exam.totalQuestions,
-      correctAnswers:
+      return {
+
+        attempt,
+
         score,
-    };
+
+        percentage,
+
+        totalQuestions:
+          exam.totalQuestions,
+
+        correctAnswers:
+          score,
+
+        incorrectAnswers:
+          exam.totalQuestions - score,
+
+        review:
+          evaluatedAnswers,
+
+      };
   };

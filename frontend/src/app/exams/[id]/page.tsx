@@ -1,230 +1,212 @@
 "use client";
 
-import { useState } from "react";
-
 import {
   useParams,
+  useRouter,
 } from "next/navigation";
+
+import {
+  Clock,
+  FileText,
+  Brain,
+} from "lucide-react";
+
+import {
+  Button,
+} from "@/components/ui/button";
 
 import {
   useExam,
 } from "@/features/exams/use-exam";
 
-import {
-  useSubmitExam,
-} from "@/features/exams/use-submit-exam";
-
-export default function ExamDetailPage() {
+export default function ExamInstructionsPage() {
 
   const params =
     useParams();
 
-  const examId =
-    params.id as string;
+  const router =
+    useRouter();
 
   const {
-    data,
+    data: exam,
     isLoading,
   } = useExam(
-    examId
+    params.id as string
   );
-
-  const submitMutation =
-    useSubmitExam();
-
-  const [
-    answers,
-    setAnswers,
-  ] = useState<
-    Record<string, string>
-  >({});
-
-  const handleSubmit =
-    async () => {
-
-      try {
-
-        const formattedAnswers =
-          Object.entries(
-            answers
-          ).map(
-            ([
-              questionId,
-              selectedAnswer,
-            ]) => ({
-              questionId,
-              selectedAnswer,
-            })
-          );
-
-        const result =
-          await submitMutation.mutateAsync({
-            examId,
-            answers:
-              formattedAnswers,
-          });
-
-        alert(
-          `Score: ${result.score}/${result.totalQuestions}
-Percentage: ${result.percentage}%`
-        );
-
-        console.log(
-          result
-        );
-
-      } catch (
-        error
-      ) {
-
-        console.error(
-          error
-        );
-
-        alert(
-          "Failed to submit exam"
-        );
-      }
-    };
 
   if (isLoading) {
 
     return (
-      <div>
-        Loading Exam...
+      <div className="flex h-screen items-center justify-center">
+
+        Loading...
+
       </div>
     );
-  }
 
-  const exam =
-    data?.exam;
+  }
 
   if (!exam) {
 
     return (
-      <div>
-        Exam not found
+      <div className="flex h-screen items-center justify-center">
+
+        Exam not found.
+
       </div>
     );
+
   }
 
+  const estimatedMinutes =
+    Math.max(
+      5,
+      exam.totalQuestions * 2
+    );
+
   return (
-    <div>
 
-      <h1
-        className="
-        text-3xl
-        font-bold
-        mb-6
-        "
-      >
-        {exam.title}
-      </h1>
+    <div className="mx-auto max-w-4xl p-8">
 
-      {exam.questions?.map(
-        (
-          question: any,
-          index: number
-        ) => (
+      <div className="rounded-xl border bg-card p-8">
 
-          <div
-            key={
-              question._id
-            }
-            className="
-            border
-            rounded-lg
-            p-4
-            mb-4
-            "
-          >
+        <h1 className="text-3xl font-bold">
 
-            <h2
-              className="
-              font-semibold
-              mb-3
-              "
-            >
-              Q{index + 1}.{" "}
-              {question.question}
+          {exam.title}
+
+        </h1>
+
+        <p className="mt-2 text-muted-foreground">
+
+          Please read the instructions carefully before starting.
+
+        </p>
+
+        <div className="mt-8 grid grid-cols-3 gap-4">
+
+          <div className="rounded-lg border p-4">
+
+            <FileText className="mb-3 h-6 w-6" />
+
+            <p className="text-sm text-muted-foreground">
+
+              Questions
+
+            </p>
+
+            <h2 className="text-2xl font-bold">
+
+              {exam.totalQuestions}
+
             </h2>
 
-            {question.options?.map(
-              (
-                option: string
-              ) => (
+          </div>
 
-                <label
-                  key={
-                    option
-                  }
-                  className="
-                  flex
-                  items-center
-                  gap-2
-                  py-1
-                  cursor-pointer
-                  "
-                >
+          <div className="rounded-lg border p-4">
 
-                  <input
-                    type="radio"
-                    name={
-                      question._id
-                    }
-                    value={
-                      option
-                    }
-                    checked={
-                      answers[
-                        question._id
-                      ] === option
-                    }
-                    onChange={() =>
-                      setAnswers(
-                        (
-                          prev
-                        ) => ({
-                          ...prev,
-                          [question._id]:
-                            option,
-                        })
-                      )
-                    }
-                  />
+            <Clock className="mb-3 h-6 w-6" />
 
-                  {option}
+            <p className="text-sm text-muted-foreground">
 
-                </label>
-              )
-            )}
+              Estimated Time
+
+            </p>
+
+            <h2 className="text-2xl font-bold">
+
+              {estimatedMinutes} min
+
+            </h2>
 
           </div>
-        )
-      )}
 
-      <button
-        onClick={
-          handleSubmit
-        }
-        disabled={
-          submitMutation.isPending
-        }
-        className="
-        border
-        px-4
-        py-2
-        rounded
-        mt-6
-        "
-      >
-        {
-          submitMutation.isPending
-            ? "Submitting..."
-            : "Submit Exam"
-        }
-      </button>
+          <div className="rounded-lg border p-4">
+
+            <Brain className="mb-3 h-6 w-6" />
+
+            <p className="text-sm text-muted-foreground">
+
+              AI Generated
+
+            </p>
+
+            <h2 className="text-2xl font-bold">
+
+              Yes
+
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div className="mt-10">
+
+          <h2 className="mb-4 text-xl font-semibold">
+
+            Instructions
+
+          </h2>
+
+          <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
+
+            <li>
+              Read every question carefully.
+            </li>
+
+            <li>
+              Select the best answer before moving on.
+            </li>
+
+            <li>
+              You can review answers before submitting.
+            </li>
+
+            <li>
+              Your exam will be evaluated instantly.
+            </li>
+
+            <li>
+              AI explanations will be available after completion.
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div className="mt-10 flex justify-end gap-4">
+
+          <Button
+            variant="outline"
+            onClick={() =>
+              router.push(
+                "/documents"
+              )
+            }
+          >
+
+            Cancel
+
+          </Button>
+
+          <Button
+            onClick={() =>
+              router.push(
+                `/exams/${exam._id}/start`
+              )
+            }
+          >
+
+            Start Exam
+
+          </Button>
+
+        </div>
+
+      </div>
 
     </div>
+
   );
+
 }

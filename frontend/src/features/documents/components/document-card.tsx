@@ -11,7 +11,8 @@ import {
 } from "lucide-react";
 
 import { Document } from "@/types/document";
-
+import GenerateExamDialog
+from "@/features/exams/components/generate-exam-dialog";
 import StatusBadge from "./status-badge";
 
 type Props = {
@@ -108,17 +109,28 @@ export default function DocumentCard({
           View Details
         </button>
 
-        <button
-          onClick={() =>
-            router.push(
-              `/documents/${document._id}`
-            )
+        <GenerateExamDialog
+          documentId={
+            document._id
           }
-          className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-muted transition"
+          documentName={
+            document.originalName
+          }
         >
-          <GraduationCap size={16} />
-          Generate Exam
-        </button>
+
+          <button
+            className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-muted transition"
+          >
+
+            <GraduationCap
+              size={16}
+            />
+
+            Generate Exam
+
+          </button>
+
+        </GenerateExamDialog>
 
         <button
           onClick={() =>

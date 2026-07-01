@@ -25,4 +25,13 @@ router.get(
   getExamResult
 );
 
+router.get(
+
+"/result/:examId",
+
+authenticate,
+getExamResult
+
+);
+
 export default router;

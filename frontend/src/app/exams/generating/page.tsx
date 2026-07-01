@@ -1,85 +1,87 @@
 "use client";
 
-import {
-  useEffect,
-} from "react";
-
+import { useEffect, useRef } from "react";
 import {
   useRouter,
   useSearchParams,
 } from "next/navigation";
 
-import ExamLoading
-from "@/features/exams/components/exam-loading";
-
-import {
-  useGenerateExam,
-} from "@/features/exams/use-generate-exam";
+import ExamLoading from "@/features/exams/components/exam-loading";
+import { useGenerateExam } from "@/features/exams/use-generate-exam";
+import { ExamDifficulty } from "@/features/exams/types";
 
 export default function GeneratingExamPage() {
 
-  const router =
-    useRouter();
+  const router = useRouter();
 
-  const params =
-    useSearchParams();
+  const params = useSearchParams();
 
-  const mutation =
-    useGenerateExam();
+  const mutation = useGenerateExam();
+
+  // Prevent duplicate generation in React Strict Mode
+  const started = useRef(false);
 
   useEffect(() => {
 
-    const generate =
-      async () => {
+    if (started.current) {
+      return;
+    }
 
-        try {
+    started.current = true;
 
-          const exam =
-            await mutation.mutateAsync({
+    const documentId = params.get("documentId");
+    const title = params.get("title");
 
-              documentId:
-                params.get(
-                  "documentId"
-                )!,
+    const questionCount =
+      Number(params.get("questionCount")) || 10;
 
-              title:
-                params.get(
-                  "title"
-                )!,
+    const difficulty =
+      (params.get("difficulty") ??
+        "adaptive") as ExamDifficulty;
 
-              questionCount:
-                Number(
-                  params.get(
-                    "questionCount"
-                  )
-                ),
+    if (!documentId || !title) {
 
-              difficulty:
-                params.get(
-                  "difficulty"
-                ) as any,
+      router.replace("/documents");
 
-            });
+      return;
 
-          router.replace(
-            `/exams/${exam._id}`
-          );
+    }
 
-        } catch {
+    const generate = async () => {
 
-          router.replace(
-            "/documents"
-          );
+      try {
 
-        }
+        const exam =
+          await mutation.mutateAsync({
 
-      };
+            documentId,
+
+            title,
+
+            questionCount,
+
+            difficulty,
+
+          });
+
+        router.replace(
+          `/exams/${exam._id}`
+        );
+
+      } catch (error) {
+
+        console.error(error);
+
+        router.replace("/documents");
+
+      }
+
+    };
 
     generate();
 
-  }, []);
+  }, [mutation, params, router]);
 
-  return (
-    <ExamLoading />
-  );
+  return <ExamLoading />;
+
 }

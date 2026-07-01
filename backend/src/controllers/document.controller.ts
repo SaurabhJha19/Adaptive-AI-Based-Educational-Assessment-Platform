@@ -3,7 +3,10 @@ import { asyncHandler } from "../utils/async-handler";
 import { AuthRequest } from "../middleware/auth.middleware";
 import { createDocument } from "../services/document.service";
 import { getUserDocuments} from "../services/document.service";
-import fs from "fs";
+import {
+  uploadFileToS3,
+  deleteFileFromS3,
+} from "../services/storage/s3.service";
 import {
   getDocumentById,
   deleteDocumentRecord,
@@ -24,48 +27,74 @@ import {
 }
 from "../validators/search.validator";
 
-export const uploadDocument = asyncHandler(
-  async (
-    req: AuthRequest,
-    res: Response
-  ) => {
+export const uploadDocument =
+  asyncHandler(
+    async (
+      req: AuthRequest,
+      res: Response
+    ) => {
 
-    if (!req.file) {
-      return res.status(400).json({
-        success: false,
-        message: "No file uploaded",
-      });
-    }
+      if (!req.file) {
 
-    const document =
-      await createDocument({
-        userId: req.user!.userId,
-        originalName:
-          req.file.originalname,
-        fileName:
-          req.file.filename,
-        filePath:
-          req.file.path,
-        fileSize:
-          req.file.size,
-        mimeType:
-          req.file.mimetype,
-      });
+        return res.status(400).json({
+          success: false,
+          message:
+            "No file uploaded",
+        });
+      }
 
-    processDocument(
+      const key =
+        `documents/${
+          req.user!.userId
+        }/${
+          Date.now()
+        }-${
+          req.file.originalname
+        }`;
+
+      const upload =
+        await uploadFileToS3(
+          req.file,
+          key
+        );
+
+      const document =
+        await createDocument({
+
+          userId:
+            req.user!.userId,
+
+          originalName:
+            req.file.originalname,
+
+          fileName:
+            req.file.originalname,
+
+          fileSize:
+            req.file.size,
+
+          mimeType:
+            req.file.mimetype,
+
+          s3Key:
+            upload.key,
+
+          s3Url:
+            upload.url,
+        });
+
+      processDocument(
         document._id.toString(),
         req.user!.userId,
-        document.filePath
+        upload.key
       ).catch(console.error);
 
-    res.status(201).json({
-      success: true,
-      message:
-        "Document uploaded successfully",
-      document,
-    });
-  }
-);
+      res.status(201).json({
+        success: true,
+        document,
+      });
+    }
+  );
 
 export const getDocuments =
   asyncHandler(
@@ -110,15 +139,9 @@ export const deleteDocument =
         });
       }
 
-      if (
-        fs.existsSync(
-          document.filePath
-        )
-      ) {
-        fs.unlinkSync(
-          document.filePath
-        );
-      }
+      await deleteFileFromS3(
+        document.s3Key
+      );
 
       await deleteDocumentRecord(
         id,

@@ -4,9 +4,10 @@ export interface IDocument extends Document {
   userId: mongoose.Types.ObjectId;
   originalName: string;
   fileName: string;
-  filePath: string;
   fileSize: number;
   mimeType: string;
+  s3Key: string;
+  s3Url: string;
   status:
     | "uploaded"
     | "processing"
@@ -32,17 +33,22 @@ const documentSchema = new Schema<IDocument>(
       required: true,
     },
 
-    filePath: {
-      type: String,
-      required: true,
-    },
-
     fileSize: {
       type: Number,
       required: true,
     },
 
     mimeType: {
+      type: String,
+      required: true,
+    },
+
+    s3Key: {
+      type: String,
+      required: true,
+    },
+
+    s3Url: {
       type: String,
       required: true,
     },

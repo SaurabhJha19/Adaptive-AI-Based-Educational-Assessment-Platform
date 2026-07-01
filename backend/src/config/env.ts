@@ -27,4 +27,16 @@ export const env = {
   EXPLAINER_MODEL:
     process.env.EXPLAINER_MODEL ||
     "gpt-4.1-mini",
+
+  AWS_REGION:
+  process.env.AWS_REGION || "",
+
+  AWS_ACCESS_KEY_ID:
+    process.env.AWS_ACCESS_KEY_ID || "",
+
+  AWS_SECRET_ACCESS_KEY:
+    process.env.AWS_SECRET_ACCESS_KEY || "",
+
+  AWS_S3_BUCKET_NAME:
+    process.env.AWS_S3_BUCKET_NAME || "",
 };

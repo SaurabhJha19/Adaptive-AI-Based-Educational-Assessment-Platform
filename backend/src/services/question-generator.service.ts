@@ -34,11 +34,15 @@ export const generateQuestions =
   async ({
     userId,
     documentId,
-    count = 5,
+    examId,
+    count = 10,
+    difficultyOverride,
   }: {
     userId: string;
     documentId: string;
+    examId: string;
     count?: number;
+    difficultyOverride?: "easy" | "medium" | "hard";
   }) => {
 
     try {
@@ -101,12 +105,18 @@ export const generateQuestions =
       const provider =
         getQuestionProvider();
 
+     const difficulty =
+          difficultyOverride ??
+          settings?.difficulty ??
+          "medium"; 
+
       const generatedQuestions =
         await provider.generateQuestions(
           context,
-          settings.difficulty,
+          difficulty,
           count
         );
+
 
       console.log(
         "Generated Questions:",
@@ -133,7 +143,7 @@ export const generateQuestions =
               return QuestionModel.create({
                 userId,
                 documentId,
-
+                examId,
                 question:
                   generatedQuestion.question,
 

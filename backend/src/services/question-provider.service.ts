@@ -19,12 +19,15 @@ export interface GeneratedQuestion {
 }
 
 export interface QuestionProvider {
+
   generateQuestions(
     context: string,
-    difficulty:
-      | "easy"
-      | "medium"
-      | "hard",
-    count: number
-  ): Promise<GeneratedQuestion[]>;
+    difficulty: string,
+    count: number,
+  ): Promise<{
+    question: string;
+    options: string[];
+    answer: string;
+    explanation: string;
+  }[]>;
 }

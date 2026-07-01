@@ -1,60 +1,19 @@
 import { api } from "@/services/api";
 
-export const generateQuestions =
+export type GenerateExamRequest = {
+  documentId: string;
+  title: string;
+};
+
+export const generateExam =
   async (
-    documentId: string,
-    count = 5
-  ) => {
-
-    const response =
-      await api.post(
-        "/questions/generate",
-        {
-          documentId,
-          count,
-        }
-      );
-
-    return response.data;
-  };
-
-export const createExam =
-  async (
-    documentId: string,
-    title: string
+    data: GenerateExamRequest
   ) => {
 
     const response =
       await api.post(
         "/exams/create",
-        {
-          documentId,
-          title,
-        }
-      );
-
-    return response.data;
-  };
-
-export const getExams =
-  async () => {
-
-    const response =
-      await api.get(
-        "/exams"
-      );
-
-    return response.data;
-  };
-
-export const getExamById =
-  async (
-    examId: string
-  ) => {
-
-    const response =
-      await api.get(
-        `/exams/${examId}`
+        data
       );
 
     return response.data;

@@ -35,19 +35,34 @@ export const createExamController =
       const {
         documentId,
         title,
+        questionCount,
+        difficulty,
       } = req.body;
 
       const exam =
-        await createExam(
-          req.user!.userId,
+        await createExam({
+
+          userId:
+            req.user!.userId,
+
           documentId,
-          title
-        );
+
+          title,
+
+          questionCount,
+
+          difficulty,
+
+        });
 
       res.status(201).json({
+
         success: true,
+
         exam,
+
       });
+
     }
   );
 

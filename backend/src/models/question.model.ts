@@ -10,6 +10,8 @@ export interface IQuestion
 
   documentId: mongoose.Types.ObjectId;
 
+  examId: mongoose.Types.ObjectId;
+
   question: string;
 
   options: string[];
@@ -49,6 +51,12 @@ const questionSchema =
       documentId: {
         type: Schema.Types.ObjectId,
         ref: "Document",
+        required: true,
+      },
+
+      examId: {
+        type: Schema.Types.ObjectId,
+        ref: "Exam",
         required: true,
       },
 

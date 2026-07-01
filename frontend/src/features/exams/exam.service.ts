@@ -25,7 +25,7 @@ export const generateExam =
 export const getExam =
   async (
     id: string
-  ) => {
+  ): Promise<Exam> => {
 
     const response =
       await api.get(

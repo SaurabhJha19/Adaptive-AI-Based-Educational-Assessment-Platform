@@ -73,20 +73,34 @@ export const getExamById =
       res: Response
     ) => {
 
-        const exam =
-          await ExamModel
-            .findOne({
-              _id: req.params.id,
-              userId: req.user!.userId,
-            })
-            .populate("questions");
+      const exam =
+        await ExamModel
+          .findOne({
+            _id: req.params.id,
+            userId: req.user!.userId,
+          })
+          .populate("questions");
 
-        if (!exam) {
-          return res.status(404).json({
-            success: false,
-            message: "Exam not found",
-          });
-        }
+      if (!exam) {
+
+        return res.status(404).json({
+
+          success: false,
+
+          message: "Exam not found",
+
+        });
+
+      }
+
+      res.status(200).json({
+
+        success: true,
+
+        exam,
+
+      });
+
     }
   );
 

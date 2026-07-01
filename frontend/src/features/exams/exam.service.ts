@@ -68,3 +68,11 @@ await api.get(
 return response.data.result;
 
 };
+
+export const getExams = async (): Promise<Exam[]> => {
+
+  const response = await api.get("/exams");
+
+  return response.data.exams;
+
+};

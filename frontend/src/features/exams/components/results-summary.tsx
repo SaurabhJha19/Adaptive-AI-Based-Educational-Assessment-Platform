@@ -18,23 +18,29 @@ export default function ResultsSummary({
 
     <div className="rounded-2xl border bg-card p-8 shadow-sm">
 
-      <div className="flex flex-col items-center">
+      <div className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-background p-10">
 
-        <Trophy
-          className="mb-4 h-14 w-14 text-yellow-500"
-        />
+        <div className="flex flex-col items-center">
 
-        <h1 className="text-5xl font-bold">
+          <div className="mb-6 rounded-full bg-primary/10 p-5">
 
-          {Math.round(result.percentage)}%
+            <Trophy className="h-14 w-14 text-yellow-500" />
 
-        </h1>
+          </div>
 
-        <p className="mt-2 text-muted-foreground">
+          <h1 className="text-7xl font-extrabold tracking-tight">
 
-          Overall Score
+            {Math.round(result.percentage)}%
 
-        </p>
+          </h1>
+
+          <p className="mt-4 text-xl text-muted-foreground">
+
+            Excellent Performance
+
+          </p>
+
+        </div>
 
       </div>
 

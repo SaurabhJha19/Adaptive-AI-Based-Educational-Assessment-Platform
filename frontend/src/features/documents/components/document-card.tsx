@@ -8,11 +8,15 @@ import {
   FileText,
   GraduationCap,
   Trash2,
+  Calendar,
+  HardDrive,
+  ChevronRight,
 } from "lucide-react";
 
 import { Document } from "@/types/document";
-import GenerateExamDialog
-from "@/features/exams/components/generate-exam-dialog";
+
+import GenerateExamDialog from "@/features/exams/components/generate-exam-dialog";
+
 import StatusBadge from "./status-badge";
 
 type Props = {
@@ -24,70 +28,82 @@ export default function DocumentCard({
   document,
   onDelete,
 }: Props) {
-
-  const router =
-    useRouter();
+  const router = useRouter();
 
   const handleDelete = () => {
+    if (!window.confirm("Delete this document?")) return;
 
-    const confirmed =
-      window.confirm(
-        "Delete this document?"
-      );
-
-    if (!confirmed) {
-      return;
-    }
-
-    onDelete?.(
-      document._id
-    );
+    onDelete?.(document._id);
   };
 
   return (
+    <div className="group overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl">
 
-    <div className="rounded-xl border bg-card p-6 shadow-sm transition hover:shadow-md">
+      {/* Header */}
 
-      <div className="flex justify-between items-start">
+      <div className="p-6">
 
-        <div className="flex gap-4">
+        <div className="flex items-start justify-between">
 
-          <div className="rounded-lg bg-primary/10 p-3">
+          <div className="flex items-start gap-4">
 
-            <FileText className="h-6 w-6" />
+            <div className="rounded-2xl bg-primary/10 p-4 transition group-hover:bg-primary/20">
 
-          </div>
-
-          <div>
-
-            <h3 className="text-lg font-semibold">
-              {document.originalName}
-            </h3>
-
-            <div className="mt-2 flex items-center gap-3">
-
-              <StatusBadge
-                status={document.status}
-              />
-
-              <span className="text-sm text-muted-foreground">
-
-                {(document.fileSize / 1024 / 1024).toFixed(2)}
-                {" "}
-                MB
-
-              </span>
+              <FileText className="h-8 w-8 text-primary" />
 
             </div>
 
-            <p className="mt-2 text-sm text-muted-foreground">
+            <div>
+
+              <h3 className="line-clamp-1 text-lg font-semibold">
+
+                {document.originalName}
+
+              </h3>
+
+              <div className="mt-3">
+
+                <StatusBadge
+                  status={document.status}
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Metadata */}
+
+        <div className="mt-6 space-y-3 text-sm text-muted-foreground">
+
+          <div className="flex items-center gap-2">
+
+            <HardDrive className="h-4 w-4" />
+
+            <span>
+
+              {(document.fileSize / 1024 / 1024).toFixed(2)} MB
+
+            </span>
+
+          </div>
+
+          <div className="flex items-center gap-2">
+
+            <Calendar className="h-4 w-4" />
+
+            <span>
 
               Uploaded{" "}
+
               {new Date(
                 document.createdAt
               ).toLocaleDateString()}
 
-            </p>
+            </span>
 
           </div>
 
@@ -95,42 +111,69 @@ export default function DocumentCard({
 
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      {/* Footer */}
 
-        <button
-          onClick={() =>
-            router.push(
-              `/documents/${document._id}`
-            )
-          }
-          className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-muted transition"
-        >
-          <Eye size={16} />
-          View Details
-        </button>
+      <div className="border-t bg-muted/20 p-4">
 
-        <GenerateExamDialog
-          documentId={
-            document._id
-          }
-          documentName={
-            document.originalName
-          }
-        >
+        <div className="grid grid-cols-2 gap-3">
 
           <button
-            className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-muted transition"
+            onClick={() =>
+              router.push(
+                `/documents/${document._id}`
+              )
+            }
+            className="flex items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm transition hover:bg-background"
           >
 
-            <GraduationCap
-              size={16}
-            />
+            <Eye className="h-4 w-4" />
 
-            Generate Exam
+            Preview
 
           </button>
 
-        </GenerateExamDialog>
+          <GenerateExamDialog
+            documentId={document._id}
+            documentName={document.originalName}
+          >
+
+            <button className="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground transition hover:opacity-90">
+
+              <GraduationCap className="h-4 w-4" />
+
+              Generate
+
+            </button>
+
+          </GenerateExamDialog>
+
+          <button
+            onClick={() =>
+              router.push(
+                `/documents/${document._id}`
+              )
+            }
+            className="flex items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm transition hover:bg-background"
+          >
+
+            <Brain className="h-4 w-4" />
+
+            Ask AI
+
+          </button>
+
+          <button
+            onClick={handleDelete}
+            className="flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 text-sm text-red-600 transition hover:bg-red-50 dark:hover:bg-red-950/20"
+          >
+
+            <Trash2 className="h-4 w-4" />
+
+            Delete
+
+          </button>
+
+        </div>
 
         <button
           onClick={() =>
@@ -138,23 +181,17 @@ export default function DocumentCard({
               `/documents/${document._id}`
             )
           }
-          className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-muted transition"
+          className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-muted py-3 text-sm font-medium transition hover:bg-muted/70"
         >
-          <Brain size={16} />
-          Ask AI
-        </button>
 
-        <button
-          onClick={handleDelete}
-          className="flex items-center gap-2 rounded-md border border-red-300 px-3 py-2 text-sm text-red-600 hover:bg-red-50 transition"
-        >
-          <Trash2 size={16} />
-          Delete
+          View Full Details
+
+          <ChevronRight className="h-4 w-4" />
+
         </button>
 
       </div>
 
     </div>
-
   );
 }

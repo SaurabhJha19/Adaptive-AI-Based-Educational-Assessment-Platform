@@ -15,7 +15,7 @@ export default function AppSidebar() {
   const logout = useLogout();
 
   return (
-    <aside className="flex h-screen w-72 flex-col border-r bg-card">
+    <aside className="flex h-screen w-64 flex-col border-r bg-card">
 
       {/* Logo */}
       <div className="border-b p-6">

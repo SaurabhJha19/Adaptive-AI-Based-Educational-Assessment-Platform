@@ -12,7 +12,7 @@ export default function PageContainer({
   return (
     <main
       className={cn(
-        "mx-auto w-full max-w-7xl p-6 md:p-8",
+        "w-full flex-1 p-8 lg:p-10",
         className
       )}
     >

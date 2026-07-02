@@ -1,6 +1,3 @@
-import Sidebar
-from "@/components/layout/sidebar";
-
 import ProtectedRoute
 from "@/components/layout/protected-route";
 
@@ -15,7 +12,6 @@ export default function DashboardLayout({
 
       <div className="flex">
 
-        <Sidebar />
 
         <main
           className="

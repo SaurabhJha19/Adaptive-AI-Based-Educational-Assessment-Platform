@@ -11,6 +11,9 @@ import examAttemptRoutes from "./routes/exam-attempt.routes";
 import recommendationRoutes from "./routes/recommendation.routes";
 import explainerRoutes from "./routes/explainer.routes";
 import topicPerformanceRoutes from "./routes/topic-performance.routes";
+import dashboardRoutes from "./routes/dashboard.routes";
+import simulatorRoutes from "./modules/simulator/routes/simulator.routes";
+import simulatorAdminRoutes from "./modules/simulator/routes/simulator-admin.routes";
 
 const app = express();
 
@@ -26,6 +29,9 @@ app.use("/api/exams", examAttemptRoutes);
 app.use("/api/feedback", feedbackRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/topic-performance", topicPerformanceRoutes);
+app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/simulator", simulatorRoutes);
+app.use("/api/admin/simulator", simulatorAdminRoutes);
 app.get("/health", (_, res) => {
   res.status(200).json({
     success: true,

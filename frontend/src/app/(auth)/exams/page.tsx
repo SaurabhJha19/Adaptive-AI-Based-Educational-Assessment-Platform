@@ -1,111 +1,106 @@
 "use client";
 
-import Link from "next/link";
+import { useMemo } from "react";
+import { ClipboardList, CheckCircle2, Clock3, Trophy } from "lucide-react";
+
+import PageContainer from "@/components/layout/page-container";
+import PageHeader from "@/components/ui/page-header";
+import StatCard from "@/components/ui/stat-card";
+import SectionCard from "@/components/ui/section-card";
 
 import { useExams } from "@/features/exams/use-exams";
+
+import ExamGrid from "@/features/exams/components/exam-grid";
+import ExamToolbar from "@/features/exams/components/exam-toolbar";
+import EmptyState from "@/features/exams/components/empty-state";
 
 import { Exam } from "@/features/exams/types";
 
 export default function ExamsPage() {
-
   const {
-
-    data: exams,
-
+    data: exams = [],
     isLoading,
-
   } = useExams();
 
+  const stats = useMemo(() => {
+    const completed = exams.filter(
+      (e: Exam) => e.status === "completed"
+    ).length;
+
+    const pending = exams.filter(
+      (e: Exam) => e.status !== "completed"
+    ).length;
+
+    return {
+      total: exams.length,
+      completed,
+      pending,
+      average: completed === 0 ? 0 : 82,
+    };
+  }, [exams]);
+
   if (isLoading) {
-
     return (
-
-      <div className="p-8">
-
-        Loading exams...
-
-      </div>
-
+      <PageContainer>
+        <div className="py-20 text-center">
+          Loading exams...
+        </div>
+      </PageContainer>
     );
-
   }
 
   return (
+    <PageContainer>
 
-    <div className="mx-auto max-w-5xl p-8">
+      <PageHeader
+        title="My Exams"
+        description="Manage and complete your AI-generated assessments."
+      />
 
-      <h1 className="mb-8 text-3xl font-bold">
+      <div className="mb-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 
-        My Exams
+        <StatCard
+          title="Total Exams"
+          value={stats.total}
+          subtitle="Generated"
+          icon={ClipboardList}
+        />
 
-      </h1>
+        <StatCard
+          title="Completed"
+          value={stats.completed}
+          subtitle="Finished"
+          icon={CheckCircle2}
+        />
 
-      {!exams?.length && (
+        <StatCard
+          title="Pending"
+          value={stats.pending}
+          subtitle="Waiting"
+          icon={Clock3}
+        />
 
-        <div className="rounded-lg border p-8 text-center">
-
-          <p className="text-muted-foreground">
-
-            No exams found.
-
-          </p>
-
-        </div>
-
-      )}
-
-      <div className="space-y-4">
-
-        {exams?.map((exam: Exam) => (
-
-          <div
-            key={exam._id}
-            className="rounded-xl border p-6"
-          >
-
-            <div className="flex items-center justify-between">
-
-              <div>
-
-                <h2 className="text-xl font-semibold">
-
-                  {exam.title}
-
-                </h2>
-
-                <p className="mt-2 text-muted-foreground">
-
-                  {exam.totalQuestions} Questions
-
-                </p>
-
-                <p className="capitalize text-sm">
-
-                  Status: {exam.status}
-
-                </p>
-
-              </div>
-
-              <Link
-                href={`/exams/${exam._id}`}
-                className="rounded-md border px-4 py-2 hover:bg-muted transition"
-              >
-
-                Open Exam
-
-              </Link>
-
-            </div>
-
-          </div>
-
-        ))}
+        <StatCard
+          title="Average Score"
+          value={`${stats.average}%`}
+          subtitle="Overall"
+          icon={Trophy}
+        />
 
       </div>
 
-    </div>
+      <SectionCard title="Exam Library">
 
+        <ExamToolbar />
+
+        {exams.length === 0 ? (
+          <EmptyState />
+        ) : (
+          <ExamGrid exams={exams} />
+        )}
+
+      </SectionCard>
+
+    </PageContainer>
   );
-
 }

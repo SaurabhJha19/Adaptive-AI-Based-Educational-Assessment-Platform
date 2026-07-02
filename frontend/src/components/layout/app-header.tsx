@@ -9,9 +9,9 @@ export default function AppHeader() {
 
   return (
 
-    <header className="sticky top-0 z-10 flex h-20 items-center justify-between border-b bg-background/80 px-8 backdrop-blur">
+    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background/95 px-8 backdrop-blur">
 
-      <div className="relative w-96">
+      <div className="relative w-full max-w-md">
 
         <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
 

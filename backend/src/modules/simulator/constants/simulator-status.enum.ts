@@ -1,0 +1,8 @@
+export enum SimulatorStatus {
+  UPLOADED = "UPLOADED",
+  PARSING = "PARSING",
+  REVIEW = "REVIEW",
+  VALIDATED = "VALIDATED",
+  PUBLISHED = "PUBLISHED",
+  ARCHIVED = "ARCHIVED",
+}

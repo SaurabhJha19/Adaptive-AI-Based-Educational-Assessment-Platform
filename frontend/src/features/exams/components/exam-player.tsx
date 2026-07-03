@@ -3,6 +3,7 @@
 import {
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 
@@ -11,6 +12,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 import { Exam } from "../types";
+import { saveAttempt } from "../exam.service";
 import { useSubmitExam } from "../use-submit-exam";
 
 import ExamTimer from "./exam-timer";
@@ -30,78 +32,73 @@ export default function ExamPlayer({
   sourceType = "generated",
   attemptId,
 }: Props) {
+  const router = useRouter();
 
-  const router =
-    useRouter();
+  const submitMutation = useSubmitExam();
 
-  const submitMutation =
-    useSubmitExam();
+  const [current, setCurrent] = useState(0);
 
-  const [
-    current,
-    setCurrent,
-  ] = useState(0);
-
-  const [
-    answers,
-    setAnswers,
-  ] = useState<
+  const [answers, setAnswers] = useState<
     Record<string, string>
   >({});
 
-  const [
-    showSubmitDialog,
-    setShowSubmitDialog,
-  ] = useState(false);
-
-  const question =
-    exam.questions[current];
-
-  const answeredCount =
-    useMemo(
-      () =>
-        Object.keys(
-          answers
-        ).length,
-      [answers]
+  const [remainingTime, setRemainingTime] =
+    useState(
+      (exam.duration ??
+        exam.questions.length * 2) * 60
     );
 
+  const [showSubmitDialog, setShowSubmitDialog] =
+    useState(false);
+
+  const autoSave =
+    useRef<NodeJS.Timeout | null>(null);
+
+  const question = exam.questions[current];
+
+  const answeredCount = useMemo(
+    () => Object.keys(answers).length,
+    [answers]
+  );
+
+  const saveProgress = async () => {
+    if (!attemptId) return;
+
+    try {
+      await saveAttempt(attemptId, {
+        answers: Object.entries(answers).map(
+          ([questionId, selectedAnswer]) => ({
+            questionId,
+            selectedAnswer,
+          })
+        ),
+        currentQuestion: current,
+        remainingTime,
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
+    const listener = (
+      e: KeyboardEvent
+    ) => {
+      if (e.key === "ArrowRight") {
+        setCurrent((value) =>
+          Math.min(
+            value + 1,
+            exam.questions.length - 1
+          )
+        );
+      }
 
-    const listener =
-      (
-        e: KeyboardEvent
-      ) => {
-
-        if (
-          e.key === "ArrowRight"
-        ) {
-
-          setCurrent(
-            value =>
-              Math.min(
-                value + 1,
-                exam.questions.length - 1
-              )
-          );
-
-        }
-
-        if (
-          e.key === "ArrowLeft"
-        ) {
-
-          setCurrent(
-            value =>
-              Math.max(
-                value - 1,
-                0
-              )
-          );
-
-        }
-
-      };
+      if (e.key === "ArrowLeft") {
+        setCurrent((value) =>
+          Math.max(value - 1, 0)
+        );
+      }
+    };
 
     window.addEventListener(
       "keydown",
@@ -113,253 +110,188 @@ export default function ExamPlayer({
         "keydown",
         listener
       );
-
   }, [exam.questions.length]);
 
-const handleSubmit = async () => {
-  try {
-    const payload = Object.entries(answers).map(
-      ([questionId, selectedAnswer]) => ({
-        questionId,
-        selectedAnswer,
-      })
+  useEffect(() => {
+    if (!attemptId) return;
+
+    autoSave.current = setInterval(() => {
+      saveProgress();
+    }, 15000);
+
+    return () => {
+      if (autoSave.current) {
+        clearInterval(autoSave.current);
+      }
+    };
+  }, [
+    attemptId,
+    answers,
+    current,
+    remainingTime,
+  ]);
+
+  useEffect(() => {
+    const handleUnload = () => {
+      saveProgress();
+    };
+
+    window.addEventListener(
+      "beforeunload",
+      handleUnload
     );
 
-    await submitMutation.mutateAsync({
-      examId: exam._id,
-      sourceType,
-      sourceId:
-        sourceType === "simulator"
-          ? exam._id
-          : undefined,
-      attemptId,
-      answers: payload,
-    });
+    return () =>
+      window.removeEventListener(
+        "beforeunload",
+        handleUnload
+      );
+  }, [
+    answers,
+    current,
+    remainingTime,
+  ]);
 
-    router.push(
-      `/results/exam/${exam._id}`
-    );
-  } catch (err) {
-    console.error(err);
-  }
-};
+  const handleSubmit = async () => {
+    try {
+      const payload = Object.entries(
+        answers
+      ).map(
+        ([questionId, selectedAnswer]) => ({
+          questionId,
+          selectedAnswer,
+        })
+      );
+
+      await submitMutation.mutateAsync({
+        examId: exam._id,
+        sourceType,
+        sourceId:
+          sourceType === "simulator"
+            ? exam._id
+            : undefined,
+        attemptId,
+        answers: payload,
+      });
+
+      router.push(
+        `/results/exam/${exam._id}`
+      );
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
-
     <div className="mx-auto max-w-5xl space-y-8 p-6">
-
-      {/* Header */}
-
       <div className="flex items-center justify-between">
-
         <div>
-
           <h1 className="text-3xl font-bold">
-
             {exam.title}
-
           </h1>
 
           <p className="text-muted-foreground">
-
-            AI Generated Assessment
-
+            {sourceType === "simulator"
+              ? "Official Mock Test"
+              : "AI Generated Assessment"}
           </p>
-
         </div>
 
         <ExamTimer
-
           totalMinutes={
+            exam.duration ??
             exam.questions.length * 2
           }
-
+          remainingTime={remainingTime}
+          onTick={setRemainingTime}
           onTimeout={() =>
-            setShowSubmitDialog(
-              true
-            )
+            setShowSubmitDialog(true)
           }
-
         />
-
       </div>
 
-      {/* Progress */}
-
       <QuestionProgress
-
         current={current}
-
-        total={
-          exam.questions.length
-        }
-
+        total={exam.questions.length}
       />
-
-      {/* Question */}
 
       <QuestionCard
-
         question={question}
-
         selectedAnswer={
-          answers[
-            question._id
-          ]
+          answers[question._id]
         }
-
-        onAnswer={answer =>
-
-          setAnswers(
-            previous => ({
-
-              ...previous,
-
-              [question._id]:
-                answer,
-
-            })
-          )
-
+        onAnswer={(answer) =>
+          setAnswers((previous) => ({
+            ...previous,
+            [question._id]: answer,
+          }))
         }
-
       />
 
-      {/* Previous / Next */}
-
       <div className="flex justify-between">
-
         <Button
-
           variant="outline"
+          disabled={current === 0}
+          onClick={async () => {
+            await saveProgress();
 
-          disabled={
-            current === 0
-          }
-
-          onClick={() =>
-            setCurrent(
-              value =>
-                Math.max(
-                  value - 1,
-                  0
-                )
-            )
-          }
-
+            setCurrent((value) =>
+              Math.max(value - 1, 0)
+            );
+          }}
         >
-
           Previous
-
         </Button>
 
         <Button
-
-          onClick={() => {
+          onClick={async () => {
+            await saveProgress();
 
             if (
               current <
               exam.questions.length - 1
             ) {
-
-              setCurrent(
-                value =>
-                  Math.min(
-                    value + 1,
-                    exam.questions.length - 1
-                  )
+              setCurrent((value) =>
+                Math.min(
+                  value + 1,
+                  exam.questions.length - 1
+                )
               );
-
             } else {
-
-              setShowSubmitDialog(
-                true
-              );
-
+              setShowSubmitDialog(true);
             }
-
           }}
-
         >
-
-          {
-
-            current ===
-            exam.questions.length - 1
-
-              ? "Submit Exam"
-
-              : "Next"
-
-          }
-
+          {current ===
+          exam.questions.length - 1
+            ? "Submit Exam"
+            : "Next"}
         </Button>
-
       </div>
 
-      {/* Question Navigator */}
-
       <QuestionNavigation
-
-        total={
-          exam.questions.length
-        }
-
-        current={
-          current
-        }
-
-        answers={
-          answers
-        }
-
-        questionIds={
-          exam.questions.map(
-            question =>
-              question._id
-          )
-        }
-
-        onSelect={
-          setCurrent
-        }
-
+        total={exam.questions.length}
+        current={current}
+        answers={answers}
+        questionIds={exam.questions.map(
+          (q) => q._id
+        )}
+        onSelect={async (index) => {
+          await saveProgress();
+          setCurrent(index);
+        }}
       />
-
-      {/* Submit Dialog */}
 
       <SubmitExamDialog
-
-        open={
-          showSubmitDialog
-        }
-
-        answered={
-          answeredCount
-        }
-
-        total={
-          exam.questions.length
-        }
-
-        loading={
-          submitMutation.isPending
-        }
-
+        open={showSubmitDialog}
+        answered={answeredCount}
+        total={exam.questions.length}
+        loading={submitMutation.isPending}
         onCancel={() =>
-          setShowSubmitDialog(
-            false
-          )
+          setShowSubmitDialog(false)
         }
-
-        onSubmit={
-          handleSubmit
-        }
-
+        onSubmit={handleSubmit}
       />
-
     </div>
-
   );
-
 }

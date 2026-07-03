@@ -14,11 +14,11 @@ export interface IExamAttempt
 
   userId: mongoose.Types.ObjectId;
 
-  examId: mongoose.Types.ObjectId;
+  examId?: mongoose.Types.ObjectId;
 
   sourceType: "generated" | "simulator";
 
-  sourceId: mongoose.Types.ObjectId;
+  sourceId?: mongoose.Types.ObjectId;
 
   answers: IAnswer[];
 
@@ -31,6 +31,12 @@ export interface IExamAttempt
   startedAt: Date;
 
   status : string;
+
+  currentQuestion: number;
+
+  remainingTime: number;
+
+  lastSavedAt: Date;
 
   submittedAt: Date;
 }
@@ -106,6 +112,21 @@ const examAttemptSchema =
       },
 
       startedAt: {
+        type: Date,
+        default: Date.now,
+      },
+
+      currentQuestion: {
+        type: Number,
+        default: 0,
+      },
+
+      remainingTime: {
+        type: Number,
+        default: 0,
+      },
+
+      lastSavedAt: {
         type: Date,
         default: Date.now,
       },

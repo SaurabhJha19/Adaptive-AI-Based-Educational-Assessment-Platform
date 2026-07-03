@@ -4,7 +4,6 @@ from "@/services/api";
 import {
   Exam,
   GenerateExamDto,
-  ExamAnswer,
   ExamResult,
 } from "./types";
 import { SubmitExamPayload } from "./use-submit-exam";
@@ -41,7 +40,7 @@ export const submitExam = async (
   payload: SubmitExamPayload
 ) => {
   const { data } = await api.post(
-    "/exam-attempt/submit",
+    `/exam-attempt/${payload.examId}/submit`,
     payload
   );
 
@@ -55,7 +54,7 @@ examId: string
 const response =
 await api.get(
 
-`/exam-attempts/result/${examId}`
+`/exam-attempt/${examId}/result`
 
 );
 
@@ -73,4 +72,20 @@ export const getExams = async (): Promise<Exam[]> => {
         response.data
     );
 
+};
+
+export const saveAttempt = async (
+  attemptId: string,
+  payload: {
+    answers: any[];
+    currentQuestion: number;
+    remainingTime: number;
+  }
+) => {
+  const { data } = await api.patch(
+    `/exam-attempt/${attemptId}/save`,
+    payload
+  );
+
+  return data;
 };

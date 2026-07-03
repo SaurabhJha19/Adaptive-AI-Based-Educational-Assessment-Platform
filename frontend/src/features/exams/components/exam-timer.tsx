@@ -1,74 +1,50 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-} from "react";
+import { useEffect } from "react";
 
 type Props = {
   totalMinutes: number;
+  remainingTime: number;
+  onTick: (seconds: number) => void;
   onTimeout: () => void;
 };
 
 export default function ExamTimer({
   totalMinutes,
+  remainingTime,
+  onTick,
   onTimeout,
 }: Props) {
-
-  const [
-    seconds,
-    setSeconds,
-  ] = useState(
-    totalMinutes * 60
-  );
-
   useEffect(() => {
-
-    if (seconds <= 0) {
-
+    if (remainingTime <= 0) {
       onTimeout();
-
       return;
     }
 
-    const interval =
-      setInterval(() => {
+    const interval = setInterval(() => {
+      onTick(remainingTime - 1);
+    }, 1000);
 
-        setSeconds(
-          value => value - 1
-        );
-
-      }, 1000);
-
-    return () =>
-      clearInterval(
-        interval
-      );
-
+    return () => clearInterval(interval);
   }, [
-    seconds,
+    remainingTime,
+    onTick,
     onTimeout,
   ]);
 
-  const minutes =
-    Math.floor(
-      seconds / 60
-    );
-
-  const remaining =
-    seconds % 60;
-
-  return (
-
-    <div className="rounded-lg border px-4 py-2 font-semibold">
-
-      {minutes}:
-      {remaining
-        .toString()
-        .padStart(2, "0")}
-
-    </div>
-
+  const minutes = Math.floor(
+    remainingTime / 60
   );
 
+  const seconds =
+    remainingTime % 60;
+
+  return (
+    <div className="rounded-lg border px-4 py-2 font-semibold">
+      {minutes}:
+      {seconds
+        .toString()
+        .padStart(2, "0")}
+    </div>
+  );
 }

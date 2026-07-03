@@ -13,16 +13,20 @@ export const submitExam = async (
   res: Response
 ) => {
 
-  const {
-    examId,
-    answers,
-  } = req.body;
+const {
+  examId,
+  sourceType,
+  sourceId,
+  attemptId,
+  answers,
+} = req.body;
 
 const result = await evaluateExam({
   userId: req.user!.userId,
   examId,
-  sourceType: "generated",
-  sourceId: examId,
+  sourceType,
+  sourceId,
+  attemptId,
   answers,
 });
 
@@ -138,5 +142,41 @@ export const getMyAttempts = async (
   res.json({
     success: true,
     attempts,
+  });
+};
+
+
+export const saveAttempt = async (
+  req: AuthRequest,
+  res: Response
+) => {
+  const { id } = req.params;
+
+  const {
+    answers,
+    currentQuestion,
+    remainingTime,
+  } = req.body;
+
+  const attempt =
+    await ExamAttemptModel.findOneAndUpdate(
+      {
+        _id: id,
+        userId: req.user!.userId,
+      },
+      {
+        answers,
+        currentQuestion,
+        remainingTime,
+        lastSavedAt: new Date(),
+      },
+      {
+        new: true,
+      }
+    );
+
+  res.json({
+    success: true,
+    attempt,
   });
 };

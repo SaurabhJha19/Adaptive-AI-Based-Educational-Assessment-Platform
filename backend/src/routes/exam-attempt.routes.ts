@@ -14,6 +14,10 @@ import {
   getMyAttempts,
 } from "../controllers/exam-attempt.controller";
 
+import {
+  saveAttempt,
+} from "../controllers/exam-attempt.controller";
+
 const router =
   Router();
 
@@ -43,6 +47,13 @@ router.get(
   "/",
   authenticate,
   getMyAttempts
+);
+
+
+router.patch(
+  "/:id/save",
+  authenticate,
+  saveAttempt
 );
 
 export default router;

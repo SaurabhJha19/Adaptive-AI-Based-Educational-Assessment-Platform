@@ -16,8 +16,9 @@ export const QuestionGroupSchema = new Schema(
     },
 
     sharedContent: {
-      type: SharedContentSchema,
+      type: Schema.Types.ObjectId,
       default: null,
+      ref: "SharedContent",
     },
 
     items: {

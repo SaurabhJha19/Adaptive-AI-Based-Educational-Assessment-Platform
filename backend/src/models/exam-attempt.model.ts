@@ -16,6 +16,10 @@ export interface IExamAttempt
 
   examId: mongoose.Types.ObjectId;
 
+  sourceType: "generated" | "simulator";
+
+  sourceId: mongoose.Types.ObjectId;
+
   answers: IAnswer[];
 
   score: number;
@@ -67,6 +71,17 @@ const examAttemptSchema =
       examId: {
         type: Schema.Types.ObjectId,
         ref: "Exam",
+        required: false,
+      },
+
+      sourceType: {
+        type: String,
+        enum: ["generated", "simulator"],
+        default: "generated",
+      },
+
+      sourceId: {
+        type: Schema.Types.ObjectId,
         required: true,
       },
 

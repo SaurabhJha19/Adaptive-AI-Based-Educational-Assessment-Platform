@@ -1,17 +1,18 @@
-import {DocumentModel} from "../models/document.model";
-import {ExamModel} from "../models/exam.model";
-import {ExamAttemptModel} from "../models/exam-attempt.model";
+import { DocumentModel } from "../models/document.model";
+import { ExamModel } from "../models/exam.model";
+import { ExamAttemptModel } from "../models/exam-attempt.model";
 
 export const getDashboardData = async (
   userId: string
 ) => {
-
   const [
     documentCount,
     examCount,
-    attempts,
+    completedAttempts,
+    recentDocuments,
+    latestAttempt,
+    recentAttempts,
   ] = await Promise.all([
-
     DocumentModel.countDocuments({
       userId,
     }),
@@ -22,37 +23,67 @@ export const getDashboardData = async (
 
     ExamAttemptModel.find({
       userId,
+      status: "COMPLETED",
+    }),
+
+    DocumentModel.find({
+      userId,
     })
       .sort({
         createdAt: -1,
       })
-      .limit(10)
-      .populate("examId"),
+      .limit(5),
 
+    ExamAttemptModel.findOne({
+      userId,
+      status: "IN_PROGRESS",
+    }).sort({
+      updatedAt: -1,
+    }),
+
+    ExamAttemptModel.find({
+      userId,
+    })
+      .sort({
+        updatedAt: -1,
+      })
+      .limit(5)
+      .populate("examId"),
   ]);
 
   const averageScore =
-    attempts.length === 0
+    completedAttempts.length === 0
       ? 0
       : Math.round(
-          attempts.reduce(
-            (sum, item) => sum + item.percentage,
+          completedAttempts.reduce(
+            (sum, item) => sum + (item.percentage ?? 0),
             0
-          ) / attempts.length
+          ) / completedAttempts.length
         );
 
   return {
+    stats: {
+      documentCount,
+      examCount,
+      averageScore,
+      studyHours: 0,
+    },
 
-    documentCount,
+    continueLearning: latestAttempt,
 
-    examCount,
+    recentDocuments,
 
-    averageScore,
+    recentActivity: recentAttempts,
 
-    studyHours: 0,
+    recommendation: {
+      title: "Reading Comprehension",
+      description:
+        "Complete another reading assessment to improve consistency.",
+    },
 
-    recentExams: attempts,
-
+    weeklyProgress: {
+      completedAssessments: completedAttempts.length,
+      averageScore,
+    },
   };
-
 };

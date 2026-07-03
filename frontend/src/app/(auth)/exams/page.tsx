@@ -23,19 +23,19 @@ export default function ExamsPage() {
   } = useExams();
 
   const stats = useMemo(() => {
-    const completed = exams.filter(
-      (e: Exam) => e.status === "completed"
+    const published  = exams.filter(
+      (e: Exam) => e.status === "published"
     ).length;
 
-    const pending = exams.filter(
-      (e: Exam) => e.status !== "completed"
+    const draft = exams.filter(
+      (e: Exam) => e.status === "draft"
     ).length;
 
     return {
       total: exams.length,
-      completed,
-      pending,
-      average: completed === 0 ? 0 : 82,
+      published ,
+      draft,
+      average: published  === 0 ? 0 : 82,
     };
   }, [exams]);
 
@@ -53,8 +53,8 @@ export default function ExamsPage() {
     <PageContainer>
 
       <PageHeader
-        title="My Exams"
-        description="Manage and complete your AI-generated assessments."
+        title="AI Assessment"
+        description="Generate and manage personalized assessments from your uploaded study material."
       />
 
       <div className="mb-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -67,15 +67,15 @@ export default function ExamsPage() {
         />
 
         <StatCard
-          title="Completed"
-          value={stats.completed}
+          title="published "
+          value={stats.published }
           subtitle="Finished"
           icon={CheckCircle2}
         />
 
         <StatCard
-          title="Pending"
-          value={stats.pending}
+          title="draft"
+          value={stats.draft}
           subtitle="Waiting"
           icon={Clock3}
         />

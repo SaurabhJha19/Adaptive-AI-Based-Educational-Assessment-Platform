@@ -5,43 +5,38 @@ export type ExamDifficulty =
   | "hard";
 
 export interface Question {
-
   _id: string;
 
   question: string;
 
   options: string[];
 
-  answer: string;
+  correctAnswer?: string;
 
-  explanation: string;
+  explanation?: string;
 
-  difficulty: string;
-
+  difficulty?: string;
 }
 
 export interface Exam {
-
   _id: string;
 
   title: string;
 
-  documentId: string;
+  description: string;
+
+  duration: number;
 
   totalQuestions: number;
 
-  status:
-    | "draft"
-    | "published";
+  status: "draft" | "published";
 
   questions: Question[];
 
   createdAt: string;
 
   updatedAt: string;
-
 }
-
 export interface ExamReview {
 
   questionId: string;

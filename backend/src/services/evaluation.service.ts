@@ -11,6 +11,9 @@ import {
   updateUserAnalytics,
 } from "./analytics.service";
 
+import OfficialExam from "../modules/simulator/models/official-exam.model";
+
+
 
 export const getExamResult =
 async (
@@ -47,10 +50,14 @@ export const evaluateExam =
   async ({
     userId,
     examId,
+    sourceType = "generated",
+    sourceId,
     answers,
   }: {
     userId: string;
     examId: string;
+    sourceType: string;
+    sourceId: string;
 
     answers: {
       questionId: string;
@@ -58,10 +65,13 @@ export const evaluateExam =
     }[];
   }) => {
 
-    const exam =
-      await ExamModel.findById(
-        examId
-      );
+    let exam;
+
+    if (sourceType === "generated") {
+      exam = await ExamModel.findById(examId);
+    } else {
+      exam = await OfficialExam.findById(sourceId);
+    }
 
     if (!exam) {
       throw new Error(
@@ -135,6 +145,8 @@ export const evaluateExam =
       await ExamAttemptModel.create({
         userId,
         examId,
+        sourceType: "generated",
+        sourceId: sourceId ?? examId,
         answers:
           evaluatedAnswers,
         score,

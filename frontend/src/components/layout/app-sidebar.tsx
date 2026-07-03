@@ -1,7 +1,7 @@
 "use client";
 
 import { LogOut } from "lucide-react";
-
+import {cn} from "@/lib/utils";
 import {
   navigation,
   secondaryNavigation,
@@ -54,19 +54,9 @@ export default function AppSidebar() {
 
         <button
           onClick={logout}
-          className="
-            flex
-            w-full
-            items-center
-            gap-3
-            rounded-xl
-            px-4
-            py-3
-            text-red-500
-            transition-all
-            duration-200
-            hover:bg-red-500/10
-          "
+          className={cn(
+            "flex w-full items-center gap-3 rounded-xl px-4 py-3 text-red-500 transition-all duration-200 hover:bg-red-500/10"
+          )}
         >
           <LogOut className="h-5 w-5" />
 

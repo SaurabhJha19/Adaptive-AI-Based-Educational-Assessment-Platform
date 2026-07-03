@@ -12,4 +12,6 @@ router.get("/exams/:id", simulatorController.getExam);
 
 router.post("/start/:id", simulatorController.startExam);
 
+router.get("/attempt/:id", simulatorController.getAttempt);
+
 export default router;

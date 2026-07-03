@@ -78,6 +78,8 @@ export const submitExam =
       await ExamAttemptModel.create({
         userId,
         examId,
+        sourceType: "generated",
+        sourceId: examId,
 
         answers:
           evaluatedAnswers,

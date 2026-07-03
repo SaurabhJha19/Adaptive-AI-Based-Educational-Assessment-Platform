@@ -5,6 +5,7 @@ import {
   BarChart3,
   User,
   Settings,
+  GraduationCap,
 } from "lucide-react";
 
 export const navigation = [
@@ -19,6 +20,12 @@ export const navigation = [
     title: "Documents",
     href: "/documents",
     icon: FileText,
+  },
+
+  {
+    title: "Exam Simulator",
+    href: "/simulator",
+    icon: GraduationCap
   },
 
   {

@@ -17,6 +17,14 @@ export interface IExam
 
   totalQuestions: number;
 
+    description: string;
+
+    duration: number;
+
+   createdAt: string;
+
+    updatedAt: string;
+
   status:
     | "draft"
     | "published";
@@ -30,6 +38,16 @@ const examSchema =
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true,
+      },
+
+      description: {
+        type: String,
+        default: "",
+      },
+
+      duration: {
+        type: Number,
+        default: 30,
       },
 
       documentId: {

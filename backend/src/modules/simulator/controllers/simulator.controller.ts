@@ -1,5 +1,9 @@
 import { Request, Response } from "express";
 import simulatorService from "../services/simulator.service";
+import startSimulatorService from "../services/start-simulator.service";
+import {ExamAttemptModel} from "../../../models/exam-attempt.model";
+import getAttemptSourceService from "../../../services/get-attempt-source.service";
+
 
 class SimulatorController {
   async getExamTypes(req: Request, res: Response) {
@@ -31,9 +35,38 @@ class SimulatorController {
     req: Request<{ id: string }>,
     res: Response
     ) {
-    const exam = await simulatorService.getExam(req.params.id);
-    res.json(exam);
+    const userId = (req as any).user.id;
+
+    const result =
+        await startSimulatorService.execute(
+        userId,
+        req.params.id
+        );
+
+    res.json(result);
     }
+
+
+async getAttempt(
+  req: Request<{ id: string }>,
+  res: Response
+) {
+  const attempt = await ExamAttemptModel.findById(req.params.id);
+
+  if (!attempt) {
+    return res.status(404).json({
+      message: "Attempt not found",
+    });
+  }
+
+  const exam = await getAttemptSourceService.execute(attempt);
+
+  res.json({
+    attempt,
+    exam,
+  });
+}
+
 }
 
 export default new SimulatorController();

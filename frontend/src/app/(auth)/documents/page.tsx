@@ -1,6 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+
+import {
+  FileText,
+  CheckCircle2,
+  Loader2,
+  HardDrive,
+} from "lucide-react";
+
+import PageContainer from "@/components/layout/page-container";
+import PageHeader from "@/components/ui/page-header";
+import StatCard from "@/components/ui/stat-card";
+import SectionCard from "@/components/ui/section-card";
 
 import UploadButton from "@/features/documents/components/upload-button";
 import DocumentGrid from "@/features/documents/components/document-grid";
@@ -27,82 +39,180 @@ export default function DocumentsPage() {
     setProgress,
   ] = useState(0);
 
+  const documents = data?.documents ?? [];
+
+  const stats =
+    useMemo(() => {
+
+      const processed =
+        documents.filter(
+          (d: any) =>
+            d.status === "processed"
+        ).length;
+
+      const processing =
+        documents.filter(
+          (d: any) =>
+            d.status === "processing"
+        ).length;
+
+      const totalSize =
+        documents.reduce(
+          (sum: number, doc: any) =>
+            sum + (doc.fileSize ?? 0),
+          0
+        );
+
+      return {
+
+        total: documents.length,
+
+        processed,
+
+        processing,
+
+        storage:
+          (
+            totalSize /
+            1024 /
+            1024
+          ).toFixed(1),
+
+      };
+
+    }, [documents]);
+
   if (isLoading) {
 
     return (
-      <div>
-        Loading documents...
-      </div>
+
+      <PageContainer>
+
+        <div className="py-20 text-center">
+
+          Loading documents...
+
+        </div>
+
+      </PageContainer>
+
     );
+
   }
 
   return (
 
-    <div className="space-y-6">
+    <PageContainer>
 
-      <div className="flex items-center justify-between">
+      <PageHeader
+        title="Documents"
+        description="Manage your uploaded study material."
+        action={
+          <UploadButton
+            onSelect={(file) =>
+              upload.mutate({
+                file,
+                onUploadProgress:
+                  setProgress,
+              })
+            }
+          />
+        }
+      />
 
-        <div>
+      {/* Statistics */}
 
-          <h1 className="text-3xl font-bold">
-            Documents
-          </h1>
+      <div className="mb-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 
-          <p className="text-muted-foreground">
-            Manage your uploaded study material.
-          </p>
+        <StatCard
+          title="Documents"
+          value={stats.total}
+          subtitle="Uploaded"
+          icon={FileText}
+        />
 
-        </div>
+        <StatCard
+          title="Processed"
+          value={stats.processed}
+          subtitle="Ready"
+          icon={CheckCircle2}
+        />
 
-        <UploadButton
-          onSelect={(file) =>
-            upload.mutate({
-              file,
-              onUploadProgress:
-                setProgress,
-            })
-          }
+        <StatCard
+          title="Processing"
+          value={stats.processing}
+          subtitle="In Progress"
+          icon={Loader2}
+        />
+
+        <StatCard
+          title="Storage"
+          value={`${stats.storage} MB`}
+          subtitle="Used"
+          icon={HardDrive}
         />
 
       </div>
 
+      {/* Upload Progress */}
+
       {upload.isPending && (
 
-        <div className="rounded-lg border p-4">
+        <SectionCard
+          title="Uploading Document"
+          className="mb-8"
+        >
 
-          <p>
-            Uploading...
-          </p>
+          <div className="space-y-4">
 
-          <div className="mt-2 h-2 rounded bg-muted">
+            <div className="h-3 overflow-hidden rounded-full bg-muted">
 
-            <div
-              className="h-2 rounded bg-primary transition-all"
-              style={{
-                width: `${progress}%`,
-              }}
-            />
+              <div
+                className="h-full rounded-full bg-primary transition-all duration-300"
+                style={{
+                  width: `${progress}%`,
+                }}
+              />
+
+            </div>
+
+            <div className="flex items-center justify-between">
+
+              <span className="text-sm text-muted-foreground">
+
+                Uploading...
+
+              </span>
+
+              <span className="font-semibold">
+
+                {progress}%
+
+              </span>
+
+            </div>
 
           </div>
 
-          <p className="mt-2 text-sm">
-            {progress}%
-          </p>
-
-        </div>
+        </SectionCard>
 
       )}
 
-      <DocumentGrid
-        documents={
-          data?.documents ?? []
-        }
-        onDelete={(id) =>
-          remove.mutate(id)
-        }
-      />
+      {/* Document Library */}
 
-    </div>
+      <SectionCard title="Document Library">
+
+        <DocumentGrid
+          documents={documents}
+          onDelete={(id) =>
+            remove.mutate(id)
+          }
+        />
+
+      </SectionCard>
+
+    </PageContainer>
 
   );
+
 }

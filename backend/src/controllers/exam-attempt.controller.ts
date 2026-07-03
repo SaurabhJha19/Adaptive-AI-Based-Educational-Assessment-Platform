@@ -18,12 +18,13 @@ export const submitExam = async (
     answers,
   } = req.body;
 
-  const result =
-    await evaluateExam({
-      userId: req.user!.userId,
-      examId,
-      answers,
-    });
+const result = await evaluateExam({
+  userId: req.user!.userId,
+  examId,
+  sourceType: "generated",
+  sourceId: examId,
+  answers,
+});
 
   res.status(200).json({
     success: true,

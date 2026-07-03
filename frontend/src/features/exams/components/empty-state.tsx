@@ -13,7 +13,7 @@ export default function EmptyState() {
       </h3>
 
       <p className="mt-2 text-muted-foreground">
-        Generate your first AI assessment from a document.
+        Upload a processed document to generate your first AI assessment.
       </p>
 
     </div>

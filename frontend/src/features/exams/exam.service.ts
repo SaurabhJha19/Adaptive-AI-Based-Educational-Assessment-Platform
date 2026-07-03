@@ -7,6 +7,7 @@ import {
   ExamAnswer,
   ExamResult,
 } from "./types";
+import { SubmitExamPayload } from "./use-submit-exam";
 
 export const generateExam =
   async (
@@ -37,22 +38,15 @@ export const getExam =
   };
 
 export const submitExam = async (
-  examId: string,
-  answers: ExamAnswer[]
-): Promise<ExamResult> => {
+  payload: SubmitExamPayload
+) => {
+  const { data } = await api.post(
+    "/exam-attempt/submit",
+    payload
+  );
 
-  const response =
-    await api.post(
-      "/exams/submit",
-      {
-        examId,
-        answers,
-      }
-    );
-
-  return response.data;
+  return data;
 };
-
 export const getExamResult =
 async (
 examId: string
@@ -73,6 +67,10 @@ export const getExams = async (): Promise<Exam[]> => {
 
   const response = await api.get("/exams");
 
-  return response.data.exams;
+    return (
+        response.data.exams ??
+        response.data.data ??
+        response.data
+    );
 
 };

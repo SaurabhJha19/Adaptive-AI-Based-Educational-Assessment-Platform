@@ -5,50 +5,40 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 
-import {
-  submitExam,
-} from "./exam.service";
+import { submitExam } from "./exam.service";
 
-import {
-  ExamAnswer,
-  ExamResult,
-} from "./types";
+import { ExamResult } from "./types";
 
-export const useSubmitExam =
-  () => {
+export interface SubmitExamPayload {
+  examId: string;
 
-    const queryClient =
-      useQueryClient();
+  sourceType?: "generated" | "simulator";
 
-    return useMutation({
+  sourceId?: string;
 
-      mutationFn: ({
-        examId,
-        answers,
-      }: {
-        examId: string;
-        answers: ExamAnswer[];
-      }) =>
-        submitExam(
-          examId,
-          answers
-        ),
+  attemptId?: string;
 
-      onSuccess: (
-        result: ExamResult,
-        variables
-      ) => {
+  answers: {
+    questionId: string;
+    selectedAnswer: string;
+  }[];
+}
 
-        queryClient.setQueryData(
-          [
-            "exam-result",
-            variables.examId,
-          ],
-          result
-        );
+export const useSubmitExam = () => {
+  const queryClient = useQueryClient();
 
-      },
+  return useMutation({
+    mutationFn: (payload: SubmitExamPayload) =>
+      submitExam(payload),
 
-    });
-
-  };
+    onSuccess: (
+      result: ExamResult,
+      variables
+    ) => {
+      queryClient.setQueryData(
+        ["exam-result", variables.examId],
+        result
+      );
+    },
+  });
+};

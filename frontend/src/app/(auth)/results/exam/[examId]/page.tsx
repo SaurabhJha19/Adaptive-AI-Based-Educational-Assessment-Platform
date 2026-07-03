@@ -125,7 +125,7 @@ export default function ExamResultsPage() {
 
         <Button
           onClick={() =>
-            router.push("/documents")
+            router.push("/simulator")
           }
         >
           Take Another Exam

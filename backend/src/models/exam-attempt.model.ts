@@ -72,6 +72,7 @@ const examAttemptSchema =
         type: Schema.Types.ObjectId,
         ref: "Exam",
         required: false,
+        default: undefined,
       },
 
       sourceType: {

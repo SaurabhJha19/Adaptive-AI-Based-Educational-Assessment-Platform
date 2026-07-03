@@ -3,7 +3,7 @@
 import {
   useQuery,
 } from "@tanstack/react-query";
-
+import { Document } from "@/types/document";
 import {
   getDocuments,
 } from "./document.service";
@@ -21,7 +21,7 @@ export const useDocuments =
 
             const processing =
             docs?.some(
-                (doc: any) =>
+                (doc: Document) =>
                 doc.status ===
                 "processing"
             );

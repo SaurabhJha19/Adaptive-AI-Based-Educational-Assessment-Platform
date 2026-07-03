@@ -1,5 +1,4 @@
 import api from "@/lib/api";
-import { id } from "zod/v4/locales";
 
 class SimulatorService {
   async getExamTypes() {

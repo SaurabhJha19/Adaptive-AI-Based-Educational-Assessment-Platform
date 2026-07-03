@@ -1,24 +1,43 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-import { useSimulatorAttempt } from "@/features/simulator/hooks/use-simulator-attempt";
+import simulatorService from "@/features/simulator/simulator.service";
 
 export default function SimulatorAttemptPage() {
   const params = useParams();
+  const router = useRouter();
 
-  const id = params.id as string;
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data = await simulatorService.getAttempt(
+          params.id as string
+        );
 
-  const { data, isLoading } =
-    useSimulatorAttempt(id);
+        /*
+         * Temporary:
+         * Reuse the existing exam player until we
+         * completely merge Simulator + AI Assessment.
+         */
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+        router.replace(
+          `/exams/${data.exam._id}/start?attempt=${data.attempt._id}&source=simulator`
+        );
+      } catch (err) {
+        console.error(err);
+
+        router.replace("/simulator");
+      }
+    };
+
+    load();
+  }, [params.id, router]);
 
   return (
-    <pre>
-      {JSON.stringify(data, null, 2)}
-    </pre>
+    <div className="flex h-[70vh] items-center justify-center">
+      Loading simulator...
+    </div>
   );
 }

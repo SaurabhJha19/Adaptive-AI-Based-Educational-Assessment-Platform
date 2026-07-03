@@ -120,7 +120,7 @@ export default function DocumentCard({
           <button
             onClick={() =>
               router.push(
-                `/documents/${document._id}`
+                `/chat?documentId=${document._id}`
               )
             }
             className="flex items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm transition hover:bg-background"
@@ -132,25 +132,29 @@ export default function DocumentCard({
 
           </button>
 
-          <GenerateExamDialog
-            documentId={document._id}
-            documentName={document.originalName}
-          >
-
-            <button className="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground transition hover:opacity-90">
-
-              <GraduationCap className="h-4 w-4" />
-
-              Generate
-
-            </button>
-
-          </GenerateExamDialog>
+            {document.status === "processed" ? (
+                <GenerateExamDialog
+                    documentId={document._id}
+                    documentName={document.originalName}
+                >
+                    <button className="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground">
+                        <GraduationCap className="h-4 w-4" />
+                        Generate
+                    </button>
+                </GenerateExamDialog>
+            ) : (
+                <button
+                    disabled
+                    className="flex items-center justify-center gap-2 rounded-lg bg-muted px-4 py-2 text-sm"
+                >
+                    Processing...
+                </button>
+            )}
 
           <button
             onClick={() =>
               router.push(
-                `/documents/${document._id}`
+                `/chat?documentId=${document._id}`
               )
             }
             className="flex items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm transition hover:bg-background"
@@ -178,7 +182,7 @@ export default function DocumentCard({
         <button
           onClick={() =>
             router.push(
-              `/documents/${document._id}`
+              `/chat?documentId=${document._id}`
             )
           }
           className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-muted py-3 text-sm font-medium transition hover:bg-muted/70"

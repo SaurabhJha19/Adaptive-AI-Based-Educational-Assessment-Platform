@@ -46,139 +46,137 @@ async (
 
 };
 
-export const evaluateExam =
-  async ({
-    userId,
-    examId,
-    sourceType = "generated",
-    sourceId,
-    answers,
-  }: {
-    userId: string;
-    examId: string;
-    sourceType: string;
-    sourceId: string;
+export const evaluateExam = async ({
+  userId,
+  examId,
+  sourceType = "generated",
+  sourceId,
+  attemptId,
+  answers,
+}: {
+  userId: string;
+  examId: string;
+  sourceType?: "generated" | "simulator";
+  sourceId?: string;
+  attemptId?: string;
+  answers: {
+    questionId: string;
+    selectedAnswer: string;
+  }[];
+}) => {
+  const exam =
+    sourceType === "generated"
+      ? await ExamModel.findById(examId)
+      : await OfficialExam.findById(sourceId);
 
-    answers: {
-      questionId: string;
-      selectedAnswer: string;
-    }[];
-  }) => {
+  if (!exam) {
+    throw new Error("Exam not found");
+  }
 
-    let exam;
+  let score = 0;
 
-    if (sourceType === "generated") {
-      exam = await ExamModel.findById(examId);
-    } else {
-      exam = await OfficialExam.findById(sourceId);
-    }
+  const evaluatedAnswers = [];
 
-    if (!exam) {
-      throw new Error(
-        "Exam not found"
+  for (const answer of answers) {
+    const question =
+      await QuestionModel.findById(
+        answer.questionId
       );
+
+    if (!question) continue;
+
+    const isCorrect =
+      question.answer ===
+      answer.selectedAnswer;
+
+    if (isCorrect) {
+      score++;
     }
 
-    let score = 0;
+    evaluatedAnswers.push({
+      questionId: question._id,
+      question: question.question,
+      options: question.options,
+      selectedAnswer:
+        answer.selectedAnswer,
+      correctAnswer:
+        question.answer,
+      explanation:
+        question.explanation,
+      difficulty:
+        question.difficulty,
+      isCorrect,
+    });
+  }
 
-    const evaluatedAnswers =
-      [];
+  const totalQuestions =
+    exam.totalQuestions ??
+    exam.questions.length;
 
-    for (
-      const answer of answers
-    ) {
+  const percentage =
+    totalQuestions === 0
+      ? 0
+      : (score / totalQuestions) * 100;
 
-      const question =
-        await QuestionModel.findById(
-          answer.questionId
-        );
+  let attempt;
 
-      if (!question) {
-        continue;
-      }
-
-      const isCorrect =
-        question.answer ===
-        answer.selectedAnswer;
-
-      if (isCorrect) {
-        score++;
-      }
-
-      evaluatedAnswers.push({
-
-        questionId:
-          question._id,
-
-        question:
-          question.question,
-
-        options:
-          question.options,
-
-        selectedAnswer:
-          answer.selectedAnswer,
-
-        correctAnswer:
-          question.answer,
-
-        explanation:
-          question.explanation,
-
-        difficulty:
-          question.difficulty,
-
-        isCorrect,
-
-      });
-    }
-
-    const percentage =
-      exam.totalQuestions > 0
-        ? (
-            score /
-            exam.totalQuestions
-          ) * 100
-        : 0;
-
-    const attempt =
+  if (attemptId) {
+    attempt =
+      await ExamAttemptModel.findByIdAndUpdate(
+        attemptId,
+        {
+          answers: evaluatedAnswers,
+          score,
+          percentage,
+          totalQuestions,
+          submittedAt: new Date(),
+          status: "COMPLETED",
+        },
+        {
+          new: true,
+        }
+      );
+  } else {
+    attempt =
       await ExamAttemptModel.create({
         userId,
-        examId,
-        sourceType: "generated",
-        sourceId: sourceId ?? examId,
-        answers:
-          evaluatedAnswers,
+
+        examId:
+          sourceType === "generated"
+            ? examId
+            : undefined,
+
+        sourceType,
+
+        sourceId:
+          sourceType === "simulator"
+            ? sourceId
+            : examId,
+
+        answers: evaluatedAnswers,
+
         score,
+
         percentage,
-        submittedAt:
-          new Date(),
-        totalQuestions: exam.questions.length,
+
+        totalQuestions,
+
+        submittedAt: new Date(),
+
+        status: "COMPLETED",
       });
+  }
 
-  await updateUserAnalytics(
-      userId,
-    );
+  await updateUserAnalytics(userId);
 
-      return {
-
-        attempt,
-
-        score,
-
-        percentage,
-
-        totalQuestions:
-          exam.totalQuestions,
-
-        correctAnswers:
-          score,
-
-        incorrectAnswers:
-          exam.totalQuestions - score,
-
-        review:
-          evaluatedAnswers,
-
-      };
+  return {
+    attempt,
+    score,
+    percentage,
+    totalQuestions,
+    correctAnswers: score,
+    incorrectAnswers:
+      totalQuestions - score,
+    review: evaluatedAnswers,
   };
+};

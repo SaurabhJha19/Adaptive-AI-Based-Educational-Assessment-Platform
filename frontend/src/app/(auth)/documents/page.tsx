@@ -13,7 +13,7 @@ import PageContainer from "@/components/layout/page-container";
 import PageHeader from "@/components/ui/page-header";
 import StatCard from "@/components/ui/stat-card";
 import SectionCard from "@/components/ui/section-card";
-
+import { Document } from "@/types/document";
 import UploadButton from "@/features/documents/components/upload-button";
 import DocumentGrid from "@/features/documents/components/document-grid";
 
@@ -39,26 +39,26 @@ export default function DocumentsPage() {
     setProgress,
   ] = useState(0);
 
-  const documents = data?.documents ?? [];
+  const documents = data?.documents || data || [];
 
   const stats =
     useMemo(() => {
 
       const processed =
         documents.filter(
-          (d: any) =>
+          (d: Document) =>
             d.status === "processed"
         ).length;
 
       const processing =
         documents.filter(
-          (d: any) =>
+          (d: Document) =>
             d.status === "processing"
         ).length;
 
       const totalSize =
         documents.reduce(
-          (sum: number, doc: any) =>
+          (sum: number, doc: Document) =>
             sum + (doc.fileSize ?? 0),
           0
         );

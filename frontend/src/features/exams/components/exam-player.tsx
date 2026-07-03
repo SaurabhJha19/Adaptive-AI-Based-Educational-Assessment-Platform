@@ -21,10 +21,14 @@ import SubmitExamDialog from "./submit-exam-dialog";
 
 type Props = {
   exam: Exam;
+  sourceType?: "generated" | "simulator";
+  attemptId?: string;
 };
 
 export default function ExamPlayer({
   exam,
+  sourceType = "generated",
+  attemptId,
 }: Props) {
 
   const router =
@@ -112,52 +116,33 @@ export default function ExamPlayer({
 
   }, [exam.questions.length]);
 
-  const handleSubmit =
-    async () => {
+const handleSubmit = async () => {
+  try {
+    const payload = Object.entries(answers).map(
+      ([questionId, selectedAnswer]) => ({
+        questionId,
+        selectedAnswer,
+      })
+    );
 
-      try {
+    await submitMutation.mutateAsync({
+      examId: exam._id,
+      sourceType,
+      sourceId:
+        sourceType === "simulator"
+          ? exam._id
+          : undefined,
+      attemptId,
+      answers: payload,
+    });
 
-        const payload =
-          Object.entries(
-            answers
-          ).map(
-            ([
-              questionId,
-              selectedAnswer,
-            ]) => ({
-
-              questionId,
-
-              selectedAnswer,
-
-            })
-          );
-
-        await submitMutation.mutateAsync({
-
-          examId:
-            exam._id,
-
-          answers:
-            payload,
-
-        });
-
-        router.push(
-          `/results/exam/${exam._id}`
-        );
-
-      } catch (error) {
-
-        console.error(error);
-
-        alert(
-          "Failed to submit exam."
-        );
-
-      }
-
-    };
+    router.push(
+      `/results/exam/${exam._id}`
+    );
+  } catch (err) {
+    console.error(err);
+  }
+};
 
   return (
 

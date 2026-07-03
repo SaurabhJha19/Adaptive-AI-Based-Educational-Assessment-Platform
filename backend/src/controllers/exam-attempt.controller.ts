@@ -122,3 +122,21 @@ export const getExamResult = async (
   });
 };
 
+export const getMyAttempts = async (
+  req: AuthRequest,
+  res: Response
+) => {
+  const attempts =
+    await ExamAttemptModel
+      .find({
+        userId: req.user!.userId,
+      })
+      .sort({
+        createdAt: -1,
+      });
+
+  res.json({
+    success: true,
+    attempts,
+  });
+};

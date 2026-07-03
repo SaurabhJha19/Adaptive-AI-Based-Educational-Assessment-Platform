@@ -2,7 +2,6 @@
 
 import { Clock3, FileText } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useMutation } from "@tanstack/react-query";
 
 import { Button } from "@/components/ui/button";
 
@@ -16,17 +15,19 @@ type Props = {
 export default function MockTestCard({ exam }: Props) {
   const router = useRouter();
 
-  const startSimulation = useMutation({
-    mutationFn: () => simulatorService.startSimulator(exam._id),
+  const handleStart = async () => {
+    try {
+      const data = await simulatorService.startSimulator(
+        exam._id
+      );
 
-    onSuccess: (data: { attemptId: string }) => {
-      router.push(`/simulator/attempt/${data.attemptId}`);
-    },
-
-    onError: () => {
-      alert("Failed to start simulation.");
-    },
-  });
+      router.push(
+        `/simulator/attempt/${data.attemptId}`
+      );
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <div className="group rounded-2xl border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-xl">
@@ -57,13 +58,9 @@ export default function MockTestCard({ exam }: Props) {
       </div>
 
       <Button
-        className="w-full"
-        disabled={startSimulation.isPending}
-        onClick={() => startSimulation.mutate()}
+          onClick={handleStart}
       >
-        {startSimulation.isPending
-          ? "Starting..."
-          : "Start Simulation"}
+          Start Mock Test
       </Button>
     </div>
   );

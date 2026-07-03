@@ -22,22 +22,21 @@ export default function ExamsPage() {
     isLoading,
   } = useExams();
 
-  const stats = useMemo(() => {
-    const published  = exams.filter(
-      (e: Exam) => e.status === "published"
-    ).length;
+const stats = useMemo(() => {
+  const published = exams.filter(
+    (e: Exam) => e.status === "published"
+  ).length;
 
-    const draft = exams.filter(
-      (e: Exam) => e.status === "draft"
-    ).length;
+  const draft = exams.filter(
+    (e: Exam) => e.status === "draft"
+  ).length;
 
-    return {
-      total: exams.length,
-      published ,
-      draft,
-      average: published  === 0 ? 0 : 82,
-    };
-  }, [exams]);
+  return {
+    total: exams.length,
+    published,
+    draft,
+  };
+}, [exams]);
 
   if (isLoading) {
     return (
@@ -67,24 +66,34 @@ export default function ExamsPage() {
         />
 
         <StatCard
+            title="Assessments"
+            value={stats.total}
+            subtitle="Generated"
+            icon={ClipboardList}
+        />
+
+        <StatCard
           title="published "
           value={stats.published }
-          subtitle="Finished"
+          subtitle="Ready"
           icon={CheckCircle2}
         />
 
         <StatCard
           title="draft"
           value={stats.draft}
-          subtitle="Waiting"
+          subtitle="Generating"
           icon={Clock3}
         />
 
         <StatCard
-          title="Average Score"
-          value={`${stats.average}%`}
-          subtitle="Overall"
-          icon={Trophy}
+            title="Questions"
+            value={exams.reduce(
+                (sum, exam) => sum + exam.totalQuestions,
+                0
+            )}
+            subtitle="Available"
+            icon={Trophy}
         />
 
       </div>

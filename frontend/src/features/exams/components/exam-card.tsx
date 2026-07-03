@@ -70,9 +70,7 @@ export default function ExamCard({ exam }: Props) {
           <div className="flex items-center gap-2 text-muted-foreground">
             <Calendar className="h-4 w-4" />
 
-            {new Date(
-              exam.createdAt
-            ).toLocaleDateString()}
+            {new Date(exam.createdAt).toLocaleDateString("en-IN")}
           </div>
 
           <div className="flex items-center gap-2">
@@ -107,7 +105,7 @@ export default function ExamCard({ exam }: Props) {
             disabled={!published}
           >
             <Link
-              href={`/exams/${exam._id}/start`}
+              href={`/exams/${exam._id}`}
             >
               {published
                 ? "Start Assessment"

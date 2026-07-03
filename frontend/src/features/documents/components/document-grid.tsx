@@ -31,7 +31,7 @@ export default function DocumentGrid({
   }
 
   return (
-    <div className="grid gap-5">
+    <div className="grid gap-6 lg:grid-cols-2">
 
       {documents.map((document) => (
 

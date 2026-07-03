@@ -10,6 +10,10 @@ import {
   getExamResult,
 } from "../controllers/exam-attempt.controller";
 
+import {
+  getMyAttempts,
+} from "../controllers/exam-attempt.controller";
+
 const router =
   Router();
 
@@ -32,6 +36,13 @@ router.get(
 authenticate,
 getExamResult
 
+);
+
+
+router.get(
+  "/",
+  authenticate,
+  getMyAttempts
 );
 
 export default router;

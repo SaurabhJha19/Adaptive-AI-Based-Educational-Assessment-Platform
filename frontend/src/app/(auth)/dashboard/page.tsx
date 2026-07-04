@@ -10,7 +10,6 @@ import RecommendationSection from "@/features/dashboard/components/recommendatio
 import PerformanceSection from "@/features/dashboard/components/performance-section";
 import RecentDocuments from "@/features/dashboard/components/recent-documents";
 import RecentActivity from "@/features/dashboard/components/recent-activity";
-
 import { useDashboard } from "@/features/dashboard/hooks/use-dashboard";
 
 export default function DashboardPage() {

@@ -27,11 +27,17 @@ export default function RecentActivity({
             className="border-l-2 border-primary pl-4"
           >
             <p className="font-medium">
-              {item.status}
+              {item.examId?.title ??
+                item.title ??
+                "Assessment"}
             </p>
 
             <p className="text-sm text-muted-foreground">
-              Score: {item.percentage ?? 0}%
+              {item.status} • Score:{" "}
+              {Math.round(
+                item.percentage ?? 0
+              )}
+              %
             </p>
           </div>
         ))}

@@ -98,22 +98,28 @@ const examAttemptSchema =
 
       score: {
         type: Number,
-        required: true,
+        default: 0,
       },
 
       totalQuestions: {
         type: Number,
-        required: true,
+        default: 0,
       },
 
       percentage: {
         type: Number,
-        required: true,
+        default: 0,
       },
 
       startedAt: {
         type: Date,
         default: Date.now,
+      },
+
+      status: {
+        type: String,
+        enum: ["IN_PROGRESS", "COMPLETED", "ABANDONED"],
+        default: "IN_PROGRESS",
       },
 
       currentQuestion: {

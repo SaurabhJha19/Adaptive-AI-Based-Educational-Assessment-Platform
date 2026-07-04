@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import { QuestionType } from "../constants/question-type.enum";
 
 export const AssessmentItemSchema = new Schema(
@@ -47,4 +47,9 @@ export const AssessmentItemSchema = new Schema(
   {
     _id: true,
   }
+);
+
+export const AssessmentItemModel = mongoose.model(
+  "AssessmentItem",
+  AssessmentItemSchema
 );

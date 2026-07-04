@@ -5,4 +5,6 @@ export enum SimulatorStatus {
   VALIDATED = "VALIDATED",
   PUBLISHED = "PUBLISHED",
   ARCHIVED = "ARCHIVED",
+  PROCESSING = "PROCESSING",
+  FAILED = "FAILED",
 }

@@ -17,7 +17,12 @@ import simulatorAdminRoutes from "./modules/simulator/routes/simulator-admin.rou
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/recommendations", recommendationRoutes);
@@ -25,13 +30,13 @@ app.use("/api/questions", questionRoutes);
 app.use("/api/explainer", explainerRoutes);
 app.use("/api/documents", documentRoutes);
 app.use("/api/exams", examRoutes);
-app.use("/api/exams", examAttemptRoutes);
+app.use("/api/exam-attempt", examAttemptRoutes);
 app.use("/api/feedback", feedbackRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/topic-performance", topicPerformanceRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/simulator", simulatorRoutes);
-app.use("/api/admin/simulator", simulatorAdminRoutes);
+app.use("/api/simulator-admin", simulatorAdminRoutes);
 app.get("/health", (_, res) => {
   res.status(200).json({
     success: true,

@@ -58,6 +58,11 @@ const OfficialExamSchema = new Schema(
       required: true,
     },
 
+    pdfKey: {
+      type: String,
+      required: true,
+    },
+
     parserVersion: {
       type: String,
       default: "1.0.0",
@@ -66,7 +71,7 @@ const OfficialExamSchema = new Schema(
     status: {
       type: String,
       enum: Object.values(SimulatorStatus),
-      default: SimulatorStatus.UPLOADED,
+      default: SimulatorStatus.PROCESSING,
     },
 
     sections: {
@@ -92,10 +97,6 @@ const OfficialExamSchema = new Schema(
 OfficialExamSchema.index({
     examType:1,
     status:1,
-});
-
-OfficialExamSchema.index({
-    examCode:1,
 });
 
 const OfficialExam: Model<any> = model(

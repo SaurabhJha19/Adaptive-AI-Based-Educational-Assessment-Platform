@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 import { Exam } from "../types";
-import { saveAttempt } from "../exam.service";
+import { saveAttempt,getAttempt } from "../exam.service";
 import { useSubmitExam } from "../use-submit-exam";
 
 import ExamTimer from "./exam-timer";
@@ -24,6 +24,7 @@ import SubmitExamDialog from "./submit-exam-dialog";
 type Props = {
   exam: Exam;
   sourceType?: "generated" | "simulator";
+  simulator?: boolean;
   attemptId?: string;
 };
 
@@ -79,6 +80,39 @@ export default function ExamPlayer({
       console.error(err);
     }
   };
+
+    useEffect(() => {
+      if (!attemptId) return;
+
+      const loadAttempt = async () => {
+        try {
+          const data = await getAttempt(attemptId);
+
+          const restoredAnswers: Record<string, string> = {};
+
+          data.attempt.answers.forEach((item: any) => {
+            restoredAnswers[item.questionId] =
+              item.selectedAnswer;
+          });
+
+          setAnswers(restoredAnswers);
+
+          setCurrent(
+            data.attempt.currentQuestion ?? 0
+          );
+
+          if (data.attempt.remainingTime) {
+            setRemainingTime(
+              data.attempt.remainingTime
+            );
+          }
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      loadAttempt();
+    }, [attemptId]);
 
   useEffect(() => {
     const listener = (

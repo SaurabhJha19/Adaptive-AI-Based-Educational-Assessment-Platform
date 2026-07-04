@@ -9,23 +9,39 @@ class StartSimulatorService {
       throw new Error("Official exam not found.");
     }
 
-    const attempt = await ExamAttemptModel.create({
-      userId,
+const totalQuestions =
+  exam.sections?.reduce(
+    (sectionTotal: number, section: any) =>
+      sectionTotal +
+      (section.questionGroups?.reduce(
+        (groupTotal: number, group: any) =>
+          groupTotal + (group.questions?.length || 0),
+        0
+      ) || 0),
+    0
+  ) || 0;
 
-      sourceType: "simulator",
+const attempt = await ExamAttemptModel.create({
+  userId,
 
-      sourceId: officialExamId,
+  sourceType: "simulator",
 
-      examId: undefined,
+  sourceId: officialExamId,
 
-      answers: [],
+  examId: undefined,
 
-      score: 0,
+  answers: [],
 
-      status: "IN_PROGRESS",
+  score: 0,
 
-      startedAt: new Date(),
-    });
+  percentage: 0,
+
+  totalQuestions,
+
+  status: "IN_PROGRESS",
+
+  startedAt: new Date(),
+});
 
     return {
       attemptId: attempt._id,

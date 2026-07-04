@@ -3,31 +3,30 @@ import { Request, Response } from "express";
 import simulatorService from "../services/simulator.service";
 
 class SimulatorAdminController {
-  async create(req: Request, res: Response) {
+    async create(
+        req: Request,
+        res: Response
+    ) {
 
-    const {
-    title,
-    examCode,
-    examType,
-    pdfUrl,
-    } = req.body;
+        const exam =
+            await simulatorService.create({
+                body: req.body,
+                file: req.file!,
+            });
 
-    if (!title || !examCode || !examType || !pdfUrl) {
-    return res.status(400).json({
-        message:
-        "title, examCode, examType and pdfUrl are required",
-    });
+        res.status(201).json(exam);
     }
 
-    const exam = await simulatorService.create(req.body);
+      async review(req: Request<{ id: string }>, res: Response) {
+        const exam = await simulatorService.getExam(req.params.id);
 
-    res.status(201).json(exam);
-  }
+        res.json(exam);
+      }
 
-  async review(req: Request<{ id: string }>, res: Response) {
-    const exam = await simulatorService.getExam(req.params.id);
+  async list(_req: Request, res: Response) {
+    const exams = await simulatorService.getAll();
 
-    res.json(exam);
+    res.json(exams);
   }
 
   async update(req: Request<{ id: string }>, res: Response) {

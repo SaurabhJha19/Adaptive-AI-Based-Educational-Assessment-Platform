@@ -1,43 +1,40 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useParams } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
 
 import simulatorService from "@/features/simulator/simulator.service";
+import SimulatorPlayer from "@/features/simulator/components/simulator-player";
 
-export default function SimulatorAttemptPage() {
-  const params = useParams();
-  const router = useRouter();
+export default function SimulatorStartPage() {
+  const { id } = useParams<{ id: string }>();
 
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const data = await simulatorService.getAttempt(
-          params.id as string
-        );
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["simulator-attempt", id],
+    queryFn: () => simulatorService.getAttempt(id),
+    enabled: !!id,
+  });
 
-        /*
-         * Temporary:
-         * Reuse the existing exam player until we
-         * completely merge Simulator + AI Assessment.
-         */
+  if (isLoading) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
 
-        router.replace(
-          `/exams/${data.exam._id}/start?attempt=${data.attempt._id}&source=simulator`
-        );
-      } catch (err) {
-        console.error(err);
-
-        router.replace("/simulator");
-      }
-    };
-
-    load();
-  }, [params.id, router]);
+  if (isError || !data?.exam) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        Exam not found
+      </div>
+    );
+  }
 
   return (
-    <div className="flex h-[70vh] items-center justify-center">
-      Loading simulator...
-    </div>
+<SimulatorPlayer
+    exam={data.exam}
+    attempt={data.attempt}
+/>
   );
 }

@@ -89,3 +89,13 @@ export const saveAttempt = async (
 
   return data;
 };
+
+export const getAttempt = async (
+  attemptId: string
+) => {
+  const { data } = await api.get(
+    `/simulator/attempt/${attemptId}`
+  );
+
+  return data;
+};

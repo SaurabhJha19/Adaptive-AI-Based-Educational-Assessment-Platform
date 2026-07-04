@@ -1,10 +1,79 @@
 import OfficialExam from "../models/official-exam.model";
 import { SimulatorStatus } from "../constants/simulator-status.enum";
+import { randomUUID } from "crypto";
+import { uploadFileToS3 } from "../../../services/storage/s3.service";
 
 class SimulatorService {
-  async create(payload: any) {
-    return OfficialExam.create(payload);
-  }
+async create({
+    body,
+    file,
+}: {
+    body: any;
+    file: Express.Multer.File;
+}) {
+
+    const key =
+        `official-exams/${randomUUID()}-${file.originalname}`;
+
+    const uploaded =
+        await uploadFileToS3(
+            file,
+            key
+        );
+
+    const exam =
+        await OfficialExam.create({
+
+            title:
+                body.title,
+
+            examCode:
+                body.examCode,
+
+            examType:
+                body.examType,
+
+            slug: body.title
+                .trim()
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace(/[^a-z0-9-]/g, ""),
+
+            pdfUrl:
+                uploaded.url,
+
+            duration: Number(body.duration) || 180,
+
+            pdfKey:
+                uploaded.key,
+
+            status:
+                SimulatorStatus.PROCESSING,
+        });
+
+    process.nextTick(async () => {
+        try {
+
+            await this.parseExam(
+                exam._id.toString()
+            );
+
+        } catch (err) {
+
+            console.error(err);
+
+            await OfficialExam.findByIdAndUpdate(
+                exam._id,
+                {
+                    status: "failed",
+                }
+            );
+
+        }
+    });
+
+    return exam;
+}
 
   async getExamTypes() {
     return OfficialExam.distinct("examType");
@@ -42,6 +111,39 @@ class SimulatorService {
     return OfficialExam.findById(id);
   }
 
+async parseExam(examId: string) {
+    const exam = await OfficialExam.findById(examId);
+
+    if (!exam) return;
+
+    exam.sections = [
+        {
+            title: "Reading",
+            order: 1,
+            questionGroups: [],
+        },
+        {
+            title: "Listening",
+            order: 2,
+            questionGroups: [],
+        },
+        {
+            title: "Speaking",
+            order: 3,
+            questionGroups: [],
+        },
+        {
+            title: "Writing",
+            order: 4,
+            questionGroups: [],
+        },
+    ];
+
+    exam.status = SimulatorStatus.REVIEW;
+
+    await exam.save();
+}
+
   async update(id: string, payload: any) {
     return OfficialExam.findByIdAndUpdate(id, payload, {
       new: true,
@@ -58,6 +160,13 @@ class SimulatorService {
         new: true,
       }
     );
+  }
+
+  async getAll() {
+    return OfficialExam.find()
+      .sort({
+        createdAt: -1,
+      });
   }
 
   async archive(id: string) {

@@ -35,7 +35,7 @@ class SimulatorController {
     req: Request<{ id: string }>,
     res: Response
     ) {
-    const userId = (req as any).user.id;
+    const userId = (req as any).user.userId;
 
     const result =
         await startSimulatorService.execute(

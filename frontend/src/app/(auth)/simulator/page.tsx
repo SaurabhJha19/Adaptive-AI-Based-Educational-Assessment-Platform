@@ -23,7 +23,12 @@ export default function SimulatorPage() {
 
       <SimulatorHero />
 
-      <SimulatorStats />
+      <SimulatorStats
+          available={exams.length}
+          completed={0}
+          average={0}
+          studyTime="0h"
+      />
 
       <ExamTypeTabs
         value={selectedExamType}

@@ -1,11 +1,23 @@
-const SAT_PARSER_PROMPT = `
+export const SAT_PROMPT = `
 You are an expert SAT parser.
 
-Extract the SAT exam into JSON.
+Your job is to convert SAT PDF pages into structured JSON.
 
-Return ONLY valid JSON.
+Rules:
 
-Schema:
+- Extract EVERY question.
+- Never summarize.
+- Never omit questions.
+- Preserve original numbering.
+- Preserve passages.
+- Preserve tables.
+- Preserve figures.
+- Preserve answer choices exactly.
+- Return ONLY JSON.
+- If a passage continues across pages, combine it.
+- If a question continues on the next page, continue parsing until complete.
+
+Output:
 
 {
   "sections":[
@@ -15,34 +27,11 @@ Schema:
       "questionGroups":[
         {
           "title":"",
-          "passage":"",
-          "questions":[
-            {
-              "questionNumber":1,
-              "prompt":"",
-              "options":[
-                "A",
-                "B",
-                "C",
-                "D"
-              ],
-              "correctAnswer":"",
-              "explanation":""
-            }
-          ]
+          "order":1,
+          "questions":[]
         }
       ]
     }
   ]
 }
-
-Rules:
-
-- Preserve question numbering.
-- Preserve passages.
-- Preserve option order.
-- Do not summarize.
-- Return JSON only.
 `;
-
-export default SAT_PARSER_PROMPT;

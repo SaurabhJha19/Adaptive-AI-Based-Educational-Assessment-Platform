@@ -23,28 +23,23 @@ parsed.sections.forEach((section: any) => {
 
   let totalQuestions = 0;
 
-  console.log(
-    JSON.stringify(parsed.sections, null, 2)
-  );
+  for (
+      const section of exam.sections
+  ) {
 
-  for (const section of parsed.sections) {
+      for (
+          const group of section.questionGroups
+      ) {
 
-    console.log(section.title);
+          totalQuestions +=
+              group.questions.length;
 
-    console.log(section.questionGroups);
+      }
 
-    for (const group of section.questionGroups ?? []) {
-
-      console.log(group.questions?.length);
-
-      totalQuestions +=
-        group.questions?.length ?? 0;
-    }
   }
 
-  exam.totalQuestions = totalQuestions;
-
-  console.log("TOTAL =", totalQuestions);
+  exam.totalQuestions =
+      totalQuestions;
 
   return exam;
 }

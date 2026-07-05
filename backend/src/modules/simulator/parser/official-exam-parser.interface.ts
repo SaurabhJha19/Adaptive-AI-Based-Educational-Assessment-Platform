@@ -1,7 +1,7 @@
-import OfficialExam from "../models/official-exam.model";
+import { IOfficialExam } from "../models/official-exam.model";
 
 export interface OfficialExamParser {
   parse(
-    exam: OfficialExam
-  ): Promise<OfficialExam>;
+    exam: IOfficialExam
+  ): Promise<IOfficialExam>;
 }

@@ -2,6 +2,7 @@ import OfficialExam from "../models/official-exam.model";
 import { SimulatorStatus } from "../constants/simulator-status.enum";
 import { randomUUID } from "crypto";
 import { uploadFileToS3 } from "../../../services/storage/s3.service";
+import satParserPipeline from "../parser/sat/pipeline/sat-parser.pipeline";
 
 class SimulatorService {
 async create({
@@ -116,32 +117,17 @@ async parseExam(examId: string) {
 
     if (!exam) return;
 
-    exam.sections = [
-        {
-            title: "Reading",
-            order: 1,
-            questionGroups: [],
-        },
-        {
-            title: "Listening",
-            order: 2,
-            questionGroups: [],
-        },
-        {
-            title: "Speaking",
-            order: 3,
-            questionGroups: [],
-        },
-        {
-            title: "Writing",
-            order: 4,
-            questionGroups: [],
-        },
-    ];
+    switch (exam.examType) {
 
-    exam.status = SimulatorStatus.REVIEW;
+        case "SAT":
+            await satParserPipeline.execute(exam);
+            break;
 
-    await exam.save();
+        default:
+            throw new Error(
+                `Parser not implemented for ${exam.examType}`
+            );
+    }
 }
 
   async update(id: string, payload: any) {

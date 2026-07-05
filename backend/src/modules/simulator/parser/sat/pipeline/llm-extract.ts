@@ -1,4 +1,4 @@
-import openai from "../../../../../../config/openai";
+import openai from "../../../../../config/openai";
 import SAT_PARSER_PROMPT from "../prompts/sat.prompt";
 import { LLMChunk } from "./chunk-builder";
 
@@ -28,6 +28,8 @@ export async function llmExtract(
           },
         ],
       });
+
+    console.log(completion.choices[0].message.content);
 
     const parsed = JSON.parse(
       completion.choices[0].message.content ?? "{}"

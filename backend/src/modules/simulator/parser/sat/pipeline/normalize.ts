@@ -11,23 +11,40 @@ export function normalizeExam(
   exam.examType = metadata.examType;
   exam.duration = metadata.duration;
 
+parsed.sections.forEach((section: any) => {
+    section.questionGroups.forEach(
+        (group: any, index: number) => {
+            group.order = index + 1;
+        }
+    );
+});
+
   exam.sections = parsed.sections;
 
   let totalQuestions = 0;
 
-  for (const section of exam.sections) {
+  console.log(
+    JSON.stringify(parsed.sections, null, 2)
+  );
 
-    for (const group of section.questionGroups) {
+  for (const section of parsed.sections) {
+
+    console.log(section.title);
+
+    console.log(section.questionGroups);
+
+    for (const group of section.questionGroups ?? []) {
+
+      console.log(group.questions?.length);
 
       totalQuestions +=
-        group.questions.length;
-
+        group.questions?.length ?? 0;
     }
-
   }
 
-  exam.totalQuestions =
-    totalQuestions;
+  exam.totalQuestions = totalQuestions;
+
+  console.log("TOTAL =", totalQuestions);
 
   return exam;
 }

@@ -10,6 +10,12 @@ export interface ExamStructure {
   modules: DetectedModule[];
 }
 
+function normalize(text: string) {
+  return text
+    .replace(/\s+/g, " ")
+    .toLowerCase();
+}
+
 export function detectStructure(
   pages: ParsedPage[]
 ): ExamStructure {
@@ -20,10 +26,10 @@ export function detectStructure(
 
   for (const page of pages) {
 
-    const text = page.content;
+    const text = normalize(page.content);
 
     if (
-      text.includes("Reading and Writing Module 1")
+      /reading\s*(and|&)\s*writing.*module\s*1/.test(text)
     ) {
 
       current = {
@@ -33,10 +39,9 @@ export function detectStructure(
       };
 
       modules.push(current);
-    }
 
-    else if (
-      text.includes("Reading and Writing Module 2")
+    } else if (
+      /reading\s*(and|&)\s*writing.*module\s*2/.test(text)
     ) {
 
       current = {
@@ -46,10 +51,9 @@ export function detectStructure(
       };
 
       modules.push(current);
-    }
 
-    else if (
-      text.includes("Math Module 1")
+    } else if (
+      /math.*module\s*1/.test(text)
     ) {
 
       current = {
@@ -59,10 +63,9 @@ export function detectStructure(
       };
 
       modules.push(current);
-    }
 
-    else if (
-      text.includes("Math Module 2")
+    } else if (
+      /math.*module\s*2/.test(text)
     ) {
 
       current = {
@@ -74,12 +77,12 @@ export function detectStructure(
       modules.push(current);
     }
 
-    current?.pages.push(page);
-
+    if (current) {
+      current.pages.push(page);
+    }
   }
 
   return {
     modules,
   };
-
 }

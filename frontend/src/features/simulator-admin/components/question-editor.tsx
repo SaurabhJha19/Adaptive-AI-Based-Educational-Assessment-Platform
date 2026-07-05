@@ -45,7 +45,7 @@ export default function QuestionEditor({
 
                         </h3>
 
-                        {group.items?.map(
+                        {group.questions?.map(
                             (
                                 question: any,
                                 qIndex: number

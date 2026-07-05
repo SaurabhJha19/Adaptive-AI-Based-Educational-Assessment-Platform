@@ -1,39 +1,133 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
+import ExamHeader from "../components/exam-player/exam-header";
+import LeftSidebar from "../components/exam-player/left-sidebar";
+import MainContent from "../components/exam-player/main-content";
+import RightSidebar from "../components/exam-player/right-sidebar";
+import BottomNavigation from "../components/exam-player/bottom-navigation";
+
+import useExamPlayer from "../hooks/use-exam-player";
 
 interface Props {
-  exam: any;
-  attempt: any;
+    exam: any;
+    attempt: any;
 }
 
 export default function SimulatorPlayer({
-  exam,
-  attempt,
+    exam,
+    attempt,
 }: Props) {
-  return (
-    <div className="container mx-auto max-w-7xl p-6">
 
-      <Card className="p-6">
+    const {
 
-        <h1 className="text-3xl font-bold">
-          {exam.title}
-        </h1>
+        section,
 
-        <p className="text-muted-foreground mt-2">
-          Official Simulator
-        </p>
+        question,
 
-      </Card>
+        questions,
 
-      <Card className="mt-6 p-6">
+        questionIndex,
 
-        <pre className="text-xs overflow-auto">
-          {JSON.stringify(exam, null, 2)}
-        </pre>
+        answers,
 
-      </Card>
+        marked,
 
-    </div>
-  );
+        answer,
+
+        next,
+
+        previous,
+
+        jump,
+
+        toggleReview,
+
+    } = useExamPlayer(
+        exam,
+        attempt._id
+    );
+
+    if (!section || !question) {
+
+        return (
+
+            <div className="flex h-screen items-center justify-center">
+
+                No questions available.
+
+            </div>
+
+        );
+
+    }
+
+    return (
+
+        <div className="flex h-screen flex-col bg-background">
+
+            <ExamHeader
+                exam={exam}
+                section={section}
+                currentQuestion={questionIndex + 1}
+                totalQuestions={questions.length}
+            />
+
+            <div className="flex flex-1 overflow-hidden">
+
+                <LeftSidebar
+                    questions={questions}
+                    currentQuestion={question.questionNumber}
+                    answers={answers}
+                    marked={marked}
+                    onSelectQuestion={jump}
+                />
+
+                <MainContent
+                    question={question}
+                    answer={
+                        answers[
+                            question._id ??
+                            question.questionNumber
+                        ]
+                    }
+                    onAnswer={answer}
+                />
+
+                <RightSidebar
+                    currentQuestion={questionIndex + 1}
+                    totalQuestions={questions.length}
+                    answered={
+                        questions.filter((question: any) => {
+
+                            const key =
+                                question._id ??
+                                question.questionNumber;
+
+                            return !!answers[key];
+
+                        }).length
+                    }
+                    marked={
+                        marked.length
+                    }
+                />
+
+            </div>
+
+            <BottomNavigation
+                onPrevious={previous}
+                onNext={next}
+                onReview={toggleReview}
+                reviewed={
+                    marked.includes(
+                        question._id ??
+                        question.questionNumber
+                    )
+                }
+            />
+
+        </div>
+
+    );
+
 }

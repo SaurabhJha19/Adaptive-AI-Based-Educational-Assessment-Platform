@@ -13,7 +13,7 @@ import { persistExam } from "./persist";
 
 class SatParserPipeline {
   async execute(exam: IOfficialExam): Promise<IOfficialExam> {
-    const pdfBuffer = await downloadPdf(exam.pdfUrl);
+    const pdfBuffer = await downloadPdf(exam.pdfKey);
 
     const extracted = await extractText(pdfBuffer);
 

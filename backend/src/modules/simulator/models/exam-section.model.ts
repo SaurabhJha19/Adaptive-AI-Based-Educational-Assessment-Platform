@@ -24,7 +24,7 @@ export const ExamSectionSchema = new Schema(
       default: "",
     },
 
-    groups: {
+    questionGroups: {
       type: [QuestionGroupSchema],
       default: [],
     },

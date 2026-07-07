@@ -109,9 +109,41 @@ export const evaluateExam = async ({
     });
   }
 
-  const totalQuestions =
-    exam.totalQuestions ??
-    exam.questions.length;
+let totalQuestions = 0;
+
+if (sourceType === "generated") {
+
+    totalQuestions = exam.totalQuestions;
+
+} else {
+
+    const officialExam = exam as any;
+
+    totalQuestions =
+        officialExam.totalQuestions ??
+        officialExam.sections.reduce(
+
+            (sectionTotal: number, section: any) =>
+
+                sectionTotal +
+
+                section.questionGroups.reduce(
+
+                    (groupTotal: number, group: any) =>
+
+                        groupTotal +
+
+                        group.questions.length,
+
+                    0
+
+                ),
+
+            0
+
+        );
+
+}
 
   const percentage =
     totalQuestions === 0
@@ -179,4 +211,170 @@ export const evaluateExam = async ({
       totalQuestions - score,
     review: evaluatedAnswers,
   };
+};
+
+export const getAttemptSummary =
+async (
+    attemptId: string
+) => {
+
+    const attempt =
+        await ExamAttemptModel
+            .findById(attemptId)
+            .lean();
+
+    if (!attempt) {
+
+        throw new Error(
+            "Attempt not found"
+        );
+
+    }
+
+    const correct =
+        attempt.answers.filter(
+            (a: any) => a.isCorrect
+        ).length;
+
+    const incorrect =
+        attempt.answers.filter(
+            (a: any) => !a.isCorrect
+        ).length;
+
+    return {
+
+        id: attempt._id,
+
+        score: attempt.score,
+
+        percentage: attempt.percentage,
+
+        totalQuestions: attempt.totalQuestions,
+
+        correct,
+
+        incorrect,
+
+        skipped:
+
+            attempt.totalQuestions -
+
+            correct -
+
+            incorrect,
+
+        submittedAt:
+
+            attempt.submittedAt,
+
+        status:
+
+            attempt.status,
+
+    };
+
+};
+
+export const getQuestionReview =
+async (
+    attemptId: string
+) => {
+
+    const attempt =
+        await ExamAttemptModel
+            .findById(attemptId)
+            .lean();
+
+    if (!attempt) {
+
+        throw new Error(
+            "Attempt not found"
+        );
+
+    }
+
+    return attempt.answers.map(
+
+        (answer: any) => ({
+
+            questionId:
+
+                answer.questionId,
+
+            question:
+
+                answer.question,
+
+            options:
+
+                answer.options,
+
+            selectedAnswer:
+
+                answer.selectedAnswer,
+
+            correctAnswer:
+
+                answer.correctAnswer,
+
+            explanation:
+
+                answer.explanation,
+
+            difficulty:
+
+                answer.difficulty,
+
+            isCorrect:
+
+                answer.isCorrect,
+
+        })
+
+    );
+
+};
+
+export const getSectionBreakdown =
+async (
+    attemptId: string
+) => {
+
+    const attempt =
+        await ExamAttemptModel
+            .findById(attemptId)
+            .lean();
+
+    if (!attempt) {
+
+        throw new Error(
+            "Attempt not found"
+        );
+
+    }
+
+    return [
+
+        {
+
+            section: "Overall",
+
+            total: attempt.totalQuestions,
+
+            correct: attempt.score,
+
+            incorrect:
+
+                attempt.totalQuestions -
+
+                attempt.score,
+
+            percentage:
+
+                attempt.percentage,
+
+        },
+
+    ];
+
 };

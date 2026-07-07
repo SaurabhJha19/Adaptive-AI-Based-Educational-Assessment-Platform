@@ -1,47 +1,101 @@
-"use client";
-
-import SectionCard from "@/components/shared/section-card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Props = {
-  activity: any[];
+
+    activity: any[];
+
 };
 
 export default function RecentActivity({
-  activity,
+
+    activity,
+
 }: Props) {
-  return (
-    <SectionCard
-      title="Recent Activity"
-      description="Latest learning activity."
-    >
-      <div className="space-y-4">
-        {activity.length === 0 && (
-          <p className="text-muted-foreground">
-            No recent activity.
-          </p>
-        )}
 
-        {activity.map((item) => (
-          <div
-            key={item._id}
-            className="border-l-2 border-primary pl-4"
-          >
-            <p className="font-medium">
-              {item.examId?.title ??
-                item.title ??
-                "Assessment"}
-            </p>
+    return (
 
-            <p className="text-sm text-muted-foreground">
-              {item.status} • Score:{" "}
-              {Math.round(
-                item.percentage ?? 0
-              )}
-              %
-            </p>
-          </div>
-        ))}
-      </div>
-    </SectionCard>
-  );
+        <Card>
+
+            <CardHeader>
+
+                <CardTitle>
+
+                    Recent Exams
+
+                </CardTitle>
+
+            </CardHeader>
+
+            <CardContent>
+
+                {
+
+                    activity.length === 0 ? (
+
+                        <p className="text-sm text-muted-foreground">
+
+                            No exams found.
+
+                        </p>
+
+                    ) : (
+
+                        <div className="space-y-4">
+
+                            {
+
+                                activity.map(
+
+                                    (exam: any) => (
+
+                                        <div
+
+                                            key={exam._id}
+
+                                            className="flex items-center justify-between border-b pb-3"
+
+                                        >
+
+                                            <div>
+
+                                                <p className="font-medium">
+
+                                                    {exam.title ?? "Assessment"}
+
+                                                </p>
+
+                                                <p className="text-sm text-muted-foreground">
+
+                                                    {exam.percentage ?? 0}% Score
+
+                                                </p>
+
+                                            </div>
+
+                                            <span className="text-sm">
+
+                                                {exam.status}
+
+                                            </span>
+
+                                        </div>
+
+                                    )
+
+                                )
+
+                            }
+
+                        </div>
+
+                    )
+
+                }
+
+            </CardContent>
+
+        </Card>
+
+    );
+
 }

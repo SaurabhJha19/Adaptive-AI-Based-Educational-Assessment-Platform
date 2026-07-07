@@ -3,17 +3,19 @@ import api from "@/lib/api";
 import { DashboardResponse } from "./types";
 
 class DashboardService {
-  async getDashboard() {
-    const { data } =
-      await api.get<DashboardResponse>(
-        "/dashboard"
-      );
 
-    return data.dashboard;
-  }
+    async getDashboard(): Promise<DashboardResponse> {
+
+        const { data } =
+
+            await api.get<DashboardResponse>(
+                "/dashboard"
+            );
+
+        return data;
+
+    }
+
 }
 
-const dashboardService =
-  new DashboardService();
-
-export default dashboardService;
+export default new DashboardService();

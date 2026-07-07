@@ -42,7 +42,7 @@ export const navigation = [
 
   {
     title: "Profile",
-    href: "/profile",
+    href: "/settings/profile",
     icon: User,
   },
 

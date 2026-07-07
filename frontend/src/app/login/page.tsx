@@ -24,6 +24,8 @@ import {
   useAuth,
 } from "@/providers/auth-provider";
 
+import Link from "next/link";
+
 export default function LoginPage() {
 
   const router =
@@ -102,6 +104,17 @@ export default function LoginPage() {
           Login
         </button>
 
+
+      <div className="text-center text-sm">
+              Don&apos;t have an account?{" "}
+          <Link
+              href="/register"
+              className="font-medium text-primary hover:underline"
+          >
+              Create one
+          </Link>
+
+          </div>
       </form>
 
     </div>

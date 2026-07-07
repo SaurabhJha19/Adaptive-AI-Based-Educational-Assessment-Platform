@@ -1,70 +1,124 @@
-"use client";
+import Link from "next/link";
 
-import { useRouter } from "next/navigation";
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
 
-import SectionCard from "@/components/shared/section-card";
 import { Button } from "@/components/ui/button";
 
 type Props = {
-  attempt: any;
+
+    attempt: any;
+
 };
 
 export default function ContinueLearning({
-  attempt,
+
+    attempt,
+
 }: Props) {
-  const router = useRouter();
 
-  if (!attempt) {
-    return (
-      <SectionCard
-        title="Continue Learning"
-        description="No unfinished assessment."
-      >
-        <p className="text-muted-foreground">
-          Start a new AI Assessment or Simulator.
-        </p>
-      </SectionCard>
-    );
-  }
+    if (!attempt) {
 
-  const handleContinue = () => {
-    if (attempt.sourceType === "simulator") {
-      router.push(
-        `/simulator/attempt/${attempt._id}`
-      );
-      return;
+        return (
+
+            <Card>
+
+                <CardHeader>
+
+                    <CardTitle>
+
+                        Continue Learning
+
+                    </CardTitle>
+
+                </CardHeader>
+
+                <CardContent className="space-y-4">
+
+                    <p className="text-muted-foreground">
+
+                        No unfinished assessment.
+
+                    </p>
+
+                    <Button asChild>
+
+                        <Link href="/simulator">
+
+                            Start New Assessment
+
+                        </Link>
+
+                    </Button>
+
+                </CardContent>
+
+            </Card>
+
+        );
+
     }
 
-    router.push(
-      `/exams/${attempt.examId}/start?attempt=${attempt._id}`
+    return (
+
+        <Card>
+
+            <CardHeader>
+
+                <CardTitle>
+
+                    Continue Learning
+
+                </CardTitle>
+
+            </CardHeader>
+
+            <CardContent className="space-y-5">
+
+                <div>
+
+                    <h3 className="font-semibold text-lg">
+
+                        {
+
+                            attempt.title ??
+
+                            "Assessment"
+
+                        }
+
+                    </h3>
+
+                    <p className="text-muted-foreground">
+
+                        Status: {attempt.status}
+
+                    </p>
+
+                </div>
+
+                <Button asChild>
+
+                    <Link
+
+                        href={`/simulator/${attempt._id}`}
+
+                    >
+
+                        Resume Assessment
+
+                    </Link>
+
+                </Button>
+
+            </CardContent>
+
+        </Card>
+
     );
-  };
 
-  return (
-    <SectionCard
-      title="Continue Learning"
-      description="Resume your latest assessment."
-    >
-      <div className="space-y-5">
-        <div>
-          <h3 className="text-lg font-semibold">
-            {attempt.examId?.title ??
-              attempt.title ??
-              "Assessment"}
-          </h3>
-
-          <p className="text-sm text-muted-foreground">
-            Status: {attempt.status}
-          </p>
-        </div>
-
-        <Button
-          className="w-full"
-          onClick={handleContinue}
-        >
-          Resume Assessment
-        </Button>
-      </div>
-    </SectionCard>
-  );
 }

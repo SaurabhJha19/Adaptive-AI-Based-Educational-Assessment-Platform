@@ -1,49 +1,135 @@
-"use client";
-
 import {
-  BookOpen,
-  Clock3,
-  FileText,
-  Trophy,
+    BookOpen,
+    ClipboardList,
+    Trophy,
+    Clock,
+    Brain,
 } from "lucide-react";
 
-import StatCard from "@/components/shared/stat-card";
-import { DashboardStats as DashboardStatsType } from "../types";
+import {
+    Card,
+    CardContent,
+} from "@/components/ui/card";
 
 type Props = {
-  stats: DashboardStatsType;
+
+    stats: {
+
+        documentCount: number;
+
+        examCount: number;
+
+        averageScore: number;
+
+        studyHours: number;
+
+        questionsSolved: number;
+
+    };
+
 };
 
+const cards = [
+
+    {
+        key: "documentCount",
+        title: "Documents",
+        icon: BookOpen,
+    },
+
+    {
+        key: "examCount",
+        title: "Assessments",
+        icon: ClipboardList,
+    },
+
+    {
+        key: "averageScore",
+        title: "Average Score",
+        icon: Trophy,
+        suffix: "%",
+    },
+
+    {
+        key: "studyHours",
+        title: "Study Hours",
+        icon: Clock,
+    },
+
+    {
+        key: "questionsSolved",
+        title: "Questions Solved",
+        icon: Brain,
+    },
+
+];
+
 export default function DashboardStats({
-  stats,
+
+    stats,
+
 }: Props) {
-  return (
-    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      <StatCard
-        title="Documents"
-        value={stats.documentCount}
-        subtitle="Uploaded"
-        icon={FileText}
-      />
 
-      <StatCard
-        title="Assessments"
-        value={stats.examCount}
-        subtitle="Generated"
-        icon={BookOpen}
-      />
+    return (
 
-      <StatCard
-        title="Average Score"
-        value={`${stats.averageScore}%`}
-        icon={Trophy}
-      />
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
 
-      <StatCard
-        title="Study Hours"
-        value={`${stats.studyHours}h`}
-        icon={Clock3}
-      />
-    </div>
-  );
+            {
+
+                cards.map(
+
+                    card => {
+
+                        const Icon = card.icon;
+
+                        return (
+
+                            <Card key={card.key}>
+
+                                <CardContent className="flex items-center justify-between p-6">
+
+                                    <div>
+
+                                        <p className="text-sm text-muted-foreground">
+
+                                            {card.title}
+
+                                        </p>
+
+                                        <h2 className="mt-2 text-3xl font-bold">
+
+                                            {
+
+                                                (stats as any)[card.key]
+
+                                            }
+
+                                            {
+
+                                                card.suffix ?? ""
+
+                                            }
+
+                                        </h2>
+
+                                    </div>
+
+                                    <Icon className="h-8 w-8 text-primary" />
+
+                                </CardContent>
+
+                            </Card>
+
+                        );
+
+                    }
+
+                )
+
+            }
+
+        </div>
+
+    );
+
 }

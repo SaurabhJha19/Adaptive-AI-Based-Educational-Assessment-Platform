@@ -1,41 +1,64 @@
-"use client";
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
 
-import SectionCard from "@/components/shared/section-card";
+import { Button } from "@/components/ui/button";
 
 type Props = {
-  recommendation: {
-    title: string;
-    description: string;
-  };
+    recommendation?: {
+        title: string;
+        description: string;
+    } | null;
 };
 
 export default function RecommendationSection({
-  recommendation,
+    recommendation,
 }: Props) {
-  return (
-    <SectionCard
-      title="AI Recommendation"
-      description="Personalized recommendation."
-    >
-      <div className="space-y-4">
-        <div>
-          <p className="text-sm text-muted-foreground">
-            Focus Area
-          </p>
 
-          <h3 className="font-semibold">
-            {recommendation.title}
-          </h3>
-        </div>
+    if (!recommendation) {
+        return (
+            <Card>
+                <CardHeader>
+                    <CardTitle>
+                        Today&apos;s Recommendation
+                    </CardTitle>
+                </CardHeader>
 
-        <div>
-          <p className="text-sm text-muted-foreground">
-            Recommendation
-          </p>
+                <CardContent>
+                    <p className="text-muted-foreground">
+                        No recommendations available.
+                    </p>
+                </CardContent>
+            </Card>
+        );
+    }
 
-          <p>{recommendation.description}</p>
-        </div>
-      </div>
-    </SectionCard>
-  );
+    return (
+        <Card>
+            <CardHeader>
+                <CardTitle>
+                    Today&apos;s Recommendation
+                </CardTitle>
+            </CardHeader>
+
+            <CardContent className="space-y-5">
+
+                <div>
+
+                    <h3 className="text-lg font-semibold">
+                        {recommendation.title}
+                    </h3>
+
+                    <p className="text-muted-foreground">
+                        {recommendation.description}
+                    </p>
+
+                </div>
+
+            </CardContent>
+        </Card>
+    );
 }

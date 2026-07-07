@@ -1,29 +1,35 @@
-import { Response } from "express";
+import { Request, Response } from "express";
 
-import asyncHandler from "express-async-handler";
-
+import { asyncHandler } from "../utils/async-handler";
 import { AuthRequest } from "../middleware/auth.middleware";
 
 import { getDashboardData } from "../services/dashboard.service";
 
-export const getDashboard = asyncHandler(
-  async (
-    req: AuthRequest,
-    res: Response
-  ) => {
+export const getDashboard =
+    asyncHandler(
 
-    const dashboard =
-      await getDashboardData(
-        req.user!.userId
-      );
+        async (
 
-    res.json({
+            req: AuthRequest,
 
-      success: true,
+            res: Response
 
-      dashboard,
+        ) => {
 
-    });
+            const dashboard =
 
-  }
-);
+                await getDashboardData(
+
+                    req.user!.userId
+
+                );
+
+            res.status(200).json(
+
+                dashboard
+
+            );
+
+        }
+
+    );

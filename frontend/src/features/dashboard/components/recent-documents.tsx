@@ -1,43 +1,96 @@
-"use client";
-
-import SectionCard from "@/components/shared/section-card";
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
 
 type Props = {
-  documents: any[];
+
+    documents: any[];
+
 };
 
 export default function RecentDocuments({
-  documents,
+
+    documents,
+
 }: Props) {
-  return (
-    <SectionCard
-      title="Recent Documents"
-      description="Recently uploaded study material."
-    >
-      <div className="space-y-4">
-        {documents.length === 0 && (
-          <p className="text-muted-foreground">
-            No documents uploaded.
-          </p>
-        )}
 
-        {documents.map((doc) => (
-          <div
-            key={doc._id}
-            className="flex items-center justify-between rounded-xl border p-4"
-          >
-            <div>
-              <p className="font-medium">
-                {doc.originalName}
-              </p>
+    return (
 
-              <p className="text-sm text-muted-foreground">
-                {doc.status}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </SectionCard>
-  );
+        <Card>
+
+            <CardHeader>
+
+                <CardTitle>
+
+                    Recent Documents
+
+                </CardTitle>
+
+            </CardHeader>
+
+            <CardContent>
+
+                {
+
+                    documents.length === 0 ? (
+
+                        <p className="text-sm text-muted-foreground">
+
+                            No uploaded documents.
+
+                        </p>
+
+                    ) : (
+
+                        <div className="space-y-4">
+
+                            {
+
+                                documents.map(
+
+                                    (doc: any) => (
+
+                                        <div
+
+                                            key={doc._id}
+
+                                            className="border-b pb-3"
+
+                                        >
+
+                                            <h4 className="font-medium">
+
+                                                {doc.originalName}
+
+                                            </h4>
+
+                                            <p className="text-sm text-muted-foreground">
+
+                                                {doc.status}
+
+                                            </p>
+
+                                        </div>
+
+                                    )
+
+                                )
+
+                            }
+
+                        </div>
+
+                    )
+
+                }
+
+            </CardContent>
+
+        </Card>
+
+    );
+
 }

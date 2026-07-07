@@ -3,6 +3,9 @@ import {
   register,
   login,
   getCurrentUser,
+  updateCurrentUser,
+  changeCurrentPassword,
+  updateCurrentPreferences
 } from "../controllers/auth.controller";
 import { authenticate } from "../middleware/auth.middleware";
 
@@ -15,5 +18,34 @@ router.get(
   authenticate,
   getCurrentUser
 );
+router.put(
+
+    "/me",
+
+    authenticate,
+
+    updateCurrentUser
+
+);
+router.put(
+
+    "/change-password",
+
+    authenticate,
+
+    changeCurrentPassword
+
+);
+
+router.put(
+
+    "/preferences",
+
+    authenticate,
+
+    updateCurrentPreferences
+
+);
+
 
 export default router;

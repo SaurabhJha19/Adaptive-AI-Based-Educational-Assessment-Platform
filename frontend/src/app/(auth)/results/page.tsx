@@ -1,88 +1,154 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-import api from "@/lib/api";
-
 import Link from "next/link";
 
+import PageContainer from "@/components/shared/page-container";
+
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+import { useResults } from "@/features/results/hooks/use-results";
+
 export default function ResultsPage() {
-  const [attempts, setAttempts] =
-    useState<any[]>([]);
 
-  const [loading, setLoading] =
-    useState(true);
+    const {
 
-  useEffect(() => {
-    api
-      .get("/exam-attempt")
-      .then((res) =>
-        setAttempts(
-          res.data.attempts
-        )
-      )
-      .finally(() =>
-        setLoading(false)
-      );
-  }, []);
+        data,
 
-  if (loading) {
+        isLoading,
+
+    } = useResults();
+
+    if (isLoading) {
+
+        return (
+
+            <PageContainer>
+
+                Loading...
+
+            </PageContainer>
+
+        );
+
+    }
+
     return (
-      <div className="p-8">
-        Loading...
-      </div>
+
+        <PageContainer>
+
+            <div className="space-y-8">
+
+                <div>
+
+                    <h1 className="text-3xl font-bold">
+
+                        Assessment History
+
+                    </h1>
+
+                    <p className="text-muted-foreground">
+
+                        Review all completed assessments.
+
+                    </p>
+
+                </div>
+
+                {
+
+                    data?.length === 0 && (
+
+                        <Card className="p-10 text-center">
+
+                            No completed assessments.
+
+                        </Card>
+
+                    )
+
+                }
+
+                <div className="grid gap-5">
+
+                    {
+
+                        data?.map(
+
+                            (attempt: any) => (
+
+                                <Card
+
+                                    key={attempt._id}
+
+                                    className="flex items-center justify-between p-6"
+
+                                >
+
+                                    <div>
+
+                                        <h3 className="font-semibold">
+
+                                            {
+
+                                                attempt.sourceType === "generated"
+
+                                                    ? "AI Assessment"
+
+                                                    : "Official Simulator"
+
+                                            }
+
+                                        </h3>
+
+                                        <p className="text-sm text-muted-foreground">
+
+                                            Score
+
+                                            {" "}
+
+                                            {attempt.score}
+
+                                            /
+
+                                            {
+
+                                                attempt.totalQuestions
+
+                                            }
+
+                                        </p>
+
+                                    </div>
+
+                                    <Button asChild>
+
+                                        <Link
+
+                                            href={`/results/${attempt._id}`}
+
+                                        >
+
+                                            View Result
+
+                                        </Link>
+
+                                    </Button>
+
+                                </Card>
+
+                            )
+
+                        )
+
+                    }
+
+                </div>
+
+            </div>
+
+        </PageContainer>
+
     );
-  }
 
-  return (
-    <div className="space-y-6 p-8">
-      <h1 className="text-3xl font-bold">
-        Results
-      </h1>
-
-      {attempts.length === 0 && (
-        <p>
-          No completed assessments.
-        </p>
-      )}
-
-      {attempts.map((attempt) => (
-        <Link
-          key={attempt._id}
-          href={`/results/exam/${attempt.examId}`}
-          className="block rounded-xl border p-5 hover:border-primary"
-        >
-          <div className="flex justify-between">
-            <div>
-              <h3 className="font-semibold">
-                {attempt.examId}
-              </h3>
-
-              <p className="text-sm text-muted-foreground">
-                {new Date(
-                  attempt.createdAt
-                ).toLocaleDateString(
-                  "en-IN"
-                )}
-              </p>
-            </div>
-
-            <div className="text-right">
-              <div className="text-xl font-bold">
-                {attempt.percentage.toFixed(
-                  0
-                )}
-                %
-              </div>
-
-              <div className="text-sm text-muted-foreground">
-                {attempt.score}/
-                {attempt.totalQuestions}
-              </div>
-            </div>
-          </div>
-        </Link>
-      ))}
-    </div>
-  );
 }

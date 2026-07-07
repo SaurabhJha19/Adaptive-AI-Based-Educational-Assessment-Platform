@@ -4,9 +4,30 @@ export interface LoginDto {
 }
 
 export interface RegisterDto {
-  username: string;
-  email: string;
-  password: string;
+
+    firstName: string;
+
+    lastName: string;
+
+    username: string;
+
+    email: string;
+
+    mobile?: string;
+
+    targetExam:
+        | "SAT"
+        | "TOEFL"
+        | "GRE"
+        | "GMAT"
+        | "ACT"
+        | "IELTS"
+        | "OTHER";
+
+    password: string;
+
+    confirmPassword: string;
+
 }
 
 export interface AuthResponse {

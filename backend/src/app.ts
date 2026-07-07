@@ -14,7 +14,7 @@ import topicPerformanceRoutes from "./routes/topic-performance.routes";
 import dashboardRoutes from "./routes/dashboard.routes";
 import simulatorRoutes from "./modules/simulator/routes/simulator.routes";
 import simulatorAdminRoutes from "./modules/simulator/routes/simulator-admin.routes";
-
+import evaluationRoutes from "./routes/evaluation.routes";
 const app = express();
 
 app.use(
@@ -37,6 +37,7 @@ app.use("/api/topic-performance", topicPerformanceRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/simulator", simulatorRoutes);
 app.use("/api/simulator-admin", simulatorAdminRoutes);
+app.use("/evaluation", evaluationRoutes);
 app.get("/health", (_, res) => {
   res.status(200).json({
     success: true,

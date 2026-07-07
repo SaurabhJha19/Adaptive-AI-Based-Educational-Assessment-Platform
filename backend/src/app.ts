@@ -20,6 +20,8 @@ const app = express();
 app.use(
   cors({
     origin: "http://localhost:3000",
+    "https://adaptive-ai-based-educational-assessment-wnhv.onrender.com",
+    
     credentials: true,
   })
 );

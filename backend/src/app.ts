@@ -18,12 +18,13 @@ import evaluationRoutes from "./routes/evaluation.routes";
 const app = express();
 
 app.use(
-  cors({
-    origin: "http://localhost:3000",
-    "https://adaptive-ai-based-educational-assessment-wnhv.onrender.com",
-    
-    credentials: true,
-  })
+    cors({
+        origin: [
+            "http://localhost:3000",
+            "https://adaptive-ai-based-educational-assessment-wnhv.onrender.com",
+        ],
+        credentials: true,
+    })
 );
 app.use(express.json());
 app.use("/api/auth", authRoutes);

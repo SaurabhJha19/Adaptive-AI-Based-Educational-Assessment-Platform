@@ -1,15 +1,37 @@
 import { SimulatorStatus } from "../../../constants/simulator-status.enum";
-import { IOfficialExam } from "../../../models/official-exam.model";
+import OfficialExam, {
+    IOfficialExam,
+} from "../../../models/official-exam.model";
 
 export async function persistExam(
-  exam: IOfficialExam
+    exam: IOfficialExam
 ): Promise<IOfficialExam> {
 
-  exam.status =
-    SimulatorStatus.REVIEW;
+    exam.status =
+        SimulatorStatus.REVIEW;
 
-  await exam.save();
+    const updated =
+        await OfficialExam.findOneAndUpdate(
+            {
+                examCode: exam.examCode,
+            },
+            {
+                $set: {
+                    title: exam.title,
+                    duration: exam.duration,
+                    sections: exam.sections,
+                    totalQuestions: exam.totalQuestions,
+                    metadata: exam.metadata,
+                    status: exam.status,
+                },
+            },
+            {
+                new: true,
+                upsert: true,
+                runValidators: true,
+            }
+        );
 
-  return exam;
+    return updated as IOfficialExam;
 
 }

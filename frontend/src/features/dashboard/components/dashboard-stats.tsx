@@ -84,7 +84,7 @@ export default function DashboardStats({
 
                         return (
 
-                            <Card key={card.key}>
+                            <Card key={card.key} className="rounded-2xl border shadow-sm">
 
                                 <CardContent className="flex items-center justify-between p-6">
 

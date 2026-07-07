@@ -77,21 +77,7 @@ class SatParserPipeline {
                   extractedQuestions
               );
               
-if (
-    chunk.moduleTitle === "Reading & Writing Module 1" &&
-    chunk.chunkIndex === 4
-) {
-
-    console.log("======================================");
-    console.log("RW1 CHUNK 4 RAW TEXT");
-    console.log("======================================");
-
-    console.log(chunk.content);
-
-    console.log("======================================");
-
-}
-            
+          
           const parsed =
               mapLlmResponse(
 

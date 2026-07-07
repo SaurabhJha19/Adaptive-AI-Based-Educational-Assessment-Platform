@@ -1,95 +1,168 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useEffect } from "react";
-import { saveAnswer } from "../services/attempt.service";
+import {
 
+    useEffect,
+    useMemo,
+    useState,
 
-export default function useExamPlayer(exam: any, attemptId: string) {
+} from "react";
 
-    const [sectionIndex, setSectionIndex] = useState(0);
+import { useSaveAnswer } from "./use-save-answer";
 
-    const [questionIndex, setQuestionIndex] = useState(0);
+export default function useExamPlayer(
 
-    const [answers, setAnswers] =
-        useState<Record<string, string>>({});
+    exam: any,
 
+    attemptId: string
 
-    const [marked, setMarked] =
-        useState<string[]>([]);
+) {
+
+    const saveAnswer =
+        useSaveAnswer();
+
+    const [
+
+        sectionIndex,
+
+        setSectionIndex,
+
+    ] = useState(0);
+
+    const [
+
+        questionIndex,
+
+        setQuestionIndex,
+
+    ] = useState(0);
+
+    const [
+
+        answers,
+
+        setAnswers,
+
+    ] = useState<
+        Record<string, string>
+    >({});
+
+    const [
+
+        marked,
+
+        setMarked,
+
+    ] = useState<string[]>([]);
 
     const section =
-        exam.sections[sectionIndex];
+        exam.sections?.[
+            sectionIndex
+        ];
 
-    const questions = useMemo(() => {
+    const questions =
+        useMemo(() => {
 
-        if (!section) return [];
+            if (!section) {
 
-        return section.questionGroups.flatMap(
-            (group: any) => group.questions
-        );
+                return [];
 
-    }, [section]);
+            }
 
-    const question =
-        questions[questionIndex];
+            return section.questionGroups.flatMap(
 
-        useEffect(() => {
+                (group: any) =>
 
-            const key =
-                question?._id ??
-                question?.questionNumber;
+                    group.questions
 
-            if (!key) return;
-
-            const value = answers[key];
-
-            if (!value) return;
-
-            saveAnswer(
-                attemptId,
-                key,
-                value
             );
 
-        }, [
-            answers,
-            question,
-            attemptId,
-        ]);
+        }, [section]);
 
-    function answer(option: string) {
+    const question =
+        questions[
+            questionIndex
+        ];
+
+    function answer(
+        value: string
+    ) {
+
+        if (!question) {
+
+            return;
+
+        }
 
         const key =
             question._id ??
             question.questionNumber;
 
-        setAnswers((prev) => ({
-            ...prev,
-            [key]: option,
-        }));
+        setAnswers(
+
+            previous => ({
+
+                ...previous,
+
+                [key]: value,
+
+            })
+
+        );
+
+        if (question._id) {
+
+            saveAnswer.mutate({
+
+                attemptId,
+
+                questionId:
+                    question._id,
+
+                selectedAnswer:
+                    value,
+
+            });
+
+        }
 
     }
 
     function next() {
 
         if (
+
             questionIndex <
             questions.length - 1
+
         ) {
 
-            setQuestionIndex((p) => p + 1);
+            setQuestionIndex(
+
+                previous =>
+
+                    previous + 1
+
+            );
 
             return;
 
         }
 
         if (
+
             sectionIndex <
             exam.sections.length - 1
+
         ) {
 
-            setSectionIndex((p) => p + 1);
+            setSectionIndex(
+
+                previous =>
+
+                    previous + 1
+
+            );
 
             setQuestionIndex(0);
 
@@ -99,82 +172,164 @@ export default function useExamPlayer(exam: any, attemptId: string) {
 
     function previous() {
 
-        if (questionIndex > 0) {
+        if (
 
-            setQuestionIndex((p) => p - 1);
+            questionIndex > 0
+
+        ) {
+
+            setQuestionIndex(
+
+                previous =>
+
+                    previous - 1
+
+            );
 
             return;
 
         }
 
-        if (sectionIndex > 0) {
+        if (
+
+            sectionIndex > 0
+
+        ) {
 
             const previousSection =
-                exam.sections[sectionIndex - 1];
+                exam.sections[
+                    sectionIndex - 1
+                ];
 
             const previousQuestions =
                 previousSection.questionGroups.flatMap(
-                    (g: any) => g.questions
+
+                    (group: any) =>
+
+                        group.questions
+
                 );
 
-            setSectionIndex((p) => p - 1);
+            setSectionIndex(
+
+                previous =>
+
+                    previous - 1
+
+            );
 
             setQuestionIndex(
+
                 previousQuestions.length - 1
+
             );
 
         }
 
     }
 
-    function jump(index: number) {
+    function jump(
+        index: number
+    ) {
 
-        setQuestionIndex(index);
+        setQuestionIndex(
+            index
+        );
 
     }
 
     function toggleReview() {
 
+        if (!question) {
+
+            return;
+
+        }
+
         const key =
             question._id ??
             question.questionNumber;
 
-        setMarked((prev) =>
+        setMarked(
 
-            prev.includes(key)
-                ? prev.filter((id) => id !== key)
-                : [...prev, key]
+            previous =>
+
+                previous.includes(key)
+
+                    ? previous.filter(
+
+                        id =>
+
+                            id !== key
+
+                    )
+
+                    : [
+
+                        ...previous,
+
+                        key,
+
+                    ]
 
         );
 
     }
 
-    return {
+    useEffect(() => {
 
-        section,
+        return () => {
 
-        question,
+            saveAnswer.reset();
 
-        questions,
+        };
 
-        sectionIndex,
+    }, []);
 
-        questionIndex,
+ const isLastSection =
+    sectionIndex ===
+    exam.sections.length - 1;
 
-        answers,
+const isLastQuestion =
+    questionIndex ===
+    questions.length - 1;
 
-        marked,
+const isLastQuestionOfExam =
+    isLastSection &&
+    isLastQuestion;
 
-        answer,
+return {
 
-        next,
+    section,
 
-        previous,
+    question,
 
-        jump,
+    questions,
 
-        toggleReview,
+    sectionIndex,
 
-    };
+    questionIndex,
+
+    answers,
+
+    marked,
+
+    answer,
+
+    next,
+
+    previous,
+
+    jump,
+
+    toggleReview,
+
+    isLastQuestionOfExam,
+
+    isLastSection,
+
+    isLastQuestion,
+
+};
 
 }

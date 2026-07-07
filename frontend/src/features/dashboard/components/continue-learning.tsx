@@ -25,7 +25,7 @@ export default function ContinueLearning({
 
         return (
 
-            <Card>
+            <Card className="rounded-2xl border shadow-sm">
 
                 <CardHeader>
 
@@ -65,7 +65,7 @@ export default function ContinueLearning({
 
     return (
 
-        <Card>
+        <Card className="rounded-2xl border shadow-sm">
 
             <CardHeader>
 
@@ -77,7 +77,7 @@ export default function ContinueLearning({
 
             </CardHeader>
 
-            <CardContent className="space-y-5">
+            <CardContent className="space-y-5 p-6">
 
                 <div>
 

@@ -14,7 +14,7 @@ export default function PerformanceSection({
 
     return (
 
-        <Card>
+        <Card className="rounded-2xl border shadow-sm">
 
             <CardHeader>
 
@@ -26,7 +26,7 @@ export default function PerformanceSection({
 
             </CardHeader>
 
-            <CardContent>
+            <CardContent className="p-6">
 
                 <div className="flex h-64 items-center justify-center rounded-lg border border-dashed">
 

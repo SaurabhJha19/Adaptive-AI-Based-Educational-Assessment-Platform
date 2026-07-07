@@ -1,61 +1,118 @@
+"use client";
+
 interface Props {
+
+    currentQuestion: number;
+
+    totalQuestions: number;
+
+    isLastQuestionOfExam: boolean;
+
     onPrevious: () => void;
+
     onNext: () => void;
+
     onReview: () => void;
+
     reviewed: boolean;
+
+    onSubmit: () => void;
+
+    isSubmitting: boolean;
+
 }
 
 export default function BottomNavigation({
+
+    currentQuestion,
+
+    isLastQuestionOfExam,
+
     onPrevious,
+
     onNext,
+
     onReview,
+
     reviewed,
+
+    onSubmit,
+
+    isSubmitting,
+
 }: Props) {
+
+    const isFirst =
+        currentQuestion === 1;
+
+        const isLast =
+    isLastQuestionOfExam;
 
     return (
 
-        <footer className="border-t bg-card">
+        <div className="flex w-full items-center justify-between border-t bg-white px-6 py-4">
 
-            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
+            <button
+                disabled={isFirst}
+                onClick={onPrevious}
+                className="rounded-lg border px-5 py-2 disabled:opacity-50"
+            >
+                Previous
+            </button>
 
-                {/* Left */}
-
-                <button
-                    onClick={onPrevious}
-                    className="rounded-lg border px-6 py-3 text-sm font-medium transition hover:bg-accent"
-                >
-                    ← Previous
-                </button>
-
-                {/* Center */}
+            <div className="flex flex-wrap items-center justify-end gap-3">
 
                 <button
                     onClick={onReview}
-                    className={`rounded-lg px-6 py-3 text-sm font-medium transition
-
-                    ${
+                    className={`rounded-lg px-5 py-2 whitespace-nowrap ${
                         reviewed
-                            ? "bg-yellow-400 text-black"
-                            : "border hover:bg-accent"
+                            ? "bg-yellow-500 text-white"
+                            : "border"
                     }`}
                 >
                     {reviewed
-                        ? "★ Marked for Review"
-                        : "☆ Mark for Review"}
+                        ? "Reviewed"
+                        : "Mark for Review"}
                 </button>
 
-                {/* Right */}
+                {
 
-                <button
-                    onClick={onNext}
-                    className="rounded-lg bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
-                >
-                    Next →
-                </button>
+                    !isLast && (
+
+                        <button
+                            onClick={onNext}
+                            className="rounded-lg bg-black px-6 py-2 text-back whitespace-nowrap"
+                        >
+                            Next →
+                        </button>
+
+                    )
+
+                }
+
+                {
+
+                    isLast && (
+
+                        <button
+                            onClick={onSubmit}
+                            disabled={isSubmitting}
+                            className="rounded-lg bg-green-600 px-6 py-2 text-white whitespace-nowrap disabled:opacity-50"
+                        >
+                            {
+                                isSubmitting
+                                    ? "Submitting..."
+                                    : "Submit Exam"
+                            }
+                        </button>
+
+                    )
+
+                }
 
             </div>
 
-        </footer>
+        </div>
 
     );
 

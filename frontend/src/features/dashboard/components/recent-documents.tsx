@@ -19,7 +19,7 @@ export default function RecentDocuments({
 
     return (
 
-        <Card>
+       <Card className="rounded-2xl border shadow-sm">
 
             <CardHeader>
 
@@ -31,7 +31,7 @@ export default function RecentDocuments({
 
             </CardHeader>
 
-            <CardContent>
+            <CardContent className="p-6">
 
                 {
 

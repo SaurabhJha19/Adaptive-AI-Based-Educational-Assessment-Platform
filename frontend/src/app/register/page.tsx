@@ -1,246 +1,374 @@
 "use client";
 
-import { useRouter }
-from "next/navigation";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import {
-  useForm,
-} from "react-hook-form";
-
-import {
-  zodResolver,
-} from "@hookform/resolvers/zod";
-
-import {
-  registerSchema,
-  RegisterForm,
+    registerSchema,
+    RegisterForm,
 } from "@/features/auth/auth.schema";
 
 import {
-  useRegister,
+    useRegister,
 } from "@/features/auth/use-register";
-
-import Link from "next/link";
 
 export default function RegisterPage() {
 
-  const router =
-    useRouter();
+    const router = useRouter();
 
-  const mutation =
-    useRegister();
+    const mutation = useRegister();
 
-  const {
-    register,
-    handleSubmit,
-  } = useForm<RegisterForm>({
-    resolver:
-      zodResolver(
-        registerSchema
-      ),
-  });
+    const {
 
-  const onSubmit =
-    async (
-      data: RegisterForm
-    ) => {
+        register,
 
-      await mutation.mutateAsync(
-        data
-      );
+        handleSubmit,
 
-      router.push(
-        "/login"
-      );
-    };
+        formState: {
 
-  return (
-    <div className="min-h-screen flex items-center justify-center">
+            errors,
 
-      <form
-        onSubmit={handleSubmit(
-          onSubmit
-        )}
-        className="w-full max-w-md border rounded-lg p-8 space-y-4"
-      >
+        },
 
-        <h1 className="text-2xl font-bold">
-          Register
-        </h1>
-      <div className="grid gap-4 md:grid-cols-2">
-       <input
-            {...register("firstName")}
-            placeholder="First Name"
-        />
+    } = useForm<RegisterForm>({
 
-        <input
-            {...register("lastName")}
-            placeholder="Last Name"
-        />
-       </div>
-       <div className="grid gap-4 md:grid-cols-2">
+        resolver:
 
-        <input
-            {...register("username")}
-            placeholder="Username"
-        />
+            zodResolver(
 
-        <input
-            {...register("email")}
-            placeholder="Email"
-        />
-        </div>
-        <div className="grid gap-4 md:grid-cols-2">
+                registerSchema
 
-        <input
-            {...register("mobile")}
-            type="tel"
-            placeholder="Mobile Number (Optional)"
-            className="h-11 rounded-md border px-3"
-        />
+            ),
 
-        <select
-            {...register("targetExam")}
-            className="h-11 rounded-md border bg-background px-3"
-        >
+    });
 
-            <option value="">
-                Select Exam
-            </option>
+    const onSubmit =
 
-            <option value="SAT">
-                SAT
-            </option>
+        async (
 
-            <option value="TOEFL">
-                TOEFL
-            </option>
+            data: RegisterForm
 
-            <option value="GRE">
-                GRE
-            </option>
+        ) => {
 
-            <option value="GMAT">
-                GMAT
-            </option>
+            try {
 
-            <option value="ACT">
-                ACT
-            </option>
+                await mutation.mutateAsync(
 
-            <option value="IELTS">
-                IELTS
-            </option>
+                    data
 
-            <option value="OTHER">
-                Other
-            </option>
+                );
 
-        </select>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
+                router.push(
 
-        <input
-            {...register("password")}
-            type="password"
-            placeholder="Password"
-        />
+                    "/login"
 
-        <input
-            {...register("confirmPassword")}
-            type="password"
-            placeholder="Confirm Password"
-        />
-        </div>
-        <button
-          type="submit"
-          className="w-full border p-2 rounded"
-        >
-          Register
-        </button>
+                );
 
-      <div className="text-center text-sm">
+            } catch (
 
-          Already have an account?{" "}
+                error
 
-        <Link
-            href="/login"
-            className="font-medium text-primary hover:underline"
-        >
-            Login
-        </Link>
+            ) {
 
-      </div>
-      </form>
+                console.error(
 
-    </div>
-  );
-}
+                    error
 
-<div className="min-h-screen grid lg:grid-cols-2 bg-slate-950">
+                );
 
-    {/* Left Branding */}
+            }
 
-    <div className="hidden lg:flex flex-col justify-between bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 p-16">
+        };
 
-        <div>
+    return (
 
-            <div className="flex items-center gap-3">
+        <div className="min-h-screen grid lg:grid-cols-1 items-center justify-center ">
 
-                <div className="h-12 w-12 rounded-xl bg-blue-600" />
 
-                <div>
+            <div className="flex min-h-screen items-center justify-center bg-slate-100 px-6 py-12">
 
-                    <h2 className="text-2xl font-bold text-white">
-                        Adaptive AI
-                    </h2>
+                <form
 
-                    <p className="text-slate-400">
-                        Assessment Platform
-                    </p>
+                    onSubmit={
 
-                </div>
+                        handleSubmit(
+
+                            onSubmit
+
+                        )
+
+                    }
+
+                    className="w-full max-w-xl rounded-2xl border border-slate-200 bg-white p-10 shadow-2xl"
+
+                >
+
+                    <div className="mb-8">
+
+                        <h1 className="text-4xl font-bold">
+
+                            Create Account
+
+                        </h1>
+
+                        <p className="mt-2 text-slate-500">
+
+                            Register to start your AI learning journey.
+
+                        </p>
+
+                    </div>
+
+                    <div className="grid gap-5 md:grid-cols-2">
+
+                        <div>
+
+                            <input
+
+                                {...register("firstName")}
+
+                                placeholder="First Name"
+
+                                className="h-12 w-full rounded-lg border px-4"
+
+                            />
+
+                            <p className="mt-1 text-sm text-red-600">
+
+                                {errors.firstName?.message}
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <input
+
+                                {...register("lastName")}
+
+                                placeholder="Last Name"
+
+                                className="h-12 w-full rounded-lg border px-4"
+
+                            />
+
+                            <p className="mt-1 text-sm text-red-600">
+
+                                {errors.lastName?.message}
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <input
+
+                                {...register("username")}
+
+                                placeholder="Username"
+
+                                className="h-12 w-full rounded-lg border px-4"
+
+                            />
+
+                            <p className="mt-1 text-sm text-red-600">
+
+                                {errors.username?.message}
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <input
+
+                                {...register("email")}
+
+                                placeholder="Email"
+
+                                className="h-12 w-full rounded-lg border px-4"
+
+                            />
+
+                            <p className="mt-1 text-sm text-red-600">
+
+                                {errors.email?.message}
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <input
+
+                                {...register("mobile")}
+
+                                placeholder="Mobile Number (Optional)"
+
+                                className="h-12 w-full rounded-lg border px-4"
+
+                            />
+
+                        </div>
+
+                        <div>
+
+                            <select
+
+                                {...register("targetExam")}
+
+                                className="h-12 w-full rounded-lg border bg-white px-4"
+
+                            >
+
+                                <option value="">
+
+                                    Select Exam
+
+                                </option>
+
+                                <option value="SAT">SAT</option>
+
+                                <option value="GRE">GRE</option>
+
+                                <option value="GMAT">GMAT</option>
+
+                                <option value="TOEFL">TOEFL</option>
+
+                                <option value="IELTS">IELTS</option>
+
+                                <option value="ACT">ACT</option>
+
+                                <option value="OTHER">Other</option>
+
+                            </select>
+
+                            <p className="mt-1 text-sm text-red-600">
+
+                                {errors.targetExam?.message}
+
+                            </p>
+
+                        </div>
+                                                <div>
+
+                            <input
+
+                                {...register("password")}
+
+                                type="password"
+
+                                placeholder="Password"
+
+                                className="h-12 w-full rounded-lg border px-4"
+
+                            />
+
+                            <p className="mt-1 text-sm text-red-600">
+
+                                {errors.password?.message}
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <input
+
+                                {...register("confirmPassword")}
+
+                                type="password"
+
+                                placeholder="Confirm Password"
+
+                                className="h-12 w-full rounded-lg border px-4"
+
+                            />
+
+                            <p className="mt-1 text-sm text-red-600">
+
+                                {errors.confirmPassword?.message}
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    {
+
+                        mutation.isError && (
+
+                            <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+
+                                {
+
+                                    (mutation.error as any)?.response?.data?.message ??
+
+                                    "Registration failed. Please try again."
+
+                                }
+
+                            </div>
+
+                        )
+
+                    }
+
+                    <button
+
+                        type="submit"
+
+                        disabled={mutation.isPending}
+
+                        className="mt-6 h-12 w-full rounded-lg bg-slate-950 text-black border border-gray-300 rounded px-4 py-2 transition hover:bg-slate-800 cursor-pointer disabled:opacity-60"
+
+                    >
+
+                        {
+
+                            mutation.isPending
+
+                                ? "Creating Account..."
+
+                                : "Create Account"
+
+                        }
+
+                    </button>
+
+                    <div className="mt-6 text-center text-sm text-slate-600">
+
+                        Already have an account?{" "}
+
+                        <Link
+
+                            href="/login"
+
+                            className="font-semibold text-blue-600 hover:underline"
+
+                        >
+
+                            Sign In
+
+                        </Link>
+
+                    </div>
+
+                </form>
 
             </div>
 
         </div>
 
-        <div className="space-y-6">
+    );
 
-            <h1 className="text-5xl font-bold leading-tight text-white">
-
-                Learn Smarter.
-
-                <br />
-
-                Score Higher.
-
-            </h1>
-
-            <p className="max-w-lg text-lg leading-8 text-slate-300">
-
-                Prepare for SAT, TOEFL, GRE, GMAT and more using
-                AI-powered adaptive practice tests and detailed
-                performance analytics.
-
-            </p>
-
-        </div>
-
-        <div className="text-slate-500">
-
-            © 2026 Adaptive AI Assessment Platform
-
-        </div>
-
-    </div>
-
-    {/* Right */}
-
-    <div className="flex items-center justify-center bg-slate-100 p-10">
-
-        {/* Form Here */}
-
-    </div>
-
-</div>
+}

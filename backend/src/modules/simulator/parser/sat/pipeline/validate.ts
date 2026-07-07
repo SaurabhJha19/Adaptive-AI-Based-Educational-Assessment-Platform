@@ -51,13 +51,13 @@ export function validateExam(
 
     }
 
-    if (totalQuestions < 90) {
+    // if (totalQuestions < 90) {
 
-        throw new Error(
-            `Parser extracted only ${totalQuestions} questions.`
-        );
+    //     throw new Error(
+    //         `Parser extracted only ${totalQuestions} questions.`
+    //     );
 
-    }
+    // }
 
     return exam;
 

@@ -1,59 +1,102 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {
+
+    useEffect,
+
+    useState,
+
+} from "react";
 
 interface Props {
+
     initialSeconds: number;
+
+    onExpire?: () => void;
+
 }
 
 export default function Timer({
+
     initialSeconds,
+
+    onExpire,
+
 }: Props) {
 
-    const [seconds, setSeconds] =
-        useState(initialSeconds);
+    const [
+
+        seconds,
+
+        setSeconds,
+
+    ] = useState(
+
+        initialSeconds
+
+    );
 
     useEffect(() => {
 
-        const interval = setInterval(() => {
+        if (seconds <= 0) {
 
-            setSeconds((prev) => {
+            onExpire?.();
 
-                if (prev <= 0) {
+            return;
 
-                    clearInterval(interval);
+        }
 
-                    return 0;
-                }
+        const interval =
+            setInterval(() => {
 
-                return prev - 1;
+                setSeconds(
 
-            });
+                    value =>
+                        value - 1
 
-        }, 1000);
+                );
 
-        return () => clearInterval(interval);
+            }, 1000);
 
-    }, []);
+        return () =>
+            clearInterval(interval);
+
+    }, [
+
+        seconds,
+
+        onExpire,
+
+    ]);
 
     const hours =
-        Math.floor(seconds / 3600);
+        Math.floor(
+            seconds / 3600
+        );
 
     const minutes =
-        Math.floor((seconds % 3600) / 60);
+        Math.floor(
+            (seconds % 3600) / 60
+        );
 
-    const secs =
+    const remaining =
         seconds % 60;
 
     return (
 
-        <div className="rounded-md bg-black px-4 py-2 font-mono text-white">
+        <span>
 
-            {String(hours).padStart(2, "0")}:
-            {String(minutes).padStart(2, "0")}:
-            {String(secs).padStart(2, "0")}
+            {String(hours).padStart(2, "0")}
 
-        </div>
+            :
+
+            {String(minutes).padStart(2, "0")}
+
+            :
+
+            {String(remaining).padStart(2, "0")}
+
+        </span>
 
     );
 

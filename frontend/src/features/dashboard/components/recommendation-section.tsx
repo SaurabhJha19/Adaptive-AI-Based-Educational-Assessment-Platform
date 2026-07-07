@@ -20,14 +20,14 @@ export default function RecommendationSection({
 
     if (!recommendation) {
         return (
-            <Card>
+           <Card className="rounded-2xl border shadow-sm">
                 <CardHeader>
                     <CardTitle>
                         Today&apos;s Recommendation
                     </CardTitle>
                 </CardHeader>
 
-                <CardContent>
+                <CardContent className="p-6">
                     <p className="text-muted-foreground">
                         No recommendations available.
                     </p>

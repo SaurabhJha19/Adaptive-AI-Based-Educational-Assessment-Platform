@@ -53,6 +53,7 @@ const userSchema = new Schema<IUser>(
     mobile: {
       type: String,
       default: "",
+      required: false,
     },
 
     targetExam: {

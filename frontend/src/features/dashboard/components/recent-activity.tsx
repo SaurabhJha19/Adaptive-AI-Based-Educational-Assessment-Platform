@@ -14,7 +14,7 @@ export default function RecentActivity({
 
     return (
 
-        <Card>
+        <Card className="rounded-2xl border shadow-sm">
 
             <CardHeader>
 
@@ -26,7 +26,7 @@ export default function RecentActivity({
 
             </CardHeader>
 
-            <CardContent>
+            <CardContent className="p-6">
 
                 {
 

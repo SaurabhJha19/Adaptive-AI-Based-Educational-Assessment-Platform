@@ -49,8 +49,15 @@ export default function ExamHeader({
                 </div>
 
             </div>
+<Timer
 
-            <Timer initialSeconds={8040} />
+    initialSeconds={
+        section.duration
+            ? section.duration * 60
+            : exam.duration * 60
+    }
+
+/>
 
         </div>
 

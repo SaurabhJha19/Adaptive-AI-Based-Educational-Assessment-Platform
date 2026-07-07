@@ -1,5 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 import ExamHeader from "../components/exam-player/exam-header";
 import LeftSidebar from "../components/exam-player/left-sidebar";
 import MainContent from "../components/exam-player/main-content";
@@ -7,6 +9,7 @@ import RightSidebar from "../components/exam-player/right-sidebar";
 import BottomNavigation from "../components/exam-player/bottom-navigation";
 
 import useExamPlayer from "../hooks/use-exam-player";
+import { useSubmitAttempt } from "../hooks/use-submit-attempt";
 
 interface Props {
     exam: any;
@@ -18,34 +21,54 @@ export default function SimulatorPlayer({
     attempt,
 }: Props) {
 
-    const {
+    const router =
+        useRouter();
 
-        section,
+    const submitMutation =
+        useSubmitAttempt();
 
-        question,
+   const {
 
-        questions,
+    section,
 
-        questionIndex,
+    question,
 
-        answers,
+    questions,
 
-        marked,
+    questionIndex,
 
-        answer,
+    answers,
 
-        next,
+    marked,
 
-        previous,
+    answer,
 
-        jump,
+    next,
 
-        toggleReview,
+    previous,
 
-    } = useExamPlayer(
-        exam,
-        attempt._id
-    );
+    jump,
+
+    toggleReview,
+
+    isLastQuestionOfExam,
+
+} = useExamPlayer(
+    exam,
+    attempt._id
+);
+
+    async function submitExam() {
+
+        await submitMutation.mutateAsync(
+            attempt._id
+        );
+
+        router.push(
+            `/simulator/result/${attempt._id}`
+        );
+
+    }
 
     if (!section || !question) {
 
@@ -97,34 +120,63 @@ export default function SimulatorPlayer({
                     currentQuestion={questionIndex + 1}
                     totalQuestions={questions.length}
                     answered={
-                        questions.filter((question: any) => {
+                        questions.filter((q: any) => {
 
                             const key =
-                                question._id ??
-                                question.questionNumber;
+                                q._id ??
+                                q.questionNumber;
 
                             return !!answers[key];
 
                         }).length
                     }
-                    marked={
-                        marked.length
-                    }
+                    marked={marked.length}
                 />
 
             </div>
 
             <BottomNavigation
-                onPrevious={previous}
-                onNext={next}
-                onReview={toggleReview}
-                reviewed={
-                    marked.includes(
-                        question._id ??
-                        question.questionNumber
-                    )
-                }
-            />
+
+    currentQuestion={
+        questionIndex + 1
+    }
+
+    totalQuestions={
+        questions.length
+    }
+
+    isLastQuestionOfExam={
+        isLastQuestionOfExam
+    }
+
+    onPrevious={
+        previous
+    }
+
+    onNext={
+        next
+    }
+
+    onReview={
+        toggleReview
+    }
+
+    reviewed={
+        marked.includes(
+            question._id ??
+            question.questionNumber
+        )
+    }
+
+    onSubmit={
+        submitExam
+    }
+
+    isSubmitting={
+        submitMutation.isPending
+    }
+
+/>
 
         </div>
 

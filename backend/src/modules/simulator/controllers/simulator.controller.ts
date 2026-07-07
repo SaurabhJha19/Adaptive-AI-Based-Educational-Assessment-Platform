@@ -3,6 +3,10 @@ import simulatorService from "../services/simulator.service";
 import startSimulatorService from "../services/start-simulator.service";
 import {ExamAttemptModel} from "../../../models/exam-attempt.model";
 import getAttemptSourceService from "../../../services/get-attempt-source.service";
+import submitAttemptService from "../services/submit-attempt.service";
+import getResultService from "../services/get-result.service";
+import saveAnswerService
+from "../services/save-answer.service";
 
 
 class SimulatorController {
@@ -66,6 +70,62 @@ async getAttempt(
     exam,
   });
 }
+
+}
+
+export async function submitAttempt(
+
+    req: Request<{ id: string }>,
+    res: Response
+
+) {
+
+    const result =
+        await submitAttemptService.execute(
+            req.params.id
+        );
+
+    res.json(result);
+
+}
+
+export async function getResult(
+
+    req: Request<{ id: string }>,
+    res: Response
+
+) {
+
+    const result =
+        await getResultService.execute(
+            req.params.id
+        );
+
+    res.json({
+
+    attempt: result,
+
+});
+
+}
+
+export async function saveAnswer(
+
+    req: Request<{ id: string }>,
+    res: Response
+
+) {
+
+    const result =
+        await saveAnswerService.execute(
+
+            req.params.id,
+
+            req.body
+
+        );
+
+    res.json(result);
 
 }
 

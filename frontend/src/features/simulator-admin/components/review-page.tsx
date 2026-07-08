@@ -96,7 +96,7 @@ export default function ReviewPage({
 
                     <div className="flex gap-3 pt-4">
 
-                        {exam.status !== "published" && (
+                        {exam.status !== "PARSING" && (
 
                             <PublishDialog
                                 examId={exam._id}

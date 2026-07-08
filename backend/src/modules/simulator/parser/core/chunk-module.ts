@@ -1,3 +1,5 @@
+import { ParsedDocument } from "../engine";
+
 export interface ParserChunk {
 
     moduleTitle: string;
@@ -14,6 +16,8 @@ export interface ParserChunk {
 
     content: string;
 
+    pages: ParsedDocument["pages"];
+
 }
 
 export function chunkModule(
@@ -26,9 +30,13 @@ export function chunkModule(
     const pages = module.pages;
 
     for (
+
         let i = 0;
+
         i < pages.length;
+
         i += pagesPerChunk
+
     ) {
 
         const slice =
@@ -36,6 +44,27 @@ export function chunkModule(
                 i,
                 i + pagesPerChunk
             );
+
+        const content =
+            slice
+
+                .flatMap(
+
+                    (page: any) =>
+
+                        page.blocks
+
+                )
+
+                .map(
+
+                    (block: any) =>
+
+                        block.text
+
+                )
+
+                .join("\n\n");
 
         chunks.push({
 
@@ -62,13 +91,9 @@ export function chunkModule(
                     slice.length - 1
                 ].page,
 
-            content:
-                slice
-                    .map(
-                        (page: any) =>
-                            page.content
-                    )
-                    .join("\n\n"),
+            content,
+
+            pages: slice,
 
         });
 

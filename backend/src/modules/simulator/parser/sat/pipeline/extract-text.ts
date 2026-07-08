@@ -1,47 +1,18 @@
-import pdf from "pdf-parse";
+import {
 
-import { ParsedPage } from "../types/sat-parser.types";
+    PdfJsExtractor,
+
+} from "../../extractors/pdfjs";
+
+const extractor =
+    new PdfJsExtractor();
 
 export async function extractText(
-    pdfBuffer: Buffer
-): Promise<ParsedPage[]> {
+    pdf: Buffer
+) {
 
-    const pages: ParsedPage[] = [];
-
-    const options = {
-
-        pagerender: async (pageData: any) => {
-
-            const textContent =
-                await pageData.getTextContent();
-
-            const text =
-                textContent.items
-                    .map(
-                        (item: any) =>
-                            item.str
-                    )
-                    .join(" ");
-
-            pages.push({
-
-                page: pages.length + 1,
-
-                content: text,
-
-            });
-
-            return text;
-
-        },
-
-    };
-
-    await pdf(
-        pdfBuffer,
-        options
+    return extractor.extract(
+        pdf
     );
-
-    return pages;
 
 }

@@ -30,21 +30,9 @@ export interface IOfficialExam
 
   totalQuestions: number;
 
-  /*
-  |--------------------------------------------------------------------------
-  | Question PDF
-  |--------------------------------------------------------------------------
-  */
-
   pdfUrl: string;
 
   pdfKey: string;
-
-  /*
-  |--------------------------------------------------------------------------
-  | Answer Key PDF
-  |--------------------------------------------------------------------------
-  */
 
   answerPdfUrl?: string;
 
@@ -119,12 +107,6 @@ const OfficialExamSchema =
         default: 0,
       },
 
-      /*
-      |--------------------------------------------------------------------------
-      | Question PDF
-      |--------------------------------------------------------------------------
-      */
-
       pdfUrl: {
         type: String,
         required: true,
@@ -134,12 +116,6 @@ const OfficialExamSchema =
         type: String,
         required: true,
       },
-
-      /*
-      |--------------------------------------------------------------------------
-      | Answer Key PDF
-      |--------------------------------------------------------------------------
-      */
 
       answerPdfUrl: {
         type: String,
@@ -173,8 +149,67 @@ const OfficialExamSchema =
       },
 
       metadata: {
-        type: Schema.Types.Mixed,
-        default: {},
+
+          parser: {
+
+              parserVersion: {
+
+                  type: String,
+
+                  default: "1.0.0",
+
+              },
+
+              extractorVersion: {
+
+                  type: String,
+
+                  default: "pdfjs-1.0.0",
+
+              },
+
+              promptVersion: {
+
+                  type: String,
+
+                  default: "sat-prompt-2.0.0",
+
+              },
+
+              schemaVersion: {
+
+                  type: String,
+
+                  default: "content-schema-1.0.0",
+
+              },
+
+              llmModel: {
+
+                  type: String,
+
+                  default: process.env.OPENAI_MODEL,
+
+              },
+
+              parsedAt: {
+
+                  type: Date,
+
+                  default: Date.now,
+
+              },
+
+              processingTimeMs: {
+
+                  type: Number,
+
+                  default: 0,
+
+              },
+
+          },
+
       },
 
       createdBy: {
@@ -188,11 +223,6 @@ const OfficialExamSchema =
     }
   );
 
-/*
-|--------------------------------------------------------------------------
-| Indexes
-|--------------------------------------------------------------------------
-*/
 
 OfficialExamSchema.index({
   examCode: 1,

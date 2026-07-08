@@ -208,25 +208,11 @@ Math2=${math2}`
         );
 
     }
-//this is main
-    // return {
+    return {
 
-    //     modules,
+        modules,
 
-    // };
-// delete below one 
-return {
+    };
 
-    modules: modules.filter(
-
-        module =>
-
-            module.title
-                .toLowerCase()
-                .includes("reading")
-
-    ),
-
-};
 
 }

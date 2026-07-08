@@ -2,6 +2,8 @@ import { Schema } from "mongoose";
 
 import SharedContentSchema from "./shared-content.model";
 import { AssessmentItemSchema } from "./assessment-item.model";
+import { ContentBlockSchema }
+from "../parser/core/content/content-block.schema";
 
 export const QuestionGroupSchema = new Schema(
   {
@@ -15,11 +17,15 @@ export const QuestionGroupSchema = new Schema(
       required: true,
     },
 
-    sharedContent: {
-      type: Schema.Types.ObjectId,
-      default: null,
-      ref: "SharedContent",
-    },
+content: {
+
+    type: [
+        ContentBlockSchema,
+    ],
+
+    default: [],
+
+},
 
     questions: {
       type: [AssessmentItemSchema],

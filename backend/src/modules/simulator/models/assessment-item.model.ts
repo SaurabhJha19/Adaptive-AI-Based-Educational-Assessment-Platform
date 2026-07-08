@@ -1,5 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import { QuestionType } from "../constants/question-type.enum";
+import { ContentBlockSchema } from "../parser/core/content/content-block.schema";
 
 export const AssessmentItemSchema = new Schema(
   {
@@ -18,6 +19,16 @@ export const AssessmentItemSchema = new Schema(
       type: String,
       required: true,
     },
+
+    content: {
+
+      type: [
+          ContentBlockSchema,
+      ],
+
+      default: [],
+
+  },
 
     options: {
       type: [String],

@@ -35,8 +35,47 @@ Extract ONLY the questions present in this chunk.
 
 Return ONLY valid JSON.
 
+================================================
+
+DOCUMENT CONTENT
+
+================================================
+
 ${chunk.content}
-        `.trim(),
+
+================================================
+
+Instructions
+
+================================================
+
+Preserve
+
+- paragraph breaks
+
+- tables
+
+- equations
+
+- graphs
+
+- figures
+
+- captions
+
+- page order
+
+- question numbering
+
+- answer choices
+
+Never merge two questions.
+
+Never merge two passages.
+
+Never merge table rows.
+
+Never flatten mathematical expressions.        `.trim(),
 
     };
 

@@ -28,6 +28,8 @@ export interface RegisterDto {
 
     confirmPassword: string;
 
+    role: "user" | "admin";
+
 }
 
 export interface AuthResponse {

@@ -18,6 +18,12 @@ class EvaluateAttemptService {
 
         }
 
+        console.log("================================");
+        console.log("ATTEMPT ANSWERS");
+        console.log("================================");
+        console.log("Total:", attempt.answers.length);
+        console.log(attempt.answers);
+
         const exam =
             await OfficialExam.findById(
                 attempt.sourceId
@@ -34,11 +40,16 @@ class EvaluateAttemptService {
         const questions =
             exam.sections.flatMap(
                 section =>
-                section.questionGroups.flatMap(
-                    (group: any) =>
-                        group.questions
-                )
+                    section.questionGroups.flatMap(
+                        (group: any) =>
+                            group.questions
+                    )
             );
+
+        console.log("================================");
+        console.log("EXAM QUESTIONS");
+        console.log("================================");
+        console.log("Total:", questions.length);
 
         let score = 0;
 
@@ -52,6 +63,21 @@ class EvaluateAttemptService {
                             answer.questionId.toString()
                     );
 
+                console.log("--------------------------------");
+                console.log({
+                    answerQuestionId:
+                        answer.questionId.toString(),
+
+                    matchedQuestionId:
+                        question?._id?.toString(),
+
+                    selectedAnswer:
+                        answer.selectedAnswer,
+
+                    correctAnswer:
+                        question?.correctAnswer,
+                });
+
                 const correct =
                     question?.correctAnswer ===
                     answer.selectedAnswer;
@@ -62,15 +88,18 @@ class EvaluateAttemptService {
 
                 }
 
-                    return {
+                return {
 
-                        questionId: answer.questionId,
+                    questionId:
+                        answer.questionId,
 
-                        selectedAnswer: answer.selectedAnswer,
+                    selectedAnswer:
+                        answer.selectedAnswer,
 
-                        isCorrect: correct,
+                    isCorrect:
+                        correct,
 
-                    };
+                };
 
             });
 
@@ -96,6 +125,11 @@ class EvaluateAttemptService {
             new Date();
 
         await attempt.save();
+
+        console.log("================================");
+        console.log("FINAL SCORE");
+        console.log(score);
+        console.log("================================");
 
         return {
 

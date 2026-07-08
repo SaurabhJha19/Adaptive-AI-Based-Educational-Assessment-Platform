@@ -44,7 +44,8 @@ export const login = asyncHandler(
         email: result.user.email,
         mobile: result.user.mobile,
         targetExam: result.user.targetExam,
-      },
+        role: result.user.role,
+    },
     });
   }
 );

@@ -1,144 +1,213 @@
-import { Schema, model, Model, Document } from "mongoose";
+import {
+  Schema,
+  model,
+  Document,
+} from "mongoose";
 
 import { ExamType } from "../constants/exam-type.enum";
 import { SimulatorStatus } from "../constants/simulator-status.enum";
 
 import { ExamSectionSchema } from "./exam-section.model";
 
-export interface IOfficialExam extends Document {
-    examCode: string;
-    title: string;
-    slug: string;
-    description: string;
+export interface IOfficialExam
+  extends Document {
 
-    examType: string;
+  examCode: string;
 
-    publisher: string;
+  title: string;
 
-    year?: number;
+  slug: string;
 
-    duration: number;
+  description: string;
 
-    totalQuestions: number;
+  examType: string;
 
-    pdfUrl: string;
+  publisher: string;
 
-    pdfKey: string;
+  year?: number;
 
-    parserVersion: string;
+  duration: number;
 
-    status: string;
+  totalQuestions: number;
 
-    sections: any[];
+  /*
+  |--------------------------------------------------------------------------
+  | Question PDF
+  |--------------------------------------------------------------------------
+  */
 
-    metadata?: Record<string, any>;
+  pdfUrl: string;
 
-    createdBy?: Schema.Types.ObjectId;
+  pdfKey: string;
 
-    createdAt: Date;
+  /*
+  |--------------------------------------------------------------------------
+  | Answer Key PDF
+  |--------------------------------------------------------------------------
+  */
 
-    updatedAt: Date;
+  answerPdfUrl?: string;
+
+  answerPdfKey?: string;
+
+  parserVersion: string;
+
+  status: string;
+
+  sections: any[];
+
+  metadata?: Record<string, any>;
+
+  createdBy?: Schema.Types.ObjectId;
+
+  createdAt: Date;
+
+  updatedAt: Date;
 }
 
-const OfficialExamSchema = new Schema<IOfficialExam>(
-  {
-    examCode: {
-      type: String,
-      unique: true,
-      required: true,
-    },
+const OfficialExamSchema =
+  new Schema<IOfficialExam>(
+    {
 
-    title: {
-      type: String,
-      required: true,
-    },
+      examCode: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+        uppercase: true,
+      },
 
-    slug: {
-      type: String,
-      required: true,
-    },
+      title: {
+        type: String,
+        required: true,
+        trim: true,
+      },
 
-    description: {
-      type: String,
-      default: "",
-    },
+      slug: {
+        type: String,
+        required: true,
+        unique: true,
+      },
 
-    examType: {
-      type: String,
-      enum: Object.values(ExamType),
-      required: true,
-    },
+      description: {
+        type: String,
+        default: "",
+      },
 
-    publisher: {
-      type: String,
-      default: "",
-    },
+      examType: {
+        type: String,
+        enum: Object.values(
+          ExamType
+        ),
+        required: true,
+      },
 
-    year: {
-      type: Number,
-    },
+      publisher: {
+        type: String,
+        default: "",
+      },
 
-    duration: {
-      type: Number,
-      required: true,
-    },
+      year: Number,
 
-    totalQuestions: {
-      type: Number,
-      default: 0,
-    },
+      duration: {
+        type: Number,
+        default: 180,
+      },
 
-    pdfUrl: {
-      type: String,
-      required: true,
-    },
+      totalQuestions: {
+        type: Number,
+        default: 0,
+      },
 
-    pdfKey: {
-      type: String,
-      required: true,
-    },
+      /*
+      |--------------------------------------------------------------------------
+      | Question PDF
+      |--------------------------------------------------------------------------
+      */
 
-    parserVersion: {
-      type: String,
-      default: "1.0.0",
-    },
+      pdfUrl: {
+        type: String,
+        required: true,
+      },
 
-    status: {
-      type: String,
-      enum: Object.values(SimulatorStatus),
-      default: SimulatorStatus.PROCESSING,
-    },
+      pdfKey: {
+        type: String,
+        required: true,
+      },
 
-    sections: {
-      type: [ExamSectionSchema] as unknown as any[],
-      default: [],
-    },
+      /*
+      |--------------------------------------------------------------------------
+      | Answer Key PDF
+      |--------------------------------------------------------------------------
+      */
 
-    metadata: {
-      type: Schema.Types.Mixed,
-      default: {},
-    },
+      answerPdfUrl: {
+        type: String,
+        default: "",
+      },
 
-    createdBy: {
-      type: Schema.Types.ObjectId,
-      ref: "User",
+      answerPdfKey: {
+        type: String,
+        default: "",
+      },
+
+      parserVersion: {
+        type: String,
+        default: "1.0.0",
+      },
+
+      status: {
+        type: String,
+        enum: Object.values(
+          SimulatorStatus
+        ),
+        default:
+          SimulatorStatus.UPLOADED,
+      },
+
+      sections: {
+        type: [
+          ExamSectionSchema,
+        ] as unknown as any[],
+        default: [],
+      },
+
+      metadata: {
+        type: Schema.Types.Mixed,
+        default: {},
+      },
+
+      createdBy: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+
     },
-  },
-  {
-    timestamps: true,
-  }
-);
+    {
+      timestamps: true,
+    }
+  );
+
+/*
+|--------------------------------------------------------------------------
+| Indexes
+|--------------------------------------------------------------------------
+*/
 
 OfficialExamSchema.index({
-    examType:1,
-    status:1,
+  examCode: 1,
 });
 
-const OfficialExam = model<IOfficialExam>(
-  "OfficialExam",
-  OfficialExamSchema
-);
+OfficialExamSchema.index({
+  examType: 1,
+  status: 1,
+});
 
-export{ OfficialExam};
+const OfficialExam =
+  model<IOfficialExam>(
+    "OfficialExam",
+    OfficialExamSchema
+  );
 
 export default OfficialExam;
+export { OfficialExam };

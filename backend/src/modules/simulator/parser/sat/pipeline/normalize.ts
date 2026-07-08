@@ -6,10 +6,30 @@ export function normalizeExam(
   exam: IOfficialExam
 ): IOfficialExam {
 
-  exam.title = metadata.title;
-  exam.examCode = metadata.examCode;
-  exam.examType = metadata.examType;
-  exam.duration = metadata.duration;
+/*
+|--------------------------------------------------------------------------
+| Preserve admin metadata.
+| Never overwrite uploaded values.
+|--------------------------------------------------------------------------
+*/
+
+exam.metadata = {
+
+    ...(exam.metadata ?? {}),
+
+    detectedTitle:
+        metadata.title,
+
+    detectedExamCode:
+        metadata.examCode,
+
+    detectedExamType:
+        metadata.examType,
+
+    detectedDuration:
+        metadata.duration,
+
+};
 
 parsed.sections.forEach((section: any) => {
     section.questionGroups.forEach(

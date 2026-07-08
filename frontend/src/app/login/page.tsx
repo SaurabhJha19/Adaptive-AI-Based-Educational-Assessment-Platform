@@ -58,8 +58,9 @@ export default function LoginPage() {
         );
 
       auth.login(
-        result.token
-      );
+      result.token,
+      result.user
+    );
 
       router.push(
         "/dashboard"

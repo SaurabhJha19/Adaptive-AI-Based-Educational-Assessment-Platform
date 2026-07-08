@@ -1,51 +1,48 @@
 "use client";
 
-import {
-  useEffect,
-} from "react";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-import {
-  useRouter,
-} from "next/navigation";
+import { useAuth } from "@/providers/auth-provider";
 
-import {
-  useAuth,
-} from "@/providers/auth-provider";
+interface ProtectedRouteProps {
+  children: React.ReactNode;
+  requireAdmin?: boolean;
+}
 
 export default function ProtectedRoute({
   children,
-}: {
-  children: React.ReactNode;
-}) {
-
-  const router =
-    useRouter();
+  requireAdmin = false,
+}: ProtectedRouteProps) {
+  const router = useRouter();
 
   const {
     isAuthenticated,
     isLoading,
+    user,
   } = useAuth();
 
   useEffect(() => {
+    if (isLoading) return;
 
-    if (
-      !isLoading &&
-      !isAuthenticated
-    ) {
-
-      router.push(
-        "/login"
-      );
+    if (!isAuthenticated) {
+      router.replace("/login");
+      return;
     }
 
+    if (requireAdmin && user?.role !== "admin") {
+      router.replace("/dashboard");
+      return;
+    }
   }, [
     isAuthenticated,
     isLoading,
+    requireAdmin,
+    user,
     router,
   ]);
 
   if (isLoading) {
-
     return (
       <div className="p-8">
         Loading...
@@ -54,13 +51,12 @@ export default function ProtectedRoute({
   }
 
   if (!isAuthenticated) {
-
     return null;
   }
 
-  return (
-    <>
-      {children}
-    </>
-  );
+  if (requireAdmin && user?.role !== "admin") {
+    return null;
+  }
+
+  return <>{children}</>;
 }

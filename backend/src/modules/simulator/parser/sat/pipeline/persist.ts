@@ -11,25 +11,37 @@ export async function persistExam(
         SimulatorStatus.REVIEW;
 
     const updated =
-        await OfficialExam.findOneAndUpdate(
-            {
-                examCode: exam.examCode,
+    await OfficialExam.findByIdAndUpdate(
+
+        exam._id,
+
+        {
+
+            $set: {
+
+                sections:
+                    exam.sections,
+
+                totalQuestions:
+                    exam.totalQuestions,
+
+                metadata:
+                    exam.metadata,
+
+                status:
+                    SimulatorStatus.REVIEW,
+
             },
-            {
-                $set: {
-                    title: exam.title,
-                    duration: exam.duration,
-                    sections: exam.sections,
-                    totalQuestions: exam.totalQuestions,
-                    metadata: exam.metadata,
-                    status: exam.status,
-                },
-            },
-            {
-                new: true,
-                upsert: true,
-                runValidators: true,
-            }
+
+        },
+
+        {
+
+            new: true,
+
+            runValidators: true,
+
+        }
         );
 
     return updated as IOfficialExam;

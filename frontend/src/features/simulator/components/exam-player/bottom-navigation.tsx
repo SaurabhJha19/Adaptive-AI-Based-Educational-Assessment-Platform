@@ -81,7 +81,7 @@ export default function BottomNavigation({
 
                         <button
                             onClick={onNext}
-                            className="rounded-lg bg-black px-6 py-2 text-back whitespace-nowrap"
+                            className="rounded-lg bg-white px-6 py-2 text-back whitespace-nowrap"
                         >
                             Next →
                         </button>

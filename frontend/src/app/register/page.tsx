@@ -329,7 +329,7 @@ export default function RegisterPage() {
 
                         disabled={mutation.isPending}
 
-                        className="mt-6 h-12 w-full rounded-lg bg-slate-950 text-black border border-gray-300 rounded px-4 py-2 transition hover:bg-slate-800 cursor-pointer disabled:opacity-60"
+                        className="mt-6 h-12 w-full rounded-lg bg-slate-950 text-white border border-gray-300 rounded px-4 py-2 transition hover:bg-slate-800 cursor-pointer disabled:opacity-60"
 
                     >
 

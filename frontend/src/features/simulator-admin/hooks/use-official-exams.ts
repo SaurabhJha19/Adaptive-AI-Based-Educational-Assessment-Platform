@@ -7,6 +7,10 @@ import {
 } from "@tanstack/react-query";
 
 import {
+    parseOfficialExam,
+} from "../services/simulator-admin.service";
+
+import {
   archiveOfficialExam,
   createOfficialExam,
   deleteOfficialExam,
@@ -41,6 +45,33 @@ export const useCreateOfficialExam =
       },
     });
   };
+
+export const useParseOfficialExam =
+() => {
+
+    const queryClient =
+        useQueryClient();
+
+    return useMutation({
+
+        mutationFn:
+            parseOfficialExam,
+
+        onSuccess: () => {
+
+            queryClient.invalidateQueries({
+
+                queryKey: [
+                    "official-exams",
+                ],
+
+            });
+
+        },
+
+    });
+
+};
 
 export const usePublishOfficialExam =
   () => {

@@ -1,175 +1,326 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2, Upload } from "lucide-react";
 
 import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+    Loader2,
+    Upload,
+} from "lucide-react";
+
+import {
+
+    Dialog,
+    DialogContent,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+
 } from "@/components/ui/dialog";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {
+    Button,
+} from "@/components/ui/button";
 
-import { useCreateOfficialExam } from "../hooks/use-official-exams";
+import {
+    Input,
+} from "@/components/ui/input";
+
+import {
+    useCreateOfficialExam,
+} from "../hooks/use-official-exams";
 
 interface UploadDialogProps {
-  onSuccess?: () => void;
+
+    onSuccess?: () => void;
+
 }
 
 export default function UploadDialog({
-  onSuccess,
+
+    onSuccess,
+
 }: UploadDialogProps) {
-  const [open, setOpen] = useState(false);
 
-  const mutation =
-    useCreateOfficialExam();
+    const mutation =
+        useCreateOfficialExam();
 
-  const [title, setTitle] =
-    useState("");
+    const [
 
-  const [examCode, setExamCode] =
-    useState("");
+        open,
 
-  const [examType, setExamType] =
-    useState("TOEFL");
+        setOpen,
 
-  const [file, setFile] =
-    useState<File | null>(null);
+    ] = useState(false);
 
-  async function handleUpload() {
-    if (!file) return;
+    const [
 
-    await mutation.mutateAsync({
-      examCode,
-      title,
-      examType,
-      file,
-    });
+        title,
 
-    setOpen(false);
+        setTitle,
 
-    setTitle("");
-    setExamCode("");
-    setExamType("TOEFL");
-    setFile(null);
+    ] = useState("");
 
-    onSuccess?.();
-  }
+    const [
 
-  return (
-    <Dialog
-      open={open}
-      onOpenChange={setOpen}
-    >
-      <DialogTrigger asChild>
-        <Button>
-          <Upload className="mr-2 h-4 w-4" />
-          Upload Exam
-        </Button>
-      </DialogTrigger>
+        examCode,
 
-      <DialogContent>
+        setExamCode,
 
-        <DialogHeader>
+    ] = useState("");
 
-          <DialogTitle>
+    const [
 
-            Upload Official Exam
+        examType,
 
-          </DialogTitle>
+        setExamType,
 
-        </DialogHeader>
+    ] = useState("SAT");
 
-        <div className="space-y-4">
+    const [
 
-          <Input
-            placeholder="Exam Title"
-            value={title}
-            onChange={(e) =>
-              setTitle(e.target.value)
-            }
-          />
+        duration,
 
-          <Input
-            placeholder="Exam Code"
-            value={examCode}
-            onChange={(e) =>
-              setExamCode(e.target.value)
-            }
-          />
+        setDuration,
 
-          <select
-            className="w-full rounded-md border p-2 bg-background"
-            value={examType}
-            onChange={(e) =>
-              setExamType(
-                e.target.value
-              )
-            }
-          >
-            <option value="TOEFL">
-              TOEFL
-            </option>
+    ] = useState(180);
 
-            <option value="IELTS">
-              IELTS
-            </option>
+    const [
 
-            <option value="GRE">
-              GRE
-            </option>
+        questionPdf,
 
-            <option value="SAT">
-              SAT
-            </option>
+        setQuestionPdf,
 
-          </select>
+    ] = useState<File | null>(null);
 
-          <Input
-            type="file"
-            accept=".pdf"
-            onChange={(e) =>
-              setFile(
-                e.target.files?.[0] ??
-                  null
-              )
-            }
-          />
+    const [
 
-        </div>
+        answerPdf,
 
-        <DialogFooter>
+        setAnswerPdf,
 
-          <Button
-            disabled={
-              mutation.isPending ||
-              !file
-            }
-            onClick={
-              handleUpload
-            }
-          >
-            {mutation.isPending ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+    ] = useState<File | null>(null);
 
-                Uploading...
+    async function handleUpload() {
 
-              </>
-            ) : (
-              "Upload"
-            )}
-          </Button>
+        if (!questionPdf) {
 
-        </DialogFooter>
+            alert(
+                "Question PDF is required."
+            );
 
-      </DialogContent>
+            return;
 
-    </Dialog>
-  );
+        }
+
+        await mutation.mutateAsync({
+
+            title,
+
+            examCode,
+
+            examType,
+
+            duration,
+
+            questionPdf,
+
+            answerPdf:
+                answerPdf ?? undefined,
+
+        });
+
+        setTitle("");
+
+        setExamCode("");
+
+        setExamType("SAT");
+
+        setDuration(180);
+
+        setQuestionPdf(null);
+
+        setAnswerPdf(null);
+
+        setOpen(false);
+
+        onSuccess?.();
+
+    }
+
+    return (
+
+        <Dialog
+            open={open}
+            onOpenChange={setOpen}
+        >
+
+            <DialogTrigger asChild>
+
+                <Button>
+
+                    <Upload className="mr-2 h-4 w-4"/>
+
+                    Upload Official Exam
+
+                </Button>
+
+            </DialogTrigger>
+
+            <DialogContent className="max-w-xl">
+
+                <DialogHeader>
+
+                    <DialogTitle>
+
+                        Upload Official Exam
+
+                    </DialogTitle>
+
+                </DialogHeader>
+
+                <div className="space-y-4">
+
+                    <Input
+                        placeholder="Display Name"
+                        value={title}
+                        onChange={(e)=>
+                            setTitle(
+                                e.target.value
+                            )
+                        }
+                    />
+
+                    <Input
+                        placeholder="Paper Code"
+                        value={examCode}
+                        onChange={(e)=>
+                            setExamCode(
+                                e.target.value
+                            )
+                        }
+                    />
+
+                    <select
+                        className="w-full rounded-md border bg-background p-2"
+                        value={examType}
+                        onChange={(e)=>
+                            setExamType(
+                                e.target.value
+                            )
+                        }
+                    >
+
+                        <option>SAT</option>
+
+                        <option>TOEFL</option>
+
+                        <option>GRE</option>
+
+                        <option>GMAT</option>
+
+                        <option>IELTS</option>
+
+                        <option>ACT</option>
+
+                    </select>
+
+                    <Input
+                        type="number"
+                        placeholder="Duration"
+                        value={duration}
+                        onChange={(e)=>
+                            setDuration(
+                                Number(
+                                    e.target.value
+                                )
+                            )
+                        }
+                    />
+
+                    <div>
+
+                        <p className="mb-2 text-sm font-medium">
+
+                            Question PDF
+
+                        </p>
+
+                        <Input
+                            type="file"
+                            accept=".pdf"
+                            onChange={(e)=>
+                                setQuestionPdf(
+                                    e.target.files?.[0] ??
+                                    null
+                                )
+                            }
+                        />
+
+                    </div>
+
+                    <div>
+
+                        <p className="mb-2 text-sm font-medium">
+
+                            Answer Key PDF (Optional)
+
+                        </p>
+
+                        <Input
+                            type="file"
+                            accept=".pdf"
+                            onChange={(e)=>
+                                setAnswerPdf(
+                                    e.target.files?.[0] ??
+                                    null
+                                )
+                            }
+                        />
+
+                    </div>
+
+                </div>
+
+                <DialogFooter>
+
+                    <Button
+                        disabled={
+                            mutation.isPending
+                        }
+                        onClick={
+                            handleUpload
+                        }
+                    >
+
+                        {
+
+                            mutation.isPending
+
+                            ?
+
+                            <>
+
+                                <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
+
+                                Uploading...
+
+                            </>
+
+                            :
+
+                            "Upload"
+
+                        }
+
+                    </Button>
+
+                </DialogFooter>
+
+            </DialogContent>
+
+        </Dialog>
+
+    );
+
 }

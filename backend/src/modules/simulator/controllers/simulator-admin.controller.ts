@@ -3,19 +3,50 @@ import { Request, Response } from "express";
 import simulatorService from "../services/simulator.service";
 
 class SimulatorAdminController {
-    async create(
-        req: Request,
-        res: Response
-    ) {
+async create(
+    req: Request,
+    res: Response
+) {
 
-        const exam =
-            await simulatorService.create({
-                body: req.body,
-                file: req.file!,
-            });
+    const exam =
+        await simulatorService.create({
 
-        res.status(201).json(exam);
-    }
+            body: req.body,
+
+            files:
+                req.files as any,
+
+        });
+
+    res.status(201).json({
+
+        success: true,
+
+        data: exam,
+
+    });
+
+}
+
+async parse(
+    req: Request<{ id: string }>,
+    res: Response
+) {
+
+    const exam =
+        await simulatorService.startParsing(
+            req.params.id
+        );
+
+    res.json({
+
+        success: true,
+
+        data: exam,
+
+    });
+
+}
 
       async review(req: Request<{ id: string }>, res: Response) {
         const exam = await simulatorService.getExam(req.params.id);
@@ -38,23 +69,62 @@ class SimulatorAdminController {
     res.json(exam);
   }
 
-  async publish(req: Request<{ id: string }>, res: Response) {
-    const exam = await simulatorService.publish(req.params.id);
+async publish(
+    req: Request<{ id: string }>,
+    res: Response
+) {
 
-    res.json(exam);
-  }
+    const exam =
+        await simulatorService.publish(
+            req.params.id
+        );
 
-  async archive(req: Request<{ id: string }>, res: Response) {
-    const exam = await simulatorService.archive(req.params.id);
+    res.json({
 
-    res.json(exam);
-  }
+        success: true,
 
-  async delete(req: Request<{ id: string }>, res: Response) {
-    await simulatorService.delete(req.params.id);
+        data: exam,
 
-    res.sendStatus(204);
-  }
+    });
+
+}
+
+async archive(
+    req: Request<{ id: string }>,
+    res: Response
+) {
+
+    const exam =
+        await simulatorService.archive(
+            req.params.id
+        );
+
+    res.json({
+
+        success: true,
+
+        data: exam,
+
+    });
+
+}
+
+async delete(
+    req: Request<{ id: string }>,
+    res: Response
+) {
+
+    await simulatorService.delete(
+        req.params.id
+    );
+
+    res.json({
+
+        success: true,
+
+    });
+
+}
 }
 
 export default new SimulatorAdminController();

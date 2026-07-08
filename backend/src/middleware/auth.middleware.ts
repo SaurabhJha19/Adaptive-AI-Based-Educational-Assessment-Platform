@@ -6,6 +6,7 @@ export interface AuthRequest extends Request {
   user?: {
     userId: string;
     email: string;
+    role: "user" | "admin";
   };
 
   file?: Express.Multer.File;
@@ -34,6 +35,7 @@ export const authenticate = (
     ) as {
       userId: string;
       email: string;
+      role: "user" | "admin";
     };
 
     req.user = decoded;

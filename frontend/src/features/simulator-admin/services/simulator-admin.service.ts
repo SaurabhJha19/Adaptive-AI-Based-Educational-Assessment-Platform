@@ -25,28 +25,68 @@ export const getOfficialExam = async (
   return data;
 };
 
-export const createOfficialExam = async (
-  payload: CreateOfficialExamPayload
+export const createOfficialExam =
+async (
+    payload: CreateOfficialExamPayload
 ) => {
-  const form = new FormData();
 
-  form.append("examCode", payload.examCode);
-  form.append("title", payload.title);
-  form.append("examType", payload.examType);
-  form.append("file", payload.file);
+    const form =
+        new FormData();
 
-  const { data } = await api.post(
-    BASE,
-    form,
-    {
-      headers: {
-        "Content-Type":
-          "multipart/form-data",
-      },
+    form.append(
+        "examCode",
+        payload.examCode
+    );
+
+    form.append(
+        "title",
+        payload.title
+    );
+
+    form.append(
+        "examType",
+        payload.examType
+    );
+
+    form.append(
+        "duration",
+        String(
+            payload.duration ?? 180
+        )
+    );
+
+    form.append(
+        "questionPdf",
+        payload.questionPdf
+    );
+
+    if (payload.answerPdf) {
+
+        form.append(
+            "answerPdf",
+            payload.answerPdf
+        );
+
     }
-  );
 
-  return data;
+    const { data } =
+        await api.post(
+            BASE,
+            form,
+            {
+
+                headers: {
+
+                    "Content-Type":
+                        "multipart/form-data",
+
+                },
+
+            }
+        );
+
+    return data;
+
 };
 
 export const publishOfficialExam =
@@ -57,6 +97,20 @@ export const publishOfficialExam =
 
     return data;
   };
+
+export const parseOfficialExam =
+async (
+    id: string
+) => {
+
+    const { data } =
+        await api.post(
+            `${BASE}/${id}/parse`
+        );
+
+    return data;
+
+};
 
 export const archiveOfficialExam =
   async (id: string) => {

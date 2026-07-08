@@ -55,11 +55,13 @@ export default function RegisterPage() {
 
             try {
 
-                await mutation.mutateAsync(
+                await mutation.mutateAsync({
 
-                    data
+                    ...data,
 
-                );
+                    role: "user",
+
+                });
 
                 router.push(
 

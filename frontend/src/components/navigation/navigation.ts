@@ -23,13 +23,13 @@ export const navigation = [
   },
 
   {
-    title: "Exam Simulator",
+    title: "Official Exam Simulator",
     href: "/simulator",
     icon: GraduationCap
   },
 
   {
-    title: "Exams",
+    title: "AI Assessment",
     href: "/exams",
     icon: ClipboardList,
   },

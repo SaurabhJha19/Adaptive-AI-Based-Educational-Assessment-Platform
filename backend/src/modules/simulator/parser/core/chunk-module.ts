@@ -48,22 +48,29 @@ export function chunkModule(
         const content =
             slice
 
-                .flatMap(
+                .flatMap((page: any) => {
 
-                    (page: any) =>
+                    if (Array.isArray(page.blocks)) {
+                        return page.blocks;
+                    }
 
-                        page.blocks
+                    if (Array.isArray(page.content)) {
+                        return page.content;
+                    }
 
-                )
+                    return [];
 
-                .map(
+                })
+                .map((block: any) => {
 
-                    (block: any) =>
+                    if (typeof block === "string") {
+                        return block;
+                    }
 
-                        block.text
+                    return block?.text ?? "";
 
-                )
-
+                })
+                .filter(Boolean)
                 .join("\n\n");
 
         chunks.push({

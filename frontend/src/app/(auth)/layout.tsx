@@ -10,7 +10,7 @@ export default function AuthLayout({
 }) {
   return (
     <ProtectedRoute>
-      <div className="flex min-h-screen bg-background">
+      <div className="flex h-screen bg-background overflow-hidden">
         <AppSidebar />
 
         <main className="flex-1 overflow-y-auto p-6">

@@ -18,7 +18,7 @@ export function buildContext(
 
         system: SAT_PROMPT,
 
-        user: `
+       user: `
 Module:
 ${chunk.moduleTitle}
 
@@ -35,6 +35,52 @@ Extract ONLY the questions present in this chunk.
 
 Return ONLY valid JSON.
 
+Return exactly this schema:
+
+{
+  "sections": [
+    {
+      "title": "string",
+      "questionGroups": [
+        {
+          "title": "string",
+          "passage": "string",
+          "questions": [
+            {
+              "number": 1,
+              "question": "string",
+              "choices": [
+                "A) ...",
+                "B) ...",
+                "C) ...",
+                "D) ..."
+              ],
+              "correctAnswer": "A",
+              "type": "MULTIPLE_CHOICE",
+              "difficulty": "EASY | MEDIUM | HARD",
+              "explanation": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+Rules:
+
+- Every question MUST include correctAnswer.
+- correctAnswer MUST be exactly one of: A, B, C, D.
+- Every multiple choice question MUST have four choices.
+- Never invent questions.
+- Never omit answers if an answer key exists in the provided pages.
+- Preserve passages exactly.
+- Preserve tables.
+- Preserve equations.
+- Preserve figures.
+- Preserve question numbering.
+- Return ONLY JSON.
+
 ================================================
 
 DOCUMENT CONTENT
@@ -42,40 +88,7 @@ DOCUMENT CONTENT
 ================================================
 
 ${chunk.content}
-
-================================================
-
-Instructions
-
-================================================
-
-Preserve
-
-- paragraph breaks
-
-- tables
-
-- equations
-
-- graphs
-
-- figures
-
-- captions
-
-- page order
-
-- question numbering
-
-- answer choices
-
-Never merge two questions.
-
-Never merge two passages.
-
-Never merge table rows.
-
-Never flatten mathematical expressions.        `.trim(),
+`.trim(),
 
     };
 

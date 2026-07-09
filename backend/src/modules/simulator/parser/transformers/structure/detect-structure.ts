@@ -1,4 +1,4 @@
-import { ParsedPage } from "./split-pages";
+import { ParsedPage } from "../../extractors/pdf/split-pages";
 
 export interface DetectedModule {
     title: string;

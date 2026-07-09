@@ -1,5 +1,29 @@
+import { ParsedDocument } from "../engine/contracts";
+
+
+const normalizeType = (type?: string) => {
+
+    switch ((type ?? "").trim().toLowerCase()) {
+
+        case "multiple choice":
+        case "multiple_choice":
+        case "mcq":
+            return "MULTIPLE_CHOICE";
+
+        case "student response":
+        case "student_response":
+        case "grid_in":
+            return "STUDENT_RESPONSE";
+
+        default:
+            return "MULTIPLE_CHOICE";
+
+    }
+
+};
+
 export function mapLlmResponse(
-    response: any,
+    response: ParsedDocument,
     fallbackSection: string,
     sectionOrder: number
 ) {
@@ -112,11 +136,23 @@ questionGroups:
                                     question.options ??
                                     question.choices ??
                                     []
-                                ).filter(Boolean),
+                                )
+                                .filter(
+                                    (option: any) =>
+                                        typeof option === "string" &&
+                                        /^[A-D]\)/.test(option.trim())
+                                ),
 
                             correctAnswer:
+
                                 question.correctAnswer ??
+
                                 question.answer ??
+
+                                question.correct_option ??
+
+                                question.correctOption ??
+
                                 "",
 
                             answer:
@@ -132,9 +168,7 @@ questionGroups:
                                 question.difficulty ??
                                 "MEDIUM",
 
-                            type:
-                                question.type ??
-                                "MULTIPLE_CHOICE",
+                           type: normalizeType(question.type),
 
                             metadata:
                                 question.metadata ??

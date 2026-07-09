@@ -4,6 +4,8 @@ from "stream";
 const pdfParse =
   require("pdf-parse");
 
+  console.log(pdfParse);
+
 import {
   getFileStreamFromS3,
 }

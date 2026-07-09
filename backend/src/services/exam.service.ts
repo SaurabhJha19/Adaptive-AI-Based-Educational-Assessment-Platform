@@ -84,6 +84,8 @@ export const createExam =
     exam.totalQuestions =
       questions.length;
 
+      exam.status = "published";
+
     await exam.save();
 
     return exam;

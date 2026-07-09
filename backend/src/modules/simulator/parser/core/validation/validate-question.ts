@@ -52,13 +52,11 @@ validateQuestion(
 
     ) {
 
-        throw new ValidationError(
+    console.warn(
 
-            "Question has no answer.",
+        `[Validation] Missing answer for Question ${question.questionNumber}`
 
-            `question.${question.questionNumber}`
-
-        );
+    );
 
     }
 

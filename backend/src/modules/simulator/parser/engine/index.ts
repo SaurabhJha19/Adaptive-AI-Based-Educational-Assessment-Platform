@@ -2,3 +2,8 @@ export * from "./document";
 export * from "./page";
 export * from "./block";
 export * from "./extractor.interface";
+export * from "./parser-engine";
+export * from "./parser-context";
+export * from "./pipeline";
+export * from "./default-pipeline";
+export * from "./stages";

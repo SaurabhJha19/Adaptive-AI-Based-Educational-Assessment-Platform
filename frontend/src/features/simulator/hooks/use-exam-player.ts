@@ -18,6 +18,14 @@ export default function useExamPlayer(
 
 ) {
 
+    const [
+
+    transitionMode,
+
+    setTransitionMode,
+
+] = useState(false);
+
     const saveAnswer =
         useSaveAnswer();
 
@@ -28,6 +36,7 @@ export default function useExamPlayer(
         setSectionIndex,
 
     ] = useState(0);
+    
 
     const [
 
@@ -405,6 +414,59 @@ function closeReview() {
 
 }
 
+function closeTransition() {
+
+    setTransitionMode(false);
+
+    if (
+
+        sectionIndex <
+
+        exam.sections.length - 1
+
+    ) {
+
+        setSectionIndex(
+
+            previous => previous + 1
+
+        );
+
+        setQuestionIndex(0);
+
+    }
+
+}
+
+function submitReview() {
+
+    closeReview();
+
+    if (
+
+        sectionIndex <
+
+        exam.sections.length - 1
+
+    ) {
+
+        setTransitionMode(true);
+
+        return;
+
+    }
+
+    /*
+    Final section
+
+    TODO:
+    Submit attempt
+    */
+
+    console.log("Submit Exam");
+
+}
+
 return {
 
    section,
@@ -426,6 +488,12 @@ return {
     questionIndex,
 
     answers,
+
+    transitionMode,
+
+    submitReview,
+
+    closeTransition,
 
     marked,
 

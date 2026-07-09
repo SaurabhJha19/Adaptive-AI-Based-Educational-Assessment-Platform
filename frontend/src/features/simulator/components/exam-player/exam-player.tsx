@@ -23,7 +23,11 @@ import {
     BottomToolbar,
 
 } from "../layout";
+import {
 
+    SectionTransition,
+
+} from "../../components/transition";
 import useExamPlayer
 from "../../hooks/use-exam-player";
 
@@ -79,6 +83,12 @@ export default function ExamPlayer({
 
         toggleReview,
 
+        transitionMode,
+
+        submitReview,
+
+        closeTransition,
+
     } = useExamPlayer(
 
         exam,
@@ -125,6 +135,8 @@ const passage =
 
     currentPassage;
 
+
+
 if (reviewMode) {
 
     return (
@@ -151,15 +163,37 @@ if (reviewMode) {
 
             onBack={closeReview}
 
-            onSubmit={() => {
+            onSubmit={() => {submitReview}}
 
-                console.log(
+        />
 
-                    "Submit Exam"
+    );
 
-                );
+}
 
-            }}
+if (transitionMode) {
+
+    return (
+
+        <SectionTransition
+
+            current={
+
+                sectionIndex + 1
+
+            }
+
+            total={
+
+                exam.sections.length
+
+            }
+
+            onContinue={
+
+                closeTransition
+
+            }
 
         />
 

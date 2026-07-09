@@ -57,6 +57,8 @@ export default function ExamPlayer({
 
         groupQuestions,
 
+        visited,
+
         question,
 
         questions,
@@ -334,37 +336,12 @@ if (transitionMode) {
                     right={
 
                         <QuestionPalette
-
-                            questions={
-
-                                questions
-
-                            }
-
-                            currentQuestion={
-
-                                question.questionNumber
-
-                            }
-
-                            answers={
-
-                                answers
-
-                            }
-
-                            marked={
-
-                                marked
-
-                            }
-
-                            onSelectQuestion={
-
-                                jump
-
-                            }
-
+                            questions={questions}
+                            currentQuestion={question.questionNumber}
+                            answers={answers}
+                            marked={marked}
+                            visited={visited}
+                            onSelectQuestion={jump}
                         />
 
                     }

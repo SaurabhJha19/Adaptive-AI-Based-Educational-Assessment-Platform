@@ -8,10 +8,9 @@ interface Props {
     currentQuestion: number;
 
     answers: Record<string, string>;
-
-    marked: string[];
     visited: Set<string>;
-    
+    marked: string[];
+
     onSelectQuestion: (
         index: number
     ) => void;

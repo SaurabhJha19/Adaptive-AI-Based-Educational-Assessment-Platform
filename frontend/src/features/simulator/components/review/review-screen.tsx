@@ -32,6 +32,8 @@ interface Props {
 
     answers: Record<string, string>;
 
+    visited: Set<string>;
+
     marked: string[];
 
     onJump: (index: number) => void;
@@ -61,6 +63,7 @@ export default function ReviewScreen({
     onBack,
 
     onSubmit,
+    visited
 
 }: Props) {
 
@@ -119,6 +122,8 @@ export default function ReviewScreen({
                     answers={answers}
 
                     marked={marked}
+
+                    visited={visited}
 
                     current={currentQuestion}
 

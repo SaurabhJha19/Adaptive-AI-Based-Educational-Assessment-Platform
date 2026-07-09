@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import "katex/dist/katex.min.css";
 import {
   QueryProvider,
 } from "@/providers/query-provider";

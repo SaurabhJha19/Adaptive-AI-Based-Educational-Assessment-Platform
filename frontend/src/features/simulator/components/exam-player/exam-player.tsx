@@ -1,127 +1,344 @@
 "use client";
 
-import ExamHeader from "./exam-header";
+import QuestionView from "./question-view";
 import QuestionNavigation from "./question-navigation";
 import QuestionPalette from "./question-palette";
-import QuestionView from "./question-view";
+import {
 
-import useExamPlayer from "../../hooks/use-exam-player";
+    ReviewScreen,
+
+} from "../review";
+import {
+
+    SimulatorLayout,
+
+    SimulatorWorkspace,
+
+    SimulatorHeader,
+
+    PassagePanel,
+
+    QuestionPanel,
+
+    BottomToolbar,
+
+} from "../layout";
+
+import useExamPlayer
+from "../../hooks/use-exam-player";
 
 interface Props {
-  exam: any;
-  attemptId: string;
+
+    exam: any;
+
+    attemptId: string;
+
 }
 
 export default function ExamPlayer({
-  exam,
-  attemptId,
+
+    exam,
+
+    attemptId,
+
 }: Props) {
 
-  const {
+    const {
 
-    section,
+        section,
 
-    question,
+        currentGroup,
 
-    questions,
+        currentPassage,
 
-    questionIndex,
+        groupQuestions,
 
-    answers,
+        question,
 
-    answer,
+        questions,
 
-    marked,
+        questionIndex,
 
-    next,
+        reviewMode,
 
-    previous,
+        openReview,
 
-    jump,
+        closeReview,
 
-    toggleReview,
+        answers,
 
-  } = useExamPlayer(exam, attemptId);
+        answer,
 
-  if (!section || !question) {
+        marked,
 
-    return (
-      <div className="flex h-screen items-center justify-center">
-        No questions available.
-      </div>
+        next,
+
+        previous,
+
+        jump,
+
+        toggleReview,
+
+    } = useExamPlayer(
+
+        exam,
+
+        attemptId
+
     );
 
-  }
+    if (
 
-  return (
+        !section ||
 
-    <div className="flex h-screen bg-gray-100">
+        !question
 
-      <div className="flex flex-1 flex-col">
+    ) {
 
-        <ExamHeader
-          exam={exam}
-          section={section}
-          currentQuestion={questionIndex + 1}
-          totalQuestions={questions.length}
-        />
+        return (
 
-        <div className="h-2 bg-gray-200">
+            <div className="flex h-screen items-center justify-center">
 
-          <div
-            className="h-full bg-black transition-all duration-300"
-            style={{
-              width: `${
-                ((questionIndex + 1) /
-                  questions.length) *
-                100
-              }%`,
-            }}
-          />
+                No questions available.
 
-        </div>
+            </div>
 
-        <div className="flex-1 overflow-auto p-8">
+        );
 
-          <QuestionView
-            question={question}
-            answer={
-              answers[
-                question._id ??
-                  question.questionNumber
-              ]
-            }
-            onAnswer={answer}
-          />
+    }
 
-        </div>
+const unansweredCount =
 
-        <QuestionNavigation
-            onPrevious={previous}
-            onNext={next}
-            onReview={toggleReview}
-            reviewed={
-                marked.includes(
-                    question._id ??
-                    question.questionNumber
-                )
-            }
-        />
+    questions.filter(question => {
 
-      </div>
+        const key =
 
-        <QuestionPalette
+            question._id ??
+
+            question.questionNumber;
+
+        return !answers[key];
+
+    }).length;
+
+const passage =
+
+    currentPassage;
+
+if (reviewMode) {
+
+    return (
+
+        <ReviewScreen
+
+            exam={exam}
+
+            section={section}
+
             questions={questions}
+
             currentQuestion={
+
                 question.questionNumber
+
             }
+
             answers={answers}
+
             marked={marked}
-            onSelectQuestion={jump}
+
+            onJump={jump}
+
+            onBack={closeReview}
+
+            onSubmit={() => {
+
+                console.log(
+
+                    "Submit Exam"
+
+                );
+
+            }}
+
         />
 
-    </div>
+    );
 
-  );
+}
+
+    return (
+
+        <SimulatorLayout
+
+            header={
+
+                <SimulatorHeader
+
+                    exam={exam}
+
+                    section={section}
+
+                    currentQuestion={
+
+                        questionIndex + 1
+
+                    }
+
+                    totalQuestions={
+
+                        questions.length
+
+                    }
+
+                />
+
+            }
+
+            workspace={
+
+                <SimulatorWorkspace
+
+                    left={
+
+                      <PassagePanel
+
+                          group={currentGroup}
+
+                      />
+
+                  }
+
+                    right={
+
+                        <QuestionPanel>
+
+                            <div className="mb-6">
+
+                                <div className="text-sm uppercase tracking-wide text-gray-500">
+
+                                    {
+
+                                        currentGroup?.title ??
+
+                                        "Question"
+
+                                    }
+
+                                </div>
+
+                            </div>
+
+                            <QuestionView
+
+                                question={question}
+
+                                answer={
+
+                                    answers[
+
+                                        question._id ??
+
+                                        question.questionNumber
+
+                                    ]
+
+                                }
+
+                                onAnswer={answer}
+
+                            />
+
+                        </QuestionPanel>
+
+                    }
+
+                />
+
+            }
+
+            footer={
+
+                <BottomToolbar
+
+                    left={
+
+                       <QuestionNavigation
+
+                            onPrevious={previous}
+
+                            onNext={next}
+
+                            onMarkReview={toggleReview}
+
+                            onReviewScreen={openReview}
+
+                            reviewed={
+
+                                marked.includes(
+
+                                    question._id ??
+
+                                    question.questionNumber
+
+                                )
+
+                            }
+
+                            unansweredCount={
+
+                                unansweredCount
+
+                            }
+
+                        />
+
+                    }
+
+                    right={
+
+                        <QuestionPalette
+
+                            questions={
+
+                                questions
+
+                            }
+
+                            currentQuestion={
+
+                                question.questionNumber
+
+                            }
+
+                            answers={
+
+                                answers
+
+                            }
+
+                            marked={
+
+                                marked
+
+                            }
+
+                            onSelectQuestion={
+
+                                jump
+
+                            }
+
+                        />
+
+                    }
+
+                />
+
+            }
+
+        />
+
+    );
 
 }

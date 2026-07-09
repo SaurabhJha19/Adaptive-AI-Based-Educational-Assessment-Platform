@@ -1,47 +1,132 @@
+import { SimulatorButton } from "../ui";
+
 interface Props {
+
     onPrevious: () => void;
+
     onNext: () => void;
-    onReview: () => void;
+
+    onMarkReview: () => void;
+
+    onReviewScreen: () => void;
+
     reviewed: boolean;
+
+    unansweredCount: number;
+
 }
 
 export default function QuestionNavigation({
+
     onPrevious,
+
     onNext,
-    onReview,
+
+    onMarkReview,
+
+    onReviewScreen,
+
     reviewed,
+
+    unansweredCount,
+
 }: Props) {
 
     return (
 
-        <div className="flex items-center justify-between border-t bg-white p-6">
+        <div className="flex w-full items-center justify-between">
 
-            <button
+            <SimulatorButton
+
+                variantType="secondary"
+
                 onClick={onPrevious}
-                className="rounded-md border px-6 py-2"
+
+                className="w-36"
+
             >
+
                 Previous
-            </button>
 
-            <button
-                onClick={onReview}
-                className={`rounded-md px-6 py-2 ${
-                    reviewed
-                        ? "bg-yellow-500 text-white"
-                        : "border"
-                }`}
-            >
-                {reviewed
-                    ? "Marked"
-                    : "Mark for Review"}
-            </button>
+            </SimulatorButton>
 
-            <button
+            <div className="flex gap-4">
+
+                <SimulatorButton
+
+                    variantType={
+
+                        reviewed
+
+                            ? "success"
+
+                            : "secondary"
+
+                    }
+
+                    onClick={onMarkReview}
+
+                    className="w-48"
+
+                >
+
+                    {
+
+                        reviewed
+
+                            ? "Marked"
+
+                            : "Mark for Review"
+
+                    }
+
+                </SimulatorButton>
+
+                <SimulatorButton
+
+                    variantType={
+
+                        unansweredCount > 0
+
+                            ? "danger"
+
+                            : "primary"
+
+                    }
+
+                    onClick={onReviewScreen}
+
+                    className="w-48"
+
+                >
+
+                    {
+
+                        unansweredCount > 0
+
+                            ? `Review (${unansweredCount})`
+
+                            : "Review Answers"
+
+                    }
+
+                </SimulatorButton>
+
+            </div>
+
+            <SimulatorButton
+
+                variantType="primary"
+
                 onClick={onNext}
-                className="rounded-md bg-black px-6 py-2 text-white"
+
+                className="w-36"
+
             >
+
                 Next
-            </button>
+
+            </SimulatorButton>
 
         </div>
 

@@ -1,3 +1,8 @@
+import { SimulatorButton } from "../ui";
+import {
+    getQuestionStatus,
+} from "../../utils";
+
 interface Props {
     questions: any[];
     currentQuestion: number;
@@ -25,7 +30,7 @@ export default function QuestionPalette({
         Questions
       </h3>
 
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-7 gap-2">
 
         {questions.map((question, index) => {
 
@@ -33,39 +38,52 @@ export default function QuestionPalette({
                 question._id ??
                 question.questionNumber;
 
-            const answered =
-                !!answers[key];
+const status =
+    getQuestionStatus({
 
-            const review =
-                marked.includes(key);
+        question,
 
-            const active =
-                question.questionNumber === currentQuestion;
+        currentQuestion,
 
+        answers,
+
+        marked,
+
+        visited,
+
+    });
+
+const variants = {
+    current: "primary",
+    answered: "success",
+    marked: "danger",
+    visited: "secondary",
+    unanswered: "secondary",
+} as const;
           return (
 
-            <button
-              key={key}
-              onClick={() =>
-                onSelectQuestion(index)
-              }
-                className={`flex h-10 w-10 items-center justify-center rounded-lg border text-sm transition
+<SimulatorButton
 
-                ${
-                    active
-                        ? "bg-black text-white"
+    key={key}
 
-                        : review
-                        ? "bg-yellow-400 text-black"
+    variantType={
 
-                        : answered
-                        ? "bg-green-500 text-white"
+        variants[status]
+    }
 
-                        : "bg-white hover:bg-gray-100"
-                }`}
-            >
-              {question.questionNumber}
-            </button>
+    onClick={() =>
+
+        onSelectQuestion(index)
+
+    }
+
+    className="h-11 w-11 p-0"
+
+>
+
+    {question.questionNumber}
+
+</SimulatorButton>
 
           );
 

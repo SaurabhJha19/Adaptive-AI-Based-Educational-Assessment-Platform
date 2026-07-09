@@ -55,34 +55,100 @@ export default function useExamPlayer(
 
     ] = useState<string[]>([]);
 
+    const [
+
+    reviewMode,
+
+    setReviewMode,
+
+] = useState(false);
+
     const section =
         exam.sections?.[
             sectionIndex
         ];
 
-    const questions =
-        useMemo(() => {
+const groups =
+    useMemo(() => {
 
-            if (!section) {
+        if (!section) {
 
-                return [];
+            return [];
 
-            }
+        }
 
-            return section.questionGroups.flatMap(
+        return section.questionGroups ?? [];
 
-                (group: any) =>
+    }, [section]);
 
-                    group.questions
+const questions =
+    useMemo(() => {
 
-            );
+        return groups.flatMap(
 
-        }, [section]);
+            (group: any) =>
 
-    const question =
-        questions[
-            questionIndex
-        ];
+                group.questions
+
+        );
+
+    }, [groups]);
+
+
+const [
+
+    visited,
+
+    setVisited,
+
+] = useState<Set<string>>(
+    new Set()
+);
+
+
+const question =
+    questions[
+        questionIndex
+    ];
+
+const currentGroup =
+    useMemo(() => {
+
+        return groups.find(
+
+            (group: any) =>
+
+                group.questions.some(
+
+                    (q: any) =>
+
+                        q.questionNumber ===
+
+                        question?.questionNumber
+
+                )
+
+        );
+
+    }, [
+
+        groups,
+
+        question,
+
+    ]);
+
+const currentPassage =
+
+    currentGroup?.passage ??
+
+    "";
+
+const groupQuestions =
+
+    currentGroup?.questions ??
+
+    [];
 
     function answer(
         value: string
@@ -286,6 +352,34 @@ export default function useExamPlayer(
 
     }, []);
 
+useEffect(() => {
+
+    if (!question) {
+
+        return;
+
+    }
+
+    const key =
+
+        question._id ??
+
+        question.questionNumber;
+
+    setVisited(previous => {
+
+        const next =
+
+            new Set(previous);
+
+        next.add(key);
+
+        return next;
+
+    });
+
+}, [question]);
+
  const isLastSection =
     sectionIndex ===
     exam.sections.length - 1;
@@ -298,15 +392,36 @@ const isLastQuestionOfExam =
     isLastSection &&
     isLastQuestion;
 
+
+function openReview() {
+
+    setReviewMode(true);
+
+}
+
+function closeReview() {
+
+    setReviewMode(false);
+
+}
+
 return {
 
-    section,
+   section,
+
+    currentGroup,
+
+    currentPassage,
+
+    groupQuestions,
 
     question,
 
     questions,
-
+    
     sectionIndex,
+
+    visited,
 
     questionIndex,
 
@@ -329,6 +444,12 @@ return {
     isLastSection,
 
     isLastQuestion,
+
+    reviewMode,
+
+    openReview,
+
+    closeReview,
 
 };
 

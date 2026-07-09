@@ -89,6 +89,8 @@ export default function ExamPlayer({
 
         closeTransition,
 
+        sectionIndex 
+
     } = useExamPlayer(
 
         exam,

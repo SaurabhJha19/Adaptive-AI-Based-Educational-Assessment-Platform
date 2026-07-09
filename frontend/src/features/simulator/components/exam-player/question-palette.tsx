@@ -10,7 +10,8 @@ interface Props {
     answers: Record<string, string>;
 
     marked: string[];
-
+    visited: Set<string>;
+    
     onSelectQuestion: (
         index: number
     ) => void;
@@ -21,6 +22,7 @@ export default function QuestionPalette({
   currentQuestion,
   answers,
   marked,
+  visited,
   onSelectQuestion,
 }: Props) {
   return (

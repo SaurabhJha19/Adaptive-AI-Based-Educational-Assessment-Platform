@@ -1,3 +1,5 @@
+import type { ElementType } from "react";
+
 interface Props {
 
     text: string;
@@ -14,8 +16,7 @@ export default function HeadingRenderer({
 
 }: Props) {
 
-    const Tag =
-        `h${level}` as keyof JSX.IntrinsicElements;
+    const Tag = `h${level}` as ElementType;
 
     return (
 

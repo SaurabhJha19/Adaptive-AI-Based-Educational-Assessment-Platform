@@ -169,6 +169,8 @@ if (reviewMode) {
 
             onSubmit={() => {submitReview}}
 
+            visited={visited}
+
         />
 
     );

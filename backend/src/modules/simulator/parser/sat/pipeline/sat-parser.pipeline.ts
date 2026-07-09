@@ -28,19 +28,15 @@ class SatParserPipeline {
     const pages =
       await extractText(pdfBuffer);
 
-    console.log(
-      `PDF Pages: ${pages.length}`
-    );
-
     const structure =
-        detectStructure(pages);
+        detectStructure(pages as any);
 
     console.log(
         `Detected Modules: ${structure.modules.length}`
     );
 
     const metadata =
-      detectMetadata(pages);
+      detectMetadata(pages as any);
 
     const chunkResults: any[] = [];
 

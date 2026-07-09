@@ -119,7 +119,7 @@ export default function ExamPlayer({
 
 const unansweredCount =
 
-    questions.filter(question => {
+    questions.filter((question: any) => {
 
         const key =
 

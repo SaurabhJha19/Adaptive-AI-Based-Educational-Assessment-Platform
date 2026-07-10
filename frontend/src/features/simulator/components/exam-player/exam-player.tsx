@@ -1,41 +1,36 @@
 "use client";
 
+import SplitPane from "../layout/split-pane";
 import QuestionView from "./question-view";
 import QuestionNavigation from "./question-navigation";
 import QuestionPalette from "./question-palette";
+
+import { ReviewScreen } from "../review";
+
 import {
-
-    ReviewScreen,
-
-} from "../review";
-import {
-
     SimulatorLayout,
-
     SimulatorWorkspace,
-
     SimulatorHeader,
-
     PassagePanel,
-
     QuestionPanel,
-
     BottomToolbar,
-
 } from "../layout";
+
 import {
-
     SectionTransition,
-
 } from "../../components/transition";
-import useExamPlayer
-from "../../hooks/use-exam-player";
 
 interface Props {
 
     exam: any;
 
-    attemptId: string;
+    player: any;
+
+    remainingTime: number;
+
+    submitExam?: () => Promise<void>;
+
+    isSubmitting?: boolean;
 
 }
 
@@ -43,7 +38,13 @@ export default function ExamPlayer({
 
     exam,
 
-    attemptId,
+    player,
+
+    remainingTime,
+
+    submitExam,
+
+    isSubmitting,
 
 }: Props) {
 
@@ -54,8 +55,6 @@ export default function ExamPlayer({
         currentGroup,
 
         currentPassage,
-
-        groupQuestions,
 
         visited,
 
@@ -91,15 +90,11 @@ export default function ExamPlayer({
 
         closeTransition,
 
-        sectionIndex 
+        sectionIndex,
 
-    } = useExamPlayer(
+        isLastQuestion,
 
-        exam,
-
-        attemptId
-
-    );
+    } = player;
 
     if (
 
@@ -121,91 +116,89 @@ export default function ExamPlayer({
 
     }
 
-const unansweredCount =
+    const unansweredCount =
 
-    questions.filter((question: any) => {
+        questions.filter(
 
-        const key =
+            (q: any) => {
 
-            question._id ??
+                const key =
 
-            question.questionNumber;
+                    q._id ??
 
-        return !answers[key];
+                    q.questionNumber;
 
-    }).length;
-
-const passage =
-
-    currentPassage;
-
-
-
-if (reviewMode) {
-
-    return (
-
-        <ReviewScreen
-
-            exam={exam}
-
-            section={section}
-
-            questions={questions}
-
-            currentQuestion={
-
-                question.questionNumber
+                return !answers[key];
 
             }
 
-            answers={answers}
+        ).length;
 
-            marked={marked}
+    if (reviewMode) {
 
-            onJump={jump}
+        return (
 
-            onBack={closeReview}
+            <ReviewScreen
 
-            onSubmit={() => {submitReview}}
+                exam={exam}
 
-            visited={visited}
+                section={section}
 
-        />
+                questions={questions}
 
-    );
+                currentQuestion={
 
-}
+                    question.questionNumber
 
-if (transitionMode) {
+                }
 
-    return (
+                answers={answers}
 
-        <SectionTransition
+                marked={marked}
 
-            current={
+                visited={visited}
 
-                sectionIndex + 1
+                onJump={jump}
 
-            }
+                onBack={closeReview}
 
-            total={
+                onContinue={submitReview}
 
-                exam.sections.length
+            />
 
-            }
+        );
 
-            onContinue={
+    }
 
-                closeTransition
+    if (transitionMode) {
 
-            }
+        return (
 
-        />
+            <SectionTransition
 
-    );
+                sectionIndex={
 
-}
+                    sectionIndex
+
+                }
+
+                totalSections={
+
+                    exam.sections.length
+
+                }
+
+                onContinue={
+
+                    closeTransition
+
+                }
+
+            />
+
+        );
+
+    }
 
     return (
 
@@ -219,15 +212,23 @@ if (transitionMode) {
 
                     section={section}
 
+                    question={question}
+
                     currentQuestion={
 
-                        questionIndex + 1
+                        question.questionNumber
 
                     }
 
                     totalQuestions={
 
                         questions.length
+
+                    }
+
+                    remainingTime={
+
+                        remainingTime
 
                     }
 
@@ -239,57 +240,107 @@ if (transitionMode) {
 
                 <SimulatorWorkspace
 
-                    left={
+                    content={
 
-                      <PassagePanel
+                        <SplitPane
 
-                          group={currentGroup}
+                            defaultWidth={45}
 
-                      />
+                            left={
 
-                  }
+                                <PassagePanel
 
-                    right={
+                                    group={
 
-                        <QuestionPanel>
-
-                            <div className="mb-6">
-
-                                <div className="text-sm uppercase tracking-wide text-gray-500">
-
-                                    {
-
-                                        currentGroup?.title ??
-
-                                        "Question"
+                                        currentGroup
 
                                     }
 
-                                </div>
+                                />
 
-                            </div>
+                            }
 
-                            <QuestionView
+                            right={
 
-                                question={question}
+                                <QuestionPanel>
 
-                                answer={
+                                    <QuestionView
 
-                                    answers[
+                                        question={
 
-                                        question._id ??
+                                            question
 
-                                        question.questionNumber
+                                        }
 
-                                    ]
+                                        answer={
 
-                                }
+                                            answers[
 
-                                onAnswer={answer}
+                                                question._id ??
 
-                            />
+                                                question.questionNumber
 
-                        </QuestionPanel>
+                                            ]
+
+                                        }
+
+                                        onAnswer={
+
+                                            answer
+
+                                        }
+
+                                    />
+
+                                </QuestionPanel>
+
+                            }
+
+                        />
+
+                    }
+
+                    sidebar={
+
+                        <QuestionPalette
+
+                            questions={
+
+                                questions
+
+                            }
+
+                            currentQuestion={
+
+                                question.questionNumber
+
+                            }
+
+                            answers={
+
+                                answers
+
+                            }
+
+                            marked={
+
+                                marked
+
+                            }
+
+                            visited={
+
+                                visited
+
+                            }
+
+                            onSelectQuestion={
+
+                                jump
+
+                            }
+
+                        />
 
                     }
 
@@ -303,15 +354,37 @@ if (transitionMode) {
 
                     left={
 
-                       <QuestionNavigation
+                        <QuestionNavigation
 
-                            onPrevious={previous}
+                            onPrevious={
 
-                            onNext={next}
+                                previous
 
-                            onMarkReview={toggleReview}
+                            }
 
-                            onReviewScreen={openReview}
+                            onNext={
+
+                                next
+
+                            }
+
+                            onMarkReview={
+
+                                toggleReview
+
+                            }
+
+                            onReviewScreen={
+
+                                openReview
+
+                            }
+
+                            onSubmit={
+
+                                submitExam
+
+                            }
 
                             reviewed={
 
@@ -331,6 +404,18 @@ if (transitionMode) {
 
                             }
 
+                            isSubmitting={
+
+                                isSubmitting
+
+                            }
+
+                            isLastQuestion={
+
+                                isLastQuestion
+
+                            }
+
                         />
 
                     }
@@ -338,12 +423,43 @@ if (transitionMode) {
                     right={
 
                         <QuestionPalette
-                            questions={questions}
-                            currentQuestion={question.questionNumber}
-                            answers={answers}
-                            marked={marked}
-                            visited={visited}
-                            onSelectQuestion={jump}
+
+                            questions={
+
+                                questions
+
+                            }
+
+                            currentQuestion={
+
+                                question.questionNumber
+
+                            }
+
+                            answers={
+
+                                answers
+
+                            }
+
+                            marked={
+
+                                marked
+
+                            }
+
+                            visited={
+
+                                visited
+
+                            }
+
+                            onSelectQuestion={
+
+                                jump
+
+                            }
+
                         />
 
                     }

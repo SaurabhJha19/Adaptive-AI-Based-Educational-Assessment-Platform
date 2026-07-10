@@ -10,9 +10,15 @@ interface Props {
 
     onReviewScreen: () => void;
 
+    onSubmit?: () => void;
+
     reviewed: boolean;
 
     unansweredCount: number;
+
+    isSubmitting?: boolean;
+
+    isLastQuestion: boolean;
 
 }
 
@@ -30,27 +36,29 @@ export default function QuestionNavigation({
 
     unansweredCount,
 
+    isSubmitting,
+
+    isLastQuestion,
+
 }: Props) {
 
     return (
 
         <div className="flex w-full items-center justify-between">
 
-            <SimulatorButton
+            <div className="flex items-center gap-3">
 
-                variantType="secondary"
+                <SimulatorButton
 
-                onClick={onPrevious}
+                    variantType="secondary"
 
-                className="w-36"
+                    onClick={onPrevious}
 
-            >
+                >
 
-                Previous
+                    Previous
 
-            </SimulatorButton>
-
-            <div className="flex gap-4">
+                </SimulatorButton>
 
                 <SimulatorButton
 
@@ -58,7 +66,7 @@ export default function QuestionNavigation({
 
                         reviewed
 
-                            ? "success"
+                            ? "danger"
 
                             : "secondary"
 
@@ -66,15 +74,13 @@ export default function QuestionNavigation({
 
                     onClick={onMarkReview}
 
-                    className="w-48"
-
                 >
 
                     {
 
                         reviewed
 
-                            ? "Marked"
+                            ? "Unmark"
 
                             : "Mark for Review"
 
@@ -82,51 +88,47 @@ export default function QuestionNavigation({
 
                 </SimulatorButton>
 
+            </div>
+
+            <div className="flex items-center gap-3">
+
+                <span className="text-sm text-gray-500">
+
+                    {unansweredCount} unanswered
+
+                </span>
+
                 <SimulatorButton
 
-                    variantType={
+                    variantType="primary"
 
-                        unansweredCount > 0
+                    onClick={
 
-                            ? "danger"
+                        isLastQuestion
 
-                            : "primary"
+                            ? onReviewScreen
+
+                            : onNext
 
                     }
 
-                    onClick={onReviewScreen}
-
-                    className="w-48"
+                    disabled={isSubmitting}
 
                 >
 
                     {
 
-                        unansweredCount > 0
+                        isLastQuestion
 
-                            ? `Review (${unansweredCount})`
+                            ? "Review Answers"
 
-                            : "Review Answers"
+                            : "Next"
 
                     }
 
                 </SimulatorButton>
 
             </div>
-
-            <SimulatorButton
-
-                variantType="primary"
-
-                onClick={onNext}
-
-                className="w-36"
-
-            >
-
-                Next
-
-            </SimulatorButton>
 
         </div>
 

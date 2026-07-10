@@ -1,30 +1,16 @@
 "use client";
 
 import {
-
-    useEffect,
     useMemo,
     useState,
-
 } from "react";
 
 import { useSaveAnswer } from "./use-save-answer";
 
 export default function useExamPlayer(
-
     exam: any,
-
     attemptId: string
-
 ) {
-
-    const [
-
-    transitionMode,
-
-    setTransitionMode,
-
-] = useState(false);
 
     const saveAnswer =
         useSaveAnswer();
@@ -36,7 +22,6 @@ export default function useExamPlayer(
         setSectionIndex,
 
     ] = useState(0);
-    
 
     const [
 
@@ -52,9 +37,7 @@ export default function useExamPlayer(
 
         setAnswers,
 
-    ] = useState<
-        Record<string, string>
-    >({});
+    ] = useState<Record<string, string>>({});
 
     const [
 
@@ -64,100 +47,162 @@ export default function useExamPlayer(
 
     ] = useState<string[]>([]);
 
+    const section =
+        exam.sections?.[sectionIndex];
+
+    const groups =
+        useMemo(() => {
+
+            if (!section) {
+
+                return [];
+
+            }
+
+            return section.questionGroups ?? [];
+
+        }, [section]);
+
+    const questions =
+        useMemo(() => {
+
+            return groups.flatMap(
+
+                (group: any) =>
+
+                    group.questions
+
+            );
+
+        }, [groups]);
+
+    const firstQuestionKey =
+        questions.length
+            ? (
+                questions[0]._id ??
+                questions[0].questionNumber
+            )
+            : null;
+
     const [
 
-    reviewMode,
+        visited,
 
-    setReviewMode,
+        setVisited,
 
-] = useState(false);
+    ] = useState<Set<string>>(() =>
 
-    const section =
-        exam.sections?.[
-            sectionIndex
-        ];
+        firstQuestionKey
 
-const groups =
-    useMemo(() => {
+            ? new Set([firstQuestionKey])
 
-        if (!section) {
+            : new Set()
 
-            return [];
+    );
 
-        }
+    const [
 
-        return section.questionGroups ?? [];
+        reviewMode,
 
-    }, [section]);
+        setReviewMode,
 
-const questions =
-    useMemo(() => {
+    ] = useState(false);
 
-        return groups.flatMap(
+    const [
 
-            (group: any) =>
+        transitionMode,
 
-                group.questions
+        setTransitionMode,
 
-        );
+    ] = useState(false);
 
-    }, [groups]);
+    const [
 
+        breakMode,
 
-const [
+        setBreakMode,
 
-    visited,
+    ] = useState(false);
 
-    setVisited,
+    const question =
+        questions[questionIndex];
 
-] = useState<Set<string>>(
-    new Set()
-);
+    const currentGroup =
+        useMemo(() => {
 
+            if (!question) {
 
-const question =
-    questions[
-        questionIndex
-    ];
+                return null;
 
-const currentGroup =
-    useMemo(() => {
+            }
 
-        return groups.find(
+            return groups.find(
 
-            (group: any) =>
+                (group: any) =>
 
-                group.questions.some(
+                    group.questions.some(
 
-                    (q: any) =>
+                        (q: any) =>
 
-                        q.questionNumber ===
+                            q.questionNumber ===
+                            question.questionNumber
 
-                        question?.questionNumber
+                    )
 
-                )
+            );
 
-        );
+        }, [
 
-    }, [
+            groups,
 
-        groups,
+            question,
 
-        question,
+        ]);
 
-    ]);
+    const currentPassage =
+        currentGroup?.content ?? [];
 
-const currentPassage =
+    const groupQuestions =
+        currentGroup?.questions ?? [];
 
-    currentGroup?.passage ??
+    const isLastSection =
+        sectionIndex ===
+        exam.sections.length - 1;
 
-    "";
+    const isLastQuestion =
+        questionIndex ===
+        questions.length - 1;
 
-const groupQuestions =
+    const isLastQuestionOfExam =
+        isLastSection &&
+        isLastQuestion;
 
-    currentGroup?.questions ??
+    function visitQuestion(
+        key: string
+    ) {
 
-    [];
+        setVisited(previous => {
+
+            if (
+
+                previous.has(key)
+
+            ) {
+
+                return previous;
+
+            }
+
+            const next =
+                new Set(previous);
+
+            next.add(key);
+
+            return next;
+
+        });
+
+    }
 
     function answer(
         value: string
@@ -173,17 +218,13 @@ const groupQuestions =
             question._id ??
             question.questionNumber;
 
-        setAnswers(
+        setAnswers(previous => ({
 
-            previous => ({
+            ...previous,
 
-                ...previous,
+            [key]: value,
 
-                [key]: value,
-
-            })
-
-        );
+        }));
 
         if (question._id) {
 
@@ -207,41 +248,39 @@ const groupQuestions =
 
         if (
 
-            questionIndex <
-            questions.length - 1
+            isLastQuestion
 
         ) {
 
-            setQuestionIndex(
-
-                previous =>
-
-                    previous + 1
-
-            );
+            openReview();
 
             return;
 
         }
 
-        if (
+        const nextQuestion =
+            questions[
+                questionIndex + 1
+            ];
 
-            sectionIndex <
-            exam.sections.length - 1
+        if (nextQuestion) {
 
-        ) {
+            visitQuestion(
 
-            setSectionIndex(
-
-                previous =>
-
-                    previous + 1
+                nextQuestion._id ??
+                nextQuestion.questionNumber
 
             );
 
-            setQuestionIndex(0);
-
         }
+
+        setQuestionIndex(
+
+            previous =>
+
+                previous + 1
+
+        );
 
     }
 
@@ -249,57 +288,37 @@ const groupQuestions =
 
         if (
 
-            questionIndex > 0
+            questionIndex === 0
 
         ) {
-
-            setQuestionIndex(
-
-                previous =>
-
-                    previous - 1
-
-            );
 
             return;
 
         }
 
-        if (
+        const previousQuestion =
+            questions[
+                questionIndex - 1
+            ];
 
-            sectionIndex > 0
+        if (previousQuestion) {
 
-        ) {
+            visitQuestion(
 
-            const previousSection =
-                exam.sections[
-                    sectionIndex - 1
-                ];
-
-            const previousQuestions =
-                previousSection.questionGroups.flatMap(
-
-                    (group: any) =>
-
-                        group.questions
-
-                );
-
-            setSectionIndex(
-
-                previous =>
-
-                    previous - 1
-
-            );
-
-            setQuestionIndex(
-
-                previousQuestions.length - 1
+                previousQuestion._id ??
+                previousQuestion.questionNumber
 
             );
 
         }
+
+        setQuestionIndex(
+
+            previous =>
+
+                previous - 1
+
+        );
 
     }
 
@@ -307,9 +326,21 @@ const groupQuestions =
         index: number
     ) {
 
-        setQuestionIndex(
-            index
-        );
+        const target =
+            questions[index];
+
+        if (target) {
+
+            visitQuestion(
+
+                target._id ??
+                target.questionNumber
+
+            );
+
+        }
+
+        setQuestionIndex(index);
 
     }
 
@@ -325,110 +356,85 @@ const groupQuestions =
             question._id ??
             question.questionNumber;
 
-        setMarked(
+        setMarked(previous =>
 
-            previous =>
+            previous.includes(key)
 
-                previous.includes(key)
+                ? previous.filter(
 
-                    ? previous.filter(
+                    id =>
 
-                        id =>
+                        id !== key
 
-                            id !== key
+                )
 
-                    )
+                : [
 
-                    : [
+                    ...previous,
 
-                        ...previous,
+                    key,
 
-                        key,
-
-                    ]
+                ]
 
         );
 
     }
 
-    useEffect(() => {
+    function openReview() {
 
-        return () => {
-
-            saveAnswer.reset();
-
-        };
-
-    }, []);
-
-useEffect(() => {
-
-    if (!question) {
-
-        return;
+        setReviewMode(true);
 
     }
 
-    const key =
+    function closeReview() {
 
-        question._id ??
+        setReviewMode(false);
 
-        question.questionNumber;
+    }
 
-    setVisited(previous => {
+    function submitReview() {
 
-        const next =
+        closeReview();
 
-            new Set(previous);
+        if (
 
-        next.add(key);
+            !isLastSection
 
-        return next;
+        ) {
 
-    });
+            setBreakMode(true);
 
-}, [question]);
+        }
 
- const isLastSection =
-    sectionIndex ===
-    exam.sections.length - 1;
+    }
 
-const isLastQuestion =
-    questionIndex ===
-    questions.length - 1;
+    function closeBreak() {
 
-const isLastQuestionOfExam =
-    isLastSection &&
-    isLastQuestion;
+        setBreakMode(false);
 
+        setTransitionMode(true);
 
-function openReview() {
+    }
 
-    setReviewMode(true);
+    function closeTransition() {
 
-}
+        setTransitionMode(false);
 
-function closeReview() {
+        if (
 
-    setReviewMode(false);
+            isLastSection
 
-}
+        ) {
 
-function closeTransition() {
+            return;
 
-    setTransitionMode(false);
-
-    if (
-
-        sectionIndex <
-
-        exam.sections.length - 1
-
-    ) {
+        }
 
         setSectionIndex(
 
-            previous => previous + 1
+            previous =>
+
+                previous + 1
 
         );
 
@@ -436,89 +442,62 @@ function closeTransition() {
 
     }
 
-}
+    return {
 
-function submitReview() {
+        section,
 
-    closeReview();
+        sectionIndex,
 
-    if (
+        currentGroup,
 
-        sectionIndex <
+        currentPassage,
 
-        exam.sections.length - 1
+        groupQuestions,
 
-    ) {
+        question,
 
-        setTransitionMode(true);
+        questions,
 
-        return;
+        questionIndex,
 
-    }
+        answers,
 
-    /*
-    Final section
+        marked,
 
-    TODO:
-    Submit attempt
-    */
+        visited,
 
-    console.log("Submit Exam");
+        reviewMode,
 
-}
+        transitionMode,
 
-return {
+        breakMode,
 
-   section,
+        isLastQuestion,
 
-    currentGroup,
+        isLastSection,
 
-    currentPassage,
+        isLastQuestionOfExam,
 
-    groupQuestions,
+        answer,
 
-    question,
+        next,
 
-    questions,
-    
-    sectionIndex,
+        previous,
 
-    visited,
+        jump,
 
-    questionIndex,
+        toggleReview,
 
-    answers,
+        openReview,
 
-    transitionMode,
+        closeReview,
 
-    submitReview,
+        submitReview,
 
-    closeTransition,
+        closeBreak,
 
-    marked,
+        closeTransition,
 
-    answer,
-
-    next,
-
-    previous,
-
-    jump,
-
-    toggleReview,
-
-    isLastQuestionOfExam,
-
-    isLastSection,
-
-    isLastQuestion,
-
-    reviewMode,
-
-    openReview,
-
-    closeReview,
-
-};
+    };
 
 }

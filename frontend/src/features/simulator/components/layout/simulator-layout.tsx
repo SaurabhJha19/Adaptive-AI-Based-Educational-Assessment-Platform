@@ -20,25 +20,29 @@ export default function SimulatorLayout({
 
     return (
 
-        <div className="flex h-screen flex-col bg-white">
+        <div className="flex h-screen overflow-hidden bg-[#f4f6fb]">
 
-            <header className="border-b">
+            <div className="flex min-w-0 flex-1 flex-col">
 
-                {header}
+                <header className="shrink-0">
 
-            </header>
+                    {header}
 
-            <main className="flex min-h-0 flex-1">
+                </header>
 
-                {workspace}
+                <main className="min-h-0 flex-1 overflow-hidden">
 
-            </main>
+                    {workspace}
 
-            <footer className="border-t">
+                </main>
 
-                {footer}
+                <footer className="shrink-0 border-t bg-white">
 
-            </footer>
+                    {footer}
+
+                </footer>
+
+            </div>
 
         </div>
 

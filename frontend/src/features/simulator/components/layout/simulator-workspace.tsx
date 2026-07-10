@@ -1,34 +1,36 @@
-import SplitPane
-
-from "./split-pane/SplitPane";
-
 interface Props {
 
-    left: React.ReactNode;
+    content: React.ReactNode;
 
-    right: React.ReactNode;
+    sidebar: React.ReactNode;
 
 }
 
 export default function SimulatorWorkspace({
 
-    left,
+    content,
 
-    right,
+    sidebar,
 
 }: Props) {
 
     return (
 
-        <SplitPane
+        <div className="flex h-full">
 
-            defaultWidth={45}
+            <div className="min-w-0 flex-1">
 
-            left={left}
+                {content}
 
-            right={right}
+            </div>
 
-        />
+            <aside className="w-[300px] shrink-0 border-l bg-white">
+
+                {sidebar}
+
+            </aside>
+
+        </div>
 
     );
 

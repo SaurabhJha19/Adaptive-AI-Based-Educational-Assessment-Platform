@@ -1,18 +1,21 @@
 "use client";
 
-import Divider
-
-from "./Divider";
-
-import useSplitPane
-
-from "./useSplitPane";
-
 import {
+    useCallback,
+    useEffect,
+    useRef,
+    useState,
+} from "react";
 
-    SplitPaneProps,
+interface Props {
 
-} from "./types";
+    left: React.ReactNode;
+
+    right: React.ReactNode;
+
+    defaultWidth?: number;
+
+}
 
 export default function SplitPane({
 
@@ -20,37 +23,129 @@ export default function SplitPane({
 
     right,
 
-    defaultWidth = 50,
+    defaultWidth = 45,
 
-}: SplitPaneProps) {
+}: Props) {
 
-    const {
+    const [
 
         width,
 
-        onDrag,
+        setWidth,
 
-    } = useSplitPane(
+    ] = useState(defaultWidth);
 
-        defaultWidth
+    const dragging =
+        useRef(false);
 
-    );
+    const startDrag = () => {
+
+        dragging.current = true;
+
+    };
+
+    const stopDrag = () => {
+
+        dragging.current = false;
+
+    };
+
+    const onMove =
+        useCallback(
+
+            (event: MouseEvent) => {
+
+                if (!dragging.current) {
+
+                    return;
+
+                }
+
+                const next =
+
+                    (event.clientX /
+
+                        window.innerWidth) *
+
+                    100;
+
+                setWidth(
+
+                    Math.min(
+
+                        70,
+
+                        Math.max(
+
+                            30,
+
+                            next
+
+                        )
+
+                    )
+
+                );
+
+            },
+
+            []
+
+        );
+
+    useEffect(() => {
+
+        window.addEventListener(
+
+            "mousemove",
+
+            onMove
+
+        );
+
+        window.addEventListener(
+
+            "mouseup",
+
+            stopDrag
+
+        );
+
+        return () => {
+
+            window.removeEventListener(
+
+                "mousemove",
+
+                onMove
+
+            );
+
+            window.removeEventListener(
+
+                "mouseup",
+
+                stopDrag
+
+            );
+
+        };
+
+    }, [onMove]);
 
     return (
 
-        <div className="flex h-full w-full">
+        <div className="flex h-full">
 
             <div
 
                 style={{
 
-                    width:
-
-                        `${width}%`,
+                    width: `${width}%`,
 
                 }}
 
-                className="h-full overflow-hidden"
+                className="overflow-hidden border-r bg-white"
 
             >
 
@@ -58,21 +153,15 @@ export default function SplitPane({
 
             </div>
 
-            <Divider
+            <div
 
-                onMove={
+                onMouseDown={startDrag}
 
-                    onDrag
-
-                }
+                className="w-1 cursor-col-resize bg-gray-200 transition-colors hover:bg-blue-500"
 
             />
 
-            <div
-
-                className="flex-1 h-full overflow-hidden"
-
-            >
+            <div className="flex-1 overflow-hidden bg-white">
 
                 {right}
 

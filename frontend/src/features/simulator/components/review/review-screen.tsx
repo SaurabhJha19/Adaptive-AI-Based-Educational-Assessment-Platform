@@ -1,24 +1,7 @@
 "use client";
 
-import {
-
-    ReviewHeader,
-
-    ReviewSummary,
-
-    ReviewGrid,
-
-    ReviewLegend,
-
-    SubmitPanel,
-
-} from ".";
-
-import {
-
-    SimulatorPanel,
-
-} from "../ui";
+import QuestionPalette from "../exam-player/question-palette";
+import { SimulatorButton } from "../ui";
 
 interface Props {
 
@@ -32,23 +15,19 @@ interface Props {
 
     answers: Record<string, string>;
 
-    visited: Set<string>;
-
     marked: string[];
+
+    visited: Set<string>;
 
     onJump: (index: number) => void;
 
     onBack: () => void;
 
-    onSubmit: () => void;
+    onContinue: () => void;
 
 }
 
 export default function ReviewScreen({
-
-    exam,
-
-    section,
 
     questions,
 
@@ -58,66 +37,120 @@ export default function ReviewScreen({
 
     marked,
 
+    visited,
+
     onJump,
 
     onBack,
 
-    onSubmit,
-    visited
+    onContinue,
 
 }: Props) {
 
     const answered =
-
-        questions.filter(
-
-            question => {
-
-                const key =
-
-                    question._id ??
-
-                    question.questionNumber;
-
-                return !!answers[key];
-
-            }
-
+        Object.keys(
+            answers
         ).length;
-
-    const unanswered =
-
-        questions.length -
-
-        answered;
 
     return (
 
-        <div className="mx-auto flex h-full max-w-7xl flex-col gap-8 p-8">
+        <div className="flex h-screen flex-col bg-background">
 
-            <ReviewHeader
+            <div className="border-b bg-white px-8 py-6">
 
-                title={exam.title}
+                <h1 className="text-2xl font-bold">
 
-                section={section.title}
+                    Review Your Answers
 
-            />
+                </h1>
 
-            <ReviewSummary
+                <p className="mt-2 text-gray-500">
 
-                answered={answered}
+                    Review your marked and unanswered questions before continuing.
 
-                review={marked.length}
+                </p>
 
-                unanswered={unanswered}
+            </div>
 
-            />
+            <div className="flex flex-1 overflow-hidden">
 
-            <SimulatorPanel className="p-8">
+                <div className="flex-1 p-8">
 
-                <ReviewGrid
+                    <div className="grid grid-cols-4 gap-6">
+
+                        <div className="rounded-xl border bg-white p-6">
+
+                            <div className="text-sm text-gray-500">
+
+                                Total Questions
+
+                            </div>
+
+                            <div className="mt-2 text-3xl font-bold">
+
+                                {questions.length}
+
+                            </div>
+
+                        </div>
+
+                        <div className="rounded-xl border bg-white p-6">
+
+                            <div className="text-sm text-gray-500">
+
+                                Answered
+
+                            </div>
+
+                            <div className="mt-2 text-3xl font-bold text-green-600">
+
+                                {answered}
+
+                            </div>
+
+                        </div>
+
+                        <div className="rounded-xl border bg-white p-6">
+
+                            <div className="text-sm text-gray-500">
+
+                                Marked
+
+                            </div>
+
+                            <div className="mt-2 text-3xl font-bold text-red-600">
+
+                                {marked.length}
+
+                            </div>
+
+                        </div>
+
+                        <div className="rounded-xl border bg-white p-6">
+
+                            <div className="text-sm text-gray-500">
+
+                                Remaining
+
+                            </div>
+
+                            <div className="mt-2 text-3xl font-bold text-orange-600">
+
+                                {questions.length - answered}
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <QuestionPalette
 
                     questions={questions}
+
+                    currentQuestion={currentQuestion}
 
                     answers={answers}
 
@@ -125,23 +158,39 @@ export default function ReviewScreen({
 
                     visited={visited}
 
-                    current={currentQuestion}
-
-                    onSelect={onJump}
+                    onSelectQuestion={onJump}
 
                 />
 
-            </SimulatorPanel>
+            </div>
 
-            <ReviewLegend />
+            <div className="flex items-center justify-between border-t bg-white px-8 py-5">
 
-            <SubmitPanel
+                <SimulatorButton
 
-                onBack={onBack}
+                    variantType="secondary"
 
-                onSubmit={onSubmit}
+                    onClick={onBack}
 
-            />
+                >
+
+                    Back to Questions
+
+                </SimulatorButton>
+
+                <SimulatorButton
+
+                    variantType="primary"
+
+                    onClick={onContinue}
+
+                >
+
+                    Continue
+
+                </SimulatorButton>
+
+            </div>
 
         </div>
 

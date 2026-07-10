@@ -4,94 +4,214 @@ import {
 } from "../../utils";
 
 interface Props {
+
     questions: any[];
+
     currentQuestion: number;
 
     answers: Record<string, string>;
+
     visited: Set<string>;
+
     marked: string[];
 
     onSelectQuestion: (
         index: number
     ) => void;
+
 }
 
 export default function QuestionPalette({
-  questions,
-  currentQuestion,
-  answers,
-  marked,
-  visited,
-  onSelectQuestion,
+
+    questions,
+
+    currentQuestion,
+
+    answers,
+
+    marked,
+
+    visited,
+
+    onSelectQuestion,
+
 }: Props) {
-  return (
-    <div className="w-72 border-l bg-gray-50 p-6">
 
-      <h3 className="mb-4 text-lg font-semibold">
-        Questions
-      </h3>
+    const answered =
+        Object.keys(
+            answers
+        ).length;
 
-      <div className="grid grid-cols-7 gap-2">
+    return (
 
-        {questions.map((question, index) => {
+        <div className="flex h-full w-72 flex-col bg-gray-50">
 
-            const key =
-                question._id ??
-                question.questionNumber;
+            <div className="border-b bg-white p-5">
 
-const status =
-    getQuestionStatus({
+                <h3 className="text-base font-semibold">
 
-        question,
+                    Question Palette
 
-        currentQuestion,
+                </h3>
 
-        answers,
+                <p className="mt-1 text-sm text-gray-500">
 
-        marked,
+                    {answered} / {questions.length} answered
 
-        visited,
+                </p>
 
-    });
+            </div>
 
-const variants = {
-    current: "primary",
-    answered: "success",
-    marked: "danger",
-    visited: "secondary",
-    unanswered: "secondary",
-} as const;
-          return (
+            <div className="flex-1 overflow-y-auto p-5">
 
-<SimulatorButton
+                <div className="grid grid-cols-5 gap-3">
 
-    key={key}
+                    {
 
-    variantType={
+                        questions.map(
 
-        variants[status]
-    }
+                            (
 
-    onClick={() =>
+                                question,
 
-        onSelectQuestion(index)
+                                index
 
-    }
+                            ) => {
 
-    className="h-11 w-11 p-0"
+                                const key =
 
->
+                                    question._id ??
 
-    {question.questionNumber}
+                                    question.questionNumber;
 
-</SimulatorButton>
+                                const status =
 
-          );
+                                    getQuestionStatus({
 
-        })}
+                                        question,
 
-      </div>
+                                        currentQuestion,
 
-    </div>
-  );
+                                        answers,
+
+                                        marked,
+
+                                        visited,
+
+                                    });
+
+                                const variants = {
+
+                                    current:
+
+                                        "primary",
+
+                                    answered:
+
+                                        "success",
+
+                                    marked:
+
+                                        "danger",
+
+                                    visited:
+
+                                        "secondary",
+
+                                    unanswered:
+
+                                        "secondary",
+
+                                } as const;
+
+                                return (
+
+                                    <SimulatorButton
+
+                                        key={key}
+
+                                        variantType={
+
+                                            variants[status]
+
+                                        }
+
+                                        onClick={() =>
+
+                                            onSelectQuestion(
+
+                                                index
+
+                                            )
+
+                                        }
+
+                                        className="h-11 w-11 rounded-lg p-0"
+
+                                    >
+
+                                        {
+
+                                            question.questionNumber
+
+                                        }
+
+                                    </SimulatorButton>
+
+                                );
+
+                            }
+
+                        )
+
+                    }
+
+                </div>
+
+            </div>
+
+            <div className="border-t bg-white p-5">
+
+                <div className="space-y-2 text-sm">
+
+                    <div className="flex items-center gap-2">
+
+                        <div className="h-3 w-3 rounded-full bg-blue-600" />
+
+                        Current
+
+                    </div>
+
+                    <div className="flex items-center gap-2">
+
+                        <div className="h-3 w-3 rounded-full bg-green-600" />
+
+                        Answered
+
+                    </div>
+
+                    <div className="flex items-center gap-2">
+
+                        <div className="h-3 w-3 rounded-full bg-red-600" />
+
+                        Marked
+
+                    </div>
+
+                    <div className="flex items-center gap-2">
+
+                        <div className="h-3 w-3 rounded-full bg-gray-400" />
+
+                        Visited
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    );
+
 }

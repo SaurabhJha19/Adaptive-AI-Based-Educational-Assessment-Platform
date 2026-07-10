@@ -2,9 +2,7 @@
 
 import { useParams } from "next/navigation";
 
-import ExamPlayer from "@/features/exams/components/exam-player";
-
-import {
+import SimulatorPlayer from "@/features/simulator/components/simulator-player";import {
     useSimulatorAttempt,
 } from "@/features/simulator/hooks/use-simulator-attempt";
 
@@ -35,9 +33,9 @@ export default function SimulatorStartPage() {
     }
 
     return (
-        <ExamPlayer
-            exam={data.exam}
-            attemptId={attemptId}
-        />
+        <SimulatorPlayer
+    exam={data.exam}
+    attempt={data}
+/>
     );
 }

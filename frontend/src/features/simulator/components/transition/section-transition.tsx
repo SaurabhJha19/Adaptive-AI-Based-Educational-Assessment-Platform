@@ -1,20 +1,12 @@
 "use client";
 
-import {
-
-    TransitionHeader,
-
-    TransitionSummary,
-
-    TransitionActions,
-
-} from ".";
+import { SimulatorButton } from "../ui";
 
 interface Props {
 
-    current: number;
+    sectionIndex: number;
 
-    total: number;
+    totalSections: number;
 
     onContinue: () => void;
 
@@ -22,33 +14,133 @@ interface Props {
 
 export default function SectionTransition({
 
-    current,
+    sectionIndex,
 
-    total,
+    totalSections,
 
     onContinue,
 
 }: Props) {
 
+    const finalSection =
+
+        sectionIndex ===
+
+        totalSections - 1;
+
     return (
 
-        <div className="mx-auto flex h-full max-w-3xl flex-col justify-center gap-10">
+        <div className="flex h-screen items-center justify-center bg-background">
 
-            <TransitionHeader
+            <div className="w-full max-w-3xl rounded-2xl border bg-white p-12 shadow-sm">
 
-                current={current}
+                <div className="mb-10 text-center">
 
-                total={total}
+                    <h1 className="text-4xl font-bold">
 
-            />
+                        Module Complete
 
-            <TransitionSummary />
+                    </h1>
 
-            <TransitionActions
+                    <p className="mt-4 text-lg text-gray-500">
 
-                onContinue={onContinue}
+                        {
 
-            />
+                            finalSection
+
+                                ?
+
+                                "You have completed the final module."
+
+                                :
+
+                                "You have completed this module."
+
+                        }
+
+                    </p>
+
+                </div>
+
+                <div className="grid grid-cols-2 gap-6">
+
+                    <div className="rounded-xl border p-6">
+
+                        <div className="text-sm text-gray-500">
+
+                            Completed
+
+                        </div>
+
+                        <div className="mt-3 text-3xl font-bold">
+
+                            {sectionIndex + 1}
+
+                        </div>
+
+                    </div>
+
+                    <div className="rounded-xl border p-6">
+
+                        <div className="text-sm text-gray-500">
+
+                            Remaining
+
+                        </div>
+
+                        <div className="mt-3 text-3xl font-bold">
+
+                            {
+
+                                Math.max(
+
+                                    totalSections -
+
+                                    sectionIndex -
+
+                                    1,
+
+                                    0
+
+                                )
+
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="mt-10 flex justify-end">
+
+                    <SimulatorButton
+
+                        variantType="primary"
+
+                        onClick={onContinue}
+
+                    >
+
+                        {
+
+                            finalSection
+
+                                ?
+
+                                "Finish Exam"
+
+                                :
+
+                                "Start Next Module"
+
+                        }
+
+                    </SimulatorButton>
+
+                </div>
+
+            </div>
 
         </div>
 

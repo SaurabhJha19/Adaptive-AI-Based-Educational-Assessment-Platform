@@ -7,7 +7,9 @@ interface Props {
     answer?: string;
 
     onAnswer: (
+
         value: string
+
     ) => void;
 
 }
@@ -22,105 +24,95 @@ export default function QuestionView({
 
 }: Props) {
 
-    const hasRichContent =
-
-        Array.isArray(
-            question.content
-        ) &&
-
-        question.content.length > 0;
-
     return (
 
-        <div className="mx-auto max-w-4xl">
-
-            <div className="mb-6 text-xl font-semibold">
-
-                Question {question.questionNumber}
-
-            </div>
+        <div className="mx-auto max-w-3xl">
 
             <div className="mb-8">
 
-                {
+                <ContentRenderer
 
-                    hasRichContent
+                    blocks={
 
-                    ?
+                        question.content
 
-                    <ContentRenderer
+                    }
 
-                        blocks={
-                            question.content
-                        }
-
-                    />
-
-                    :
-
-                    <div className="whitespace-pre-wrap text-lg">
-
-                        {question.prompt}
-
-                    </div>
-
-                }
+                />
 
             </div>
 
             <div className="space-y-4">
 
-                {question.options.map(
+                {
 
-                    (
+                    question.options.map(
 
-                        option: string,
+                        (
 
-                        index: number
+                            option: string,
 
-                    ) => (
+                            index: number
 
-                        <button
+                        ) => (
 
-                            key={index}
+                            <button
 
-                            onClick={() =>
+                                key={index}
 
-                                onAnswer(
-                                    option
-                                )
+                                onClick={() =>
 
-                            }
+                                    onAnswer(
 
-                            className={
+                                        option
 
-                                `block w-full rounded-lg border p-4 text-left transition
+                                    )
+
+                                }
+
+                                className={`flex w-full items-start gap-4 rounded-xl border p-5 text-left transition-all
 
                                 ${
 
                                     answer === option
 
-                                        ?
+                                        ? "border-blue-600 bg-blue-50"
 
-                                        "border-black bg-gray-100"
+                                        : "hover:border-blue-300 hover:bg-gray-50"
 
-                                        :
+                                }`}
 
-                                        "hover:bg-gray-50"
+                            >
 
-                                }`
+                                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border font-semibold">
 
-                            }
+                                    {
 
-                        >
+                                        String.fromCharCode(
 
-                            {option}
+                                            65 +
 
-                        </button>
+                                            index
+
+                                        )
+
+                                    }
+
+                                </div>
+
+                                <div className="leading-7">
+
+                                    {option}
+
+                                </div>
+
+                            </button>
+
+                        )
 
                     )
 
-                )}
+                }
 
             </div>
 

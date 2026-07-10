@@ -1,10 +1,6 @@
-import Timer from "./timer";
 import {
-
     SimulatorHeading,
-
     SimulatorText,
-
 } from "../ui";
 
 interface Props {
@@ -13,9 +9,13 @@ interface Props {
 
     section: any;
 
+    question: any;
+
     currentQuestion: number;
 
     totalQuestions: number;
+
+    remainingTime: number;
 
 }
 
@@ -29,26 +29,46 @@ export default function ExamHeader({
 
     totalQuestions,
 
+    remainingTime,
+
 }: Props) {
+
+    const minutes =
+        Math.floor(
+            remainingTime / 60
+        );
+
+    const seconds =
+        remainingTime % 60;
+
+    const formattedTime =
+        `${minutes}:${seconds
+            .toString()
+            .padStart(2, "0")}`;
 
     return (
 
-        <div className="flex h-16 items-center justify-between border-b bg-white px-8">
+        <header className="flex h-16 items-center justify-between border-b bg-white px-8">
 
             <div className="flex items-center gap-4">
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-black font-bold text-white">
+                <div className="flex flex-col">
 
-                    AI
+                    <div className="text-xs uppercase tracking-[0.25em] text-blue-600">
+
+                        Digital SAT
+
+                    </div>
+
+                    <SimulatorHeading>
+
+                        {exam.title}
+
+                    </SimulatorHeading>
 
                 </div>
 
                 <div>
-
-                    <SimulatorHeading>
-                        {exam.title}
-
-                   </SimulatorHeading>
 
                     <SimulatorText>
 
@@ -62,7 +82,7 @@ export default function ExamHeader({
 
             <div className="text-center">
 
-                <div className="text-xs uppercase tracking-widest text-gray-400">
+                <div className="text-xs uppercase tracking-wider text-gray-400">
 
                     Question
 
@@ -76,21 +96,23 @@ export default function ExamHeader({
 
             </div>
 
-            <Timer
+            <div className="text-right">
 
-                initialSeconds={
+                <div className="text-xs uppercase tracking-wider text-gray-400">
 
-                    section.duration
+                    Time Remaining
 
-                        ? section.duration * 60
+                </div>
 
-                        : exam.duration * 60
+                <div className="font-mono text-2xl font-bold">
 
-                }
+                    {formattedTime}
 
-            />
+                </div>
 
-        </div>
+            </div>
+
+        </header>
 
     );
 

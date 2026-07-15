@@ -1,32 +1,41 @@
 import { Schema } from "mongoose";
 
 export const ContentBlockSchema =
-new Schema(
+    new Schema(
+        {
+            type: {
+                type: String,
+                required: true
+            },
 
-    {
+            text: {
+                type: String,
+                default: ""
+            },
 
-        type: {
+            page: {
+                type: Number,
+                default: 0
+            },
 
-            type: String,
+            bbox: {
 
-            required: true,
+                left: Number,
 
+                top: Number,
+
+                right: Number,
+
+                bottom: Number
+
+            },
+
+            metadata: {
+                type: Schema.Types.Mixed,
+                default: {}
+            }
         },
-
-        data: {
-
-            type: Schema.Types.Mixed,
-
-            default: {},
-
-        },
-
-    },
-
-    {
-
-        _id: false,
-
-    }
-
-);
+        {
+            _id: false
+        }
+    );

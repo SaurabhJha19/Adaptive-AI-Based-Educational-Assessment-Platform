@@ -1,0 +1,5655 @@
+{
+  "page_1": {
+    "column_1": [
+      {
+        "text": "The SAT®",
+        "type": "section_header",
+        "left": 46.03,
+        "top": 557.2767139,
+        "right": 250.24147499999998,
+        "bottom": 601.1632715999999,
+        "width": 204.21147499999998,
+        "height": 43.88655769999991
+      },
+      {
+        "text": "Practic Test# 7 e",
+        "type": "section_header",
+        "left": 45.61,
+        "top": 387.9023240846966,
+        "right": 321.98067370999996,
+        "bottom": 524.7844716,
+        "width": 276.37067370999995,
+        "height": 136.88214751530336
+      },
+      {
+        "text": "Make time to take the practice test.",
+        "type": "section_header",
+        "left": 73.49,
+        "top": 268.5727290515151,
+        "right": 428.1137631499998,
+        "bottom": 288.6712716,
+        "width": 354.6237631499998,
+        "height": 20.098542548484886
+      },
+      {
+        "text": "It is one of  the best ways to get ready for the SAT.",
+        "type": "text",
+        "left": 72.67,
+        "top": 223.06737499999997,
+        "right": 432.65414999999985,
+        "bottom": 264.8184,
+        "width": 359.98414999999983,
+        "height": 41.75102500000003
+      },
+      {
+        "text": "After you have taken the practice test, score it right away at sat.org/digital-practice.",
+        "type": "text",
+        "left": 72.73,
+        "top": 181.5728242424243,
+        "right": 361.4216546,
+        "bottom": 211.58759999999995,
+        "width": 288.6916546,
+        "height": 30.01477575757565
+      },
+      {
+        "text": "This version of the SAT Practice Test is for students who will be taking the digital SAT in nondigital format.",
+        "type": "text",
+        "left": 72.41,
+        "top": 147.01919999999996,
+        "right": 404.38456000000014,
+        "bottom": 170.74919999999997,
+        "width": 331.9745600000001,
+        "height": 23.730000000000018
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 44.17769241333008,
+        "top": 44.06494140625,
+        "right": 135.45269775390625,
+        "bottom": 80.97174072265625,
+        "width": 91.27500534057617,
+        "height": 36.90679931640625
+      },
+      {
+        "text": "~",
+        "type": "text",
+        "left": 44.88,
+        "top": 30.401870099999996,
+        "right": 134.88,
+        "bottom": 75.70187009999995,
+        "width": 90,
+        "height": 45.299999999999955
+      }
+    ],
+    "column_2": [
+      {
+        "text": "■",
+        "type": "text",
+        "left": 570.72,
+        "top": 733.2,
+        "right": 608.1600000000001,
+        "bottom": 792,
+        "width": 37.440000000000055,
+        "height": 58.799999999999955
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 439.5379943847656,
+        "top": 709.4725112915039,
+        "right": 529.7447509765625,
+        "bottom": 746.0485916137695,
+        "width": 90.20675659179688,
+        "height": 36.576080322265625
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 308.6528015136719,
+        "top": 410.3740539550781,
+        "right": 345.53851318359375,
+        "bottom": 446.9852600097656,
+        "width": 36.885711669921875,
+        "height": 36.6112060546875
+      },
+      {
+        "text": "tJ",
+        "type": "text",
+        "left": 308.84,
+        "top": 398.3042752805611,
+        "right": 357.48318644,
+        "bottom": 441.6812716,
+        "width": 48.64318644000002,
+        "height": 43.37699631943889
+      }
+    ]
+  },
+  "page_2": {},
+  "page_3": {
+    "column_1": [
+      {
+        "text": "Test begins on the next page.",
+        "type": "text",
+        "left": 228.3489,
+        "top": 424.95551061678464,
+        "right": 383.6528999999999,
+        "bottom": 435.088,
+        "width": 155.3039999999999,
+        "height": 10.132489383215386
+      }
+    ]
+  },
+  "page_4": {
+    "column_1": [
+      {
+        "text": "Reading and Writing 33  QUESTIONS",
+        "type": "section_header",
+        "left": 123.7,
+        "top": 632.7622696969697,
+        "right": 346.7881,
+        "bottom": 671.5287999999999,
+        "width": 223.0881,
+        "height": 38.76653030303021
+      },
+      {
+        "text": "1",
+        "type": "text",
+        "left": 42.3864,
+        "top": 455.7276086675378,
+        "right": 47.415312,
+        "bottom": 465.1092619,
+        "width": 5.028911999999998,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "On the basis of extensive calculations and models, astronomers in the 1990s predicted that the collision of two neutron stars or a neutron star and a black hole could release a massive burst of gamma rays in an event called a kilonova. This _______  was confirmed with observations in 2017.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 375.40890866753784,
+        "right": 274.19963010000004,
+        "bottom": 447.1489619,
+        "width": 220.31873010000004,
+        "height": 71.74005323246217
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 344.47950866753786,
+        "right": 250.6475589000001,
+        "bottom": 366.3323619,
+        "width": 196.7666589000001,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s). All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.",
+        "type": "text",
+        "left": 123.06,
+        "top": 515.219125,
+        "right": 521.8259499999999,
+        "bottom": 578.5323999999999,
+        "width": 398.7659499999999,
+        "height": 63.313274999999976
+      },
+      {
+        "text": "- --------~  - --------~",
+        "type": "text",
+        "left": 35.62,
+        "top": 450.54499230769227,
+        "right": 576.2014750000002,
+        "bottom": 460.834,
+        "width": 540.5814750000002,
+        "height": 10.289007692307734
+      },
+      {
+        "text": "2",
+        "type": "text",
+        "left": 320.7718,
+        "top": 455.7276086675378,
+        "right": 325.800712,
+        "bottom": 465.1092619,
+        "width": 5.028911999999991,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "The following text is from John Muir's 1913 autobiography The Story of My Boyhood and Youth . Muir describes being on a boat.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 412.82390866753786,
+        "right": 549.4875332,
+        "bottom": 447.1489619,
+        "width": 217.22123320000003,
+        "height": 34.32505323246215
+      },
+      {
+        "text": "The water was so clear that it was almost invisible, and when we floated slowly out over the plants and fishes, we seemed to be miraculously sustained in the air while exploring a veritable fairyland.",
+        "type": "text",
+        "left": 350.2255,
+        "top": 344.47700866753775,
+        "right": 554.7728186999999,
+        "bottom": 403.7474619,
+        "width": 204.5473186999999,
+        "height": 59.27045323246227
+      },
+      {
+        "text": "As used in the text, what does the word 'clear' most nearly mean?",
+        "type": "text",
+        "left": 332.2731,
+        "top": 313.5469086675377,
+        "right": 550.7688494999995,
+        "bottom": 335.3997618999999,
+        "width": 218.49574949999953,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.1007385253906,
+        "top": 23.03314208984375,
+        "right": 555.0734252929688,
+        "bottom": 46.42462158203125,
+        "width": 91.97268676757812,
+        "height": 23.3914794921875
+      }
+    ]
+  },
+  "page_5": {
+    "column_1": [
+      {
+        "text": "3",
+        "type": "section_header",
+        "left": 60.3467,
+        "top": 664.7146086675378,
+        "right": 65.375612,
+        "bottom": 674.0962619000001,
+        "width": 5.028912000000005,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "At the turn of the twentieth century, Black residents of Richmond, Virginia, had few formal options for banking and other financial services. To _______ this situation, Maggie Lena Walker chartered the St. Luke Penny Savings Bank in 1903. The bank went on to provide home loans and savings opportunities to thousands of Black families over the following decades.",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 559.4499086675377,
+        "right": 293.6162192,
+        "bottom": 656.1359619000001,
+        "width": 221.7750192,
+        "height": 96.68605323246243
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 528.5208086675377,
+        "right": 268.60785890000005,
+        "bottom": 550.3736618999999,
+        "width": 196.76665890000007,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "4",
+        "type": "text",
+        "left": 60.34669999999999,
+        "top": 423.2478086675377,
+        "right": 65.37561199999999,
+        "bottom": 432.62946189999985,
+        "width": 5.028911999999998,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "The results of randomized clinical trials testing the efficacy of common medical interventions sometimes fail to _______  conclusions that practitioners reach based on their real-world observations of patients. While there are several possible reasons for this, one is that practitioners may overlook confounding variables that account for the results they attribute to the interventions in question.",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 317.9848086675377,
+        "right": 296.10972140000007,
+        "bottom": 414.6694618999999,
+        "width": 224.26852140000008,
+        "height": 96.68465323246215
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 71.84539999999996,
+        "top": 287.05470866753774,
+        "right": 268.6120589,
+        "bottom": 308.9085618999999,
+        "width": 196.76665890000007,
+        "height": 21.853853232462143
+      }
+    ],
+    "column_2": [
+      {
+        "text": "5",
+        "type": "section_header",
+        "left": 338.7318,
+        "top": 664.7146086675377,
+        "right": 343.760712,
+        "bottom": 674.0962619,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Diadromous fish migrate between freshwater and marine biomes during their life cycle. The migration's obligate nature is why diadromous fish can be _______  those that are merely euryhaline (able to tolerate high salinity): the euryhaline blackchin tilapia can survive high salinity, but its life cycle does not involve relocation to a different biome, as does that of the diadromous wild salmon.",
+        "type": "text",
+        "left": 350.22630000000004,
+        "top": 559.4499086675377,
+        "right": 569.8683315999998,
+        "bottom": 656.1359619,
+        "width": 219.64203159999977,
+        "height": 96.68605323246231
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 350.23060000000004,
+        "top": 528.5208086675377,
+        "right": 546.9972588999997,
+        "bottom": 550.3736618999999,
+        "width": 196.76665889999964,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "6",
+        "type": "text",
+        "left": 338.7318,
+        "top": 423.2478086675377,
+        "right": 343.760712,
+        "bottom": 432.62946189999985,
+        "width": 5.028911999999991,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "The following text is from Joan Didion's memoir The Year of Magical Thinking . In the text, the author discusses her home life.",
+        "type": "text",
+        "left": 350.22630000000004,
+        "top": 380.3444086675377,
+        "right": 573.5497266000001,
+        "bottom": 414.6694618999999,
+        "width": 223.32342660000006,
+        "height": 34.32505323246215
+      },
+      {
+        "text": "[I]n California we heated our houses by building fires. We built fires even on summer evenings, because the fog came in. Fires said we were home, we had drawn the circle, we were safe through the night.",
+        "type": "text",
+        "left": 368.18550000000005,
+        "top": 311.9952086675377,
+        "right": 572.2021736999997,
+        "bottom": 371.2681618999999,
+        "width": 204.01667369999961,
+        "height": 59.27295323246216
+      },
+      {
+        "text": "©2005 by Joan Didion",
+        "type": "text",
+        "left": 498.83000000000004,
+        "top": 301.25665463562575,
+        "right": 574.7461162999998,
+        "bottom": 308.85132629999987,
+        "width": 75.91611629999977,
+        "height": 7.594671664374118
+      },
+      {
+        "text": "Which choice best describes the function of the underlined portion in the text as a whole?",
+        "type": "text",
+        "left": 350.2354,
+        "top": 270.58770866753775,
+        "right": 548.7726549999996,
+        "bottom": 292.44056189999986,
+        "width": 198.53725499999962,
+        "height": 21.85285323246211
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.7740478515625,
+        "top": 23.41064453125,
+        "right": 573.132080078125,
+        "bottom": 45.45208740234375,
+        "width": 91.3580322265625,
+        "height": 22.04144287109375
+      }
+    ]
+  },
+  "page_6": {
+    "column_1": [
+      {
+        "text": "7",
+        "type": "text",
+        "left": 42.3864,
+        "top": 664.7146086675378,
+        "right": 47.415312,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999998,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The majority of plastics today wind up in landfills or are, at best, recycled into materials that have a very limited range of applications. To address this problem, chemist Guoliang Liu and colleagues designed a reactor that melts polyethylene and polypropylene-two widely used plastics-into a wax. The wax can then be transformed into a surfactant (a chemical compound usable as a detergent). With this promising new method, plastic waste could be turned into a range of useful cleaning products.",
+        "type": "text",
+        "left": 53.8802,
+        "top": 522.0403086675376,
+        "right": 274.3901143000001,
+        "bottom": 656.1370619,
+        "width": 220.5099143000001,
+        "height": 134.09675323246245
+      },
+      {
+        "text": "Which choice best states the function of the underlined portion of the text?",
+        "type": "text",
+        "left": 53.88280000000001,
+        "top": 491.1121086675376,
+        "right": 236.97710440000012,
+        "bottom": 512.9651618999998,
+        "width": 183.0943044000001,
+        "height": 21.853053232462173
+      }
+    ],
+    "column_2": [
+      {
+        "text": "8",
+        "type": "section_header",
+        "left": 320.7555,
+        "top": 664.7028086675379,
+        "right": 325.784412,
+        "bottom": 674.0844619000001,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The following text is from H.D.'s 1916 poem 'Mid-Day.' In the poem, the speaker is on a path in an outdoor setting.",
+        "type": "text",
+        "left": 332.2493,
+        "top": 621.8003086675378,
+        "right": 549.0163609999995,
+        "bottom": 656.1252619,
+        "width": 216.7670609999995,
+        "height": 34.324953232462235
+      },
+      {
+        "text": "A slight wind shakes the seed-podsmy thoughts are spent as the black seeds. My thoughts tear me, I dread their fever. I am scattered in its whirl. I am scattered like the hot shrivelled seeds.",
+        "type": "text",
+        "left": 350.2085,
+        "top": 516.0459086675377,
+        "right": 506.2499018,
+        "bottom": 612.7238619000001,
+        "width": 156.04140179999996,
+        "height": 96.67795323246241
+      },
+      {
+        "text": "Which choice best describes the function of the underlined portion in the text as a whole?",
+        "type": "text",
+        "left": 332.2593,
+        "top": 485.1187086675377,
+        "right": 530.7965549999997,
+        "bottom": 506.97076189999984,
+        "width": 198.53725499999967,
+        "height": 21.85205323246214
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.109375,
+        "top": 22.92803955078125,
+        "right": 555.24072265625,
+        "bottom": 46.5030517578125,
+        "width": 92.13134765625,
+        "height": 23.57501220703125
+      }
+    ]
+  },
+  "page_7": {
+    "column_1": [
+      {
+        "text": "9",
+        "type": "section_header",
+        "left": 60.3467,
+        "top": 664.7146086675378,
+        "right": 65.375612,
+        "bottom": 674.0962619000001,
+        "width": 5.028912000000005,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "In 2023 literary scholar Jeremy Douglass cautioned technology investors and enthusiasts who predict conventional books' ultimate displacement by newer forms of media. Douglass observed that the concept of an 'interactive' text is much older than technologists assume, extending back to the first time readers scratched notes into a text's margins. In addition, newer media, such as video games, haven't replaced older forms of entertainment, such as comic books, but rather exist alongside them. Douglass believes that rather than supplanting books, technology is simply making new forms of expression possible.",
+        "type": "text",
+        "left": 71.8405,
+        "top": 497.1001086675377,
+        "right": 296.0667369,
+        "bottom": 656.1370619,
+        "width": 224.2262369,
+        "height": 159.03695323246234
+      },
+      {
+        "text": "Which choice best describes the function of the underlined portion in the text as a whole?",
+        "type": "text",
+        "left": 71.8519,
+        "top": 466.17290866753774,
+        "right": 270.38915500000013,
+        "bottom": 488.0249618999999,
+        "width": 198.53725500000013,
+        "height": 21.85205323246214
+      }
+    ],
+    "column_2": [
+      {
+        "text": "10",
+        "type": "section_header",
+        "left": 336.21750000000003,
+        "top": 664.7146086675378,
+        "right": 346.275324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "In 2018, scientists discovered an immense aggregation of Muusoctopus robustus (pearl octopuses) along a hydrothermal vent 3,200 meters beneath the ocean's surface. Water temperatures at this site-named the Octopus Garden-climb as high as  1 1 °j , much warmer than the ambient 1 ' 6°j typical at this depth. Based on observations made over three years, scientists concluded that temperatures at the site likely confer reproductive benefits and that the site is used exclusively for reproduction-6,000 M. robustus adults, hatchlings, and eggs were observed at the garden, but no juveniles were present.",
+        "type": "text",
+        "left": 350.2262999999999,
+        "top": 496.2118086675379,
+        "right": 574.2224219999996,
+        "bottom": 656.1359619000001,
+        "width": 223.99612199999967,
+        "height": 159.92415323246217
+      },
+      {
+        "text": "Which statement about M. robustus and the Octopus Garden is best supported by the text?",
+        "type": "text",
+        "left": 350.2263,
+        "top": 465.28080866753794,
+        "right": 572.4971390999998,
+        "bottom": 487.1344619000001,
+        "width": 222.27083909999982,
+        "height": 21.853653232462136
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.4526672363281,
+        "top": 23.37664794921875,
+        "right": 573.1856689453125,
+        "bottom": 45.2843017578125,
+        "width": 91.73300170898438,
+        "height": 21.90765380859375
+      }
+    ]
+  },
+  "page_8": {
+    "column_1": [
+      {
+        "text": "11",
+        "type": "text",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~  - ---",
+        "type": "text",
+        "left": 35.57,
+        "top": 657.5933230769231,
+        "right": 395.2302894999999,
+        "bottom": 671.312,
+        "width": 359.6602894999999,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "The following text is from Thomas Mann's 1924 novel The Magic Mountain , translated by John E. Woods in 1995.",
+        "type": "text",
+        "left": 53.88,
+        "top": 621.8121086675378,
+        "right": 248.99679313700008,
+        "bottom": 656.1370619,
+        "width": 195.1167931370001,
+        "height": 34.324953232462235
+      },
+      {
+        "text": "The story of Hans Castorp that we intend to tell here-not for his sake (for the reader will come to know him as a perfectly ordinary, if engaging young man), but for the sake of the story itself, which seems to us to be very much worth telling (although in Hans Castorp's favor it should be noted that it is his story, and that not every story happens to everybody)-is a story that took place long ago, and is, so to speak, covered with the patina of history and must necessarily be told with verbs whose tense is that of the deepest past. ©1995 by Alfred A. Knopf, Inc.",
+        "type": "text",
+        "left": 71.8392,
+        "top": 467.909754635626,
+        "right": 278.4022012,
+        "bottom": 612.7356619000001,
+        "width": 206.56300119999997,
+        "height": 144.8259072643741
+      },
+      {
+        "text": "What does the text most strongly suggest about the story of Hans Castorp?",
+        "type": "text",
+        "left": 53.88000000000004,
+        "top": 437.23290866753797,
+        "right": 267.97545150000013,
+        "bottom": 459.0849619000001,
+        "width": 214.09545150000008,
+        "height": 21.85205323246214
+      }
+    ],
+    "column_2": [
+      {
+        "text": "12",
+        "type": "text",
+        "left": 318.24050000000005,
+        "top": 664.7156086675379,
+        "right": 328.29832400000004,
+        "bottom": 674.0972619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 349.6797790527344,
+        "top": 427.01007080078125,
+        "right": 538.9635009765625,
+        "bottom": 657.7494506835938,
+        "width": 189.28372192382812,
+        "height": 230.7393798828125
+      },
+      {
+        "text": "Researcher Judith Hilton and her team interviewed 55 people about which factors would make them switch from using single-use plastic containers to reusable containers. The graph shows three of the factors mentioned in the interviews and the percentage of participants who mentioned them.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 343.42880866753785,
+        "right": 546.5084280999998,
+        "bottom": 415.1684619,
+        "width": 214.24212809999983,
+        "height": 71.73965323246216
+      },
+      {
+        "text": "According to the graph, about what percentage of participants mentioned costs in the interviews?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 312.49870866753787,
+        "right": 540.4946874999997,
+        "bottom": 334.3525619,
+        "width": 208.2283874999997,
+        "height": 21.853853232462143
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.2099609375,
+        "top": 22.80841064453125,
+        "right": 555.2467651367188,
+        "bottom": 45.92254638671875,
+        "width": 92.03680419921875,
+        "height": 23.1141357421875
+      }
+    ]
+  },
+  "page_9": {
+    "column_1": [
+      {
+        "text": "13",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "A student in a political science course is writing a paper on Aristotle's The Politics , in which Aristotle offers his opinion on political instability and gives advice on how constitutions can be preserved. Aristotle observes that different forms of government can fall in different ways-for example, oligarchies might grant power to military leaders during wartime who refuse to relinquish that power during peacetime-but some methods of preserving order apply across all forms of government. The student claims that in particular Aristotle asserts that in a healthy state obedience to law must be as close to absolute as possible and that even minor infractions should not be ignored.",
+        "type": "text",
+        "left": 71.8403,
+        "top": 484.6242086675378,
+        "right": 295.8992834000001,
+        "bottom": 656.1370619,
+        "width": 224.0589834000001,
+        "height": 171.51285323246225
+      }
+    ],
+    "column_2": [
+      {
+        "text": "Which quotation from a philosopher's analysis of The Politics would best support the student's claim?",
+        "type": "text",
+        "left": 350.20840000000004,
+        "top": 654.2388086675378,
+        "right": 566.1522117999998,
+        "bottom": 676.0921619000001,
+        "width": 215.94381179999976,
+        "height": 21.85335323246227
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.4710693359375,
+        "top": 23.53558349609375,
+        "right": 573.0219116210938,
+        "bottom": 44.80279541015625,
+        "width": 91.55084228515625,
+        "height": 21.2672119140625
+      }
+    ]
+  },
+  "page_10": {
+    "column_1": [
+      {
+        "text": "14",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Almost all works of fiction contain references to the progression of time, including the time of day when events in a story take place. In a 2020 study, Allen Kim, Charuta Pethe, and Steven Skiena claim that an observable pattern in such references reflects a shift in human behavior prompted by the spread of electric lighting in the late nineteenth century. The researchers drew this conclusion from an analysis of more than 50,000 novels spanning many centuries and cultures, using software to recognize and tally both specific time references-that is, clock phrases, such as 7 a.m. or 2:30 p.m.-and implied ones, such as mentions of meals typically associated with a particular time of day.",
+        "type": "text",
+        "left": 53.88,
+        "top": 484.6242086675378,
+        "right": 275.37214290000003,
+        "bottom": 656.1370619,
+        "width": 221.49214290000003,
+        "height": 171.51285323246225
+      },
+      {
+        "text": "Which finding from the study, if true, would most directly support the researchers' conclusion?",
+        "type": "text",
+        "left": 53.88,
+        "top": 453.6941086675378,
+        "right": 264.23519820000007,
+        "bottom": 475.54796189999996,
+        "width": 210.35519820000007,
+        "height": 21.853853232462143
+      }
+    ],
+    "column_2": [
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.0959777832031,
+        "top": 22.9000244140625,
+        "right": 555.2803344726562,
+        "bottom": 46.51263427734375,
+        "width": 92.18435668945312,
+        "height": 23.61260986328125
+      }
+    ]
+  },
+  "page_11": {
+    "column_1": [
+      {
+        "text": "-",
+        "type": "text",
+        "left": 53.61,
+        "top": 659.6195749999999,
+        "right": 57.939,
+        "bottom": 670.766,
+        "width": 4.329000000000001,
+        "height": 11.146425000000022
+      },
+      {
+        "text": "-- Percentage of ULE Attributed to",
+        "type": "text",
+        "left": 72.09,
+        "top": 646.7853686538461,
+        "right": 272.25994000000003,
+        "bottom": 670.766,
+        "width": 200.16994000000003,
+        "height": 23.980631346153814
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 79.20199584960938,
+        "top": 374.2773742675781,
+        "right": 285.8918762207031,
+        "bottom": 657.9709167480469,
+        "width": 206.68988037109375,
+        "height": 283.69354248046875
+      },
+      {
+        "text": "In a study of urban physical expansion, Richa Mahtta et al. conducted a meta-analysis of more than 300 cities worldwide to determine whether urban land expansion (ULE) was more strongly influenced by urban population growth or by growth in gross domestic product (GDP) per capita, a measure of economic activity. Because efficient national government is necessary to provide urban services and infrastructure that attract economic investment, Mahtta et al. propose that absent other factors, the importance of GDP per capita growth to ULE would likely increase relative to the importance of population growth as governments become more efficient. If true, this suggests the possibility that _______",
+        "type": "text",
+        "left": 71.85819999999995,
+        "top": 177.29180866753768,
+        "right": 295.29904630000004,
+        "bottom": 361.3067618999999,
+        "width": 223.4408463000001,
+        "height": 184.01495323246223
+      },
+      {
+        "text": "□",
+        "type": "text",
+        "left": 213.8191986,
+        "top": 769.2960863999999,
+        "right": 227.73939860000002,
+        "bottom": 778.2960863999999,
+        "width": 13.920200000000023,
+        "height": 9
+      },
+      {
+        "text": "urban population growth",
+        "type": "text",
+        "left": 226.0591986,
+        "top": 769.1614550538461,
+        "right": 331.4189585999999,
+        "bottom": 777.6498864,
+        "width": 105.35975999999988,
+        "height": 8.488431346153902
+      },
+      {
+        "text": "■",
+        "type": "text",
+        "left": 213.8191986,
+        "top": 752.4860864,
+        "right": 227.73939860000002,
+        "bottom": 761.4860864,
+        "width": 13.920200000000023,
+        "height": 9
+      }
+    ],
+    "column_2": [
+      {
+        "text": "Which choice most effectively uses data from the graph to complete the statement?",
+        "type": "text",
+        "left": 350.2263,
+        "top": 654.2394086675378,
+        "right": 555.5944937999999,
+        "bottom": 676.0918619,
+        "width": 205.36819379999991,
+        "height": 21.852453232462267
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.58502197265625,
+        "top": 23.40380859375,
+        "right": 573.0693969726562,
+        "bottom": 45.7493896484375,
+        "width": 91.484375,
+        "height": 22.3455810546875
+      }
+    ]
+  },
+  "page_12": {
+    "column_1": [
+      {
+        "text": "-",
+        "type": "text",
+        "left": 35.61,
+        "top": 659.6195749999999,
+        "right": 39.939,
+        "bottom": 670.766,
+        "width": 4.329000000000001,
+        "height": 11.146425000000022
+      },
+      {
+        "text": "-- China's Imports by Type, 2000-2006",
+        "type": "text",
+        "left": 54.84,
+        "top": 646.5844521153846,
+        "right": 271.0650900000001,
+        "bottom": 670.766,
+        "width": 216.2250900000001,
+        "height": 24.181547884615384
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 60.20772171020508,
+        "top": 414.7099304199219,
+        "right": 271.65814208984375,
+        "bottom": 666.2607879638672,
+        "width": 211.45042037963867,
+        "height": 251.5508575439453
+      },
+      {
+        "text": "A student is researching the Chinese government's 1992 shift to a market economy that emphasizes trade liberalization. One means of trade liberalization involves expanding from ordinary imports into an emphasis on processing imports, which have two types: processing with assembly (in which a firm obtains raw materials from a foreign trading partner without payment and sells the final goods to that partner, charging for assembly) and processing with inputs (in which a firm expends capital to buy raw materials from a trading partner, processes them into final goods, and sells those goods to whichever trading partner it chooses). The student asserts that while initial efforts at trade liberalization were shaped by Chinese firms' limited capital, this situation resolved during the 2000s.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 203.74480866753777,
+        "right": 278.0446524000001,
+        "bottom": 400.20146189999997,
+        "width": 224.16375240000008,
+        "height": 196.4566532324622
+      }
+    ],
+    "column_2": [
+      {
+        "text": "Which choice best describes data from the graph that support the student's assertion?",
+        "type": "text",
+        "left": 332.2493,
+        "top": 654.222308667538,
+        "right": 555.4701313999997,
+        "bottom": 676.0755619000001,
+        "width": 223.22083139999967,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.04730224609375,
+        "top": 22.86651611328125,
+        "right": 555.20947265625,
+        "bottom": 46.65380859375,
+        "width": 92.16217041015625,
+        "height": 23.78729248046875
+      }
+    ]
+  },
+  "page_13": {
+    "column_1": [
+      {
+        "text": "17",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Narwhals are shy whales that live in the remote Arctic Ocean. Some of them have a long tusk, like a unicorn horn, with sensitive nerves. Narwhals are known for this tusk, but many actually don't have one and its purpose is unknown. One group of scientists came up with a possible purpose in 2014. The scientists suggested that the tusk may help narwhals determine when water around them is likely to start freezing and become dangerous for them. Marine biologist Kristin Laidre disagrees with that idea, though. She reasons that if the narwhal's tusk serves such an important purpose, then it's most likely that _______",
+        "type": "text",
+        "left": 71.8412,
+        "top": 497.08480866753786,
+        "right": 295.17727729999996,
+        "bottom": 656.1359619000001,
+        "width": 223.33607729999994,
+        "height": 159.05115323246224
+      },
+      {
+        "text": "Which choice most logically completes the text?",
+        "type": "text",
+        "left": 71.8412,
+        "top": 478.62580866753785,
+        "right": 273.0291107,
+        "bottom": 488.0074619,
+        "width": 201.18791069999997,
+        "height": 9.381653232462156
+      }
+    ],
+    "column_2": [
+      {
+        "text": "18",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "To address the susceptibility of materials used in components of high-performance machinery, such as aircraft engines, to creep (deformation that is induced by persistent mechanical stress and that often occurs at elevated temperatures), materials researchers have developed silicon carbide (SiC) fibers for producing aerospace composites. Testing the thermomechanical properties of several commercially available SiC fibers, Ramakrishna T. Bhatt et al. found that in comparison with two polymer-derived SiC fibers, a nitrogen-treated SiC fiber exhibited a lower minimum creep rate, a measure of the rate at which a stress-exposed material deforms at a constant temperature and uniaxial load. The finding suggests that _______",
+        "type": "text",
+        "left": 350.2263,
+        "top": 472.13980866753786,
+        "right": 574.4529137999998,
+        "bottom": 656.1359619000001,
+        "width": 224.22661379999983,
+        "height": 183.99615323246223
+      },
+      {
+        "text": "Which choice most logically completes the text?",
+        "type": "text",
+        "left": 350.2263,
+        "top": 453.68080866753786,
+        "right": 551.4142106999999,
+        "bottom": 463.0624619,
+        "width": 201.18791069999992,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.5187072753906,
+        "top": 23.4326171875,
+        "right": 573.109375,
+        "bottom": 45.2305908203125,
+        "width": 91.59066772460938,
+        "height": 21.7979736328125
+      }
+    ]
+  },
+  "page_14": {
+    "column_1": [
+      {
+        "text": "19",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "One of the earliest known maps is a Babylonian clay tablet thought to be almost 4,500 years old. The map _______  the area of a plot of land, shows a river valley, and includes the cardinal directions.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 609.3378086675378,
+        "right": 273.81198480000006,
+        "bottom": 656.1359619000001,
+        "width": 219.93108480000006,
+        "height": 46.798153232462255
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 53.8832,
+        "top": 578.4080086675378,
+        "right": 272.08559630000013,
+        "bottom": 600.2613619000001,
+        "width": 218.20239630000015,
+        "height": 21.85335323246227
+      },
+      {
+        "text": "20",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 473.13780866753785,
+        "right": 49.929924,
+        "bottom": 482.5194619,
+        "width": 10.057823999999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Eighteen letters written by Louisa May Alcott, author of the popular novel Little Women (1868), can be found at the New York Historical Society. _______ letters demonstrate Alcott's keen business sense in her interactions with publishers. 23 - ------~  - ------~",
+        "type": "text",
+        "left": 35.68,
+        "top": 405.28860866753786,
+        "right": 581.4748549000001,
+        "bottom": 476.2192,
+        "width": 545.7948549000001,
+        "height": 70.93059133246214
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 374.3585086675379,
+        "right": 272.0832963000001,
+        "bottom": 396.2123619,
+        "width": 218.2023963000001,
+        "height": 21.853853232462143
+      },
+      {
+        "text": "21",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 269.0888086675378,
+        "right": 49.929924,
+        "bottom": 278.4704618999999,
+        "width": 10.057823999999997,
+        "height": 9.3816532324621
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 35.64,
+        "top": 263.17175,
+        "right": 304.680568,
+        "bottom": 275.7644,
+        "width": 269.040568,
+        "height": 12.592650000000049
+      },
+      {
+        "text": "The Dust Bowl was a period of severe drought that plagued the Great Plains of the US during the 1930s. During this time, dust storms _______  over 100 million acres of land. They even reached as far east as New York City.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 201.24040866753785,
+        "right": 273.2567091,
+        "bottom": 260.5104619,
+        "width": 219.37580910000003,
+        "height": 59.270053232462146
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 53.89089999999999,
+        "top": 170.3103086675378,
+        "right": 272.0932963000001,
+        "bottom": 192.16416189999995,
+        "width": 218.2023963000001,
+        "height": 21.853853232462143
+      }
+    ],
+    "column_2": [
+      {
+        "text": "- ------~ - ------~",
+        "type": "text",
+        "left": 35.66,
+        "top": 660.2334999999999,
+        "right": 583.080568,
+        "bottom": 670.3828,
+        "width": 547.420568,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "22",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Many mechanical calculators were powered by a notched cylinder mechanism called the Leibniz wheel. Leibniz wheel calculators were popular in the first half of the twentieth _______  these ingenious devices were eventually replaced by electronic calculators.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 584.3937086675378,
+        "right": 551.0868333999997,
+        "bottom": 656.1359619000001,
+        "width": 218.8205333999997,
+        "height": 71.7422532324623
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 332.275,
+        "top": 553.4643086675378,
+        "right": 550.4773962999994,
+        "bottom": 575.3171619,
+        "width": 218.20239629999946,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "Featuring jagged peaks of black ink surrounded by hazy swirls of blue and green paint, Zhang Daqian's 1983 painting Panorama of Mount Lu is inspired by the tradition of qinglü shanshui , a type of Chinese landscape painting _______  by the use of blue and green hues to depict ethereal, otherworldly landscapes.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 355.39940866753784,
+        "right": 549.2145225999999,
+        "bottom": 439.6144619,
+        "width": 216.9482225999999,
+        "height": 84.21505323246214
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 332.2735,
+        "top": 324.47030866753784,
+        "right": 550.4758962999995,
+        "bottom": 346.3231619,
+        "width": 218.20239629999946,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.3215637207031,
+        "top": 23.04925537109375,
+        "right": 555.0731811523438,
+        "bottom": 46.43072509765625,
+        "width": 91.75161743164062,
+        "height": 23.3814697265625
+      }
+    ]
+  },
+  "page_15": {
+    "column_1": [
+      {
+        "text": "",
+        "type": "figure",
+        "left": 80.03199768066406,
+        "top": 730.5958061218262,
+        "right": 96.34382629394531,
+        "bottom": 764.2809944152832,
+        "width": 16.31182861328125,
+        "height": 33.68518829345703
+      },
+      {
+        "text": "24",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Increasing the heat on an uncovered boiling pot of water does not increase the temperature of the water. What increases is the rate at which the water turns to _______  a pressure cooker pot, though, an airtight seal traps the vapor in the pot, creating pressure that allows the temperature of the water to increase past",
+        "type": "text",
+        "left": 71.8412,
+        "top": 584.3937086675378,
+        "right": 294.21340250000003,
+        "bottom": 656.1359619000001,
+        "width": 222.37220250000001,
+        "height": 71.7422532324623
+      },
+      {
+        "text": "its boiling point.",
+        "type": "text",
+        "left": 71.8435,
+        "top": 571.9222086675378,
+        "right": 143.34834250000003,
+        "bottom": 581.3038619,
+        "width": 71.50484250000002,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 71.8435,
+        "top": 540.9921086675378,
+        "right": 290.04589630000015,
+        "bottom": 562.8459619,
+        "width": 218.20239630000015,
+        "height": 21.853853232462257
+      },
+      {
+        "text": "25",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 435.7208086675378,
+        "right": 67.890224,
+        "bottom": 445.1024619,
+        "width": 10.057824000000004,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Wanting to celebrate the 100th anniversary of the Alaska Purchase, _______  up with a motto that best captured the state's unique character. The commission selected 'North to the Future,' submitted by Juneau journalist Richard Peter, as its winning entry.",
+        "type": "text",
+        "left": 71.8412,
+        "top": 355.40100866753784,
+        "right": 292.19926716659995,
+        "bottom": 427.1424619,
+        "width": 220.35806716659994,
+        "height": 71.74145323246216
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 71.84789999999998,
+        "top": 324.47190866753783,
+        "right": 290.0502963000001,
+        "bottom": 346.3247619,
+        "width": 218.20239630000015,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "26",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Recently unearthed Neronian tools in France dating to 54,000 years ago and attributed to Homo sapiens may provide evidence that interactions between Neanderthals and modern humans occurred 10,000 years earlier than was previously _______ finding that, if true, would overturn current theories about H. sapiens migration during the Upper Paleolithic.",
+        "type": "text",
+        "left": 350.2262999999999,
+        "top": 559.4484086675378,
+        "right": 574.0547915999998,
+        "bottom": 656.1359619000001,
+        "width": 223.8284915999999,
+        "height": 96.68755323246228
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 350.2263,
+        "top": 528.5193086675379,
+        "right": 568.4286962999995,
+        "bottom": 550.3721619,
+        "width": 218.20239629999952,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "27",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 423.24780866753787,
+        "right": 346.27532399999996,
+        "bottom": 432.6294619,
+        "width": 10.057823999999982,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Guard cells are specialized cells that are part of a plant's pores. These cells help regulate the amount of carbon dioxide a plant takes in. _______  they help regulate a plant's water loss.",
+        "type": "text",
+        "left": 350.2263,
+        "top": 367.8716086675378,
+        "right": 571.9384577999996,
+        "bottom": 414.6694619,
+        "width": 221.7121577999996,
+        "height": 46.79785323246216
+      },
+      {
+        "text": "Which choice completes the text with the most logical transition?",
+        "type": "text",
+        "left": 350.23670000000004,
+        "top": 336.94150866753785,
+        "right": 547.0033588999996,
+        "bottom": 358.7953619,
+        "width": 196.76665889999958,
+        "height": 21.853853232462143
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.6670227050781,
+        "top": 23.35308837890625,
+        "right": 573.130615234375,
+        "bottom": 45.7122802734375,
+        "width": 91.46359252929688,
+        "height": 22.35919189453125
+      }
+    ]
+  },
+  "page_16": {
+    "column_1": [
+      {
+        "text": "28",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 53.88,
+        "top": 634.2838086675379,
+        "right": 262.0036185000001,
+        "bottom": 656.1370619,
+        "width": 208.12361850000008,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to identify what type of scientist Chaudhuri is. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 479.6262086675378,
+        "right": 267.7249059000001,
+        "bottom": 526.4224619,
+        "width": 213.84400590000013,
+        "height": 46.79625323246222
+      }
+    ],
+    "column_2": [
+      {
+        "text": "29",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 332.2654,
+        "top": 634.2838086675379,
+        "right": 540.3890184999997,
+        "bottom": 656.1370619,
+        "width": 208.12361849999968,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to indicate where the short story takes place. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 461.1672086675378,
+        "right": 547.7132715999995,
+        "bottom": 507.96346189999997,
+        "width": 215.44697159999953,
+        "height": 46.79625323246216
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.12481689453125,
+        "top": 22.85003662109375,
+        "right": 555.163330078125,
+        "bottom": 46.7103271484375,
+        "width": 92.03851318359375,
+        "height": 23.86029052734375
+      }
+    ]
+  },
+  "page_17": {
+    "column_1": [
+      {
+        "text": "30",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 71.8403,
+        "top": 634.2838086675379,
+        "right": 279.96391850000003,
+        "bottom": 656.1370619,
+        "width": 208.12361850000002,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to contrast the two styles of tiles. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 71.8412,
+        "top": 461.16640866753784,
+        "right": 289.5616589000001,
+        "bottom": 495.4904619,
+        "width": 217.7204589000001,
+        "height": 34.32405323246218
+      }
+    ],
+    "column_2": [
+      {
+        "text": "31",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 350.2254,
+        "top": 634.2838086675379,
+        "right": 558.3490184999997,
+        "bottom": 656.1370619,
+        "width": 208.12361849999974,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to contrast the song 'Poor Miner's Farewell' with the song 'Bring Him Back Home.' Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 350.2263,
+        "top": 373.86020866753785,
+        "right": 574.6938824999996,
+        "bottom": 420.6564619,
+        "width": 224.46758249999965,
+        "height": 46.79625323246216
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.456787109375,
+        "top": 23.315673828125,
+        "right": 573.23876953125,
+        "bottom": 45.34619140625,
+        "width": 91.781982421875,
+        "height": 22.030517578125
+      }
+    ]
+  },
+  "page_18": {
+    "column_1": [
+      {
+        "text": "32",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 53.88,
+        "top": 634.2838086675379,
+        "right": 262.0036185000001,
+        "bottom": 656.1370619,
+        "width": 208.12361850000008,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to use a quotation to challenge Thucydides's explanation of the conflict between Athens and Sparta. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 53.8799,
+        "top": 342.94580866753796,
+        "right": 262.12924130000016,
+        "bottom": 402.2142619000001,
+        "width": 208.24934130000017,
+        "height": 59.26845323246215
+      }
+    ],
+    "column_2": [
+      {
+        "text": "If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
+        "type": "text",
+        "left": 50.33960000000002,
+        "top": 87.43770886666664,
+        "right": 542.4620388068997,
+        "bottom": 119.94597339999996,
+        "width": 492.1224388068997,
+        "height": 32.50826453333332
+      },
+      {
+        "text": "33",
+        "type": "section_header",
+        "left": 318.2404,
+        "top": 664.715308667538,
+        "right": 328.298224,
+        "bottom": 674.0969619000002,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 332.24830000000003,
+        "top": 634.284508667538,
+        "right": 540.3719184999998,
+        "bottom": 656.1377619000002,
+        "width": 208.12361849999974,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to present an overview of the study's findings. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 332.24820000000005,
+        "top": 367.889908667538,
+        "right": 549.1305068999999,
+        "bottom": 414.6861619000002,
+        "width": 216.88230689999983,
+        "height": 46.79625323246216
+      },
+      {
+        "text": "STOP",
+        "type": "section_header",
+        "left": 268.1206,
+        "top": 128.59748486666672,
+        "right": 324.5653754731,
+        "bottom": 150.11794540000005,
+        "width": 56.44477547309998,
+        "height": 21.520460533333335
+      }
+    ]
+  },
+  "page_19": {
+    "column_1": [
+      {
+        "text": "No Test Material On This Page",
+        "type": "text",
+        "left": 197.1499,
+        "top": 390.8425192666666,
+        "right": 431.49323627560005,
+        "bottom": 406.9828422,
+        "width": 234.34333627560005,
+        "height": 16.14032293333338
+      }
+    ]
+  },
+  "page_20": {
+    "column_1": [
+      {
+        "text": "Reading and Writing 33  QUESTIONS",
+        "type": "section_header",
+        "left": 123.7,
+        "top": 632.7622696969697,
+        "right": 346.7881,
+        "bottom": 671.5287999999999,
+        "width": 223.0881,
+        "height": 38.76653030303021
+      },
+      {
+        "text": "1",
+        "type": "text",
+        "left": 42.3864,
+        "top": 455.7276086675378,
+        "right": 47.415312,
+        "bottom": 465.1092619,
+        "width": 5.028911999999998,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Taking photographs in the mid-1800s was complicated and expensive, but this changed with the 1854 invention of the carte de visite , a small photo that cost little to make. Carte de visite photos helped to _______ photography: they made it easy and enjoyable for everyday people to have their pictures taken, and people at the time loved exchanging these small photos with friends and family.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 350.4622086675379,
+        "right": 278.10751380000005,
+        "bottom": 447.1489619,
+        "width": 224.22661380000005,
+        "height": 96.68675323246214
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 53.88399999999999,
+        "top": 319.5331086675379,
+        "right": 250.6506589000001,
+        "bottom": 341.38596190000004,
+        "width": 196.76665890000012,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s). All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.",
+        "type": "text",
+        "left": 123.06,
+        "top": 515.219125,
+        "right": 521.8259499999999,
+        "bottom": 578.5323999999999,
+        "width": 398.7659499999999,
+        "height": 63.313274999999976
+      },
+      {
+        "text": "- --------~  - --------~",
+        "type": "text",
+        "left": 35.62,
+        "top": 450.54499230769227,
+        "right": 576.2014750000002,
+        "bottom": 460.834,
+        "width": 540.5814750000002,
+        "height": 10.289007692307734
+      },
+      {
+        "text": "2",
+        "type": "text",
+        "left": 320.7718,
+        "top": 455.7276086675378,
+        "right": 325.800712,
+        "bottom": 465.1092619,
+        "width": 5.028911999999991,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Painter Alma W. Thomas was fascinated by the colors and shapes found in nature. The flowers and trees in the garden at her home in Washington, DC,",
+        "type": "text",
+        "left": 332.2663,
+        "top": 412.82390866753786,
+        "right": 549.9972357999997,
+        "bottom": 447.1489619,
+        "width": 217.73093579999966,
+        "height": 34.32505323246215
+      },
+      {
+        "text": "_______ her work. For example, Thomas's use of broken brushstrokes was inspired by the way that light would shine through the leaves of a tree in front of her house.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 362.93520866753784,
+        "right": 554.9028249999996,
+        "bottom": 409.7316619,
+        "width": 222.63652499999955,
+        "height": 46.79645323246217
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 332.26869999999997,
+        "top": 332.00510866753785,
+        "right": 529.0353588999994,
+        "bottom": 353.8589619,
+        "width": 196.76665889999947,
+        "height": 21.853853232462143
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.07305908203125,
+        "top": 23.041259765625,
+        "right": 555.1487426757812,
+        "bottom": 46.3634033203125,
+        "width": 92.07568359375,
+        "height": 23.3221435546875
+      }
+    ]
+  },
+  "page_21": {
+    "column_1": [
+      {
+        "text": "3",
+        "type": "section_header",
+        "left": 60.3467,
+        "top": 664.7146086675378,
+        "right": 65.375612,
+        "bottom": 674.0962619000001,
+        "width": 5.028912000000005,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "In the 1990s, conservationists began planting more than 500,000 native trees in the habitat of the Azores bullfinch to boost the bird's numbers. This approach was apparently _______: the Azores bullfinch's population size increased from as few as 100 birds at the end of the 1980s to around 1,300 in 2023.",
+        "type": "text",
+        "left": 71.84089999999998,
+        "top": 584.3945397606601,
+        "right": 292.843376,
+        "bottom": 656.043178,
+        "width": 221.002476,
+        "height": 71.6486382393399
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 71.84120000000001,
+        "top": 553.5575397606601,
+        "right": 268.62851799999976,
+        "bottom": 575.318178,
+        "width": 196.78731799999974,
+        "height": 21.76063823933987
+      },
+      {
+        "text": "-----",
+        "type": "text",
+        "left": 53.71,
+        "top": 445.681727625,
+        "right": 297.74382080000004,
+        "bottom": 450.7564716,
+        "width": 244.03382080000003,
+        "height": 5.07474397499999
+      },
+      {
+        "text": "4",
+        "type": "section_header",
+        "left": 60.3474,
+        "top": 448.19800866753786,
+        "right": 65.376312,
+        "bottom": 457.5796619,
+        "width": 5.028911999999998,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "The recently observed gamma ray burst GRB 230307A lasted for 200 seconds, _______ for a burst generated by the merger of neutron stars. Bursts caused by neutron mergers typically last fewer than 2 seconds.",
+        "type": "text",
+        "left": 71.8412,
+        "top": 380.3547086675378,
+        "right": 294.2674101,
+        "bottom": 439.6207619,
+        "width": 222.4262101,
+        "height": 59.266053232462184
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 71.85329999999999,
+        "top": 349.42750866753784,
+        "right": 268.6199589000001,
+        "bottom": 371.2795619,
+        "width": 196.7666589000001,
+        "height": 21.85205323246214
+      }
+    ],
+    "column_2": [
+      {
+        "text": "----- -----",
+        "type": "text",
+        "left": 53.66,
+        "top": 659.7434999999999,
+        "right": 575.9007728,
+        "bottom": 669.8928,
+        "width": 522.2407728000001,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "5",
+        "type": "section_header",
+        "left": 338.7155,
+        "top": 664.7068086675379,
+        "right": 343.744412,
+        "bottom": 674.0884619000001,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "In 1776, the United States sent Benjamin Franklin to France to try to win the country's support in the United States' fight for independence from Great Britain. Franklin was very popular in France. This _______ surely helped him to convince France to assist the United States.",
+        "type": "text",
+        "left": 350.2093,
+        "top": 584.3900086675378,
+        "right": 570.6223221999995,
+        "bottom": 656.1292619000001,
+        "width": 220.41302219999955,
+        "height": 71.73925323246226
+      },
+      {
+        "text": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "text",
+        "left": 350.21299999999997,
+        "top": 553.4625086675378,
+        "right": 546.9796588999995,
+        "bottom": 575.3145619000001,
+        "width": 196.76665889999958,
+        "height": 21.852053232462254
+      },
+      {
+        "text": "6",
+        "type": "section_header",
+        "left": 338.7155,
+        "top": 448.19820866753787,
+        "right": 343.744412,
+        "bottom": 457.5798619,
+        "width": 5.028911999999991,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "In the 1950s, scientists didn't know much about the ocean floor. Many scientists at the time believed that the ocean floor was mostly flat. But geologist Marie Tharp and her research partner, Bruce Heezen, proved that this idea was wrong. Using sonar data collected from the Atlantic Ocean, Tharp and Heezen showed that the floor was filled with canyons, mountains, and valleys.",
+        "type": "text",
+        "left": 350.2093,
+        "top": 342.9298086675378,
+        "right": 570.3215629999997,
+        "bottom": 439.6209619,
+        "width": 220.11226299999976,
+        "height": 96.69115323246217
+      },
+      {
+        "text": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+        "type": "text",
+        "left": 350.2344,
+        "top": 311.99970866753785,
+        "right": 548.7716549999997,
+        "bottom": 333.8535619,
+        "width": 198.53725499999967,
+        "height": 21.853853232462143
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.70574951171875,
+        "top": 23.413330078125,
+        "right": 573.1193237304688,
+        "bottom": 45.5301513671875,
+        "width": 91.41357421875,
+        "height": 22.1168212890625
+      }
+    ]
+  },
+  "page_22": {
+    "column_1": [
+      {
+        "text": "7",
+        "type": "text",
+        "left": 42.3864,
+        "top": 664.7146086675378,
+        "right": 47.415312,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999998,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "In the early days of television in the 1940s, many people thought that US television programs would rely on the financial support of ad agencies and commercial sponsors, much like radio did. But advertisers hesitated to jump into a new space, particularly at a time when the manufacturing of new television sets was stalled due to the US's involvement in World War II. Broadcasters, like the National Broadcasting Company (NBC), needed to persuade advertisers to support their programming despite not knowing whether there would be a robust television audience to begin with.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 509.561008667538,
+        "right": 277.6046226,
+        "bottom": 656.1359619000001,
+        "width": 223.72372260000003,
+        "height": 146.57495323246212
+      },
+      {
+        "text": "Which choice best describes the function of the underlined phrase in the text as a whole?",
+        "type": "text",
+        "left": 53.8888,
+        "top": 478.630908667538,
+        "right": 252.42605500000016,
+        "bottom": 500.48376190000016,
+        "width": 198.53725500000016,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "8",
+        "type": "section_header",
+        "left": 320.7718,
+        "top": 664.7146086675378,
+        "right": 325.800712,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The Bayeux Tapestry, from eleventh-century France, depicts 75 scenes over 250 feet of fabric. It was likely produced by workers embroidering in sections and then joining the resulting panels together. It's plausible that the workshop that produced the tapestry had never produced one so large, and some researchers claim that a close examination of the joins-the places where the panels are stitched together-suggests that the workers developed and refined their joining process over the course of production. For example, the first join the workers completed exhibits a clear misalignment of the borders of the two panels, whereas the later joins are virtually invisible.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 484.61510866753787,
+        "right": 553.4546127999998,
+        "bottom": 656.1359619000001,
+        "width": 221.18831279999984,
+        "height": 171.52085323246223
+      },
+      {
+        "text": "Which choice best describes the function of the underlined sentence in the text as a whole?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 453.68160866753783,
+        "right": 530.8035549999996,
+        "bottom": 475.5354619,
+        "width": 198.53725499999962,
+        "height": 21.853853232462143
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.0276184082031,
+        "top": 22.8404541015625,
+        "right": 555.5368041992188,
+        "bottom": 46.422119140625,
+        "width": 92.50918579101562,
+        "height": 23.5816650390625
+      }
+    ]
+  },
+  "page_23": {
+    "column_1": [
+      {
+        "text": "9",
+        "type": "section_header",
+        "left": 60.3467,
+        "top": 664.7146086675378,
+        "right": 65.375612,
+        "bottom": 674.0962619000001,
+        "width": 5.028912000000005,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Text 1",
+        "type": "section_header",
+        "left": 71.84049999999999,
+        "top": 646.7554086675378,
+        "right": 99.24807039999999,
+        "bottom": 656.1370619,
+        "width": 27.407570399999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Little is known about how plate tectonics-wherein slabs of Earth's crust move over, under, away from, and against one another-began. Some researchers contend that tectonic movements began around 3 billion years ago, often noting that computer models of Earth's mantle temperature at the time indicate that the mantle would have been sufficiently molten to enable the plates to move.",
+        "type": "text",
+        "left": 71.8412,
+        "top": 546.9835086675378,
+        "right": 293.3042122000001,
+        "bottom": 643.6635619000001,
+        "width": 221.4630122000001,
+        "height": 96.68005323246234
+      },
+      {
+        "text": "Text 2",
+        "type": "section_header",
+        "left": 71.8412,
+        "top": 528.5224086675379,
+        "right": 99.24877040000001,
+        "bottom": 537.9040619000001,
+        "width": 27.40757040000001,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Ultimately, any plausible claim about the inception of tectonic movement must rest on empirical evidence from the geological record. Researcher Wriju Chowdhury and his team analyzed the geochemistry of zircon crystals to gain insight into the chemical composition of the magma from which the crystals formed and, based on the data, compellingly argue that plate tectonics may have been occurring as early as 4.2 billion years ago.",
+        "type": "text",
+        "left": 71.8412,
+        "top": 416.27760866753783,
+        "right": 291.6675158,
+        "bottom": 525.4318619000001,
+        "width": 219.82631579999997,
+        "height": 109.15425323246222
+      },
+      {
+        "text": "Based on the texts, how would the author of Text 2 most likely respond to what 'some researchers contend' as described in Text 1?",
+        "type": "text",
+        "left": 71.8412,
+        "top": 372.87630866753784,
+        "right": 284.8889615,
+        "bottom": 407.2013619,
+        "width": 213.04776149999998,
+        "height": 34.32505323246215
+      }
+    ],
+    "column_2": [
+      {
+        "text": "10",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Hevea brasiliensis , a tree in the Amazon rainforest, is the world's main source of natural rubber. The tree produces a milky substance called latex that is used to make rubber. The bark of Hevea brasiliensis is helpful for the process of making rubber because it has a unique structure that makes it easy to collect latex. A network of tubes in the tree's inner bark helps the latex to flow out easily when people make small cuts into the bark.",
+        "type": "text",
+        "left": 350.2254,
+        "top": 546.9822086675377,
+        "right": 571.3700765115001,
+        "bottom": 656.1370619,
+        "width": 221.1446765115001,
+        "height": 109.1548532324623
+      },
+      {
+        "text": "What feature of Hevea brasiliensis does the text say is helpful for the process of making rubber?",
+        "type": "text",
+        "left": 350.22540000000004,
+        "top": 516.0521086675377,
+        "right": 572.2436520999998,
+        "bottom": 537.9059619,
+        "width": 222.0182520999998,
+        "height": 21.853853232462257
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.3870544433594,
+        "top": 23.4232177734375,
+        "right": 573.1849365234375,
+        "bottom": 44.77874755859375,
+        "width": 91.79788208007812,
+        "height": 21.35552978515625
+      }
+    ]
+  },
+  "page_24": {
+    "column_1": [
+      {
+        "text": "11",
+        "type": "text",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Conservationists worldwide are working to protect ecosystems from habitat destruction and biodiversity loss, and in many cases, initiatives that rely on natural features or processes can help address such challenges. In response to a rapidly dwindling population of blueback salmon, the Quinault Indian Nation (a tribe in Washington State) partnered with the conservation organization Wild Salmon Center to restore naturally occurring logjams in the Quinault River. The logjams create shady pools where the blueback salmon can rest and spawn, thus promoting blueback population recovery.",
+        "type": "text",
+        "left": 53.88,
+        "top": 509.5676086675378,
+        "right": 276.30458700000014,
+        "bottom": 656.1370619,
+        "width": 222.42458700000014,
+        "height": 146.56945323246225
+      },
+      {
+        "text": "Which choice best states the main idea of the text?",
+        "type": "text",
+        "left": 53.88,
+        "top": 491.1087086675378,
+        "right": 264.69618180000003,
+        "bottom": 500.4903619,
+        "width": 210.81618180000004,
+        "height": 9.381653232462156
+      }
+    ],
+    "column_2": [
+      {
+        "text": "12",
+        "type": "text",
+        "left": 318.25750000000005,
+        "top": 664.7146086675378,
+        "right": 328.31532400000003,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Percentage of Bus Shelters with Shade in a County by Areas' Highest Average Summer Surface Temperature",
+        "type": "section_header",
+        "left": 350.22460000000007,
+        "top": 621.8120086675377,
+        "right": 533.4551040999999,
+        "bottom": 656.1370619,
+        "width": 183.2305040999998,
+        "height": 34.325053232462324
+      },
+      {
+        "text": "",
+        "type": "table",
+        "left": 325.5614318847656,
+        "top": 521.4672241210938,
+        "right": 544.8189697265625,
+        "bottom": 613.7363739013672,
+        "width": 219.25753784179688,
+        "height": 92.26914978027344
+      },
+      {
+        "text": "A student is researching a bus system in a large county where surface temperatures vary by area and are hot in the summer. The student claims that all areas of the county should have more bus stops with shaded shelter, noting that the highest percentage of bus stops with shaded shelter for any area is only _______",
+        "type": "text",
+        "left": 332.2663,
+        "top": 422.75360866753783,
+        "right": 551.3278020999994,
+        "bottom": 506.9654619,
+        "width": 219.06150209999942,
+        "height": 84.21185323246215
+      },
+      {
+        "text": "Which choice most effectively uses data from the table to complete the student's claim?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 391.82530866753785,
+        "right": 537.6344937999997,
+        "bottom": 413.6773619,
+        "width": 205.36819379999974,
+        "height": 21.85205323246214
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.06854248046875,
+        "top": 22.889892578125,
+        "right": 555.2890014648438,
+        "bottom": 46.47784423828125,
+        "width": 92.220458984375,
+        "height": 23.58795166015625
+      }
+    ]
+  },
+  "page_25": {
+    "column_1": [
+      {
+        "text": "13",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Total Areas and 2022 Populations of Smallest Arabian Peninsula Countries",
+        "type": "section_header",
+        "left": 71.8403,
+        "top": 634.2838086675379,
+        "right": 271.72907509999993,
+        "bottom": 656.1370619,
+        "width": 199.88877509999992,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "",
+        "type": "table",
+        "left": 94.00554656982422,
+        "top": 559.4952850341797,
+        "right": 255.765869140625,
+        "bottom": 625.8251495361328,
+        "width": 161.76032257080078,
+        "height": 66.32986450195312
+      },
+      {
+        "text": "In terms of area and population, the three smallest Arabian Peninsula countries are Bahrain, Qatar, and Kuwait.",
+        "type": "text",
+        "left": 71.8412,
+        "top": 511.0554086675378,
+        "right": 291.87705380000006,
+        "bottom": 545.3804619,
+        "width": 220.03585380000004,
+        "height": 34.32505323246221
+      },
+      {
+        "text": "According to the table, what is the total area of Bahrain?",
+        "type": "text",
+        "left": 71.8412,
+        "top": 480.1263086675378,
+        "right": 267.3715847,
+        "bottom": 501.97916189999995,
+        "width": 195.5303847,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "14",
+        "type": "section_header",
+        "left": 57.83240000000001,
+        "top": 374.8548086675377,
+        "right": 67.890224,
+        "bottom": 384.2364618999999,
+        "width": 10.057823999999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Janet Echelman is a sculptor and fiber artist. She has installed giant sculptures all over the world. Echelman uses bright and flowing materials, which mimic the wind. However, while her sculptures appear as delicate as a breeze, they are actually very durable.",
+        "type": "text",
+        "left": 71.84120000000001,
+        "top": 294.5344086675377,
+        "right": 290.7245948000001,
+        "bottom": 366.2764618999999,
+        "width": 218.88339480000008,
+        "height": 71.74205323246218
+      },
+      {
+        "text": "Which quotation from an article about Echelman's sculptures, if true, would most effectively illustrate the underlined claim?",
+        "type": "text",
+        "left": 71.84120000000003,
+        "top": 251.13040866753772,
+        "right": 285.3080375000001,
+        "bottom": 285.4554618999999,
+        "width": 213.4668375000001,
+        "height": 34.32505323246215
+      }
+    ],
+    "column_2": [
+      {
+        "text": "15",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Early Earth is thought to have been characterized by a stagnant lid tectonic regime, in which the upper lithosphere (the outer rocky layer) was essentially immobile and there was no interaction between the lithosphere and the underlying mantle. Researchers investigated the timing of the transition from a stagnant lid regime to a tectonic plate regime, in which the lithosphere is fractured into dynamic plates that in turn allow lithospheric and mantle material to mix. Examining chemical data from lithospheric and mantle-derived rocks ranging from 285 million to 3.8 billion years old, the researchers dated the transition to 3.2 billion years ago.",
+        "type": "text",
+        "left": 350.2254,
+        "top": 497.0954086675378,
+        "right": 568.8154415999996,
+        "bottom": 656.1370619,
+        "width": 218.59004159999967,
+        "height": 159.04165323246224
+      },
+      {
+        "text": "Which finding, if true, would most directly support the researchers' conclusion?",
+        "type": "text",
+        "left": 350.2254,
+        "top": 466.1663086675378,
+        "right": 565.6828484999996,
+        "bottom": 488.0191619,
+        "width": 215.45744849999966,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.5748596191406,
+        "top": 23.37493896484375,
+        "right": 573.1339111328125,
+        "bottom": 45.56103515625,
+        "width": 91.55905151367188,
+        "height": 22.18609619140625
+      }
+    ]
+  },
+  "page_26": {
+    "column_1": [
+      {
+        "text": "16",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The Uto-Aztecan language family is divided into a northern branch, which includes the Shoshone language of present-day Idaho and Utah, and a southern one, whose best-known representative is Nahuatl, the language of the Aztec Empire in Mexico. Lexical similarities across the family, including of botanical terms, confirm descent from a single language spoken millennia ago, and the family's geographical distribution suggests an origin in what is now the US Southwest. However, vocabulary pertaining to maize isn't shared between northern and southern branches, despite the crop's universal cultivation among Uto-Aztecan tribes. Given archaeological evidence that maize originated in Mexico and diffused northward into what became the US Southwest, some linguists reason that _______",
+        "type": "text",
+        "left": 53.880900000000004,
+        "top": 447.19480866753787,
+        "right": 275.1949356000002,
+        "bottom": 656.1359619000001,
+        "width": 221.31403560000018,
+        "height": 208.94115323246223
+      },
+      {
+        "text": "Which choice most logically completes the text?",
+        "type": "text",
+        "left": 53.880900000000004,
+        "top": 428.73580866753787,
+        "right": 255.06881070000006,
+        "bottom": 438.1174619,
+        "width": 201.18791070000006,
+        "height": 9.381653232462156
+      }
+    ],
+    "column_2": [
+      {
+        "text": "17",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Data collected by the Mars rover Curiosity at the Gale Crater's Murray Formation are suggestive of hydrological deposition of sediment in the distant past. To characterize the nature of the depositional environment, Frances Rivera-Hernández et al. analyzed the grain size of Murray Formation sediment, finding that although there are intervals of coarse grains, most of the sediment consists of fine grains that show signs of cracking due to episodic desiccation. Rivera-Hernández et al. concluded that the coarse grains are sandstone, which tends to be deposited by flowing water, whereas the fine grains are mudstone, which is slowly deposited by settling out of suspension in low-flow water, leading the researchers to posit that _______",
+        "type": "text",
+        "left": 332.2661999999999,
+        "top": 472.13980866753786,
+        "right": 553.5278510999997,
+        "bottom": 656.1359619000001,
+        "width": 221.26165109999977,
+        "height": 183.99615323246223
+      },
+      {
+        "text": "Which choice most logically completes the text?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 453.68080866753786,
+        "right": 533.4542106999997,
+        "bottom": 463.0624619,
+        "width": 201.18791069999975,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.2358703613281,
+        "top": 22.95068359375,
+        "right": 555.2376708984375,
+        "bottom": 46.08172607421875,
+        "width": 92.00180053710938,
+        "height": 23.13104248046875
+      }
+    ]
+  },
+  "page_27": {
+    "column_1": [
+      {
+        "text": "18",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "An analysis by Alain Elayi and colleagues of coins minted in Sidon in the fifth and fourth centuries BCE reveals a change in their composition over time: while a coin from circa 450 BCE contains about S8Wsilver and copper, a coin from 367 BCE (the end of Ba'alšillem II's reign) contains silver and copper, giving it a relatively yellowish appearance that traders would have noticed. Because coins with a silver content below were widely considered unsuitable for trade, Elayi et al. speculate that a crisis in confidence in the currency occurred in Sidon around 367 BCE, which was likely relieveddespite Sidon's persistent oppressive financial obligations-as a result of Ba'alšillem II's successor Abd'aštart I's decision to _______ 3W 6GPIW IGP6W 8 'W",
+        "type": "text",
+        "left": 71.2412018,
+        "top": 469.4038086675378,
+        "right": 296.0363831000001,
+        "bottom": 656.1359619000001,
+        "width": 224.79518130000008,
+        "height": 186.73215323246228
+      },
+      {
+        "text": "Which choice most logically completes the text?",
+        "type": "text",
+        "left": 71.84899999999999,
+        "top": 450.94700866753783,
+        "right": 273.03691069999996,
+        "bottom": 460.3286619,
+        "width": 201.18791069999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "-----",
+        "type": "text",
+        "left": 53.66,
+        "top": 252.70349999999996,
+        "right": 297.74382080000004,
+        "bottom": 262.8528,
+        "width": 244.08382080000004,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "19",
+        "type": "section_header",
+        "left": 57.83239999999998,
+        "top": 257.6768086675379,
+        "right": 67.89022399999998,
+        "bottom": 267.0584619,
+        "width": 10.057823999999997,
+        "height": 9.3816532324621
+      },
+      {
+        "text": "Nowadays, tug-of-war is usually seen as an informal game one might play at a picnic or in gym class. Surprisingly, the Olympic committee once decided _______ tug-of-war as an official Olympic event! Nations competed in the event at the Olympic Games from 1900 to 1920.",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 177.35540866753774,
+        "right": 290.08550390000005,
+        "bottom": 249.09746189999998,
+        "width": 218.24430390000006,
+        "height": 71.74205323246224
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 71.84359999999998,
+        "top": 146.4263086675378,
+        "right": 290.0459963000001,
+        "bottom": 168.27916189999996,
+        "width": 218.20239630000015,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "20",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The Globe Theatre in London is a reconstruction of the famed venue where many of Shakespeare's plays were first performed. In 1613, a prop cannon _______ during a performance and ignited the Globe's thatched roof. No one was hurt, but in two hours the original Globe was gone.",
+        "type": "text",
+        "left": 350.2263,
+        "top": 584.3937086675378,
+        "right": 568.2715427999998,
+        "bottom": 656.1359619000001,
+        "width": 218.0452427999998,
+        "height": 71.7422532324623
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 350.2287,
+        "top": 553.4643086675378,
+        "right": 568.4310962999995,
+        "bottom": 575.3171619,
+        "width": 218.20239629999946,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "-----",
+        "type": "text",
+        "left": 332.11,
+        "top": 445.681727625,
+        "right": 575.9007728,
+        "bottom": 450.7564716,
+        "width": 243.7907728,
+        "height": 5.07474397499999
+      },
+      {
+        "text": "21",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 448.1928086675377,
+        "right": 346.27532399999996,
+        "bottom": 457.57446189999985,
+        "width": 10.057823999999982,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Nigerian American artist Toyin Ojih Odutola uses black-ink pens to create highly detailed drawings of human figures. Her portrait of novelist Zadie _______ is displayed in the National Portrait Gallery in London.",
+        "type": "text",
+        "left": 350.2254,
+        "top": 380.3479086675378,
+        "right": 566.1228782999998,
+        "bottom": 439.6155619,
+        "width": 215.89747829999982,
+        "height": 59.26765323246218
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 350.2294,
+        "top": 349.42070866753784,
+        "right": 568.4317962999995,
+        "bottom": 371.2727619,
+        "width": 218.20239629999952,
+        "height": 21.85205323246214
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.666748046875,
+        "top": 23.42169189453125,
+        "right": 573.1223754882812,
+        "bottom": 45.24639892578125,
+        "width": 91.45562744140625,
+        "height": 21.82470703125
+      }
+    ]
+  },
+  "page_28": {
+    "column_1": [
+      {
+        "text": "22",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "When a given industry-water and electricity are two well-known examples-carries high infrastructural start-up costs and other barriers that discourage competition, _______ of just one or two suppliers per municipality. Such industries are known as natural monopolies.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 584.3936086675377,
+        "right": 270.86797590000015,
+        "bottom": 656.1359619000001,
+        "width": 216.98707590000015,
+        "height": 71.74235323246239
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 53.8896,
+        "top": 553.4642086675377,
+        "right": 272.0919963000001,
+        "bottom": 575.3170618999999,
+        "width": 218.20239630000012,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "-",
+        "type": "text",
+        "left": 35.71,
+        "top": 445.681727625,
+        "right": 37.5082333,
+        "bottom": 450.7564716,
+        "width": 1.7982332999999997,
+        "height": 5.07474397499999
+      },
+      {
+        "text": "23",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 448.19280866753786,
+        "right": 49.929924,
+        "bottom": 457.5744619,
+        "width": 10.057823999999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "As the fourteenth US librarian of Congress, Carla Hayden has many responsibilities. These include overseeing the Library of Congress's collections, which boast more than 162 million _______ the US Copyright Office, which registers copyright claims and advises Congress on copyright law; and appointing the US poet laureate.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 355.39940866753784,
+        "right": 271.8342507000001,
+        "bottom": 439.61776189999995,
+        "width": 217.9533507000001,
+        "height": 84.2183532324621
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 53.8833,
+        "top": 324.47030866753784,
+        "right": 272.0856963000001,
+        "bottom": 346.3231619,
+        "width": 218.20239630000012,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "---- - ----",
+        "type": "text",
+        "left": 54.24,
+        "top": 445.681727625,
+        "right": 558.144825,
+        "bottom": 450.7564716,
+        "width": 503.90482499999996,
+        "height": 5.07474397499999
+      },
+      {
+        "text": "24",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Digital artist Jung (Lulu) Chen primarily uses a suite of software tools to create illustrations for children's books. To manifest the warm and welcoming atmospheres that are a signature of her _______ she occasionally relies on more traditional art techniques, such as painting with watercolors.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 584.3937086675378,
+        "right": 552.2288154999998,
+        "bottom": 656.1359619000001,
+        "width": 219.96251549999977,
+        "height": 71.7422532324623
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 332.27879999999993,
+        "top": 553.4643086675378,
+        "right": 550.4811962999994,
+        "bottom": 575.3171619,
+        "width": 218.20239629999946,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "25",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 448.19280866753786,
+        "right": 328.315324,
+        "bottom": 457.5744619,
+        "width": 10.057823999999982,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Chondrites are stony meteorites that are undifferentiated-that is, their contents have not melted and separated into distinct layers. They are hardly _______ many chondrites experience aqueous alteration as a result of exposure to fluids, as well as fracturing, veining, and localized melting due to collisions with other objects.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 355.40020866753787,
+        "right": 556.2706497999999,
+        "bottom": 439.6144619,
+        "width": 224.0043497999999,
+        "height": 84.21425323246211
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 332.27049999999997,
+        "top": 324.47110866753786,
+        "right": 550.4728962999994,
+        "bottom": 346.32396190000003,
+        "width": 218.20239629999946,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.29559326171875,
+        "top": 22.95037841796875,
+        "right": 555.1484375,
+        "bottom": 46.455322265625,
+        "width": 91.85284423828125,
+        "height": 23.50494384765625
+      }
+    ]
+  },
+  "page_29": {
+    "column_1": [
+      {
+        "text": "26",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "That the geographic center of North America lay in the state of North Dakota was conceded by all _______ establishing its precise coordinates proved more divisive.",
+        "type": "text",
+        "left": 71.8412,
+        "top": 609.337808667538,
+        "right": 288.10328660000016,
+        "bottom": 656.1359619000001,
+        "width": 216.26208660000015,
+        "height": 46.79815323246214
+      },
+      {
+        "text": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "text",
+        "left": 71.84360000000001,
+        "top": 578.408008667538,
+        "right": 290.0459963000001,
+        "bottom": 600.2613619000002,
+        "width": 218.20239630000012,
+        "height": 21.85335323246227
+      },
+      {
+        "text": "27",
+        "type": "section_header",
+        "left": 57.8333,
+        "top": 473.1400086675378,
+        "right": 67.891124,
+        "bottom": 482.52166189999997,
+        "width": 10.057824000000004,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Famous for its four-degree tilt, the leaning Garisenda Tower is a popular attraction in Bologna's city center. However, measurements taken in 2023 showed that the tower was rotating in a concerning way. _______ city officials closed the area around the tower so experts could explore solutions to stabilize the historical twelfth-century structure.",
+        "type": "text",
+        "left": 71.8412,
+        "top": 380.34440866753783,
+        "right": 295.3846099,
+        "bottom": 464.5594619,
+        "width": 223.54340989999997,
+        "height": 84.21505323246214
+      },
+      {
+        "text": "Which choice completes the text with the most logical transition?",
+        "type": "text",
+        "left": 71.84490000000002,
+        "top": 349.41530866753783,
+        "right": 268.6115589000001,
+        "bottom": 371.2681619,
+        "width": 196.76665890000007,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "28",
+        "type": "section_header",
+        "left": 336.2014,
+        "top": 664.6942086675379,
+        "right": 346.25922399999996,
+        "bottom": 674.0758619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "In 2021, a model developed by astrophysicist Catherine Zucker and her research team revealed that the same supernovas responsible for the creation and ongoing expansion of the Local Bubble-a 14-million-year-old cavity in the Milky Way-are likely responsible for the formation of new stars. _______ this model detailed how the bubble's expansion trapped interstellar clouds of gas and dust that became stars upon their eventual collapse.",
+        "type": "text",
+        "left": 350.2263,
+        "top": 546.9764086675378,
+        "right": 573.6357155999997,
+        "bottom": 656.1359619000001,
+        "width": 223.4094155999997,
+        "height": 109.15955323246226
+      },
+      {
+        "text": "Which choice completes the text with the most logical transition?",
+        "type": "text",
+        "left": 350.2287,
+        "top": 516.0463086675378,
+        "right": 546.9953588999996,
+        "bottom": 537.9001619000001,
+        "width": 196.76665889999958,
+        "height": 21.853853232462257
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.6861572265625,
+        "top": 23.41131591796875,
+        "right": 573.1215209960938,
+        "bottom": 45.5120849609375,
+        "width": 91.43536376953125,
+        "height": 22.10076904296875
+      }
+    ]
+  },
+  "page_30": {
+    "column_1": [
+      {
+        "text": "29",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Following the American Revolutionary War, North American foodways underwent a radical transformation, fueled in large part by spiking consumer demand for certain grains. The cultivation, trade, and transportation of maize and wheat, _______ reconfigured the continent's existing regional foodways into a globally oriented food system.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 559.4484086675378,
+        "right": 278.0865600000001,
+        "bottom": 656.1359619000001,
+        "width": 224.20566000000008,
+        "height": 96.68755323246228
+      },
+      {
+        "text": "Which choice completes the text with the most logical transition?",
+        "type": "text",
+        "left": 53.8833,
+        "top": 528.5193086675379,
+        "right": 250.64995890000012,
+        "bottom": 550.3721619,
+        "width": 196.76665890000012,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "30",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 423.24780866753787,
+        "right": 49.929924,
+        "bottom": 432.6294619,
+        "width": 10.057823999999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "When, in 2017, Cambridge University students Lucy Moss and Toby Marlow decided they wanted to develop a musical together, one of their goals was for their female actor friends to have good parts to play. _______ they created the show Six , a retelling of the history of King Henry VIII's wives in which each of the six queens has a starring role.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 330.45440866753785,
+        "right": 276.52550190000005,
+        "bottom": 414.6694619,
+        "width": 222.64460190000005,
+        "height": 84.21505323246214
+      },
+      {
+        "text": "Which choice completes the text with the most logical transition?",
+        "type": "text",
+        "left": 53.88330000000002,
+        "top": 299.52530866753784,
+        "right": 250.64995890000012,
+        "bottom": 321.3781619,
+        "width": 196.7666589000001,
+        "height": 21.852853232462166
+      }
+    ],
+    "column_2": [
+      {
+        "text": "31",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Mountain climbing routes that incorporate metal rungs and cables are known as via ferratas, from the Italian phrase for 'iron path.' As climbing these routes has shifted from a mode of travel to a sporting activity, modern via ferratas are rarely designed to simply reach a summit. _______ new routes favor recreation over utility, aiming to provide a challenging climb or showcase dramatic scenery.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 559.4484086675378,
+        "right": 554.7432714999995,
+        "bottom": 656.1359619000001,
+        "width": 222.47697149999954,
+        "height": 96.68755323246228
+      },
+      {
+        "text": "Which choice completes the text with the most logical transition?",
+        "type": "text",
+        "left": 332.27479999999997,
+        "top": 528.5193086675379,
+        "right": 529.0414588999995,
+        "bottom": 550.3721619,
+        "width": 196.76665889999953,
+        "height": 21.852853232462166
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.2447204589844,
+        "top": 22.97589111328125,
+        "right": 555.2589721679688,
+        "bottom": 46.4083251953125,
+        "width": 92.01425170898438,
+        "height": 23.43243408203125
+      }
+    ]
+  },
+  "page_31": {
+    "column_1": [
+      {
+        "text": "32",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 71.8403,
+        "top": 634.2838086675379,
+        "right": 279.96391850000003,
+        "bottom": 656.1370619,
+        "width": 208.12361850000002,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to indicate the title of a novel that won a Nebula Award. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 467.15320866753785,
+        "right": 292.49519090000007,
+        "bottom": 513.9504619,
+        "width": 220.65399090000008,
+        "height": 46.7972532324622
+      },
+      {
+        "text": "If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
+        "type": "text",
+        "left": 68.29989999999998,
+        "top": 87.43730886666663,
+        "right": 560.4223388068998,
+        "bottom": 119.94557340000006,
+        "width": 492.1224388068998,
+        "height": 32.50826453333343
+      },
+      {
+        "text": "STOP",
+        "type": "section_header",
+        "left": 286.0809,
+        "top": 128.5970848666667,
+        "right": 342.52567547309997,
+        "bottom": 150.11754540000004,
+        "width": 56.44477547309998,
+        "height": 21.520460533333335
+      }
+    ],
+    "column_2": [
+      {
+        "text": "33",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675377,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "While researching a topic, a student has taken the following notes:",
+        "type": "text",
+        "left": 350.2254,
+        "top": 634.2838086675378,
+        "right": 558.3490184999997,
+        "bottom": 656.1370618999999,
+        "width": 208.12361849999974,
+        "height": 21.85325323246218
+      },
+      {
+        "text": "The student wants to indicate the year Yosemite Falls was completed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+        "type": "text",
+        "left": 350.22630000000004,
+        "top": 479.6262086675378,
+        "right": 571.5276332161001,
+        "bottom": 526.4224619,
+        "width": 221.30133321610003,
+        "height": 46.79625323246222
+      }
+    ]
+  },
+  "page_32": {
+    "column_1": [
+      {
+        "text": "Math",
+        "type": "section_header",
+        "left": 126.7512,
+        "top": 650.5357629121212,
+        "right": 188.36715560000005,
+        "bottom": 671.9938148,
+        "width": 61.61595560000005,
+        "height": 21.45805188787881
+      },
+      {
+        "text": "27 QUESTIONS",
+        "type": "section_header",
+        "left": 126.6312,
+        "top": 632.7719187090909,
+        "right": 239.65261239999995,
+        "bottom": 645.1030432,
+        "width": 113.02141239999995,
+        "height": 12.331124490909133
+      },
+      {
+        "text": "DIRECTIONS",
+        "type": "section_header",
+        "left": 127.9038,
+        "top": 585.699992,
+        "right": 181.25303555985607,
+        "bottom": 596.025224,
+        "width": 53.34923555985607,
+        "height": 10.325232000000028
+      },
+      {
+        "text": "The questions in this section address a number of important math skills. Use of  a calculator is permitted for all questions.",
+        "type": "text",
+        "left": 125.9512,
+        "top": 557.4447276249999,
+        "right": 426.348024,
+        "bottom": 579.1027716,
+        "width": 300.39682400000004,
+        "height": 21.658043975000055
+      },
+      {
+        "text": "NOTES ,a-nH",
+        "type": "section_header",
+        "left": 125.7612,
+        "top": 530.384829578788,
+        "right": 165.09539330000007,
+        "bottom": 549.7068148000001,
+        "width": 39.33419330000007,
+        "height": 19.321985221212117
+      },
+      {
+        "text": "Unless otherwise indicated:",
+        "type": "text",
+        "left": 126.5212,
+        "top": 519.514227625,
+        "right": 242.71252719999998,
+        "bottom": 527.9720716,
+        "width": 116.19132719999999,
+        "height": 8.45784397500006
+      },
+      {
+        "text": "li04ii1Ut31 REFERENCE",
+        "type": "section_header",
+        "left": 125.7512,
+        "top": 411.78577628484845,
+        "right": 185.48647999999991,
+        "bottom": 426.6413432,
+        "width": 59.73527999999992,
+        "height": 14.855566915151542
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 129.06155395507812,
+        "top": 201.919189453125,
+        "right": 555.148193359375,
+        "bottom": 384.6533203125,
+        "width": 426.0866394042969,
+        "height": 182.734130859375
+      },
+      {
+        "text": "The number of degrees of  arc in a circle is 360.",
+        "type": "text",
+        "left": 125.2284,
+        "top": 180.15248287500003,
+        "right": 318.74188316000004,
+        "bottom": 188.61051480000003,
+        "width": 193.51348316000005,
+        "height": 8.458031925
+      },
+      {
+        "text": "The number of radians of  arc in a circle is 2n.",
+        "type": "text",
+        "left": 125.22863329999998,
+        "top": 163.9504997895791,
+        "right": 311.01984287,
+        "bottom": 172.6831148,
+        "width": 185.79120957,
+        "height": 8.732615010420886
+      },
+      {
+        "text": "The sum of  the measures in degrees of  the angles of  a triangle is 180.",
+        "type": "text",
+        "left": 125.2284,
+        "top": 148.231382875,
+        "right": 412.371952,
+        "bottom": 156.6894148,
+        "width": 287.143552,
+        "height": 8.458031925
+      }
+    ],
+    "column_2": [
+      {
+        "text": "'~",
+        "type": "text",
+        "left": 499.1446,
+        "top": 338.78075579788464,
+        "right": 573.8555251,
+        "bottom": 352.9283986,
+        "width": 74.7109251,
+        "height": 14.147642802115342
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.8594970703125,
+        "top": 22.8350830078125,
+        "right": 554.9732055664062,
+        "bottom": 46.7283935546875,
+        "width": 91.11370849609375,
+        "height": 23.893310546875
+      }
+    ]
+  },
+  "page_33": {
+    "column_1": [
+      {
+        "text": "For multiple-choice questions, solve each problem, choose the correct answer from the choices provided, and then circle your answer in this book. Circle only one answer for each question. If you change your mind, completely erase the circle. You will not get credit for questions with more than one answer circled, or for questions with no answers circled.",
+        "type": "text",
+        "left": 147.95050000000003,
+        "top": 613.559775,
+        "right": 475.4504,
+        "bottom": 674.1955999999999,
+        "width": 327.49989999999997,
+        "height": 60.635824999999954
+      },
+      {
+        "text": "For student-produced response questions, solve each problem and write your answer next to or under the question in the test book as described below.",
+        "type": "text",
+        "left": 148.03970000000004,
+        "top": 581.643875,
+        "right": 478.3442,
+        "bottom": 603.1694,
+        "width": 330.30449999999996,
+        "height": 21.525525000000016
+      }
+    ],
+    "column_2": [
+      {
+        "text": "",
+        "type": "figure",
+        "left": 525.816650390625,
+        "top": 732.0259857177734,
+        "right": 549.2138671875,
+        "bottom": 764.2872581481934,
+        "width": 23.397216796875,
+        "height": 32.26127243041992
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.59637451171875,
+        "top": 23.09417724609375,
+        "right": 572.9722290039062,
+        "bottom": 46.243408203125,
+        "width": 91.3758544921875,
+        "height": 23.14923095703125
+      }
+    ]
+  },
+  "page_34": {
+    "column_1": [
+      {
+        "text": "1",
+        "type": "text",
+        "left": 42.3864,
+        "top": 664.7146086675378,
+        "right": 47.415312,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999998,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.57,
+        "top": 657.5933230769231,
+        "right": 297.80147500000004,
+        "bottom": 671.312,
+        "width": 262.23147500000005,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "The scatterplot shows the temperature, in degrees Fahrenheit C °F2 , and the distance above sea level, in feet, measured at 6 locations on Mount Jefferson. A line of best fit is also shown.",
+        "type": "text",
+        "left": 53.8809,
+        "top": 602.1030086675379,
+        "right": 269.41168680000004,
+        "bottom": 654.3274619000001,
+        "width": 215.53078680000004,
+        "height": 52.224453232462224
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 58.20463943481445,
+        "top": 429.0798034667969,
+        "right": 273.663330078125,
+        "bottom": 594.8258819580078,
+        "width": 215.45869064331055,
+        "height": 165.74607849121094
+      },
+      {
+        "text": "At a distance of 4,000 feet above sea level, what is the temperature, in °F, predicted by the line of best fit?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 393.9378086675378,
+        "right": 275.19493559999995,
+        "bottom": 416.8524619,
+        "width": 221.31403559999995,
+        "height": 22.91465323246217
+      },
+      {
+        "text": "2",
+        "type": "text",
+        "left": 42.38639999999999,
+        "top": 224.81180866753778,
+        "right": 47.415311999999986,
+        "bottom": 234.1934619,
+        "width": 5.028911999999998,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.52,
+        "top": 216.18165384615384,
+        "right": 297.80147500000004,
+        "bottom": 233.33000000000004,
+        "width": 262.28147500000006,
+        "height": 17.148346153846205
+      },
+      {
+        "text": "Rectangle P has an area of 72 square inches. If a rectangle with an area of 20 square inches is removed from rectangle P, what is the area, in square inches, of the resulting figure?",
+        "type": "text",
+        "left": 53.88089999999999,
+        "top": 170.9308086675378,
+        "right": 277.04934690000005,
+        "bottom": 216.23346189999995,
+        "width": 223.16844690000005,
+        "height": 45.30265323246215
+      }
+    ],
+    "column_2": [
+      {
+        "text": "3",
+        "type": "section_header",
+        "left": 320.7718,
+        "top": 664.7146086675378,
+        "right": 325.800712,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 313.97,
+        "top": 657.5933230769231,
+        "right": 576.2014750000002,
+        "bottom": 671.312,
+        "width": 262.23147500000016,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "p + 61 = 65 I  I",
+        "type": "formula",
+        "left": 414.55,
+        "top": 640.8485,
+        "right": 472.6829933,
+        "bottom": 654.7568,
+        "width": 58.13299330000001,
+        "height": 13.908300000000054
+      },
+      {
+        "text": "Which value is a solution to the given equation?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 626.3619086675378,
+        "right": 533.2865802999996,
+        "bottom": 635.7435619,
+        "width": 201.02028029999963,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "4",
+        "type": "text",
+        "left": 320.7718,
+        "top": 394.1248086675378,
+        "right": 325.800712,
+        "bottom": 403.5064619,
+        "width": 5.028911999999991,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 314.02,
+        "top": 389.10499230769227,
+        "right": 576.2014750000002,
+        "bottom": 399.394,
+        "width": 262.1814750000002,
+        "height": 10.289007692307734
+      },
+      {
+        "text": "Lorenzo purchased a box of cereal and some strawberries at the grocery store. Lorenzo paid $2 for the box of cereal and $1.90 per pound for the strawberries. If Lorenzo paid a total of $9.60 for the box of cereal and the strawberries, which of the following equations can be used to find p , the number of pounds of strawberries Lorenzo purchased? (Assume there is no sales tax.)",
+        "type": "text",
+        "left": 332.2663,
+        "top": 292.34980866753784,
+        "right": 554.1251343999994,
+        "bottom": 385.5464619,
+        "width": 221.8588343999994,
+        "height": 93.19665323246215
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.43182373046875,
+        "top": 23.01739501953125,
+        "right": 555.0206909179688,
+        "bottom": 46.4945068359375,
+        "width": 91.5888671875,
+        "height": 23.47711181640625
+      }
+    ]
+  },
+  "page_35": {
+    "column_1": [
+      {
+        "text": "5",
+        "type": "text",
+        "left": 60.3467,
+        "top": 664.7146086675378,
+        "right": 65.375612,
+        "bottom": 674.0962619000001,
+        "width": 5.028912000000005,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- ---------",
+        "type": "text",
+        "left": 53.57,
+        "top": 657.113323076923,
+        "right": 297.1901885999999,
+        "bottom": 670.832,
+        "width": 243.6201885999999,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "The bar graph summarizes the charge, in kilowatt-hours (kWh), a battery received each day for 15 days.",
+        "type": "text",
+        "left": 71.84049999999999,
+        "top": 621.8121086675378,
+        "right": 281.7870991000001,
+        "bottom": 656.1370619,
+        "width": 209.9465991000001,
+        "height": 34.324953232462235
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 84.43595123291016,
+        "top": 472.9820251464844,
+        "right": 282.6506652832031,
+        "bottom": 614.6322631835938,
+        "width": 198.21471405029297,
+        "height": 141.65023803710938
+      },
+      {
+        "text": "For how many of these 15 days did the battery receive a charge of 0 kWh?",
+        "type": "text",
+        "left": 71.8412,
+        "top": 439.71180866753787,
+        "right": 265.2552509000002,
+        "bottom": 461.5654619,
+        "width": 193.41405090000018,
+        "height": 21.853653232462136
+      },
+      {
+        "text": "- ---------",
+        "type": "text",
+        "left": 53.67,
+        "top": 266.76666153846145,
+        "right": 297.1901885999999,
+        "bottom": 273.626,
+        "width": 243.52018859999987,
+        "height": 6.8593384615385276
+      },
+      {
+        "text": "6",
+        "type": "text",
+        "left": 60.346700000000006,
+        "top": 270.5858086675378,
+        "right": 65.375612,
+        "bottom": 279.9674619,
+        "width": 5.028911999999998,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "A line in the xy -plane has a slope of 9 and passes through the point C 8,q$2 . The equation y px r = + defines the line, where p and r are constants. What is the value of p ?",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 209.47080866753777,
+        "right": 287.4096544,
+        "bottom": 260.1984619,
+        "width": 215.56845440000004,
+        "height": 50.72765323246222
+      }
+    ],
+    "column_2": [
+      {
+        "text": "7",
+        "type": "text",
+        "left": 338.7318,
+        "top": 664.7146086675378,
+        "right": 343.760712,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- ---------",
+        "type": "text",
+        "left": 331.97,
+        "top": 657.113323076923,
+        "right": 575.3483221999998,
+        "bottom": 670.832,
+        "width": 243.37832219999973,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "What is an x -coordinate of an x -intercept of the graph of y x x x = 3( - 14)( + 5)( + 4) in the xy -plane?",
+        "type": "text",
+        "left": 350.22630000000004,
+        "top": 631.4132086675378,
+        "right": 573.6793299,
+        "bottom": 654.7016619000001,
+        "width": 223.45302989999993,
+        "height": 23.288453232462302
+      },
+      {
+        "text": "8",
+        "type": "text",
+        "left": 338.73179999999996,
+        "top": 529.1388086675378,
+        "right": 343.76071199999996,
+        "bottom": 538.5204619,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- ---",
+        "type": "text",
+        "left": 332.04,
+        "top": 522.84175,
+        "right": 426.8581714,
+        "bottom": 535.4344,
+        "width": 94.81817139999998,
+        "height": 12.592649999999935
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 354.72808837890625,
+        "top": 353.8225402832031,
+        "right": 569.7401123046875,
+        "bottom": 521.8252258300781,
+        "width": 215.01202392578125,
+        "height": 168.002685546875
+      },
+      {
+        "text": "The graph shown gives the estimated value, in dollars, of a tablet as a function of the number of months since it was purchased. What is the best interpretation of the y -intercept of the graph in this context?",
+        "type": "text",
+        "left": 350.2262999999999,
+        "top": 285.1778086675379,
+        "right": 566.8141948999996,
+        "bottom": 342.4544619,
+        "width": 216.5878948999997,
+        "height": 57.27665323246214
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.8121337890625,
+        "top": 23.202392578125,
+        "right": 573.000244140625,
+        "bottom": 46.13812255859375,
+        "width": 91.1881103515625,
+        "height": 22.93572998046875
+      }
+    ]
+  },
+  "page_36": {
+    "column_1": [
+      {
+        "text": "9",
+        "type": "text",
+        "left": 42.3864,
+        "top": 664.7146086675378,
+        "right": 47.415312,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999998,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.57,
+        "top": 657.5933230769231,
+        "right": 297.80147500000004,
+        "bottom": 671.312,
+        "width": 262.23147500000005,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "Triangles EFG and JKL are congruent, where E , F , and G correspond to J , K , and L , respectively. The measure of angle E is 45° and the measure of angle F is 20° . What is the measure of angle J ?",
+        "type": "text",
+        "left": 53.880900000000004,
+        "top": 607.3414086675378,
+        "right": 266.55712940000006,
+        "bottom": 655.2629619,
+        "width": 212.67622940000007,
+        "height": 47.9215532324622
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.67,
+        "top": 433.0766615384615,
+        "right": 297.80147500000004,
+        "bottom": 439.936,
+        "width": 262.131475,
+        "height": 6.859338461538471
+      },
+      {
+        "text": "10",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 436.7188086675378,
+        "right": 49.929924,
+        "bottom": 446.10046189999997,
+        "width": 10.057823999999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "The function f is defined by f x x = 1 2 + 6 ( ) ( ) . What",
+        "type": "text",
+        "left": 53.880900000000004,
+        "top": 404.92090310000003,
+        "right": 273.8281376,
+        "bottom": 427.5069031,
+        "width": 219.9472376,
+        "height": 22.585999999999956
+      },
+      {
+        "text": "is the value of f 4 ( ) ?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 385.4796958,
+        "right": 141.0623451,
+        "bottom": 396.0006958,
+        "width": 87.18144509999999,
+        "height": 10.521000000000015
+      }
+    ],
+    "column_2": [
+      {
+        "text": "- -----",
+        "type": "text",
+        "left": 314.06,
+        "top": 659.7434999999999,
+        "right": 459.4768865,
+        "bottom": 669.8928,
+        "width": 145.41688649999998,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "11",
+        "type": "section_header",
+        "left": 318.25750000000005,
+        "top": 664.7146086675377,
+        "right": 328.31532400000003,
+        "bottom": 674.0962619,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 363.9731750488281,
+        "top": 487.5130920410156,
+        "right": 529.82861328125,
+        "bottom": 657.5012054443359,
+        "width": 165.85543823242188,
+        "height": 169.9881134033203
+      },
+      {
+        "text": "The graph of a system of an absolute value function and a linear function is shown. What is the solution x y ( , ) to this system of two equations?",
+        "type": "text",
+        "left": 331.5662964,
+        "top": 438.40180866753786,
+        "right": 548.8342998999996,
+        "bottom": 474.5994619,
+        "width": 217.26800349999957,
+        "height": 36.19765323246213
+      },
+      {
+        "text": "A) C0, 82",
+        "type": "formula",
+        "left": 332.2663,
+        "top": 410.3388086675379,
+        "right": 378.4365859,
+        "bottom": 419.7550129,
+        "width": 46.17028590000001,
+        "height": 9.416204232462121
+      },
+      {
+        "text": "B) 7 2 , 9 2          ",
+        "type": "formula",
+        "left": 332.2663,
+        "top": 366.293512,
+        "right": 378.3170134,
+        "bottom": 391.393512,
+        "width": 46.05071340000001,
+        "height": 25.099999999999966
+      },
+      {
+        "text": "C) -7 2 , 9 2          ",
+        "type": "formula",
+        "left": 332.2663,
+        "top": 329.5614868,
+        "right": 384.3157927,
+        "bottom": 354.6614868,
+        "width": 52.04949269999997,
+        "height": 25.099999999999966
+      },
+      {
+        "text": "D) Cq3, 42",
+        "type": "formula",
+        "left": 332.2663,
+        "top": 300.14480866753786,
+        "right": 384.2989918,
+        "bottom": 309.5610127,
+        "width": 52.03269180000001,
+        "height": 9.416204032462133
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.6370544433594,
+        "top": 22.95794677734375,
+        "right": 555.0335083007812,
+        "bottom": 46.67181396484375,
+        "width": 91.39645385742188,
+        "height": 23.7138671875
+      }
+    ]
+  },
+  "page_37": {
+    "column_1": [
+      {
+        "text": "- -------",
+        "type": "text",
+        "left": 53.66,
+        "top": 659.7434999999999,
+        "right": 297.1552248,
+        "bottom": 669.8928,
+        "width": 243.4952248,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "12",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "y x = 6 + 3",
+        "type": "formula",
+        "left": 161.7439056,
+        "top": 645.3597607231086,
+        "right": 205.8239031,
+        "bottom": 654.7620991,
+        "width": 44.07999749999999,
+        "height": 9.402338376891407
+      },
+      {
+        "text": "One of the two equations in a system of linear equations is given. The system has infinitely many solutions. Which equation could be the second equation in this system?",
+        "type": "text",
+        "left": 71.8412,
+        "top": 591.4391086675378,
+        "right": 282.2592596000002,
+        "bottom": 636.7413619,
+        "width": 210.41805960000016,
+        "height": 45.30225323246225
+      },
+      {
+        "text": "A) y x = 2 6 + 3 ( )",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 570.00942,
+        "right": 149.4465018,
+        "bottom": 580.53042,
+        "width": 77.60530179999999,
+        "height": 10.521000000000072
+      },
+      {
+        "text": "- -------",
+        "type": "text",
+        "left": 53.71,
+        "top": 412.08172762500004,
+        "right": 297.1552248,
+        "bottom": 417.15647160000003,
+        "width": 243.44522479999998,
+        "height": 5.07474397499999
+      },
+      {
+        "text": "13",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 414.57980866753786,
+        "right": 67.890224,
+        "bottom": 423.9614619,
+        "width": 10.057824000000004,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "If p 6 7 + 18 = 54 , what is the value of p 7 ?",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 380.75105712310864,
+        "right": 247.62564509999999,
+        "bottom": 404.9533955,
+        "width": 175.78444509999997,
+        "height": 24.202338376891362
+      },
+      {
+        "text": "- -------",
+        "type": "text",
+        "left": 53.69,
+        "top": 278.05999999999995,
+        "right": 297.1552248,
+        "bottom": 285.57800000000003,
+        "width": 243.4652248,
+        "height": 7.518000000000086
+      },
+      {
+        "text": "14",
+        "type": "text",
+        "left": 57.83240000000001,
+        "top": 281.93580866753786,
+        "right": 67.890224,
+        "bottom": 291.3174619,
+        "width": 10.057823999999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "y x x y = 9 + 12 + 7 = 20",
+        "type": "formula",
+        "left": 158.5519012,
+        "top": 248.31366702310868,
+        "right": 208.3419042,
+        "bottom": 272.01600540000004,
+        "width": 49.790002999999984,
+        "height": 23.702338376891362
+      },
+      {
+        "text": "The solution to the given system of equations is x y ( , ) . What is the value of y ?",
+        "type": "text",
+        "left": 71.14120179999999,
+        "top": 214.89580866753784,
+        "right": 271.1013611000001,
+        "bottom": 237.68546190000006,
+        "width": 199.9601593000001,
+        "height": 22.78965323246223
+      }
+    ],
+    "column_2": [
+      {
+        "text": "- -------",
+        "type": "text",
+        "left": 332.06,
+        "top": 659.7434999999999,
+        "right": 575.313699,
+        "bottom": 669.8928,
+        "width": 243.25369900000004,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "15",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "A circle in the xy -plane has the equation x y k - 13 + -= 64 2 2 ( ) ( ) . Which of the following gives the center of the circle and its radius?",
+        "type": "text",
+        "left": 349.32628780000005,
+        "top": 609.5241086675378,
+        "right": 557.8913293999998,
+        "bottom": 651.7082619,
+        "width": 208.56504159999974,
+        "height": 42.18415323246222
+      },
+      {
+        "text": "- -------",
+        "type": "text",
+        "left": 332.09,
+        "top": 428.78,
+        "right": 575.313699,
+        "bottom": 436.298,
+        "width": 243.22369900000007,
+        "height": 7.518000000000029
+      },
+      {
+        "text": "16",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 432.66480866753784,
+        "right": 346.27532399999996,
+        "bottom": 442.0464619,
+        "width": 10.057823999999982,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "The function f is defined by f x x x = - 4 ( ) . What value of a satisfies f f a 5 -= -15 ( ) ( ) ? 1 I",
+        "type": "text",
+        "left": 350.2263,
+        "top": 397.8276877,
+        "right": 565.1845376,
+        "bottom": 422.7536865,
+        "width": 214.95823760000002,
+        "height": 24.925998800000002
+      },
+      {
+        "text": "- -------",
+        "type": "text",
+        "left": 332.09,
+        "top": 223.33000000000004,
+        "right": 575.313699,
+        "bottom": 230.84799999999996,
+        "width": 243.22369900000007,
+        "height": 7.517999999999915
+      },
+      {
+        "text": "17",
+        "type": "text",
+        "left": 336.2175,
+        "top": 227.2438086675378,
+        "right": 346.27532399999996,
+        "bottom": 236.6254618999999,
+        "width": 10.057823999999982,
+        "height": 9.3816532324621
+      },
+      {
+        "text": "For the exponential function f , the value of f (0) is c , where c is a constant. Of the following equations that define the function f , which equation shows the value of c as the coefficient or the base?",
+        "type": "text",
+        "left": 350.2262999999999,
+        "top": 167.62580866753785,
+        "right": 574.4722587999997,
+        "bottom": 217.29099929999995,
+        "width": 224.2459587999998,
+        "height": 49.6651906324621
+      },
+      {
+        "text": "A) f x ( ) = 22(1.5) x +1",
+        "type": "formula",
+        "left": 350.2262999999999,
+        "top": 144.23980866753777,
+        "right": 443.53559094599996,
+        "bottom": 157.03923180000004,
+        "width": 93.30929094600003,
+        "height": 12.799423132462266
+      },
+      {
+        "text": "B) f x ( ) = 33(1.5) x C) f x ( ) = 49.5(1.5) x -1",
+        "type": "formula",
+        "left": 350.2263,
+        "top": 103.4548086675378,
+        "right": 451.035316246,
+        "bottom": 136.6468367,
+        "width": 100.809016246,
+        "height": 33.19202803246219
+      },
+      {
+        "text": "D) f x ( ) = 74.25(1.5) x -2",
+        "type": "formula",
+        "left": 350.2263,
+        "top": 83.06280866753787,
+        "right": 456.13449098399997,
+        "bottom": 95.86223740000003,
+        "width": 105.90819098399999,
+        "height": 12.799428732462161
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.78497314453125,
+        "top": 23.06671142578125,
+        "right": 573.0028076171875,
+        "bottom": 46.34716796875,
+        "width": 91.21783447265625,
+        "height": 23.28045654296875
+      }
+    ]
+  },
+  "page_38": {
+    "column_1": [
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.57,
+        "top": 657.5933230769231,
+        "right": 297.80147500000004,
+        "bottom": 671.312,
+        "width": 262.23147500000005,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "The function f t ( ) = 40,000(2) t 790 gives the number of bacteria in a population t minutes after an initial observation. How much time, in minutes, does it take for the number of bacteria in the population to double?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 536.8098086675378,
+        "right": 272.54397900000004,
+        "bottom": 655.543968,
+        "width": 218.66307900000004,
+        "height": 118.73415933246213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.72,
+        "top": 367.85833076923075,
+        "right": 297.80147500000004,
+        "bottom": 371.288,
+        "width": 262.08147500000007,
+        "height": 3.4296692307692638
+      },
+      {
+        "text": "n t w 12 -2 = -2",
+        "type": "formula",
+        "left": 136.59859310000002,
+        "top": 335.85106322310867,
+        "right": 194.9390861,
+        "bottom": 360.05340160000003,
+        "width": 58.34049299999998,
+        "height": 24.202338376891362
+      },
+      {
+        "text": "The given equation relates the variables n , t , and w , where n > 0 , t > 0 , and w t > . Which expression is equivalent to n ?",
+        "type": "text",
+        "left": 53.88089999999997,
+        "top": 294.28280866753784,
+        "right": 270.879095,
+        "bottom": 329.3584619,
+        "width": 216.99819500000004,
+        "height": 35.07565323246217
+      }
+    ],
+    "column_2": [
+      {
+        "text": "20",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 313.97,
+        "top": 657.5933230769231,
+        "right": 576.2014750000002,
+        "bottom": 671.312,
+        "width": 262.23147500000016,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "During a study, the temperature, in degrees Celsius C °C2 , of the air in a chamber was recorded to the nearest integer at certain times. The scatterplot shows the recorded temperature y , in °C, of the air in the chamber x minutes after the start of the study.",
+        "type": "text",
+        "left": 332.2663,
+        "top": 587.822008667538,
+        "right": 556.7167130999999,
+        "bottom": 654.3274619000001,
+        "width": 224.45041309999988,
+        "height": 66.50545323246217
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 336.37139892578125,
+        "top": 415.6470642089844,
+        "right": 551.6476440429688,
+        "bottom": 580.3702239990234,
+        "width": 215.2762451171875,
+        "height": 164.72315979003906
+      },
+      {
+        "text": "What was the average rate of change, in °C per minute, of the recorded temperature of the air in the chamber from x = 5 to x = 7 ?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 366.65800902310866,
+        "right": 552.1135695999996,
+        "bottom": 402.7584619,
+        "width": 219.84726959999955,
+        "height": 36.100452876891325
+      },
+      {
+        "text": "21",
+        "type": "text",
+        "left": 318.25750000000005,
+        "top": 264.4118086675378,
+        "right": 328.31532400000003,
+        "bottom": 273.7934619,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 313.97,
+        "top": 257.27332307692313,
+        "right": 576.2014750000002,
+        "bottom": 270.99199999999996,
+        "width": 262.23147500000016,
+        "height": 13.718676923076828
+      },
+      {
+        "text": "In August, a car dealer completed 15 more than 3 times the number of sales the car dealer completed in September. In August and September, the car dealer completed 363 sales. How many sales did the car dealer complete in September?",
+        "type": "text",
+        "left": 332.26630000000006,
+        "top": 198.55680866753778,
+        "right": 552.0611850999996,
+        "bottom": 255.83346189999997,
+        "width": 219.7948850999996,
+        "height": 57.276653232462195
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.6722106933594,
+        "top": 23.11810302734375,
+        "right": 555.04736328125,
+        "bottom": 46.435546875,
+        "width": 91.37515258789062,
+        "height": 23.31744384765625
+      }
+    ]
+  },
+  "page_39": {
+    "column_1": [
+      {
+        "text": "22",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 664.7146086675378,
+        "right": 67.890224,
+        "bottom": 674.0962619000001,
+        "width": 10.057824000000004,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Points Q and R lie on a circle with center P . The radius of this circle is 9 inches. Triangle PQR has a perimeter of 31 inches. What is the length, in inches, of QR ?",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 597.3386426231086,
+        "right": 292.36946809999995,
+        "bottom": 652.7684619,
+        "width": 220.52826809999996,
+        "height": 55.42981927689141
+      },
+      {
+        "text": "23",
+        "type": "section_header",
+        "left": 57.83240000000001,
+        "top": 418.5088086675378,
+        "right": 67.890224,
+        "bottom": 427.89046189999993,
+        "width": 10.057823999999997,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "In a set of four consecutive odd integers, where the integers are ordered from least to greatest, the first integer is represented by x . The product of 12 and the fourth odd integer is at most 26 less than the sum of the first and third odd integers. Which inequality represents this situation?",
+        "type": "text",
+        "left": 71.84120000000001,
+        "top": 340.6843086675378,
+        "right": 294.38103290000004,
+        "bottom": 409.93046189999995,
+        "width": 222.53983290000002,
+        "height": 69.24615323246218
+      }
+    ],
+    "column_2": [
+      {
+        "text": "24",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "",
+        "type": "table",
+        "left": 421.68603515625,
+        "top": 602.5971832275391,
+        "right": 485.3292541503906,
+        "bottom": 656.9243011474609,
+        "width": 63.643218994140625,
+        "height": 54.327117919921875
+      },
+      {
+        "text": "The table shows three values of x and their corresponding values of y , where s is a constant. There is a linear relationship between x and y . Which of the following equations represents this relationship?",
+        "type": "text",
+        "left": 350.2262999999999,
+        "top": 531.1348086675378,
+        "right": 554.0648663999996,
+        "bottom": 588.4106619,
+        "width": 203.83856639999965,
+        "height": 57.27585323246228
+      },
+      {
+        "text": "s",
+        "type": "text",
+        "left": 424.7955919,
+        "top": 510.78166622310863,
+        "right": 430.0455919,
+        "bottom": 520.1840046,
+        "width": 5.25,
+        "height": 9.40233837689135
+      },
+      {
+        "text": "25",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 358.2668086675378,
+        "right": 346.27532399999996,
+        "bottom": 367.6484619,
+        "width": 10.057823999999982,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Which of the following expressions is equivalent to C s i n 2x°2 C cos66°2+ C cos2x° 2 C si n 6 6 ° 2 ?",
+        "type": "text",
+        "left": 350.2263,
+        "top": 324.71580866753783,
+        "right": 553.4467292999998,
+        "bottom": 347.87946189999997,
+        "width": 203.2204292999998,
+        "height": 23.16365323246214
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.76373291015625,
+        "top": 23.22784423828125,
+        "right": 572.9630126953125,
+        "bottom": 46.14971923828125,
+        "width": 91.19927978515625,
+        "height": 22.921875
+      }
+    ]
+  },
+  "page_40": {
+    "column_1": [
+      {
+        "text": "26",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The cost of renting a carpet cleaner is $52 for the first day and $26 for each additional day. Which of the following functions gives the cost C d ( ) , in dollars, of renting the carpet cleaner for d days, where d is a positive integer?",
+        "type": "text",
+        "left": 53.88089999999997,
+        "top": 589.8176086675378,
+        "right": 277.53128430000004,
+        "bottom": 654.3274619000001,
+        "width": 223.65038430000007,
+        "height": 64.50985323246232
+      }
+    ],
+    "column_2": [
+      {
+        "text": "If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
+        "type": "text",
+        "left": 50.33960000000002,
+        "top": 86.00230886666668,
+        "right": 542.4620388068997,
+        "bottom": 118.5105734,
+        "width": 492.1224388068997,
+        "height": 32.50826453333332
+      },
+      {
+        "text": "27",
+        "type": "text",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "f x x x = - 2 + 15 ( ) ( )( )",
+        "type": "formula",
+        "left": 398.124115,
+        "top": 644.2827963999999,
+        "right": 493.0086125,
+        "bottom": 654.8037964,
+        "width": 94.88449750000001,
+        "height": 10.521000000000072
+      },
+      {
+        "text": "The function f is defined by the given equation. For what value of x does f x ( ) reach its minimum?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 611.5197086675378,
+        "right": 549.4188709999997,
+        "bottom": 634.3092619,
+        "width": 217.15257099999974,
+        "height": 22.789553232462254
+      },
+      {
+        "text": "STOP",
+        "type": "section_header",
+        "left": 268.1206,
+        "top": 127.16208486666665,
+        "right": 324.5653754731,
+        "bottom": 148.68254539999998,
+        "width": 56.44477547309998,
+        "height": 21.520460533333335
+      }
+    ]
+  },
+  "page_41": {
+    "column_1": [
+      {
+        "text": "No Test Material On This Page",
+        "type": "text",
+        "left": 197.1499,
+        "top": 390.8429192666666,
+        "right": 431.49323627560005,
+        "bottom": 406.9832422,
+        "width": 234.34333627560005,
+        "height": 16.14032293333338
+      }
+    ]
+  },
+  "page_42": {
+    "column_1": [
+      {
+        "text": "Math",
+        "type": "section_header",
+        "left": 126.74,
+        "top": 650.5258393939393,
+        "right": 188.35037999999997,
+        "bottom": 671.9836,
+        "width": 61.61037999999998,
+        "height": 21.457760606060674
+      },
+      {
+        "text": "27 QUESTIONS",
+        "type": "section_header",
+        "left": 126.62,
+        "top": 632.7622696969697,
+        "right": 239.63147080000007,
+        "bottom": 645.0932,
+        "width": 113.01147080000007,
+        "height": 12.3309303030303
+      },
+      {
+        "text": "The questions in this section address a number of important math skills. Use of  a calculator is permitted for all questions.",
+        "type": "text",
+        "left": 125.94,
+        "top": 557.4362500000001,
+        "right": 426.3099999999999,
+        "bottom": 579.0939999999999,
+        "width": 300.3699999999999,
+        "height": 21.65774999999985
+      },
+      {
+        "text": ",a-nH",
+        "type": "section_header",
+        "left": 125.75,
+        "top": 530.3767060606061,
+        "right": 165.08054909999998,
+        "bottom": 549.6984,
+        "width": 39.330549099999985,
+        "height": 19.321693939393867
+      },
+      {
+        "text": "Unless otherwise indicated:",
+        "type": "text",
+        "left": 126.51,
+        "top": 519.50625,
+        "right": 242.69100000000006,
+        "bottom": 527.9639999999999,
+        "width": 116.18100000000005,
+        "height": 8.457749999999919
+      },
+      {
+        "text": "li04ii1Ut31",
+        "type": "section_header",
+        "left": 125.74,
+        "top": 411.7794272727273,
+        "right": 185.4699560000001,
+        "bottom": 426.6348,
+        "width": 59.729956000000115,
+        "height": 14.855372727272709
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 129.045166015625,
+        "top": 201.94500732421875,
+        "right": 555.210205078125,
+        "bottom": 384.4686279296875,
+        "width": 426.1650390625,
+        "height": 182.52362060546875
+      },
+      {
+        "text": "The number of degrees of  arc in a circle is 360.",
+        "type": "text",
+        "left": 125.22,
+        "top": 180.14625,
+        "right": 318.7192000000001,
+        "bottom": 188.60400000000004,
+        "width": 193.49920000000012,
+        "height": 8.457750000000033
+      },
+      {
+        "text": "The number of radians of  arc in a circle is 2n.",
+        "type": "text",
+        "left": 125.22099999999998,
+        "top": 163.94486973947892,
+        "right": 310.99771999999996,
+        "bottom": 172.67719999999997,
+        "width": 185.77671999999998,
+        "height": 8.732330260521053
+      },
+      {
+        "text": "The sum of  the measures in degrees of  the angles of  a triangle is 180.",
+        "type": "text",
+        "left": 125.22,
+        "top": 148.22625000000005,
+        "right": 412.3423932000001,
+        "bottom": 156.68399999999997,
+        "width": 287.12239320000015,
+        "height": 8.457749999999919
+      }
+    ],
+    "column_2": [
+      {
+        "text": "'~",
+        "type": "text",
+        "left": 499.1,
+        "top": 338.77561442307695,
+        "right": 573.8042849000002,
+        "bottom": 352.923,
+        "width": 74.70428490000018,
+        "height": 14.147385576923057
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.5228271484375,
+        "top": 22.92279052734375,
+        "right": 554.965576171875,
+        "bottom": 46.7109375,
+        "width": 91.4427490234375,
+        "height": 23.78814697265625
+      }
+    ]
+  },
+  "page_43": {
+    "column_1": [
+      {
+        "text": "For multiple-choice questions, solve each problem, choose the correct answer from the choices provided, and then circle your answer in this book. Circle only one answer for each question. If you change your mind, completely erase the circle. You will not get credit for questions with more than one answer circled, or for questions with no answers circled.",
+        "type": "text",
+        "left": 147.95050000000003,
+        "top": 613.559775,
+        "right": 475.4504,
+        "bottom": 674.1955999999999,
+        "width": 327.49989999999997,
+        "height": 60.635824999999954
+      },
+      {
+        "text": "For student-produced response questions, solve each problem and write your answer next to or under the question in the test book as described below.",
+        "type": "text",
+        "left": 148.03970000000004,
+        "top": 581.643875,
+        "right": 478.3442,
+        "bottom": 603.1694,
+        "width": 330.30449999999996,
+        "height": 21.525525000000016
+      }
+    ],
+    "column_2": [
+      {
+        "text": "",
+        "type": "figure",
+        "left": 525.8377685546875,
+        "top": 732.0070037841797,
+        "right": 549.1884155273438,
+        "bottom": 764.2718181610107,
+        "width": 23.35064697265625,
+        "height": 32.264814376831055
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.626708984375,
+        "top": 23.08514404296875,
+        "right": 573.0418090820312,
+        "bottom": 46.00164794921875,
+        "width": 91.41510009765625,
+        "height": 22.91650390625
+      }
+    ]
+  },
+  "page_44": {
+    "column_1": [
+      {
+        "text": "1",
+        "type": "text",
+        "left": 42.3864,
+        "top": 664.7146086675378,
+        "right": 47.415312,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999998,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.57,
+        "top": 657.5933230769231,
+        "right": 297.80147500000004,
+        "bottom": 671.312,
+        "width": 262.23147500000005,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "A total of 165 people contributed to a charity event as either a donor or a volunteer. 130 people contributed as a donor. How many people contributed as a volunteer?",
+        "type": "text",
+        "left": 53.880900000000004,
+        "top": 610.8337086675378,
+        "right": 278.34848250000016,
+        "bottom": 656.1359619000001,
+        "width": 224.46758250000016,
+        "height": 45.30225323246225
+      },
+      {
+        "text": "2",
+        "type": "text",
+        "left": 42.386400000000016,
+        "top": 443.70280866753797,
+        "right": 47.415312000000014,
+        "bottom": 453.0844619000001,
+        "width": 5.028911999999998,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 35.52,
+        "top": 435.05165384615384,
+        "right": 297.80147500000004,
+        "bottom": 452.2,
+        "width": 262.28147500000006,
+        "height": 17.14834615384615
+      },
+      {
+        "text": "There are 250 trees in a park. Of these trees, 6k are birch trees. How many birch trees are in the park?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 412.3968086675378,
+        "right": 269.9545715,
+        "bottom": 434.44333079999996,
+        "width": 216.0736715,
+        "height": 22.046522132462144
+      }
+    ],
+    "column_2": [
+      {
+        "text": "- ----",
+        "type": "text",
+        "left": 314.06,
+        "top": 659.7434999999999,
+        "right": 423.89636840000003,
+        "bottom": 669.8928,
+        "width": 109.83636840000003,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "3",
+        "type": "text",
+        "left": 320.7718,
+        "top": 664.7146086675378,
+        "right": 325.800712,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 360.97564697265625,
+        "top": 488.9635314941406,
+        "right": 527.989501953125,
+        "bottom": 657.5318908691406,
+        "width": 167.01385498046875,
+        "height": 168.568359375
+      },
+      {
+        "text": "f",
+        "type": "text",
+        "left": 430.35,
+        "top": 485.4266128846154,
+        "right": 441.36870000000005,
+        "bottom": 501.6318,
+        "width": 11.018700000000024,
+        "height": 16.205187115384604
+      },
+      {
+        "text": "The graph of the quadratic function y f x = ( ) is shown. What is the vertex of the graph?",
+        "type": "text",
+        "left": 332.26629999999994,
+        "top": 449.8148086675378,
+        "right": 531.9388314999999,
+        "bottom": 474.7017151,
+        "width": 199.67253149999993,
+        "height": 24.886906432462183
+      },
+      {
+        "text": "4 - --------~",
+        "type": "text",
+        "left": 313.92,
+        "top": 264.17165384615384,
+        "right": 576.2014750000002,
+        "bottom": 282.3364619,
+        "width": 262.28147500000017,
+        "height": 18.164808053846173
+      },
+      {
+        "text": "The number of raccoons in a 131-square-mile area is estimated to be 2,358. What is the estimated population density, in raccoons per square mile, of this area?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 219.0748086675378,
+        "right": 553.4650896999997,
+        "bottom": 264.3764619000001,
+        "width": 221.19878969999968,
+        "height": 45.301653232462286
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.67535400390625,
+        "top": 22.89581298828125,
+        "right": 555.0405883789062,
+        "bottom": 46.61639404296875,
+        "width": 91.365234375,
+        "height": 23.7205810546875
+      }
+    ]
+  },
+  "page_45": {
+    "column_1": [
+      {
+        "text": "5",
+        "type": "text",
+        "left": 60.3467,
+        "top": 664.7146086675378,
+        "right": 65.375612,
+        "bottom": 674.0962619000001,
+        "width": 5.028912000000005,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "xIIW x9W 26",
+        "type": "formula",
+        "left": 160.54390560000002,
+        "top": 646.0553052231087,
+        "right": 218.6343996,
+        "bottom": 655.4576436,
+        "width": 58.09049399999998,
+        "height": 9.402338376891294
+      },
+      {
+        "text": "A data set of three numbers is shown. If a number from this data set is selected at random, what is the probability of selecting a positive number?",
+        "type": "text",
+        "left": 71.8412,
+        "top": 604.0986086675377,
+        "right": 285.38137580000006,
+        "bottom": 637.4273619,
+        "width": 213.54017580000004,
+        "height": 33.328753232462304
+      },
+      {
+        "text": "6",
+        "type": "text",
+        "left": 60.3467,
+        "top": 371.86180866753784,
+        "right": 65.375612,
+        "bottom": 381.2434619,
+        "width": 5.028912000000005,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 53.64,
+        "top": 365.89175,
+        "right": 322.767883,
+        "bottom": 378.4844,
+        "width": 269.127883,
+        "height": 12.592649999999992
+      },
+      {
+        "text": "f x x = 45 + 600 ( )",
+        "type": "formula",
+        "left": 148.1759033,
+        "top": 351.429708,
+        "right": 221.81589830000001,
+        "bottom": 361.950708,
+        "width": 73.63999500000003,
+        "height": 10.521000000000015
+      },
+      {
+        "text": "The function f gives the monthly fee f x ( ) , in dollars, a facility charges to keep x crates in storage. What is the monthly fee, in dollars, the facility charges to keep 50 crates in storage?",
+        "type": "text",
+        "left": 71.84119999999996,
+        "top": 287.85980866753783,
+        "right": 294.1521974,
+        "bottom": 341.5587097,
+        "width": 222.31099740000002,
+        "height": 53.698901032462174
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 53.65,
+        "top": 182.17491038461537,
+        "right": 321.15749719999997,
+        "bottom": 190.57760000000007,
+        "width": 267.5074972,
+        "height": 8.402689615384702
+      },
+      {
+        "text": "7",
+        "type": "text",
+        "left": 60.346699999999956,
+        "top": 186.0848086675378,
+        "right": 65.37561199999996,
+        "bottom": 195.4664619,
+        "width": 5.028912000000005,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The function f is defined by f x x = 5 1 4 -+ 11 4 2 ( )           .",
+        "type": "text",
+        "left": 71.84119999999996,
+        "top": 148.71109920000004,
+        "right": 291.8986332,
+        "bottom": 177.04269920000002,
+        "width": 220.05743320000005,
+        "height": 28.33159999999998
+      },
+      {
+        "text": "?",
+        "type": "formula",
+        "left": 183.9859,
+        "top": 124.28380866753787,
+        "right": 187.95664509999997,
+        "bottom": 133.66546189999997,
+        "width": 3.970745099999988,
+        "height": 9.3816532324621
+      },
+      {
+        "text": "What is the value of f 1 4          ",
+        "type": "text",
+        "left": 71.84120000000001,
+        "top": 116.96849980000002,
+        "right": 180.7884032,
+        "bottom": 142.06849979999993,
+        "width": 108.94720319999999,
+        "height": 25.09999999999991
+      }
+    ],
+    "column_2": [
+      {
+        "text": "- ------~ - ------~",
+        "type": "text",
+        "left": 53.66,
+        "top": 660.2334999999999,
+        "right": 600.898564,
+        "bottom": 670.3828,
+        "width": 547.238564,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "8",
+        "type": "text",
+        "left": 338.7318,
+        "top": 664.7146086675378,
+        "right": 343.760712,
+        "bottom": 674.0962619000001,
+        "width": 5.028911999999991,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "If x 8 = 6 , what is the value of x 72 ?",
+        "type": "text",
+        "left": 350.22630000000004,
+        "top": 645.8531079231086,
+        "right": 499.0707451,
+        "bottom": 655.2629619,
+        "width": 148.84444509999997,
+        "height": 9.40985397689144
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 332.05,
+        "top": 474.9649103846154,
+        "right": 599.2900543999999,
+        "bottom": 483.3676,
+        "width": 267.2400543999999,
+        "height": 8.402689615384588
+      },
+      {
+        "text": "9",
+        "type": "text",
+        "left": 338.7318,
+        "top": 478.75080866753774,
+        "right": 343.760712,
+        "bottom": 488.1324618999999,
+        "width": 5.028911999999991,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "Which expression is equivalent to x x x 23 + 2 + 9 3 2 ?",
+        "type": "text",
+        "left": 350.22630000000004,
+        "top": 456.89564942310864,
+        "right": 571.4687451000001,
+        "bottom": 469.6556258,
+        "width": 221.24244510000005,
+        "height": 12.759976376891359
+      },
+      {
+        "text": "B) x x x 9 23 + 2 + 1 3 2 ( )",
+        "type": "formula",
+        "left": 350.2263,
+        "top": 413.1060996,
+        "right": 449.37700490000003,
+        "bottom": 426.35869959999997,
+        "width": 99.15070490000005,
+        "height": 13.252599999999973
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 332.06,
+        "top": 267.58349999999996,
+        "right": 600.898564,
+        "bottom": 277.7328,
+        "width": 268.83856399999996,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "10",
+        "type": "text",
+        "left": 336.2175,
+        "top": 272.08180866753787,
+        "right": 346.27532399999996,
+        "bottom": 281.46346189999997,
+        "width": 10.057823999999982,
+        "height": 9.3816532324621
+      },
+      {
+        "text": "Which expression is equivalent to x x x x 9 + 5 + 7 + 6 + 5 - 5 3 3 2 ( ) ( ) ?",
+        "type": "text",
+        "left": 349.32628780000005,
+        "top": 233.25310279999997,
+        "right": 495.2237451,
+        "bottom": 259.07546189999994,
+        "width": 145.89745729999993,
+        "height": 25.82235909999997
+      },
+      {
+        "text": "A) x x x 15 + 5 - 5 - 35 6 2",
+        "type": "formula",
+        "left": 350.2263,
+        "top": 210.4406628231087,
+        "right": 452.9715659,
+        "bottom": 223.20063920000007,
+        "width": 102.74526589999999,
+        "height": 12.759976376891359
+      },
+      {
+        "text": "B) x x 15 + 10 + 2 3 2",
+        "type": "formula",
+        "left": 350.2263,
+        "top": 190.60866162310867,
+        "right": 434.7025024,
+        "bottom": 203.36863800000003,
+        "width": 84.47620240000003,
+        "height": 12.759976376891359
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.6793212890625,
+        "top": 23.30218505859375,
+        "right": 573.0030517578125,
+        "bottom": 46.25213623046875,
+        "width": 91.32373046875,
+        "height": 22.949951171875
+      }
+    ]
+  },
+  "page_46": {
+    "column_1": [
+      {
+        "text": "11",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "At a state fair, attendees can win tokens that are worth a different number of points depending on the shape. One attendee won S square tokens and C circle tokens worth a total of 1,120 points. The equation S C 80 + 90 = 1,120 represents this situation. How many more points is a circle token worth than a square token?",
+        "type": "text",
+        "left": 53.88089999999998,
+        "top": 569.6748086675378,
+        "right": 276.3054870000001,
+        "bottom": 655.3876619,
+        "width": 222.4245870000001,
+        "height": 85.71285323246218
+      }
+    ],
+    "column_2": [
+      {
+        "text": "- --------~  - --------~",
+        "type": "text",
+        "left": 35.57,
+        "top": 657.5933230769231,
+        "right": 576.2014750000002,
+        "bottom": 671.312,
+        "width": 540.6314750000001,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "12",
+        "type": "section_header",
+        "left": 318.25750000000005,
+        "top": 664.714608667538,
+        "right": 328.31532400000003,
+        "bottom": 674.0962619000002,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "In the given scatterplot, a line of best fit for the data is shown.",
+        "type": "text",
+        "left": 332.26630000000006,
+        "top": 634.281908667538,
+        "right": 548.4990390999997,
+        "bottom": 656.1359619000002,
+        "width": 216.2327390999996,
+        "height": 21.854053232462206
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 358.1737060546875,
+        "top": 456.117919921875,
+        "right": 530.404052734375,
+        "bottom": 626.3361358642578,
+        "width": 172.2303466796875,
+        "height": 170.2182159423828
+      },
+      {
+        "text": "Which of the following is closest to the slope of the line of best fit shown?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 423.2478086675378,
+        "right": 545.7121836999995,
+        "bottom": 445.1024619,
+        "width": 213.4458836999995,
+        "height": 21.85465323246217
+      },
+      {
+        "text": "- --------~",
+        "type": "text",
+        "left": 314.12,
+        "top": 189.90556161211543,
+        "right": 576.2014750000002,
+        "bottom": 192.82086619999995,
+        "width": 262.0814750000002,
+        "height": 2.9153045878845205
+      },
+      {
+        "text": "13",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 191.26080866753784,
+        "right": 328.315324,
+        "bottom": 200.64246189999994,
+        "width": 10.057823999999982,
+        "height": 9.3816532324621
+      },
+      {
+        "text": "A circle has a radius of 2.1 inches. The area of the circle is bp square inches, where b is a constant. What is the value of b ?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 142.74280866753782,
+        "right": 539.0803059999996,
+        "bottom": 180.81146190000004,
+        "width": 206.8140059999996,
+        "height": 38.068653232462225
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.47991943359375,
+        "top": 22.95953369140625,
+        "right": 555.1359252929688,
+        "bottom": 46.38555908203125,
+        "width": 91.656005859375,
+        "height": 23.426025390625
+      }
+    ]
+  },
+  "page_47": {
+    "column_1": [
+      {
+        "text": "In triangle X YZ , angle Y is a right angle, point P lies on XZ , and point Q lies on YZ such that PQ is parallel to X Y . If the measure of angle X ZY is 63 °, what is the measure, in degrees, of angle X PQ ?",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 599.8331494231087,
+        "right": 293.87006970000004,
+        "bottom": 653.7662619,
+        "width": 222.02886970000006,
+        "height": 53.933112476891324
+      },
+      {
+        "text": "15 ---",
+        "type": "text",
+        "left": 53.54,
+        "top": 486.63,
+        "right": 299.221148,
+        "bottom": 509.18399999999997,
+        "width": 245.68114800000004,
+        "height": 22.553999999999974
+      },
+      {
+        "text": "An investment account was opened with an initial value of T899. The value of the account doubled every 10 years. Which equation represents the value of the account M t ( ) , in dollars, t years after the account was opened?",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 419.56880866753784,
+        "right": 289.22639810000015,
+        "bottom": 486.5734619,
+        "width": 217.38519810000017,
+        "height": 67.00465323246215
+      },
+      {
+        "text": "A) M t = 890 1 2 t 10 ( )          ",
+        "type": "formula",
+        "left": 71.84119999999999,
+        "top": 373.21480710000003,
+        "right": 164.756784376,
+        "bottom": 410.0464071,
+        "width": 92.91558437600003,
+        "height": 36.83159999999998
+      },
+      {
+        "text": "B) M t = 890 1 10 t 2 ( )          ",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 325.4457947,
+        "right": 166.0576436,
+        "bottom": 362.2773947,
+        "width": 94.2164436,
+        "height": 36.83159999999998
+      },
+      {
+        "text": "C) M t = 890 2 t 10 ( ) ( )",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 284.95171120000003,
+        "right": 161.756479176,
+        "bottom": 306.60431120000004,
+        "width": 89.915279176,
+        "height": 21.652600000000007
+      },
+      {
+        "text": "D) M t = 890 10 t 2 ( ) ( )",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 237.18269869999995,
+        "right": 163.055637,
+        "bottom": 258.83529870000007,
+        "width": 91.21443699999999,
+        "height": 21.65260000000012
+      }
+    ],
+    "column_2": [
+      {
+        "text": "14 16 ------",
+        "type": "text",
+        "left": 53.56,
+        "top": 654.98175,
+        "right": 577.3748439999999,
+        "bottom": 675.0924,
+        "width": 523.814844,
+        "height": 20.110649999999964
+      },
+      {
+        "text": "y x x < < 22",
+        "type": "formula",
+        "left": 448.3109863,
+        "top": 632.6839916231087,
+        "right": 476.4249843,
+        "bottom": 656.28633,
+        "width": 28.11399799999998,
+        "height": 23.60233837689134
+      },
+      {
+        "text": "For which of the following tables are all the values of x and their corresponding values of y solutions to the given system of inequalities?",
+        "type": "text",
+        "left": 350.2262999999999,
+        "top": 592.4992086675379,
+        "right": 572.9124878999997,
+        "bottom": 625.8279619000001,
+        "width": 222.68618789999982,
+        "height": 33.32875323246219
+      },
+      {
+        "text": "",
+        "type": "table",
+        "left": 349.8182373046875,
+        "top": 522.3682861328125,
+        "right": 431.4579772949219,
+        "bottom": 576.5433654785156,
+        "width": 81.63973999023438,
+        "height": 54.175079345703125
+      },
+      {
+        "text": "",
+        "type": "table",
+        "left": 350.4754943847656,
+        "top": 457.42694091796875,
+        "right": 431.60986328125,
+        "bottom": 511.2148742675781,
+        "width": 81.13436889648438,
+        "height": 53.787933349609375
+      },
+      {
+        "text": "",
+        "type": "table",
+        "left": 350.3494567871094,
+        "top": 392.301025390625,
+        "right": 431.66790771484375,
+        "bottom": 446.7530822753906,
+        "width": 81.31845092773438,
+        "height": 54.452056884765625
+      },
+      {
+        "text": "",
+        "type": "table",
+        "left": 350.37744140625,
+        "top": 327.5573425292969,
+        "right": 431.83013916015625,
+        "bottom": 381.61328125,
+        "width": 81.45269775390625,
+        "height": 54.055938720703125
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.72772216796875,
+        "top": 23.2813720703125,
+        "right": 573.0308227539062,
+        "bottom": 46.2606201171875,
+        "width": 91.3031005859375,
+        "height": 22.979248046875
+      }
+    ]
+  },
+  "page_48": {
+    "column_1": [
+      {
+        "text": "17",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "Which expression is equivalent to h q h q 15 7 5 21 ,",
+        "type": "text",
+        "left": 53.880900000000004,
+        "top": 626.4015698231086,
+        "right": 226.3073332,
+        "bottom": 655.4615461999999,
+        "width": 172.4264332,
+        "height": 29.059976376891314
+      },
+      {
+        "text": "where h > 0 and q > 0 ?",
+        "type": "text",
+        "left": 53.8809,
+        "top": 602.7608227231086,
+        "right": 159.49634509999998,
+        "bottom": 612.2310933,
+        "width": 105.61544509999999,
+        "height": 9.47027057689138
+      },
+      {
+        "text": "A) h q 10 14",
+        "type": "formula",
+        "left": 53.8809,
+        "top": 555.0591616231086,
+        "right": 86.033998814,
+        "bottom": 583.7191379999999,
+        "width": 32.153098814,
+        "height": 28.659976376891336
+      },
+      {
+        "text": "B) h q 3 3",
+        "type": "formula",
+        "left": 53.8809,
+        "top": 514.7734570231087,
+        "right": 82.2660993,
+        "bottom": 543.4334334,
+        "width": 28.385199299999996,
+        "height": 28.659976376891336
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 35.66,
+        "top": 329.9835,
+        "right": 304.680568,
+        "bottom": 340.1328,
+        "width": 269.020568,
+        "height": 10.149299999999982
+      },
+      {
+        "text": "y x y x 3 = 4 + 17 -3 = 9 - 23",
+        "type": "formula",
+        "left": 135.90010379999998,
+        "top": 300.8226697231087,
+        "right": 196.4600988,
+        "bottom": 324.5250081,
+        "width": 60.559995000000015,
+        "height": 23.702338376891305
+      },
+      {
+        "text": "The solution to the given system of equations is x y , ( ) . What is the value of x 39 ?",
+        "type": "text",
+        "left": 52.9809013,
+        "top": 265.36971040000003,
+        "right": 253.14106110000014,
+        "bottom": 289.1964619,
+        "width": 200.16015980000014,
+        "height": 23.826751499999943
+      }
+    ],
+    "column_2": [
+      {
+        "text": "- ------~ - ------~",
+        "type": "text",
+        "left": 35.66,
+        "top": 660.2334999999999,
+        "right": 583.080568,
+        "bottom": 670.3828,
+        "width": 547.420568,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "19",
+        "type": "section_header",
+        "left": 318.2575,
+        "top": 664.7146086675378,
+        "right": 328.315324,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "h t t b = -16 2 + ( )",
+        "type": "formula",
+        "left": 408.19768680000004,
+        "top": 642.2871908999999,
+        "right": 480.1006893,
+        "bottom": 655.5397909,
+        "width": 71.90300249999996,
+        "height": 13.25260000000003
+      },
+      {
+        "text": "The function h estimates an object's height, in feet, above the ground t seconds after the object is dropped, where b is a constant. The function estimates that the object is 3,364 feet above the ground when it is dropped at t = 0 . Approximately how many seconds after being dropped does the function estimate the object will hit the ground?",
+        "type": "text",
+        "left": 332.26629999999994,
+        "top": 546.4138086675379,
+        "right": 546.9463665999998,
+        "bottom": 632.8748619,
+        "width": 214.68006659999986,
+        "height": 86.46105323246218
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 314.12,
+        "top": 378.0655616121154,
+        "right": 581.4748549000001,
+        "bottom": 380.98086620000004,
+        "width": 267.3548549000001,
+        "height": 2.915304587884634
+      },
+      {
+        "text": "20",
+        "type": "text",
+        "left": 318.2575,
+        "top": 379.2828086675379,
+        "right": 328.315324,
+        "bottom": 388.66446190000005,
+        "width": 10.057823999999982,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "x x 2 - 8 - 7 = 0 2",
+        "type": "formula",
+        "left": 409.6942993,
+        "top": 357.42766162310863,
+        "right": 477.5542873,
+        "bottom": 370.187638,
+        "width": 67.85998799999999,
+        "height": 12.759976376891359
+      },
+      {
+        "text": "One solution to the given equation can be written as",
+        "type": "text",
+        "left": 332.2663,
+        "top": 327.9588086675378,
+        "right": 551.1601716999996,
+        "bottom": 337.3404619,
+        "width": 218.89387169999964,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "k 8 4 , where k is a constant. What is the value",
+        "type": "formula",
+        "left": 333.0662964,
+        "top": 292.7456677231086,
+        "right": 535.6691453999998,
+        "bottom": 317.04800609999995,
+        "width": 202.60284899999982,
+        "height": 24.302338376891328
+      },
+      {
+        "text": "of k ?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 272.5808086675379,
+        "right": 356.2669451,
+        "bottom": 281.9624619,
+        "width": 24.000645099999986,
+        "height": 9.3816532324621
+      },
+      {
+        "text": "- ------~",
+        "type": "text",
+        "left": 314.06,
+        "top": 161.98350000000005,
+        "right": 583.080568,
+        "bottom": 172.13279999999997,
+        "width": 269.02056799999997,
+        "height": 10.149299999999926
+      },
+      {
+        "text": "21",
+        "type": "text",
+        "left": 318.2575,
+        "top": 166.6278086675378,
+        "right": 328.315324,
+        "bottom": 176.00946190000002,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "A line intersects two parallel lines, forming four acute angles and four obtuse angles. The measure of one of the acute angles is x 9 - 560 ° ( ) . The sum of the measures of one of the acute angles and three of the obtuse angles is x w -18 + ° ( ) . What is the value of w ?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 71.71280866753784,
+        "right": 550.7665376,
+        "bottom": 155.6164619,
+        "width": 218.5002376,
+        "height": 83.90365323246215
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 463.3509521484375,
+        "top": 23.14501953125,
+        "right": 555.0065307617188,
+        "bottom": 46.23736572265625,
+        "width": 91.65557861328125,
+        "height": 23.09234619140625
+      }
+    ]
+  },
+  "page_49": {
+    "column_1": [
+      {
+        "text": "- --",
+        "type": "text",
+        "left": 53.66,
+        "top": 659.7434999999999,
+        "right": 141.0127572,
+        "bottom": 669.8928,
+        "width": 87.35275720000001,
+        "height": 10.14930000000004
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 154.2787322998047,
+        "top": 547.1251220703125,
+        "right": 213.31338500976562,
+        "bottom": 657.0261993408203,
+        "width": 59.03465270996094,
+        "height": 109.90107727050781
+      },
+      {
+        "text": "For the linear function f , the table shows three values of x and their corresponding values of f x ( ) . If h x f x = - 13 ( ) ( ) , which equation defines h ?",
+        "type": "text",
+        "left": 71.44120179999999,
+        "top": 495.2367148,
+        "right": 294.2851501,
+        "bottom": 533.4694619,
+        "width": 222.84394830000002,
+        "height": 38.23274710000004
+      },
+      {
+        "text": "C) h x x = 5 + 9 ( )",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 437.0526938,
+        "right": 149.0461956,
+        "bottom": 447.5736938,
+        "width": 77.2049956,
+        "height": 10.521000000000015
+      },
+      {
+        "text": "23",
+        "type": "section_header",
+        "left": 57.8324,
+        "top": 318.4178086675378,
+        "right": 67.890224,
+        "bottom": 327.7994619,
+        "width": 10.057824000000004,
+        "height": 9.381653232462156
+      },
+      {
+        "text": "- --------",
+        "type": "text",
+        "left": 53.62,
+        "top": 312.7749923076923,
+        "right": 297.2938088,
+        "bottom": 323.064,
+        "width": 243.67380880000002,
+        "height": 10.289007692307734
+      },
+      {
+        "text": "The linear function g is defined by g x b x = - 15 ( ) , where b is a constant. If g c c + 7 = 4 ( ) , where c is a constant, which of the following expressions represents the value of b ?",
+        "type": "text",
+        "left": 71.84119999999999,
+        "top": 225.99680866753783,
+        "right": 286.9306332,
+        "bottom": 304.39071040000005,
+        "width": 215.0894332,
+        "height": 78.39390173246221
+      },
+      {
+        "text": "B) c 19 4 + 7",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 153.67805602310864,
+        "right": 122.71740510000001,
+        "bottom": 177.98039440000002,
+        "width": 50.87620510000001,
+        "height": 24.302338376891385
+      },
+      {
+        "text": "C) c 61 4 + 105",
+        "type": "formula",
+        "left": 71.8412,
+        "top": 120.50106162310863,
+        "right": 133.2361916,
+        "bottom": 144.8034,
+        "width": 61.39499160000001,
+        "height": 24.302338376891385
+      }
+    ],
+    "column_2": [
+      {
+        "text": "24",
+        "type": "section_header",
+        "left": 336.2175,
+        "top": 664.7146086675378,
+        "right": 346.27532399999996,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "- --------",
+        "type": "text",
+        "left": 331.97,
+        "top": 657.113323076923,
+        "right": 575.4517845999998,
+        "bottom": 670.832,
+        "width": 243.48178459999974,
+        "height": 13.718676923076941
+      },
+      {
+        "text": "In triangle X YZ , angle Z is a right angle and the",
+        "type": "text",
+        "left": 350.2263,
+        "top": 638.3978086675378,
+        "right": 552.3200984999999,
+        "bottom": 647.7794619,
+        "width": 202.09379849999988,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "length of YZ is 24 units. If X tan = 12 35 , what is the",
+        "type": "text",
+        "left": 350.2263,
+        "top": 606.0036816231086,
+        "right": 562.4692898999999,
+        "bottom": 630.20602,
+        "width": 212.24298989999994,
+        "height": 24.202338376891362
+      },
+      {
+        "text": "perimeter, in units, of triangle X YZ ?",
+        "type": "text",
+        "left": 350.22630000000004,
+        "top": 588.5917065231087,
+        "right": 506.6627451,
+        "bottom": 598.0144619,
+        "width": 156.43644509999996,
+        "height": 9.42275537689136
+      },
+      {
+        "text": "25 - --------",
+        "type": "text",
+        "left": 331.92,
+        "top": 407.4516538461539,
+        "right": 575.4517845999998,
+        "bottom": 426.33146189999997,
+        "width": 243.53178459999975,
+        "height": 18.87980805384609
+      },
+      {
+        "text": "x x y y + 14 + = 6 + 109 2 2",
+        "type": "formula",
+        "left": 408.0983887,
+        "top": 394.60127682310866,
+        "right": 515.1383811999999,
+        "bottom": 407.3612532,
+        "width": 107.03999249999993,
+        "height": 12.759976376891359
+      },
+      {
+        "text": "In the xy -plane, the graph of the given equation is a circle. What is the length of the circle's radius?",
+        "type": "text",
+        "left": 350.2263,
+        "top": 364.6278086675378,
+        "right": 565.6313625999998,
+        "bottom": 385.9824619,
+        "width": 215.40506259999978,
+        "height": 21.35465323246217
+      },
+      {
+        "text": "",
+        "type": "figure",
+        "left": 481.6300964355469,
+        "top": 23.2967529296875,
+        "right": 572.9404296875,
+        "bottom": 46.01593017578125,
+        "width": 91.31033325195312,
+        "height": 22.71917724609375
+      }
+    ]
+  },
+  "page_50": {
+    "column_1": [
+      {
+        "text": "26",
+        "type": "section_header",
+        "left": 39.8721,
+        "top": 664.7146086675378,
+        "right": 49.929924,
+        "bottom": 674.0962619000001,
+        "width": 10.057823999999997,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "The speed of a vehicle is increasing at a rate of 7.3 meters per second squared. What is this rate, in miles per minute squared , rounded to the nearest tenth? 7 U s eI mil e = I W 699 me te rs . 4",
+        "type": "text",
+        "left": 53.88089999999997,
+        "top": 603.5997086675378,
+        "right": 267.6515676000001,
+        "bottom": 654.3274619000001,
+        "width": 213.7706676000001,
+        "height": 50.727753232462305
+      }
+    ],
+    "column_2": [
+      {
+        "text": "If you finish before time is called, you may check your work on this module only. Do not turn to any other module in the test.",
+        "type": "text",
+        "left": 50.33960000000002,
+        "top": 87.43730886666663,
+        "right": 542.4620388068997,
+        "bottom": 119.94557340000006,
+        "width": 492.1224388068997,
+        "height": 32.50826453333343
+      },
+      {
+        "text": "27",
+        "type": "text",
+        "left": 318.25750000000005,
+        "top": 664.714608667538,
+        "right": 328.31532400000003,
+        "bottom": 674.0962619000002,
+        "width": 10.057823999999982,
+        "height": 9.381653232462213
+      },
+      {
+        "text": "y y x x k = -2.5 = + 8 + 2",
+        "type": "formula",
+        "left": 411.3942993,
+        "top": 627.1015698231087,
+        "right": 479.72029829999997,
+        "bottom": 654.1039082,
+        "width": 68.32599899999997,
+        "height": 27.002338376891316
+      },
+      {
+        "text": "In the given system of equations, k is a positive integer constant. The system has no real solutions. What is the least possible value of k ?",
+        "type": "text",
+        "left": 332.2663,
+        "top": 585.2028086675377,
+        "right": 543.4596501999995,
+        "bottom": 618.5315619,
+        "width": 211.1933501999995,
+        "height": 33.328753232462304
+      },
+      {
+        "text": "STOP",
+        "type": "section_header",
+        "left": 268.1206,
+        "top": 128.5970848666667,
+        "right": 324.5653754731,
+        "bottom": 150.11754540000004,
+        "width": 56.44477547309998,
+        "height": 21.520460533333335
+      }
+    ]
+  },
+  "page_51": {
+    "column_1": [
+      {
+        "text": "No Test Material On This Page NoTest Material On This Page NoTest Material On This Page NoTest Material On This Page NoTest Material On This Page",
+        "type": "text",
+        "left": 197.1499,
+        "top": 390.8429192666666,
+        "right": 431.49323627560005,
+        "bottom": 406.9832422,
+        "width": 234.34333627560005,
+        "height": 16.14032293333338
+      }
+    ]
+  },
+  "page_52": {},
+  "page_53": {},
+  "page_54": {},
+  "page_55": {},
+  "page_56": {
+    "column_1": [
+      {
+        "text": "The SAT.",
+        "type": "section_header",
+        "left": 58.9,
+        "top": 693.7218,
+        "right": 167.37240000000003,
+        "bottom": 714.6268,
+        "width": 108.47240000000002,
+        "height": 20.904999999999973
+      },
+      {
+        "text": "GENERAL DIRECTIONS",
+        "type": "section_header",
+        "left": 58.67,
+        "top": 660.4128,
+        "right": 173.87,
+        "bottom": 669.2927999999999,
+        "width": 115.2,
+        "height": 8.879999999999995
+      },
+      {
+        "text": "TIMING",
+        "type": "section_header",
+        "left": 58.5,
+        "top": 593.2228,
+        "right": 98.08800059999994,
+        "bottom": 602.1028,
+        "width": 39.588000599999944,
+        "height": 8.879999999999995
+      },
+      {
+        "text": "USING YOUR TEST BOOK",
+        "type": "section_header",
+        "left": 58.84,
+        "top": 382.9728,
+        "right": 183.03327999999996,
+        "bottom": 391.8528,
+        "width": 124.19327999999996,
+        "height": 8.879999999999995
+      }
+    ],
+    "column_2": [
+      {
+        "text": "MARKING YOUR ANSWERS",
+        "type": "section_header",
+        "left": 58.84,
+        "top": 463.37280000000004,
+        "right": 192.59104000000005,
+        "bottom": 472.25280000000004,
+        "width": 133.75104000000005,
+        "height": 8.879999999999995
+      }
+    ]
+  }
+}

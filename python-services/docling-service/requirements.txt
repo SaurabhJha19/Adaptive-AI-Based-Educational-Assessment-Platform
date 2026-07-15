@@ -1,0 +1,9 @@
+docling
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+orjson
+aiofiles
+httpx

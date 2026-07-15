@@ -1,0 +1,3274 @@
+[
+  {
+    "path": "root.texts[19].orig",
+    "value": "A) theory"
+  },
+  {
+    "path": "root.texts[19].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[20].orig",
+    "value": "B) evidence"
+  },
+  {
+    "path": "root.texts[20].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[21].orig",
+    "value": "C) constant"
+  },
+  {
+    "path": "root.texts[21].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[22].orig",
+    "value": "D) experiment"
+  },
+  {
+    "path": "root.texts[22].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[26].orig",
+    "value": "A) Simple"
+  },
+  {
+    "path": "root.texts[26].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[27].orig",
+    "value": "B) Understandable"
+  },
+  {
+    "path": "root.texts[27].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[28].orig",
+    "value": "C) Obvious"
+  },
+  {
+    "path": "root.texts[28].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[29].orig",
+    "value": "D) Transparent"
+  },
+  {
+    "path": "root.texts[29].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[40].orig",
+    "value": "A) prolong"
+  },
+  {
+    "path": "root.texts[40].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[41].orig",
+    "value": "B) rectify"
+  },
+  {
+    "path": "root.texts[41].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[42].orig",
+    "value": "C) retain"
+  },
+  {
+    "path": "root.texts[42].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[43].orig",
+    "value": "D) highlight"
+  },
+  {
+    "path": "root.texts[43].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[46].orig",
+    "value": "A) circumvent"
+  },
+  {
+    "path": "root.texts[46].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[47].orig",
+    "value": "B) corroborate"
+  },
+  {
+    "path": "root.texts[47].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[48].orig",
+    "value": "C) disseminate"
+  },
+  {
+    "path": "root.texts[48].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[49].orig",
+    "value": "D) implement"
+  },
+  {
+    "path": "root.texts[49].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[55].orig",
+    "value": "A) demarcated from"
+  },
+  {
+    "path": "root.texts[55].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[56].orig",
+    "value": "B) reconstituted as"
+  },
+  {
+    "path": "root.texts[56].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[57].orig",
+    "value": "C) conflated with"
+  },
+  {
+    "path": "root.texts[57].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[58].orig",
+    "value": "D) derived from"
+  },
+  {
+    "path": "root.texts[58].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[63].orig",
+    "value": "A) It illustrates that a fire provides comfort beyond physical warmth."
+  },
+  {
+    "path": "root.texts[63].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[64].orig",
+    "value": "B) It summarizes the information that came before it in the text."
+  },
+  {
+    "path": "root.texts[64].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[65].orig",
+    "value": "C) It explains that the house remains cold even in summer."
+  },
+  {
+    "path": "root.texts[65].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[66].orig",
+    "value": "D) It suggests that the author feels comfortable in her home with or without a fire."
+  },
+  {
+    "path": "root.texts[66].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[74].orig",
+    "value": "A) It clarifies the meaning of a scientific term."
+  },
+  {
+    "path": "root.texts[74].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[75].orig",
+    "value": "B) It describes an environmental concern."
+  },
+  {
+    "path": "root.texts[75].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[76].orig",
+    "value": "C) It explains the significance of a scientific discovery."
+  },
+  {
+    "path": "root.texts[76].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[77].orig",
+    "value": "D) It identifies a result that confused the team."
+  },
+  {
+    "path": "root.texts[77].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[83].orig",
+    "value": "A) It illustrates a change in the natural environment that the speaker implies is responsible for the growing misgivings described in the text."
+  },
+  {
+    "path": "root.texts[83].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[84].orig",
+    "value": "B) It establishes an example of consistency in the natural landscape that the speaker then contrasts with the unpredictability of human emotions."
+  },
+  {
+    "path": "root.texts[84].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[85].orig",
+    "value": "C) It presents an observation of an occurrence in the natural world that the speaker then expands on to convey a sense of a turbulent interior state."
+  },
+  {
+    "path": "root.texts[85].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[86].orig",
+    "value": "D) It evokes the ordinariness of an event in nature to suggest that the critical self-evaluation the speaker engages in is a common pursuit."
+  },
+  {
+    "path": "root.texts[86].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[94].orig",
+    "value": "A) It challenges the stance of the investors and enthusiasts who are mentioned earlier in the text."
+  },
+  {
+    "path": "root.texts[94].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[95].orig",
+    "value": "B) It explains the basis for the claim made by the technologists mentioned in the text."
+  },
+  {
+    "path": "root.texts[95].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[96].orig",
+    "value": "C) It suggests that academics are better suited than investors to see the potential uses of contemporary interactive texts."
+  },
+  {
+    "path": "root.texts[96].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[97].orig",
+    "value": "D) It provides a historical anecdote about the technological challenges involved in reading the earliest interactive texts."
+  },
+  {
+    "path": "root.texts[97].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[102].orig",
+    "value": "A) M. robustus leave the Octopus Garden upon reaching an intermediary stage of development."
+  },
+  {
+    "path": "root.texts[102].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[103].orig",
+    "value": "B) The M. robustus population at the Octopus Garden remains stable despite variations in water temperature."
+  },
+  {
+    "path": "root.texts[103].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[104].orig",
+    "value": "C) M. robustus nests in the Octopus Garden contain on average fewer but larger eggs than nests at similar ocean depths."
+  },
+  {
+    "path": "root.texts[104].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[105].orig",
+    "value": "D) The Octopus Garden provides an ideal feeding ground for M. robustus hatchlings."
+  },
+  {
+    "path": "root.texts[105].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[116].orig",
+    "value": "A) Though it is true that stories of even the most uninteresting people are themselves interesting because all people are unique, the reason this story is interesting is nonetheless difficult to understand because of the passage of time."
+  },
+  {
+    "path": "root.texts[116].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[117].orig",
+    "value": "B) Even though it is a story of a person of no particular importance, its age and the manner in which it therefore must be told are both indicators that the story itself is important."
+  },
+  {
+    "path": "root.texts[117].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[118].orig",
+    "value": "C) Like all stories about the lives of inconsequential people, this story must necessarily be related in a particular way if the reason the story is consequential is to be made evident to the audience."
+  },
+  {
+    "path": "root.texts[118].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[119].orig",
+    "value": "D) It is a remarkable story that happened to an unremarkable person, though one could plausibly argue that because the story is valuable, some of its value accrues to the person at its center."
+  },
+  {
+    "path": "root.texts[119].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[123].orig",
+    "value": "A) 10%"
+  },
+  {
+    "path": "root.texts[123].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[124].orig",
+    "value": "B) 95%"
+  },
+  {
+    "path": "root.texts[124].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[125].orig",
+    "value": "C) 25%"
+  },
+  {
+    "path": "root.texts[125].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[126].orig",
+    "value": "D) 50%"
+  },
+  {
+    "path": "root.texts[126].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[135].orig",
+    "value": "A) 'When constructing his argument regarding the characteristics of a well-functioning government, Aristotle asserts that 'Transgression creeps in unperceived and at last ruins the state,' illustrating this idea with a comparison to frequent small expenditures slowly and almost imperceptibly chipping away at a fortune until it is ultimately depleted.'"
+  },
+  {
+    "path": "root.texts[135].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[136].orig",
+    "value": "B) 'When Aristotle writes on the necessity of avoiding corruption in government, he proposes that 'every state should be so administered and so regulated by law that its magistrates cannot possibly make money.' In particular, he thinks oligarchies are particularly susceptible to corruption through bribery.'"
+  },
+  {
+    "path": "root.texts[136].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[137].orig",
+    "value": "C) 'When Aristotle considers the health of constitutions, he states that 'Constitutions are preserved when their destroyers are at a distance, and sometimes also because they are near, for the fear of them makes the government keep in hand the constitution.' He holds that rulers who wish to see constitutions preserved must continually remind the populace of the dangers that would result from a constitutional collapse.'"
+  },
+  {
+    "path": "root.texts[137].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[138].orig",
+    "value": "D) 'When contrasting different forms of government, Aristotle holds that 'oligarchies may last, not from any inherent stability in such forms of government, but because the rulers are on good terms both with the unenfranchised and with the governing classes.' That is, oligarchic leaders who wish to hold on to power will introduce members of disenfranchised classes into government in a participatory role.'"
+  },
+  {
+    "path": "root.texts[138].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[146].orig",
+    "value": "A) Novels published after the year 1800 include the clock phrase 10 a.m. less often than novels published before the year 1800 do."
+  },
+  {
+    "path": "root.texts[146].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[147].orig",
+    "value": "B) Novels published after 1880 contain significantly more references to activities occurring after 10 p.m. than do novels from earlier periods."
+  },
+  {
+    "path": "root.texts[147].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[148].orig",
+    "value": "C) Among novels published in the nineteenth century, implied time references become steadily more common than clock phrases as publication dates approach 1900."
+  },
+  {
+    "path": "root.texts[148].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[149].orig",
+    "value": "D) The time references of noon (12 p.m.) and midnight (12 a.m.) are used with roughly the same frequency in the novels."
+  },
+  {
+    "path": "root.texts[149].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[166].orig",
+    "value": "A) national governments of countries in Region 1 experienced declines in efficiency in the period from 2000 to 2014, relative to the period from 1970 to 2000."
+  },
+  {
+    "path": "root.texts[166].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[167].orig",
+    "value": "B) countries in Region 1 experienced a slower rate of economic growth in the period from 2000 to 2014 than countries in Region 2 did, despite increasing national government efficiency in Region 1."
+  },
+  {
+    "path": "root.texts[167].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[168].orig",
+    "value": "C) national governments of most countries in Region 2 became more efficient in the period from 2000 to 2014 than they had been in the period from 1970 to 2000, but those of several countries in this region did not."
+  },
+  {
+    "path": "root.texts[168].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[169].orig",
+    "value": "D) national governments of countries in Region 1 and in Region 2 generally became more efficient in the period from 2000 to 2014 than they had been in the period from 1970 to 2000, but at different rates."
+  },
+  {
+    "path": "root.texts[169].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[179].orig",
+    "value": "A) Processing imports with inputs were greater than both ordinary imports and processing imports with assembly in 2006."
+  },
+  {
+    "path": "root.texts[179].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[180].orig",
+    "value": "B) From 2000 to 2006, processing imports with inputs rose much more sharply than processing imports with assembly did."
+  },
+  {
+    "path": "root.texts[180].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[181].orig",
+    "value": "C) From 2000 to 2006, neither processing imports with inputs nor processing imports with assembly were greater than ordinary imports."
+  },
+  {
+    "path": "root.texts[181].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[182].orig",
+    "value": "D) Processing imports with assembly were greater in 2006 than processing imports with inputs in 2000."
+  },
+  {
+    "path": "root.texts[182].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[190].orig",
+    "value": "A) some narwhals would seek a new habitat."
+  },
+  {
+    "path": "root.texts[190].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[191].orig",
+    "value": "B) fewer marine animals would also have tusks."
+  },
+  {
+    "path": "root.texts[191].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[192].orig",
+    "value": "C) more narwhals would have a tusk."
+  },
+  {
+    "path": "root.texts[192].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[193].orig",
+    "value": "D) narwhals would become less shy over time."
+  },
+  {
+    "path": "root.texts[193].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[198].orig",
+    "value": "A) unlike the two polymer-derived SiC fibers, the nitrogen-treated SiC fiber can substantially inhibit creep, provided that temperatures and loads are consistent."
+  },
+  {
+    "path": "root.texts[198].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[199].orig",
+    "value": "B) the two polymer-derived SiC fibers likely hold similar potential for reducing the creep resistance of materials exposed to stress and elevated temperatures, thus prolonging the life span of aerospace machinery."
+  },
+  {
+    "path": "root.texts[199].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[200].orig",
+    "value": "C) composites based on the two polymer-derived SiC fibers have chemical properties that may improve the mechanical and thermal stability of aerospace equipment to a greater extent than do composites based on the nitrogen-treated SiC fiber."
+  },
+  {
+    "path": "root.texts[200].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[201].orig",
+    "value": "D) aerospace composites containing the nitrogen-treated SiC fiber may have the ability to withstand mechanical stress for a longer period of time than can aerospace composites containing either of the two polymer-derived SiC fibers."
+  },
+  {
+    "path": "root.texts[201].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[212].orig",
+    "value": "A) describes"
+  },
+  {
+    "path": "root.texts[212].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[213].orig",
+    "value": "B) describe"
+  },
+  {
+    "path": "root.texts[213].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[214].orig",
+    "value": "C) have described"
+  },
+  {
+    "path": "root.texts[214].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[215].orig",
+    "value": "D) are describing"
+  },
+  {
+    "path": "root.texts[215].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[218].orig",
+    "value": "A) century"
+  },
+  {
+    "path": "root.texts[218].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[219].orig",
+    "value": "B) century,"
+  },
+  {
+    "path": "root.texts[219].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[220].orig",
+    "value": "C) century, but"
+  },
+  {
+    "path": "root.texts[220].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[221].orig",
+    "value": "D) century that"
+  },
+  {
+    "path": "root.texts[221].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[224].orig",
+    "value": "A) One"
+  },
+  {
+    "path": "root.texts[224].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[225].orig",
+    "value": "B) That"
+  },
+  {
+    "path": "root.texts[225].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[226].orig",
+    "value": "C) This"
+  },
+  {
+    "path": "root.texts[226].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[227].orig",
+    "value": "D) These"
+  },
+  {
+    "path": "root.texts[227].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[231].orig",
+    "value": "A) are affecting"
+  },
+  {
+    "path": "root.texts[231].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[232].orig",
+    "value": "B) will have affected"
+  },
+  {
+    "path": "root.texts[232].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[233].orig",
+    "value": "C) will affect"
+  },
+  {
+    "path": "root.texts[233].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[234].orig",
+    "value": "D) affected"
+  },
+  {
+    "path": "root.texts[234].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[237].orig",
+    "value": "A) has been characterized"
+  },
+  {
+    "path": "root.texts[237].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[238].orig",
+    "value": "B) will be characterized"
+  },
+  {
+    "path": "root.texts[238].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[239].orig",
+    "value": "C) characterized"
+  },
+  {
+    "path": "root.texts[239].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[240].orig",
+    "value": "D) is characterized"
+  },
+  {
+    "path": "root.texts[240].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[252].orig",
+    "value": "A) vapor. With"
+  },
+  {
+    "path": "root.texts[252].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[253].orig",
+    "value": "B) vapor with"
+  },
+  {
+    "path": "root.texts[253].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[254].orig",
+    "value": "C) vapor, with"
+  },
+  {
+    "path": "root.texts[254].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[255].orig",
+    "value": "D) vapor and with"
+  },
+  {
+    "path": "root.texts[255].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[258].orig",
+    "value": "A) a contest sponsored by the Alaska Centennial Commission would award $300 to an individual who came"
+  },
+  {
+    "path": "root.texts[258].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[259].orig",
+    "value": "B) an award of $300 would go to an individual in a contest sponsored by the Alaska Centennial Commission for coming"
+  },
+  {
+    "path": "root.texts[259].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[260].orig",
+    "value": "C) $300 would be awarded to an individual by the Alaska Centennial Commission in a contest for coming"
+  },
+  {
+    "path": "root.texts[260].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[261].orig",
+    "value": "D) the Alaska Centennial Commission sponsored a contest that would award $300 to an individual who came"
+  },
+  {
+    "path": "root.texts[261].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[267].orig",
+    "value": "A) supposed; a"
+  },
+  {
+    "path": "root.texts[267].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[268].orig",
+    "value": "B) supposed. A"
+  },
+  {
+    "path": "root.texts[268].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[269].orig",
+    "value": "C) supposed a"
+  },
+  {
+    "path": "root.texts[269].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[270].orig",
+    "value": "D) supposed, a"
+  },
+  {
+    "path": "root.texts[270].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[273].orig",
+    "value": "A) Additionally,"
+  },
+  {
+    "path": "root.texts[273].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[274].orig",
+    "value": "B) Previously,"
+  },
+  {
+    "path": "root.texts[274].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[275].orig",
+    "value": "C) In conclusion,"
+  },
+  {
+    "path": "root.texts[275].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[276].orig",
+    "value": "D) Instead,"
+  },
+  {
+    "path": "root.texts[276].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[288].orig",
+    "value": "A) Chalk is a type of sedimentary rock."
+  },
+  {
+    "path": "root.texts[288].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[289].orig",
+    "value": "B) Some scientists study shale, chalk, and sandstone."
+  },
+  {
+    "path": "root.texts[289].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[290].orig",
+    "value": "C) There are scientists who study sedimentary rocks."
+  },
+  {
+    "path": "root.texts[290].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[291].orig",
+    "value": "D) Chaudhuri is a sedimentologist."
+  },
+  {
+    "path": "root.texts[291].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[301].orig",
+    "value": "A) 'Raymond's Run' takes place in Harlem."
+  },
+  {
+    "path": "root.texts[301].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[302].orig",
+    "value": "B) 'Raymond's Run' was published in Gorilla, My Love ."
+  },
+  {
+    "path": "root.texts[302].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[303].orig",
+    "value": "C) 'Raymond's Run' is told from a first person perspective."
+  },
+  {
+    "path": "root.texts[303].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[304].orig",
+    "value": "D) 'Raymond's Run' was written by Toni Cade Bambara."
+  },
+  {
+    "path": "root.texts[304].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[317].orig",
+    "value": "A) Tiles in the majolica and arista styles can be found in the Royal Alcázar of Seville in Andalucía, Spain."
+  },
+  {
+    "path": "root.texts[317].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[318].orig",
+    "value": "B) Featuring tiles in the majolica and arista styles, the Royal Alcázar of Seville in Spain is famous for its intricate tilework."
+  },
+  {
+    "path": "root.texts[318].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[319].orig",
+    "value": "C) In the arista style, designs are stamped into the ceramic tiles, whereas in the majolica style, the designs are painted directly on them."
+  },
+  {
+    "path": "root.texts[319].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[320].orig",
+    "value": "D) Among the famous tilework of the Royal Alcázar of Seville are majolica style tiles, made by painting designs directly on the ceramic tiles."
+  },
+  {
+    "path": "root.texts[320].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[330].orig",
+    "value": "A) The songs 'Poor Miner's Farewell' and 'Bring Him Back Home' both raised awareness about human rights violations."
+  },
+  {
+    "path": "root.texts[330].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[331].orig",
+    "value": "B) While both are protest songs, 'Poor Miner's Farewell' is about coal miners in Kentucky, whereas 'Bring Him Back Home' is about the anti-apartheid leader Nelson Mandela."
+  },
+  {
+    "path": "root.texts[331].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[332].orig",
+    "value": "C) Hugh Masekela's song 'Bring Him Back Home,' released in 1987, called on the South African government to free Nelson Mandela."
+  },
+  {
+    "path": "root.texts[332].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[333].orig",
+    "value": "D) Released in 1932 by Aunt Molly Jackson, the song 'Poor Miner's Farewell' was a protest against the unlivable wages and dangerous working conditions faced by Kentucky coal miners."
+  },
+  {
+    "path": "root.texts[333].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[347].orig",
+    "value": "A) According to Allison's Thucydides trap theory, whenever 'a rising power is threatening to displace a ruling power,' conflict is likely."
+  },
+  {
+    "path": "root.texts[347].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[348].orig",
+    "value": "B) Thucydides wrote that conflict between the two powers was 'inevitable,' although Stewart later challenged the historical basis of this claim."
+  },
+  {
+    "path": "root.texts[348].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[349].orig",
+    "value": "C) According to Stewart, a 'clash of cultures' between Athens and Sparta caused the conflict, not Athens's rise."
+  },
+  {
+    "path": "root.texts[349].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[350].orig",
+    "value": "D) Thucydides explained that conflict was caused by 'the rise of Athens and the fear this instilled in Sparta,' but Allison disagreed, seeing the conflict as an example of the Thucydides trap."
+  },
+  {
+    "path": "root.texts[350].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[363].orig",
+    "value": "A) The 2021 study determined the information rate (IR) of 17 languages in bits of information conveyed per second."
+  },
+  {
+    "path": "root.texts[363].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[364].orig",
+    "value": "B) Researchers found that information was conveyed more quickly in Spanish, at 7.7 syllables per second, than in Vietnamese, at 5.3 syllables per second."
+  },
+  {
+    "path": "root.texts[364].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[365].orig",
+    "value": "C) Vietnamese had the sixteenth-fastest syllable rate, lower than that of Spanish, which had the second-fastest; however, Spanish had the lower information rate of the two."
+  },
+  {
+    "path": "root.texts[365].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[366].orig",
+    "value": "D) Though some of the languages differed in number of syllables spoken per second, all 17 conveyed information at roughly the same rate."
+  },
+  {
+    "path": "root.texts[366].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[377].orig",
+    "value": "A) weaken"
+  },
+  {
+    "path": "root.texts[377].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[378].orig",
+    "value": "B) praise"
+  },
+  {
+    "path": "root.texts[378].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[379].orig",
+    "value": "C) popularize"
+  },
+  {
+    "path": "root.texts[379].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[380].orig",
+    "value": "D) isolate"
+  },
+  {
+    "path": "root.texts[380].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[384].orig",
+    "value": "A) restricted"
+  },
+  {
+    "path": "root.texts[384].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[385].orig",
+    "value": "B) announced"
+  },
+  {
+    "path": "root.texts[385].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[386].orig",
+    "value": "C) distracted"
+  },
+  {
+    "path": "root.texts[386].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[387].orig",
+    "value": "D) influenced"
+  },
+  {
+    "path": "root.texts[387].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[399].orig",
+    "value": "A) amusing"
+  },
+  {
+    "path": "root.texts[399].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[400].orig",
+    "value": "B) costly"
+  },
+  {
+    "path": "root.texts[400].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[401].orig",
+    "value": "C) successful"
+  },
+  {
+    "path": "root.texts[401].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[402].orig",
+    "value": "D) disastrous"
+  },
+  {
+    "path": "root.texts[402].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[406].orig",
+    "value": "A) a coincidence"
+  },
+  {
+    "path": "root.texts[406].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[407].orig",
+    "value": "B) a reprieve"
+  },
+  {
+    "path": "root.texts[407].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[408].orig",
+    "value": "C) an incident"
+  },
+  {
+    "path": "root.texts[408].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[409].orig",
+    "value": "D) an oddity"
+  },
+  {
+    "path": "root.texts[409].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[412].orig",
+    "value": "A) thoughtfulness"
+  },
+  {
+    "path": "root.texts[412].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[413].orig",
+    "value": "B) esteem"
+  },
+  {
+    "path": "root.texts[413].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[414].orig",
+    "value": "C) controversy"
+  },
+  {
+    "path": "root.texts[414].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[415].orig",
+    "value": "D) sincerity"
+  },
+  {
+    "path": "root.texts[415].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[418].orig",
+    "value": "A) It identifies a scientific belief that Tharp and Heezen showed to be wrong."
+  },
+  {
+    "path": "root.texts[418].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[419].orig",
+    "value": "B) It describes the design of Tharp and Heezen's experiment."
+  },
+  {
+    "path": "root.texts[419].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[420].orig",
+    "value": "C) It emphasizes a disagreement between Tharp and Heezen."
+  },
+  {
+    "path": "root.texts[420].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[421].orig",
+    "value": "D) It presents data to support a claim that Tharp and Heezen made."
+  },
+  {
+    "path": "root.texts[421].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[432].orig",
+    "value": "A) It compares the beginnings of radio programming with the beginnings of television programming in the United States."
+  },
+  {
+    "path": "root.texts[432].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[433].orig",
+    "value": "B) It identifies a specific reason behind some advertisers' hesitance to support television."
+  },
+  {
+    "path": "root.texts[433].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[434].orig",
+    "value": "C) It describes how broadcasters attempted to convince advertisers to support television."
+  },
+  {
+    "path": "root.texts[434].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[435].orig",
+    "value": "D) It explains why a type of television programming was popular at the time."
+  },
+  {
+    "path": "root.texts[435].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[440].orig",
+    "value": "A) It identifies the people and events depicted in the Bayeux Tapestry."
+  },
+  {
+    "path": "root.texts[440].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[441].orig",
+    "value": "B) It supports an argument about the workers who produced the Bayeux Tapestry."
+  },
+  {
+    "path": "root.texts[441].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[442].orig",
+    "value": "C) It compares the Bayeux Tapestry with other tapestries from eleventh-century France."
+  },
+  {
+    "path": "root.texts[442].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[443].orig",
+    "value": "D) It describes how researchers determined where the Bayeux Tapestry was produced."
+  },
+  {
+    "path": "root.texts[443].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[454].orig",
+    "value": "A) By suggesting that the temperature of Earth's mantle 3 billion years ago was likely insufficient to allow for the level of tectonic movement predicted by computer models"
+  },
+  {
+    "path": "root.texts[454].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[455].orig",
+    "value": "B) By distinguishing between computer models of Earth's mantle temperature that reliably predict the onset of plate tectonics and those that do not"
+  },
+  {
+    "path": "root.texts[455].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[456].orig",
+    "value": "C) By indicating that computer models of Earth's mantle temperature are still being improved such that new models tend to be much more reliable than their predecessors"
+  },
+  {
+    "path": "root.texts[456].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[457].orig",
+    "value": "D) By asserting that a more definitive form of evidence than the computer models suggests a different timeline for the onset of plate tectonics on Earth"
+  },
+  {
+    "path": "root.texts[457].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[462].orig",
+    "value": "A) Its latex produces rubber of an especially high quality."
+  },
+  {
+    "path": "root.texts[462].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[463].orig",
+    "value": "B) Its bark has a unique structure that makes it easy to collect latex."
+  },
+  {
+    "path": "root.texts[463].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[464].orig",
+    "value": "C) It is able to grow in a wide variety of climates around the world."
+  },
+  {
+    "path": "root.texts[464].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[465].orig",
+    "value": "D) It is one of only two trees in the Amazon that produce latex."
+  },
+  {
+    "path": "root.texts[465].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[473].orig",
+    "value": "A) A partnership between the Quinault Indian Nation and Wild Salmon Center shows the importance of collaborative approaches to preserving biodiversity."
+  },
+  {
+    "path": "root.texts[473].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[474].orig",
+    "value": "B) Nature-based approaches can be effective ways to achieve conservation goals."
+  },
+  {
+    "path": "root.texts[474].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[475].orig",
+    "value": "C) As indicated by a recent project, logjams help the blueback salmon thrive and reproduce."
+  },
+  {
+    "path": "root.texts[475].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[476].orig",
+    "value": "D) Scientists now realize that nature-based conservation methods offer better long-term solutions to environmental issues than methods that are not nature-based do."
+  },
+  {
+    "path": "root.texts[476].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[482].orig",
+    "value": "A) R'WP"
+  },
+  {
+    "path": "root.texts[482].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[483].orig",
+    "value": "B) 1RWP"
+  },
+  {
+    "path": "root.texts[483].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[484].orig",
+    "value": "C) S'WP"
+  },
+  {
+    "path": "root.texts[484].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[485].orig",
+    "value": "D) ISWP"
+  },
+  {
+    "path": "root.texts[485].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[495].orig",
+    "value": "A) 4,268,873 square miles"
+  },
+  {
+    "path": "root.texts[495].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[496].orig",
+    "value": "B) 4,471 square miles"
+  },
+  {
+    "path": "root.texts[496].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[497].orig",
+    "value": "C) 304 square miles"
+  },
+  {
+    "path": "root.texts[497].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[498].orig",
+    "value": "D) 6,880 square miles"
+  },
+  {
+    "path": "root.texts[498].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[501].orig",
+    "value": "A) 'Echelman uses a special program that makes a 3D model of the sculpture.'"
+  },
+  {
+    "path": "root.texts[501].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[502].orig",
+    "value": "B) 'The first part of planning a new sculpture is done using paper and pencil, and then a digital program is used to finalize the design.'"
+  },
+  {
+    "path": "root.texts[502].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[503].orig",
+    "value": "C) 'The materials that Echelman uses to build her sculptures are both flexible and strong.'"
+  },
+  {
+    "path": "root.texts[503].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[504].orig",
+    "value": "D) 'Each sculpture is designed to reflect local landmarks from the area in which it is eventually installed.'"
+  },
+  {
+    "path": "root.texts[504].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[509].orig",
+    "value": "A) Among rocks known to be older than 3.2 billion years, significantly more are mantle derived than lithospheric, but the opposite is true for the rocks younger than 3.2 billion years."
+  },
+  {
+    "path": "root.texts[509].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[510].orig",
+    "value": "B) Mantle-derived rocks older than 3.2 billion years show significantly more compositional diversity than lithospheric rocks older than 3.2 billion years do."
+  },
+  {
+    "path": "root.texts[510].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[511].orig",
+    "value": "C) There is a positive correlation between the age of lithospheric rocks and their chemical similarity to mantle-derived rocks, and that correlation increases significantly in strength at around 3.2 billion years old."
+  },
+  {
+    "path": "root.texts[511].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[512].orig",
+    "value": "D) Mantle-derived rocks younger than 3.2 billion years contain some material that is not found in older mantle-derived rocks but is found in older and contemporaneous lithospheric rocks."
+  },
+  {
+    "path": "root.texts[512].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[520].orig",
+    "value": "A) northern Uto-Aztecan tribes likely obtained the crop directly from a southern Uto-Aztecan tribe rather than from a non-Uto-Aztecan tribe."
+  },
+  {
+    "path": "root.texts[520].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[521].orig",
+    "value": "B) variation in maize-related vocabulary within each branch of the Uto-Aztecan family likely reflects regionally specific methods for cultivating the crop."
+  },
+  {
+    "path": "root.texts[521].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[522].orig",
+    "value": "C) southern Uto-Aztecan tribes likely acquired maize at roughly the same time as northern Uto-Aztecan tribes did, though from different sources."
+  },
+  {
+    "path": "root.texts[522].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[523].orig",
+    "value": "D) the family's division into northern and southern branches likely preceded the acquisition of the crop by the Uto-Aztecan tribes."
+  },
+  {
+    "path": "root.texts[523].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[528].orig",
+    "value": "A) although the area of the Murray Formation experienced a prolonged period of dryness that prevented a lake from forming, water flowing from a distant source was present."
+  },
+  {
+    "path": "root.texts[528].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[529].orig",
+    "value": "B) a lake existed at the Murray Formation for a prolonged period, though the lake occasionally experienced drying and there were periods in which one or more streams were present."
+  },
+  {
+    "path": "root.texts[529].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[530].orig",
+    "value": "C) one or more streams existed at the Murray Formation for an extended period until being replaced by a lake that persisted for only a brief period before permanently drying."
+  },
+  {
+    "path": "root.texts[530].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[531].orig",
+    "value": "D) a stream-fed lake was present at the Murray Formation for an extended period, and although the streams experienced occasional drying, the lake did not."
+  },
+  {
+    "path": "root.texts[531].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[539].orig",
+    "value": "A) proclaim that the percentage of silver in coins suitable for trade would be raised to a threshold higher than 8 ' W ."
+  },
+  {
+    "path": "root.texts[539].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[540].orig",
+    "value": "B) keep the amount of silver in Sidonian coins consistent with that in coins minted in 367 BCE but decrease their weight."
+  },
+  {
+    "path": "root.texts[540].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[541].orig",
+    "value": "C) begin minting heavier coins with a proportion of silver to copper similar to that in coins minted in 367 BCE."
+  },
+  {
+    "path": "root.texts[541].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[542].orig",
+    "value": "D) fund the mining of some copper deposits that were not available to Ba'alšillem II."
+  },
+  {
+    "path": "root.texts[542].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[547].orig",
+    "value": "A) included"
+  },
+  {
+    "path": "root.texts[547].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[548].orig",
+    "value": "B) including"
+  },
+  {
+    "path": "root.texts[548].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[549].orig",
+    "value": "C) include"
+  },
+  {
+    "path": "root.texts[549].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[550].orig",
+    "value": "D) to include"
+  },
+  {
+    "path": "root.texts[550].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[556].orig",
+    "value": "A) malfunctions"
+  },
+  {
+    "path": "root.texts[556].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[557].orig",
+    "value": "B) will malfunction"
+  },
+  {
+    "path": "root.texts[557].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[558].orig",
+    "value": "C) has malfunctioned"
+  },
+  {
+    "path": "root.texts[558].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[559].orig",
+    "value": "D) malfunctioned"
+  },
+  {
+    "path": "root.texts[559].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[563].orig",
+    "value": "A) Smith:"
+  },
+  {
+    "path": "root.texts[563].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[564].orig",
+    "value": "B) Smith-"
+  },
+  {
+    "path": "root.texts[564].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[565].orig",
+    "value": "C) Smith"
+  },
+  {
+    "path": "root.texts[565].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[566].orig",
+    "value": "D) Smith,"
+  },
+  {
+    "path": "root.texts[566].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[576].orig",
+    "value": "A) these often consist"
+  },
+  {
+    "path": "root.texts[576].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[577].orig",
+    "value": "B) they often consist"
+  },
+  {
+    "path": "root.texts[577].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[578].orig",
+    "value": "C) it often consists"
+  },
+  {
+    "path": "root.texts[578].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[579].orig",
+    "value": "D) this often consists"
+  },
+  {
+    "path": "root.texts[579].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[582].orig",
+    "value": "A) work, though,"
+  },
+  {
+    "path": "root.texts[582].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[583].orig",
+    "value": "B) work, though"
+  },
+  {
+    "path": "root.texts[583].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[584].orig",
+    "value": "C) work; though,"
+  },
+  {
+    "path": "root.texts[584].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[585].orig",
+    "value": "D) work, though;"
+  },
+  {
+    "path": "root.texts[585].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[589].orig",
+    "value": "A) items managing"
+  },
+  {
+    "path": "root.texts[589].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[590].orig",
+    "value": "B) items, managing"
+  },
+  {
+    "path": "root.texts[590].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[591].orig",
+    "value": "C) items; managing"
+  },
+  {
+    "path": "root.texts[591].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[592].orig",
+    "value": "D) items. Managing"
+  },
+  {
+    "path": "root.texts[592].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[595].orig",
+    "value": "A) pristine, though"
+  },
+  {
+    "path": "root.texts[595].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[596].orig",
+    "value": "B) pristine, though;"
+  },
+  {
+    "path": "root.texts[596].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[597].orig",
+    "value": "C) pristine; though"
+  },
+  {
+    "path": "root.texts[597].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[598].orig",
+    "value": "D) pristine, though,"
+  },
+  {
+    "path": "root.texts[598].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[610].orig",
+    "value": "A) involved:"
+  },
+  {
+    "path": "root.texts[610].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[611].orig",
+    "value": "B) involved,"
+  },
+  {
+    "path": "root.texts[611].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[612].orig",
+    "value": "C) involved"
+  },
+  {
+    "path": "root.texts[612].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[613].orig",
+    "value": "D) involved;"
+  },
+  {
+    "path": "root.texts[613].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[616].orig",
+    "value": "A) Similarly,"
+  },
+  {
+    "path": "root.texts[616].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[617].orig",
+    "value": "B) As a result,"
+  },
+  {
+    "path": "root.texts[617].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[618].orig",
+    "value": "C) For example,"
+  },
+  {
+    "path": "root.texts[618].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[619].orig",
+    "value": "D) In comparison,"
+  },
+  {
+    "path": "root.texts[619].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[624].orig",
+    "value": "A) Hence,"
+  },
+  {
+    "path": "root.texts[624].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[625].orig",
+    "value": "B) However,"
+  },
+  {
+    "path": "root.texts[625].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[626].orig",
+    "value": "C) Admittedly,"
+  },
+  {
+    "path": "root.texts[626].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[627].orig",
+    "value": "D) Specifically,"
+  },
+  {
+    "path": "root.texts[627].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[636].orig",
+    "value": "A) in particular,"
+  },
+  {
+    "path": "root.texts[636].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[637].orig",
+    "value": "B) alternatively,"
+  },
+  {
+    "path": "root.texts[637].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[638].orig",
+    "value": "C) by comparison,"
+  },
+  {
+    "path": "root.texts[638].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[639].orig",
+    "value": "D) second of all,"
+  },
+  {
+    "path": "root.texts[639].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[642].orig",
+    "value": "A) In other words,"
+  },
+  {
+    "path": "root.texts[642].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[643].orig",
+    "value": "B) In summary,"
+  },
+  {
+    "path": "root.texts[643].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[644].orig",
+    "value": "C) For example,"
+  },
+  {
+    "path": "root.texts[644].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[645].orig",
+    "value": "D) To that end,"
+  },
+  {
+    "path": "root.texts[645].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[650].orig",
+    "value": "A) Additionally,"
+  },
+  {
+    "path": "root.texts[650].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[651].orig",
+    "value": "B) On the other hand,"
+  },
+  {
+    "path": "root.texts[651].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[652].orig",
+    "value": "C) More often,"
+  },
+  {
+    "path": "root.texts[652].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[653].orig",
+    "value": "D) Nonetheless,"
+  },
+  {
+    "path": "root.texts[653].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[665].orig",
+    "value": "A) Babel-17 , by Samuel Delany, won a Nebula Award in 1967."
+  },
+  {
+    "path": "root.texts[665].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[666].orig",
+    "value": "B) Samuel Delany published a science fiction novel in 1966."
+  },
+  {
+    "path": "root.texts[666].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[667].orig",
+    "value": "C) Samuel Delany is an award-winning US writer known for his science fiction."
+  },
+  {
+    "path": "root.texts[667].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[668].orig",
+    "value": "D) One of Samuel Delany's novels was among the best works of science fiction published in the US."
+  },
+  {
+    "path": "root.texts[668].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[679].orig",
+    "value": "A) While living in California, Obata created black ink paintings."
+  },
+  {
+    "path": "root.texts[679].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[680].orig",
+    "value": "B) Obata, a Japanese American artist, created a notable painting."
+  },
+  {
+    "path": "root.texts[680].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[681].orig",
+    "value": "C) Yosemite Falls was completed in 1930."
+  },
+  {
+    "path": "root.texts[681].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[682].orig",
+    "value": "D) Obata used a Japanese painting method called sumi-e."
+  },
+  {
+    "path": "root.texts[682].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[787].orig",
+    "value": "A) 47"
+  },
+  {
+    "path": "root.texts[787].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[788].orig",
+    "value": "B) 35"
+  },
+  {
+    "path": "root.texts[788].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[789].orig",
+    "value": "C) 25"
+  },
+  {
+    "path": "root.texts[789].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[790].orig",
+    "value": "D) 0"
+  },
+  {
+    "path": "root.texts[790].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[793].orig",
+    "value": "A) 92"
+  },
+  {
+    "path": "root.texts[793].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[794].orig",
+    "value": "B) 84"
+  },
+  {
+    "path": "root.texts[794].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[795].orig",
+    "value": "C) 80"
+  },
+  {
+    "path": "root.texts[795].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[796].orig",
+    "value": "D) 52"
+  },
+  {
+    "path": "root.texts[796].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[804].orig",
+    "value": "A) ($ (W"
+  },
+  {
+    "path": "root.texts[804].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[805].orig",
+    "value": "B) 4"
+  },
+  {
+    "path": "root.texts[805].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[806].orig",
+    "value": "C) 126"
+  },
+  {
+    "path": "root.texts[806].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[807].orig",
+    "value": "D) 130"
+  },
+  {
+    "path": "root.texts[807].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[810].orig",
+    "value": "A) p 1. 90 + 2 = 9. 60"
+  },
+  {
+    "path": "root.texts[810].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[811].orig",
+    "value": "B) p 1.90 - 2 = 9.60"
+  },
+  {
+    "path": "root.texts[811].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[812].orig",
+    "value": "C) p 1.90 + 2 = 9.60"
+  },
+  {
+    "path": "root.texts[812].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[813].orig",
+    "value": "D) p 1.90 - 2 = 9.60"
+  },
+  {
+    "path": "root.texts[813].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[851].orig",
+    "value": "A) 0"
+  },
+  {
+    "path": "root.texts[851].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[852].orig",
+    "value": "B) 1"
+  },
+  {
+    "path": "root.texts[852].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[853].orig",
+    "value": "C) 4"
+  },
+  {
+    "path": "root.texts[853].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[854].orig",
+    "value": "D) 6"
+  },
+  {
+    "path": "root.texts[854].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[897].orig",
+    "value": "A) The estimated value of the tablet was $225 when it was purchased."
+  },
+  {
+    "path": "root.texts[897].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[898].orig",
+    "value": "B) The estimated value of the tablet 24 months after it was purchased was $225."
+  },
+  {
+    "path": "root.texts[898].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[899].orig",
+    "value": "C) The estimated value of the tablet had decreased by $225 in the 24 months after it was purchased."
+  },
+  {
+    "path": "root.texts[899].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[900].orig",
+    "value": "D) The estimated value of the tablet decreased by approximately 2.25% each year after it was purchased."
+  },
+  {
+    "path": "root.texts[900].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[908].orig",
+    "value": "A) 20°"
+  },
+  {
+    "path": "root.texts[908].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[909].orig",
+    "value": "B) 45°"
+  },
+  {
+    "path": "root.texts[909].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[910].orig",
+    "value": "C) W35°"
+  },
+  {
+    "path": "root.texts[910].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[911].orig",
+    "value": "D) W60°"
+  },
+  {
+    "path": "root.texts[911].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[916].orig",
+    "value": "A) 20"
+  },
+  {
+    "path": "root.texts[916].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[917].orig",
+    "value": "B) 12"
+  },
+  {
+    "path": "root.texts[917].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[918].orig",
+    "value": "C) 10"
+  },
+  {
+    "path": "root.texts[918].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[919].orig",
+    "value": "D) 5"
+  },
+  {
+    "path": "root.texts[919].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[956].orig",
+    "value": "A) C0, 82"
+  },
+  {
+    "path": "root.texts[957].orig",
+    "value": "B) 7 2 , 9 2          "
+  },
+  {
+    "path": "root.texts[958].orig",
+    "value": "C) -7 2 , 9 2          "
+  },
+  {
+    "path": "root.texts[959].orig",
+    "value": "D) Cq3, 42"
+  },
+  {
+    "path": "root.texts[969].orig",
+    "value": "A) y x = 2 6 + 3 ( )"
+  },
+  {
+    "path": "root.texts[970].orig",
+    "value": "B) y x = 2 6 + 3 ( )"
+  },
+  {
+    "path": "root.texts[970].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[971].orig",
+    "value": "C) y x 2 = 2 6 + 3 ( ) ( )"
+  },
+  {
+    "path": "root.texts[971].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[972].orig",
+    "value": "D) y x 2 = 2 6 + 3 ( ) ( )"
+  },
+  {
+    "path": "root.texts[972].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[983].orig",
+    "value": "A) The center is at k 13, ( ) and the radius is 8."
+  },
+  {
+    "path": "root.texts[983].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[984].orig",
+    "value": "B) The center is at k , 13 ( ) and the radius is 8."
+  },
+  {
+    "path": "root.texts[984].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[985].orig",
+    "value": "C) The center is at k , 13 ( ) and the radius is 64."
+  },
+  {
+    "path": "root.texts[985].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[986].orig",
+    "value": "D) The center is at k 13, ( ) and the radius is 64."
+  },
+  {
+    "path": "root.texts[986].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[990].orig",
+    "value": "A) q28"
+  },
+  {
+    "path": "root.texts[990].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[991].orig",
+    "value": "B) 5"
+  },
+  {
+    "path": "root.texts[991].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[992].orig",
+    "value": "C) 10"
+  },
+  {
+    "path": "root.texts[992].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[993].orig",
+    "value": "D) 45"
+  },
+  {
+    "path": "root.texts[993].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[997].orig",
+    "value": "A) f x ( ) = 22(1.5) x +1"
+  },
+  {
+    "path": "root.texts[998].orig",
+    "value": "B) f x ( ) = 33(1.5) x C) f x ( ) = 49.5(1.5) x -1"
+  },
+  {
+    "path": "root.texts[999].orig",
+    "value": "D) f x ( ) = 74.25(1.5) x -2"
+  },
+  {
+    "path": "root.texts[1008].orig",
+    "value": "A) 2"
+  },
+  {
+    "path": "root.texts[1008].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1009].orig",
+    "value": "B) 790"
+  },
+  {
+    "path": "root.texts[1009].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1010].orig",
+    "value": "C) 1,580"
+  },
+  {
+    "path": "root.texts[1010].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1011].orig",
+    "value": "D) 40,000"
+  },
+  {
+    "path": "root.texts[1011].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1015].orig",
+    "value": "A) tw 12"
+  },
+  {
+    "path": "root.texts[1015].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1016].orig",
+    "value": "B) t w 6( -)"
+  },
+  {
+    "path": "root.texts[1016].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1017].orig",
+    "value": "C) w t tw -6"
+  },
+  {
+    "path": "root.texts[1017].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1018].orig",
+    "value": "D) tw w t 6 -"
+  },
+  {
+    "path": "root.texts[1018].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1072].orig",
+    "value": "A) W3 2"
+  },
+  {
+    "path": "root.texts[1072].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1073].orig",
+    "value": "B) 13"
+  },
+  {
+    "path": "root.texts[1073].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1074].orig",
+    "value": "C) 9 2"
+  },
+  {
+    "path": "root.texts[1074].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1075].orig",
+    "value": "D) 9"
+  },
+  {
+    "path": "root.texts[1075].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1077].orig",
+    "value": "A) x x x 12( + 6) £ + ( + 4) - 26"
+  },
+  {
+    "path": "root.texts[1077].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1078].orig",
+    "value": "B) x x x 12( + 6) ³ 26 - ( + ( + 4))"
+  },
+  {
+    "path": "root.texts[1078].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1079].orig",
+    "value": "C) x x x 12( + 4) £ + ( + 3) - 26"
+  },
+  {
+    "path": "root.texts[1079].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1080].orig",
+    "value": "D) x x x 12( + 4) ³ 26 - ( + ( + 3))"
+  },
+  {
+    "path": "root.texts[1080].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1085].orig",
+    "value": "A) sx y + 3 = 18"
+  },
+  {
+    "path": "root.texts[1085].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1087].orig",
+    "value": "B) x sy s 3 + = 18"
+  },
+  {
+    "path": "root.texts[1087].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1088].orig",
+    "value": "C) x sy 3 + = 18"
+  },
+  {
+    "path": "root.texts[1088].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1089].orig",
+    "value": "D) sx y + 3 = 18"
+  },
+  {
+    "path": "root.texts[1089].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1091].orig",
+    "value": "A) 2Ccos66°2Csin2x°2"
+  },
+  {
+    "path": "root.texts[1091].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1092].orig",
+    "value": "B) 2Ccos66°2 + 2Ccos2x°2"
+  },
+  {
+    "path": "root.texts[1092].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1093].orig",
+    "value": "C) Ccos66°2 + Ccos2x°2 2 2"
+  },
+  {
+    "path": "root.texts[1093].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1094].orig",
+    "value": "D) Ccos66°2 + Csin2x°2 2 2"
+  },
+  {
+    "path": "root.texts[1094].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1101].orig",
+    "value": "A) C d d = 26 + 26 ( )"
+  },
+  {
+    "path": "root.texts[1101].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1102].orig",
+    "value": "B) C d d = 26 + 52 ( )"
+  },
+  {
+    "path": "root.texts[1102].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1103].orig",
+    "value": "C) C d d = 52 - 26 ( )"
+  },
+  {
+    "path": "root.texts[1103].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1104].orig",
+    "value": "D) C d d = 52 + 78 ( )"
+  },
+  {
+    "path": "root.texts[1104].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1184].orig",
+    "value": "A) 35"
+  },
+  {
+    "path": "root.texts[1184].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1185].orig",
+    "value": "B) 130"
+  },
+  {
+    "path": "root.texts[1185].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1186].orig",
+    "value": "C) 165"
+  },
+  {
+    "path": "root.texts[1186].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1187].orig",
+    "value": "D) 330"
+  },
+  {
+    "path": "root.texts[1187].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1191].orig",
+    "value": "A) 6"
+  },
+  {
+    "path": "root.texts[1191].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1192].orig",
+    "value": "B) 15"
+  },
+  {
+    "path": "root.texts[1192].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1193].orig",
+    "value": "C) 75"
+  },
+  {
+    "path": "root.texts[1193].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1194].orig",
+    "value": "D) 244"
+  },
+  {
+    "path": "root.texts[1194].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1235].orig",
+    "value": "A) 0, -2 ( )"
+  },
+  {
+    "path": "root.texts[1235].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1236].orig",
+    "value": "B) 0, -3 ( )"
+  },
+  {
+    "path": "root.texts[1236].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1237].orig",
+    "value": "C) 0, 2 ( )"
+  },
+  {
+    "path": "root.texts[1237].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1238].orig",
+    "value": "D) 0, 3 ( )"
+  },
+  {
+    "path": "root.texts[1238].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1241].orig",
+    "value": "A) 18"
+  },
+  {
+    "path": "root.texts[1241].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1242].orig",
+    "value": "B) 131"
+  },
+  {
+    "path": "root.texts[1242].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1243].orig",
+    "value": "C) 149"
+  },
+  {
+    "path": "root.texts[1243].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1244].orig",
+    "value": "D) 2,376"
+  },
+  {
+    "path": "root.texts[1244].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1257].orig",
+    "value": "A) 9"
+  },
+  {
+    "path": "root.texts[1257].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1258].orig",
+    "value": "B) I 3"
+  },
+  {
+    "path": "root.texts[1258].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1259].orig",
+    "value": "C) 2 3"
+  },
+  {
+    "path": "root.texts[1259].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1260].orig",
+    "value": "D) I"
+  },
+  {
+    "path": "root.texts[1260].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1270].orig",
+    "value": "A) 3"
+  },
+  {
+    "path": "root.texts[1270].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1271].orig",
+    "value": "B) 15"
+  },
+  {
+    "path": "root.texts[1271].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1272].orig",
+    "value": "C) 54"
+  },
+  {
+    "path": "root.texts[1272].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1273].orig",
+    "value": "D) 57"
+  },
+  {
+    "path": "root.texts[1273].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1276].orig",
+    "value": "A) x x x 23 + 2 + 9 2 ( )"
+  },
+  {
+    "path": "root.texts[1276].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1277].orig",
+    "value": "B) x x x 9 23 + 2 + 1 3 2 ( )"
+  },
+  {
+    "path": "root.texts[1278].orig",
+    "value": "C) x x x 23 + 2 + 9 2 ( )"
+  },
+  {
+    "path": "root.texts[1278].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1279].orig",
+    "value": "D) x x x 34 + + 3 2 ( )"
+  },
+  {
+    "path": "root.texts[1279].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1282].orig",
+    "value": "A) x x x 15 + 5 - 5 - 35 6 2"
+  },
+  {
+    "path": "root.texts[1283].orig",
+    "value": "B) x x 15 + 10 + 2 3 2"
+  },
+  {
+    "path": "root.texts[1284].orig",
+    "value": "C) x x x 15 + 5 + 5 + 2 6 2"
+  },
+  {
+    "path": "root.texts[1284].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1285].orig",
+    "value": "D) x x x 15 + 5 + 5 + 2 3 2"
+  },
+  {
+    "path": "root.texts[1285].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1294].orig",
+    "value": "A) 950"
+  },
+  {
+    "path": "root.texts[1294].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1295].orig",
+    "value": "B) 90"
+  },
+  {
+    "path": "root.texts[1295].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1296].orig",
+    "value": "C) 80"
+  },
+  {
+    "path": "root.texts[1296].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1297].orig",
+    "value": "D) 10"
+  },
+  {
+    "path": "root.texts[1297].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1335].orig",
+    "value": "A) 9"
+  },
+  {
+    "path": "root.texts[1335].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1336].orig",
+    "value": "B) I 2"
+  },
+  {
+    "path": "root.texts[1336].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1337].orig",
+    "value": "C) I"
+  },
+  {
+    "path": "root.texts[1337].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1338].orig",
+    "value": "D) 2"
+  },
+  {
+    "path": "root.texts[1338].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1352].orig",
+    "value": "A) M t = 890 1 2 t 10 ( )          "
+  },
+  {
+    "path": "root.texts[1353].orig",
+    "value": "B) M t = 890 1 10 t 2 ( )          "
+  },
+  {
+    "path": "root.texts[1354].orig",
+    "value": "C) M t = 890 2 t 10 ( ) ( )"
+  },
+  {
+    "path": "root.texts[1355].orig",
+    "value": "D) M t = 890 10 t 2 ( ) ( )"
+  },
+  {
+    "path": "root.texts[1368].orig",
+    "value": "A) h q 10 14"
+  },
+  {
+    "path": "root.texts[1369].orig",
+    "value": "B) h q 3 3"
+  },
+  {
+    "path": "root.texts[1370].orig",
+    "value": "C) h q 10 14"
+  },
+  {
+    "path": "root.texts[1370].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1371].orig",
+    "value": "D) h q 3 3"
+  },
+  {
+    "path": "root.texts[1371].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1375].orig",
+    "value": "A) x18"
+  },
+  {
+    "path": "root.texts[1375].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1376].orig",
+    "value": "B) x6"
+  },
+  {
+    "path": "root.texts[1376].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1377].orig",
+    "value": "C) 6"
+  },
+  {
+    "path": "root.texts[1377].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1378].orig",
+    "value": "D) 18"
+  },
+  {
+    "path": "root.texts[1378].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1381].orig",
+    "value": "A) 7.25"
+  },
+  {
+    "path": "root.texts[1381].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1382].orig",
+    "value": "B) 14.50"
+  },
+  {
+    "path": "root.texts[1382].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1383].orig",
+    "value": "C) 105.13"
+  },
+  {
+    "path": "root.texts[1383].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1384].orig",
+    "value": "D) 210.25"
+  },
+  {
+    "path": "root.texts[1384].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1405].orig",
+    "value": "A) h x x = 5 - 4 ( )"
+  },
+  {
+    "path": "root.texts[1405].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1406].orig",
+    "value": "B) h x x = 5 + 7 ( )"
+  },
+  {
+    "path": "root.texts[1406].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1407].orig",
+    "value": "C) h x x = 5 + 9 ( )"
+  },
+  {
+    "path": "root.texts[1408].orig",
+    "value": "D) h x x = 5 + 20 ( )"
+  },
+  {
+    "path": "root.texts[1408].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1412].orig",
+    "value": "A) c 15 4"
+  },
+  {
+    "path": "root.texts[1412].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1413].orig",
+    "value": "B) c 19 4 + 7"
+  },
+  {
+    "path": "root.texts[1414].orig",
+    "value": "C) c 61 4 + 105"
+  },
+  {
+    "path": "root.texts[1415].orig",
+    "value": "D) c 15 + 105"
+  },
+  {
+    "path": "root.texts[1415].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1422].orig",
+    "value": "A) 188"
+  },
+  {
+    "path": "root.texts[1422].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1423].orig",
+    "value": "B) 168"
+  },
+  {
+    "path": "root.texts[1423].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1424].orig",
+    "value": "C) 84"
+  },
+  {
+    "path": "root.texts[1424].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1425].orig",
+    "value": "D) 71"
+  },
+  {
+    "path": "root.texts[1425].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1429].orig",
+    "value": "A) I09"
+  },
+  {
+    "path": "root.texts[1429].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1430].orig",
+    "value": "B) I'9"
+  },
+  {
+    "path": "root.texts[1430].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1431].orig",
+    "value": "C) I67"
+  },
+  {
+    "path": "root.texts[1431].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1432].orig",
+    "value": "D) 3'I"
+  },
+  {
+    "path": "root.texts[1432].marker",
+    "value": "D)"
+  },
+  {
+    "path": "root.texts[1439].orig",
+    "value": "A) 0.3"
+  },
+  {
+    "path": "root.texts[1439].marker",
+    "value": "A)"
+  },
+  {
+    "path": "root.texts[1440].orig",
+    "value": "B) 16.3"
+  },
+  {
+    "path": "root.texts[1440].marker",
+    "value": "B)"
+  },
+  {
+    "path": "root.texts[1441].orig",
+    "value": "C) 195.8"
+  },
+  {
+    "path": "root.texts[1441].marker",
+    "value": "C)"
+  },
+  {
+    "path": "root.texts[1442].orig",
+    "value": "D) 220.4"
+  },
+  {
+    "path": "root.texts[1442].marker",
+    "value": "D)"
+  }
+]

@@ -8,8 +8,8 @@ import {
     uploadFileToS3,
 } from "../../../services/storage/s3.service";
 
-import satParserPipeline
-from "../parser/sat/pipeline/sat-parser.pipeline";
+import { SATParserPipeline }
+from "../parser/sat-v2/pipeline/sat-parser.pipeline";
 
 class SimulatorService {
 
@@ -237,7 +237,7 @@ async parseExam(examId: string) {
 
             case "SAT":
 
-                await satParserPipeline.execute(
+                await SATParserPipeline.execute(
                     exam
                 );
 
